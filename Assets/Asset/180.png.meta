@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 0465e6808642f144ca147e1830eb4d05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4752157717163938566
+    second: Stage 1 map 180_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stage 1 map 180_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4b6a3ec4b7dca459042f51fb4d4e2a
+      internalID: 1979927653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 960877e0068aa0248accb7c557605868
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Stage 1 map 180_0: -4752157717163938566
+      Stage 1 map 180_1: -1310283290
+      Stage 1 map 180_10: 1001311844
+      Stage 1 map 180_11: -785209887
+      Stage 1 map 180_12: 1984538214
+      Stage 1 map 180_13: 958856585
+      Stage 1 map 180_14: -758013644
+      Stage 1 map 180_15: -751285315
+      Stage 1 map 180_16: 444128312
+      Stage 1 map 180_17: -120549379
+      Stage 1 map 180_18: -644110625
+      Stage 1 map 180_19: -46630693
+      Stage 1 map 180_2: -531797690
+      Stage 1 map 180_20: 760025
+      Stage 1 map 180_21: 1157938323
+      Stage 1 map 180_22: 1158442911
+      Stage 1 map 180_23: -522853864
+      Stage 1 map 180_24: 1956115738
+      Stage 1 map 180_25: 521537072
+      Stage 1 map 180_26: -1957807488
+      Stage 1 map 180_27: -982897289
+      Stage 1 map 180_28: 1726826380
+      Stage 1 map 180_29: -1421139412
+      Stage 1 map 180_3: 1117488819
+      Stage 1 map 180_30: -65306328
+      Stage 1 map 180_31: -727045622
+      Stage 1 map 180_32: 1782165656
+      Stage 1 map 180_33: -1208882707
+      Stage 1 map 180_34: -1764589806
+      Stage 1 map 180_35: -461171998
+      Stage 1 map 180_36: -2137211564
+      Stage 1 map 180_37: 875147708
+      Stage 1 map 180_38: -467410624
+      Stage 1 map 180_39: 49494697
+      Stage 1 map 180_4: -1324805090
+      Stage 1 map 180_40: -1484246187
+      Stage 1 map 180_41: 1440874158
+      Stage 1 map 180_42: 44141240
+      Stage 1 map 180_43: 1979927653
+      Stage 1 map 180_44: 753499946
+      Stage 1 map 180_45: 2076682618
+      Stage 1 map 180_46: 1261931746
+      Stage 1 map 180_47: 1964449199
+      Stage 1 map 180_48: -2120981371
+      Stage 1 map 180_49: -1649178356
+      Stage 1 map 180_5: 208007122
+      Stage 1 map 180_50: -351365638
+      Stage 1 map 180_51: -1138163071
+      Stage 1 map 180_52: 240966645
+      Stage 1 map 180_53: -585979187
+      Stage 1 map 180_54: -96006044
+      Stage 1 map 180_55: 251453039
+      Stage 1 map 180_56: -376037840
+      Stage 1 map 180_57: -1896302697
+      Stage 1 map 180_58: 290113537
+      Stage 1 map 180_59: 1695544651
+      Stage 1 map 180_6: 1884527399
+      Stage 1 map 180_60: 305141679
+      Stage 1 map 180_61: -1064437752
+      Stage 1 map 180_62: 427599198
+      Stage 1 map 180_63: -27140386
+      Stage 1 map 180_64: 1675884353
+      Stage 1 map 180_65: 1638907096
+      Stage 1 map 180_66: 320017722
+      Stage 1 map 180_67: 1208007892
+      Stage 1 map 180_68: -38551912
+      Stage 1 map 180_69: 1996554936
+      Stage 1 map 180_7: 895863209
+      Stage 1 map 180_70: -1482794673
+      Stage 1 map 180_71: -1258979332
+      Stage 1 map 180_72: -1387919937
+      Stage 1 map 180_73: -2093974263
+      Stage 1 map 180_74: -736065958
+      Stage 1 map 180_75: -1936068430
+      Stage 1 map 180_76: 1645630685
+      Stage 1 map 180_77: 1192961539
+      Stage 1 map 180_78: -303153514
+      Stage 1 map 180_79: 1567012602
+      Stage 1 map 180_8: 2125045885
+      Stage 1 map 180_80: 1026529910
+      Stage 1 map 180_81: -1628717459
+      Stage 1 map 180_82: 1327887688
+      Stage 1 map 180_83: -1013395860
+      Stage 1 map 180_84: 618638580
+      Stage 1 map 180_85: -588143244
+      Stage 1 map 180_86: 1531717080
+      Stage 1 map 180_87: 44190233
+      Stage 1 map 180_9: -946449667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

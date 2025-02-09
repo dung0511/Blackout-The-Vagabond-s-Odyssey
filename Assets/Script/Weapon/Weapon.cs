@@ -10,12 +10,14 @@ public class Weapon : MonoBehaviour
     public float BulletDame;
     private float timeBtwFire = 0;
     public GameObject weapon;
-    public SpriteRenderer characterSR;
+    public SpriteRenderer currentCharacterSR;
+    public CharacterManagement characterManagement;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        characterSR = GetComponent<SpriteRenderer>();
+        currentCharacterSR = characterManagement.currentCharacterSR;
     }
     //private void Awake()
     //{
@@ -42,12 +44,12 @@ public class Weapon : MonoBehaviour
         if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
         {
             transform.localScale = new Vector3((float)0.2, (float)-0.2, 0);
-            characterSR.gameObject.transform.localScale = new Vector3(-1, characterSR.gameObject.transform.localScale.y, 0);
+            currentCharacterSR.gameObject.transform.localScale = new Vector3(-1, currentCharacterSR.gameObject.transform.localScale.y, 0);
         }
         else
         {
             transform.localScale = new Vector3((float)0.2, (float)0.2, 0);
-            characterSR.gameObject.transform.localScale = new Vector3(1, characterSR.gameObject.transform.localScale.y, 0);
+            currentCharacterSR.gameObject.transform.localScale = new Vector3(1, currentCharacterSR.gameObject.transform.localScale.y, 0);
         }
 
     }

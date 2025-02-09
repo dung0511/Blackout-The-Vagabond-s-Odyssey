@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 31ee5bcb5363b424c9a4173b868af5c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4577589433201684068
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_0
+  - first:
+      213: 6538579952499432344
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_1
+  - first:
+      213: -3318505050623072017
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_2
+  - first:
+      213: -5482029827381258976
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_3
+  - first:
+      213: -3619750283179123418
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_4
+  - first:
+      213: -6259156434352158091
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_5
+  - first:
+      213: 6332588047526840856
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_6
+  - first:
+      213: -7150538411876260883
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_7
+  - first:
+      213: -115108565721168632
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_8
+  - first:
+      213: 7811626171264731475
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_9
+  - first:
+      213: -4634398384055999984
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_10
+  - first:
+      213: -3218401954533684634
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_11
+  - first:
+      213: 8866884161380138037
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_12
+  - first:
+      213: -8417517208309120591
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_13
+  - first:
+      213: 3125807927959323421
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_14
+  - first:
+      213: -510727509329113831
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_15
+  - first:
+      213: 7932276491927986001
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_16
+  - first:
+      213: -8516027366643484441
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_17
+  - first:
+      213: -2241820574384009865
+    second: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 345
+        width: 44
+        height: 35
+      alignment: 9
+      pivot: {x: 0.19134885, y: 0.32754692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c919e62e9a22970c0800000000000000
+      internalID: -4577589433201684068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 345
+        width: 84
+        height: 35
+      alignment: 9
+      pivot: {x: 0.29640996, y: 0.35628924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b183ce2d3bdba50800000000000000
+      internalID: 6538579952499432344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 352
+        width: 36
+        height: 27
+      alignment: 9
+      pivot: {x: 0.2205624, y: 0.295079}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8a5481d3d42f1d0800000000000000
+      internalID: -3318505050623072017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 349
+        width: 86
+        height: 28
+      alignment: 9
+      pivot: {x: 0.306993, y: 0.37425232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02518d2caeaebe3b0800000000000000
+      internalID: -5482029827381258976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 346
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.19820634, y: 0.27136877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d1d73bb4014cdc0800000000000000
+      internalID: -3619750283179123418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 233
+        width: 73
+        height: 42
+      alignment: 9
+      pivot: {x: 0.23817089, y: 0.5119756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ac6d8a2620329a0800000000000000
+      internalID: -6259156434352158091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 248
+        width: 86
+        height: 31
+      alignment: 9
+      pivot: {x: 0.21341439, y: 0.6460276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ac8b9174fd1e750800000000000000
+      internalID: 6332588047526840856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 242
+        width: 86
+        height: 41
+      alignment: 9
+      pivot: {x: 0.28359842, y: 0.25464016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de36457133f24cc90800000000000000
+      internalID: -7150538411876260883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 253
+        width: 86
+        height: 18
+      alignment: 9
+      pivot: {x: 0.25435477, y: 0.44411215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 805c59d8e5d076ef0800000000000000
+      internalID: -115108565721168632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 244
+        width: 87
+        height: 33
+      alignment: 9
+      pivot: {x: 0.24561565, y: 0.22564328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35901607d98786c60800000000000000
+      internalID: 7811626171264731475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 146
+        width: 87
+        height: 23
+      alignment: 9
+      pivot: {x: 0.30343014, y: 0.43439317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012a2ba493f4fafb0800000000000000
+      internalID: -4634398384055999984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 135
+        width: 57
+        height: 34
+      alignment: 9
+      pivot: {x: 0.13820234, y: 0.30768135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ac8936970f553d0800000000000000
+      internalID: -3218401954533684634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 136
+        width: 42
+        height: 33
+      alignment: 9
+      pivot: {x: 0.20060222, y: 0.45427403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53cb99f7a208d0b70800000000000000
+      internalID: 8866884161380138037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 137
+        width: 77
+        height: 34
+      alignment: 9
+      pivot: {x: 0.114594296, y: 0.3224752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b14ffb62b8fe2b80800000000000000
+      internalID: -8417517208309120591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 138
+        width: 82
+        height: 31
+      alignment: 9
+      pivot: {x: 0.34051588, y: 0.32152042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d138d1ecfb9116b20800000000000000
+      internalID: 3125807927959323421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 31
+        width: 69
+        height: 37
+      alignment: 9
+      pivot: {x: 0.23757182, y: 0.5271885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d0b65490889e8f0800000000000000
+      internalID: -510727509329113831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 29
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.26048207, y: 0.5661826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f9c81417b151e60800000000000000
+      internalID: 7932276491927986001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 32
+        width: 47
+        height: 33
+      alignment: 9
+      pivot: {x: 0.24315497, y: 0.5304845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8b5b9da3ef0d980800000000000000
+      internalID: -8516027366643484441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 29
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77dcda5b01473e0e0800000000000000
+      internalID: -2241820574384009865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3844f6776c9163047bdd79b4cf4e710c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_0: -4577589433201684068
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_1: 6538579952499432344
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_10: -4634398384055999984
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_11: -3218401954533684634
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_12: 8866884161380138037
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_13: -8417517208309120591
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_14: 3125807927959323421
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_15: -510727509329113831
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_16: 7932276491927986001
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_17: -8516027366643484441
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_18: -2241820574384009865
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_2: -3318505050623072017
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_3: -5482029827381258976
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_4: -3619750283179123418
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_5: -6259156434352158091
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_6: 6332588047526840856
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_7: -7150538411876260883
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_8: -115108565721168632
+      png-clipart-sprite-firearm-weapon-gun-rimfire-ammunition-sprite-angle-ak47-removebg-preview_9: 7811626171264731475
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

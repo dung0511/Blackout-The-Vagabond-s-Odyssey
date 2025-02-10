@@ -29,16 +29,17 @@ public class MoveController : MonoBehaviour
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
-        if (Mathf.Abs(moveInput.x) > 0.01 || Mathf.Abs(moveInput.y) > 0.01)
+
+        
+        if (moveInput.magnitude > 1)
         {
-            
-            anim.SetBool("isMoving", true);
+            moveInput = moveInput.normalized;
         }
-        else
-        {
-            anim.SetBool("isMoving", false);
-        }
-        rd.linearVelocity = new Vector2(moveInput.x * speed, moveInput.y * speed);
+
+       
+        anim.SetBool("isMoving", moveInput.magnitude > 0.01f);
+
+        rd.linearVelocity = moveInput * speed;
 
     }
 }

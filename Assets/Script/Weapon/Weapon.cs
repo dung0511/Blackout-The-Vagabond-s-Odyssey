@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     public Transform firePos;
     public float TimeBtwFire = 0.2f;
     public float bulletForce;
-    public float BulletDame;
+    public int BulletDame;
     private float timeBtwFire = 0;
     public GameObject weapon;
     public SpriteRenderer currentCharacterSR;
@@ -34,24 +34,23 @@ public class Weapon : MonoBehaviour
     }
     void RotateGun()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane; 
 
-        Vector2 lookDir = mousePos - transform.position;
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector2 lookDir = (Vector2)(worldMousePos - transform.position);
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
-        transform.rotation = rotation;
-        if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-        {
-            transform.localScale = new Vector3((float)0.2, (float)-0.2, 0);
-            currentCharacterSR.gameObject.transform.localScale = new Vector3(-1, currentCharacterSR.gameObject.transform.localScale.y, 0);
-        }
-        else
-        {
-            transform.localScale = new Vector3((float)0.2, (float)0.2, 0);
-            currentCharacterSR.gameObject.transform.localScale = new Vector3(1, currentCharacterSR.gameObject.transform.localScale.y, 0);
-        }
+        
+        transform.rotation = Quaternion.Euler(0, 0, angle);
 
+       
+        bool isFlipped = angle > 90 || angle < -90;
+        transform.localScale = new Vector3(0.2f, isFlipped ? -0.2f : 0.2f, 1);
+
+        
+        currentCharacterSR.gameObject.transform.localScale = new Vector3(isFlipped ? -1 : 1,
+                                                                         currentCharacterSR.gameObject.transform.localScale.y, 1);
     }
 
     public void Fire()
@@ -77,4 +76,5 @@ public class Weapon : MonoBehaviour
         }
 
     }
+    
 }

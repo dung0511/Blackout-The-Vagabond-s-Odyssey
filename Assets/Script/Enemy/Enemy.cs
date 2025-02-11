@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -6,40 +7,37 @@ public class Enemy : MonoBehaviour
     public float speed;
     public int health;
     public Animator animator;
-    //private bool isTouchPlayer=false;
+    public bool isHurt;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        isHurt = false;
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (isTouchPlayer)
-    //    {
-    //        animator.SetBool("isAttack1", true);
-    //    }
-    //    else animator.SetBool("isAttack1", false);
-    //}
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
+    void Update()
+    {
+        animator.SetBool("isHurt", isHurt);
+    }
 
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Bullet bullet = collision.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            isHurt = true;
+            Debug.Log("Is hurt is true");
+            StartCoroutine(ResetHurt());
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    MoveController player = collision.GetComponent<MoveController>();
-    //    if (player != null)
-    //    {
-    //        isTouchPlayer=true;
-    //        Debug.Log(isTouchPlayer);
-    //    }
-    //    //isTouchPlayer = false;
-    //}
+            
+            Destroy(collision.gameObject);
+        }
+    }
 
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    isTouchPlayer = false;
-    //    Debug.Log(isTouchPlayer);
-    //}
+    private IEnumerator ResetHurt()
+    {
+        yield return new WaitForSeconds(0.5f); 
+        isHurt = false;
+        Debug.Log("Is hurt is false");
+    }
 }

@@ -21,6 +21,8 @@ public class Bullet : MonoBehaviour
         {
             enemy.takeDame(bulletDamage.BulletDame);
             Debug.Log("player dealt: "+ bulletDamage.BulletDame);
+           
         }
+        
     }
 }

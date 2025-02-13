@@ -16,16 +16,6 @@ public class PropPlacer : MonoBehaviour
     public void ProcessRoom(RectangleRoom room)
     {
         Reset();
-        // Place corner props
-        // List<Prop> cornerProps = props.FindAll(p => p.corner);
-        // PlaceCornerProps(room, cornerProps);
-
-        //Place props near LEFT wall
-        // List<Prop> leftWallProps = propsToPlace
-        // .Where(x => x.NearWallLeft)
-        // .OrderByDescending(x => x.PropSize.x * x.PropSize.y)
-        // .ToList();
-        // PlaceProps(room, leftWallProps, room.NearWallTilesLeft, ObjectOriginCorner.BottomLeft);
     }
 
     public void PlaceCornerProps(RectangleRoom room)
@@ -115,13 +105,16 @@ public class PropPlacer : MonoBehaviour
     {
         //avoid placement in entrances path
         HashSet<Vector2Int> tempPositons = new HashSet<Vector2Int>(nearWallTiles);
-        tempPositons.ExceptWith(DungeonData.path);
+        if(!nearWallProps[0].inner) tempPositons.ExceptWith(DungeonData.path);
 
         foreach (Prop propToPlace in nearWallProps)
         {
             //We want to place only certain quantity of each prop
             int quantity = Random.Range(propToPlace.minQuantity, propToPlace.maxQuantity +1);
-
+            int diam = (room.size[0] + room.size[1])/2;
+            if(diam > 14) quantity++;
+            if(diam > 16) quantity++;
+            
             for (int i = 0; i < quantity; i++)
             {
                 tempPositons.ExceptWith(room.propPositions);
@@ -142,34 +135,24 @@ public class PropPlacer : MonoBehaviour
             //select the specified position (but it can be already taken after placing the corner props as a group)
             Vector2Int position = availablePositions[i];
             bool taken = false;
-            // for (int x = 0; x < propToPlace.propSize.x; x++)
-            // {
-            //     for (int y = 0; y < propToPlace.propSize.y; y++)
-            //     {
-            //         if (room.propPositions.Contains(position + new Vector2Int(x, y)))
-            //         {
-            //             taken = true;
-            //             break;
-            //         }
-            //     }
-            //     if (taken)
-            //         break;
-            // }
+
             if (room.propPositions.Contains(position) || taken)
                 continue;
 
             //check if there is enough space around to fit the prop
             List<Vector2Int> freePositionsAround = new();
-            // if(propToPlace.inner) 
-            // {
-            //     // float roomSizeAverage = (room.size[0] + room.size[1]) / 2f;
-            //     // roomSizeAverage = Mathf.Round(roomSizeAverage);
-            //     int offset = 1; //space between 2 objects
-            //     // if(roomSizeAverage < 15) offset = 1;
-            //     freePositionsAround = TryToFitInnerProp(propToPlace, availablePositions, position, offset, room.propPositions);
-            // }
-            // else
-                freePositionsAround = TryToFitProp(propToPlace, availablePositions, position, room);
+            if(propToPlace.inner) 
+            {
+                float roomSizeAverage = (room.size[0] + room.size[1]) / 2f;
+                roomSizeAverage = Mathf.Round(roomSizeAverage);
+                int offset = 2; //space between 2 objects
+                if(roomSizeAverage < 12) offset = 1;
+                freePositionsAround = TryToFitInnerProp(propToPlace, availablePositions, position, offset, room.propPositions);
+            }
+            else
+            {
+                freePositionsAround = TryToFitProp(propToPlace, availablePositions, position);
+            }
             //If we have enough spaces place the prop
             if (freePositionsAround.Count == propToPlace.propSize.x * propToPlace.propSize.y)
             {
@@ -188,6 +171,7 @@ public class PropPlacer : MonoBehaviour
                     if(propToPlace.inner) PlaceInnerGroupProp(room, position, propToPlace);
                     else PlaceGroupProp(room, position, propToPlace);
                 }
+                availablePositions.Except(room.propPositions);
                 return true;
             }
         }
@@ -195,11 +179,46 @@ public class PropPlacer : MonoBehaviour
         return false;
     }
 
+    private List<Vector2Int> TryToFitInnerProp(
+        Prop prop, List<Vector2Int> availablePositions, 
+        Vector2Int originPosition, int offset, HashSet<Vector2Int> propPositions)
+    {
+        List<Vector2Int> freePositions = new();
+
+        for (int xOffset = 0; xOffset < prop.propSize.x; xOffset++)
+        {
+            for (int yOffset = 0; yOffset < prop.propSize.y; yOffset++)
+            {
+                bool adjacent = false;
+                Vector2Int tempPos = originPosition + new Vector2Int(xOffset, yOffset);
+                
+                if (availablePositions.Contains(tempPos) )
+                {
+                    
+                    for(int x=-offset; x<=offset; x++)
+                    {
+                        for(int y=-offset; y<=offset; y++)
+                        {
+                            Vector2Int checkPos = tempPos + new Vector2Int(x, y);
+                            if(!availablePositions.Contains(checkPos))
+                            {
+                                adjacent = true;
+                                break;
+                            }
+                        }
+                        if(adjacent) break;
+                    }
+                    if(!adjacent) freePositions.Add(tempPos); 
+                }
+            }
+        }
+        return freePositions;
+    }
+
     private List<Vector2Int> TryToFitProp(
         Prop prop,
         List<Vector2Int> availablePositions,
-        Vector2Int originPosition,
-        RectangleRoom room)
+        Vector2Int originPosition)
     {
         List<Vector2Int> freePositions = new();
 
@@ -209,7 +228,9 @@ public class PropPlacer : MonoBehaviour
             {
                 Vector2Int tempPos = originPosition + new Vector2Int(xOffset, yOffset);
                 if (availablePositions.Contains(tempPos) )
-                    freePositions.Add(tempPos);
+                {
+                    freePositions.Add(tempPos); 
+                }
             }
         }
         return freePositions;

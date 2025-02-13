@@ -10,7 +10,7 @@ public class MapVisualizer : MonoBehaviour
     [SerializeField] private TileBase floorTile; 
     [SerializeField] private TileBase wallTile;
     [SerializeField] private GameObject doorParent; // up/down, left, right
-    [SerializeField] private GameObject[] doors; // up/down, left, right
+    [SerializeField] private GameObject[] doors; // front. side
 
     public void PlaceTiles(IEnumerable<Vector2Int> path)
     {

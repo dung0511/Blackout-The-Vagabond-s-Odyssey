@@ -11,8 +11,8 @@ TagManager:
   - Background
   - Water
   - UI
-  - 
-  - 
+  - Object
+  - Character
   - 
   - 
   - 
@@ -43,6 +43,12 @@ TagManager:
     locked: 0
   - name: Map
     uniqueID: 3846639383
+    locked: 0
+  - name: Objects
+    uniqueID: 1090378573
+    locked: 0
+  - name: Character
+    uniqueID: 1794060529
     locked: 0
   m_RenderingLayers:
   - Default

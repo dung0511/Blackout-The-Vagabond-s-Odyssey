@@ -37,26 +37,28 @@ public static class ProceduralGeneration
         return path;
     }
 
-    public static List<Vector2Int> DirectedCorridor(Vector2Int startPos, int numSteps, Vector2Int direction)
-    {
-        List<Vector2Int> corridorPath = new List<Vector2Int>();
+    public static (List<Vector2Int> corridorPath, HashSet<Vector2Int> minPath) DirectedCorridor(Vector2Int startPos, int numSteps, Vector2Int direction)
+{
+    List<Vector2Int> corridorPath = new List<Vector2Int>();
+    HashSet<Vector2Int> minPath = new HashSet<Vector2Int>();
 
-        Vector2Int currentPos = startPos;
-        for (int i = 0; i < numSteps; i++)
+    Vector2Int currentPos = startPos;
+    for (int i = 0; i < numSteps; i++)
+    {
+        for (int x = -1; x <= 1; x++)
         {
-            for (int x = -1; x <= 1; x++)
+            for (int y = -1; y <= 1; y++)
             {
-                for (int y = -1; y <= 1; y++)
-                {
-                    Vector2Int offset = new Vector2Int(x, y);
-                    corridorPath.Add(currentPos + offset);
-                }
+                Vector2Int offset = new Vector2Int(x, y);
+                corridorPath.Add(currentPos + offset);
             }
-            currentPos += direction;
-            corridorPath.Add(currentPos);          
         }
-        return corridorPath;
+        minPath.Add(currentPos);
+        currentPos += direction;
+        corridorPath.Add(currentPos);
     }
+    return (corridorPath, minPath);
+}
 }
 
 public static class Direction2D

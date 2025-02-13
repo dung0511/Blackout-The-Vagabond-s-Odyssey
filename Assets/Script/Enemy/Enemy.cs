@@ -8,36 +8,54 @@ public class Enemy : MonoBehaviour
     public int health;
     public Animator animator;
     public bool isHurt;
+    //public bool isAttack1;
 
     void Start()
     {
+       // isAttack1 = false;
         animator = GetComponent<Animator>();
         isHurt = false;
     }
 
     void Update()
     {
+        animator.SetBool("isAttack1", checkAttack());
+        isHurt=GetComponent<EnemyHealth>().isHurt;
         animator.SetBool("isHurt", isHurt);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Bullet bullet = collision.GetComponent<Bullet>();
-        if (bullet != null)
-        {
-            isHurt = true;
-            Debug.Log("Is hurt is true");
-            StartCoroutine(ResetHurt());
+        //Bullet bullet = collision.GetComponent<Bullet>();
+        //if (bullet != null)
+        //{
+        //    isHurt = true;
+        //    Debug.Log("Is hurt is true");
+        //    StartCoroutine(ResetHurt());
 
             
-            Destroy(collision.gameObject);
-        }
+        //    Destroy(collision.gameObject);
+        //}
     }
 
-    private IEnumerator ResetHurt()
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    Bullet bullet = collision.collider.GetComponent<Bullet>();
+    //    if (bullet != null)
+    //    {
+    //        isHurt = true;
+    //        Debug.Log("Is hurt is true");
+    //        StartCoroutine(ResetHurt());
+
+
+    //        Destroy(collision.gameObject);
+    //    }
+    //}
+
+    private bool checkAttack()
     {
-        yield return new WaitForSeconds(0.5f); 
-        isHurt = false;
-        Debug.Log("Is hurt is false");
+        return GetComponentInChildren<EnemyInteractZone>().isTouchPlayer;
     }
+
+    
 }

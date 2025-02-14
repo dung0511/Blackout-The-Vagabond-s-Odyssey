@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public EnemyDetailSO enemyDetails;
+    private MiniOrc_Movement_AI miniOrc_Movement_AI;
+    [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
+
     public int damage;
     public float speed;
     public int health;
@@ -12,7 +16,10 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-       // isAttack1 = false;
+        miniOrc_Movement_AI = GetComponent<MiniOrc_Movement_AI>();
+        movementToPositionEvent = GetComponent<MovementToPositionEvent>();
+
+        // isAttack1 = false;
         animator = GetComponent<Animator>();
         isHurt = false;
     }

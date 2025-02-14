@@ -27,4 +27,71 @@ public static class Utility
     {
         return rng.Next(min, max);
     }
+
+    /// <summary>
+    /// Empty string debug check
+    /// </summary>
+    public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
+    {
+        if (stringToCheck == "")
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// null value debug check
+    /// </summary>
+    public static bool ValidateCheckNullValue(Object thisObject, string fieldName, UnityEngine.Object objectToCheck)
+    {
+        if (objectToCheck == null)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// positive value debug check - if zero is allowed set isZeroAllowed to true. Returns true if there is an error
+    /// </summary>
+    public static bool ValidateCheckPositiveValue(Object thisObject, string fieldName, float valueToCheck, bool isZeroAllowed)
+    {
+        bool error = false;
+
+        if (isZeroAllowed)
+        {
+            if (valueToCheck < 0)
+            {
+                error = true;
+            }
+        }
+        else
+        {
+            if (valueToCheck <= 0)
+            {
+                error = true;
+            }
+        }
+
+        return error;
+    }
+    /// <summary>
+    /// positive range debug check - set isZeroAllowed to true if the min and max range values can both be zero. Returns true if there is an error
+    /// </summary>
+    public static bool ValidateCheckPositiveRange(Object thisObject, string fieldNameMinimum, float valueToCheckMinimum, string fieldNameMaximum, float valueToCheckMaximum, bool isZeroAllowed)
+    {
+        bool error = false;
+        if (valueToCheckMinimum > valueToCheckMaximum)
+        {
+            Console.WriteLine("Error");
+            error = true;
+        }
+
+        if (ValidateCheckPositiveValue(thisObject, fieldNameMinimum, valueToCheckMinimum, isZeroAllowed)) error = true;
+
+        if (ValidateCheckPositiveValue(thisObject, fieldNameMaximum, valueToCheckMaximum, isZeroAllowed)) error = true;
+
+        return error;
+    }
 }

@@ -9,7 +9,7 @@ public class Prop : ScriptableObject
     public Vector2Int propSize = Vector2Int.one;
 
     [Header("Quantity: ")]
-    [Min(1)] public int minQuantity = 1;
+    [Min(0)] public int minQuantity = 1;
     [Min(1)] public int maxQuantity = 1;
 
     [Header("Group:")]
@@ -23,7 +23,5 @@ public class Prop : ScriptableObject
     public bool nearBottomWall = false;
     public bool nearLeftWall = false;
     public bool nearRightWall = false;
-    public bool inner = true;
-    public int groupWithOthers = 0;
-    
+    public bool inner = true;    
 }

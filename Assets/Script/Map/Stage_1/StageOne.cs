@@ -35,20 +35,22 @@ public class StageOne : AbstractDungeonGenerator
                 case RoomType.Normal:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
+                    propPlacer.PlaceTraps(room);
                     break;
                 case RoomType.Elite:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
+                    propPlacer.PlaceTraps(room);
                     break;
                 case RoomType.Treasure:
-
+                    propPlacer.PlaceTopWallProps(room);
                     break;
                 case RoomType.Shop:
                     propPlacer.PlaceLeftWallProps(room);
                     propPlacer.PlaceRightWallProps(room);
                     break;
                 case RoomType.Exit:
-                    
+                    propPlacer.PlaceTraps(room);
                     break;
                 default:
                     Debug.LogError("Invalid room type: " + room.roomType);

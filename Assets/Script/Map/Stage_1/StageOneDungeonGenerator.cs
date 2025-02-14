@@ -83,7 +83,6 @@ public class StageOneDungeonGenerator : StageOne
     private void SetRoomType(HashSet<Vector2Int> deadEnds)
     {
         var tmp = DungeonData.rooms.Where(x => x.roomType != RoomType.Spawn).ToList();
-        Debug.Log("total rooms: " + DungeonData.rooms.Count);
         //Set exit (furthest), treasure room (2nd furthest)
         if(deadEnds.Count == 1){
             DungeonData.rooms.FirstOrDefault(x => x.center == deadEnds.First()).roomType = RoomType.Exit;
@@ -124,8 +123,6 @@ public class StageOneDungeonGenerator : StageOne
         var sr = DungeonData.rooms.ElementAt(shopIndex);
         sr.roomType = RoomType.Shop;
         Debug.Log("Shop: "+sr.center);
-                Debug.Log("total rooms: " + DungeonData.rooms.Count);
-
     }
 
     private Vector2Int FindFurthestRoomByWorld(HashSet<Vector2Int> deadEnds)

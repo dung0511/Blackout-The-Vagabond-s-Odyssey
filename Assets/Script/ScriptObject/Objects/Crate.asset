@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 1824006317161249655, guid: 1a76efaec1a0c344aa39d3b16a284b00, type: 3}
   propSize: {x: 1, y: 1}
   minQuantity: 1
-  maxQuantity: 4
+  maxQuantity: 3
   placeAsGroup: 1
   minGroupSize: 2
   maxGroupSize: 4
@@ -26,3 +26,4 @@ MonoBehaviour:
   nearLeftWall: 1
   nearRightWall: 1
   inner: 0
+  groupWithOthers: 0

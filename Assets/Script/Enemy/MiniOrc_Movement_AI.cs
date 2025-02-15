@@ -60,8 +60,10 @@ public class MiniOrc_Movement_AI : MonoBehaviour
         //{
         //    currentWaypoint++;
         //}
-        if(enemy.health > 0)
+        if (enemy.health > 0 )
         {
+            //MoveEnemy();
+            InvokeRepeating("chasePlayerCheck", 0f, 0.5f);
             MoveEnemy();
         }
         //else if (enemy.health <= 0)
@@ -71,14 +73,23 @@ public class MiniOrc_Movement_AI : MonoBehaviour
         
     }
 
-    private void MoveEnemy()
+    void chasePlayerCheck()
     {
-        if (!chasePlayer && Vector3.Distance(transform.position, target.position ) < enemy.enemyDetails.chaseDistance)
+        if (!chasePlayer && Vector3.Distance(transform.position, target.position) < enemy.enemyDetails.chaseDistance)
         {
             chasePlayer = true;
         }
+        if (Vector3.Distance(transform.position, target.position) < .5f) chasePlayer = false;
+    }
+    private void MoveEnemy()
+    {
+        //if (!chasePlayer && Vector3.Distance(transform.position, target.position ) < enemy.enemyDetails.chaseDistance)
+        //{
+        //    chasePlayer = true;
+        //}
+        //if(Vector3.Distance(transform.position, target.position) < .5f) chasePlayer = false;
         if (!chasePlayer) return;
-        enemy.movementToPositionEvent.CallMovementToPositionEvent(target.position, transform.position, moveSpeed, (target.position - transform.position).normalized);
+        else enemy.movementToPositionEvent.CallMovementToPositionEvent(target.position, transform.position, moveSpeed, (target.position - transform.position).normalized);
     }
 
     #region Validation

@@ -9,9 +9,9 @@ public class PropPlacer : MonoBehaviour
 {
     [SerializeField] private List<Prop> props;
     [SerializeField] private List<Prop> lightProps;
-    [SerializeField, Range(0,1)] private float lightPropChance = 0.5f;
+    [SerializeField] private List<Prop> trapProps;
     [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f;
-    public GameObject propParent;
+    [SerializeField] private GameObject propParent;
     
     public void ProcessRoom(RectangleRoom room)
     {
@@ -46,19 +46,27 @@ public class PropPlacer : MonoBehaviour
     public void PlaceInnerProps(RectangleRoom room)
     {
         //Place props near RIGHT wall
-        List<Prop> innerProp = props
+        List<Prop> innerProps = props
         .Where(x => x.inner)
         .OrderByDescending(x => x.propSize.x * x.propSize.y)
         .ToList();
-        PlaceProps(room, innerProp, room.inners);
+        PlaceProps(room, innerProps, room.inners);
     }
     
+    public void PlaceTraps(RectangleRoom room)
+    {
+        List<Prop> traps = trapProps
+        .OrderByDescending(x => x.propSize.x * x.propSize.y)
+        .ToList();
+        PlaceTraps(room, traps);
+    }
+
     public void PlaceLights(RectangleRoom room)
     {
-        if(Utility.UnseededRng(0, 100) <= lightPropChance*100)  PlaceProps(room, lightProps, room.nearLeftWall);
-        if(Utility.UnseededRng(0, 100) <= lightPropChance*100)  PlaceProps(room, lightProps, room.nearRightWall);
-        if(Utility.UnseededRng(0, 100) <= lightPropChance*100)  PlaceProps(room, lightProps, room.nearTopWall);
-        if(Utility.UnseededRng(0, 100) <= lightPropChance*100)  PlaceProps(room, lightProps, room.nearBottomWall);
+        PlaceProps(room, lightProps, room.nearLeftWall);
+        PlaceProps(room, lightProps, room.nearRightWall);
+        PlaceProps(room, lightProps, room.nearTopWall);
+        PlaceProps(room, lightProps, room.nearBottomWall);
     }
 
     public void PlaceLeftWallProps(RectangleRoom room)
@@ -112,7 +120,7 @@ public class PropPlacer : MonoBehaviour
             //We want to place only certain quantity of each prop
             int quantity = Random.Range(propToPlace.minQuantity, propToPlace.maxQuantity +1);
             int diam = (room.size[0] + room.size[1])/2;
-            if(diam > 14) quantity++;
+            if(diam > 13) quantity++;
             if(diam > 16) quantity++;
             
             for (int i = 0; i < quantity; i++)
@@ -147,7 +155,7 @@ public class PropPlacer : MonoBehaviour
                 roomSizeAverage = Mathf.Round(roomSizeAverage);
                 int offset = 2; //space between 2 objects
                 if(roomSizeAverage < 12) offset = 1;
-                freePositionsAround = TryToFitInnerProp(propToPlace, availablePositions, position, offset, room.propPositions);
+                freePositionsAround = TryToFitInnerProp(propToPlace, availablePositions, position, offset);
             }
             else
             {
@@ -181,7 +189,7 @@ public class PropPlacer : MonoBehaviour
 
     private List<Vector2Int> TryToFitInnerProp(
         Prop prop, List<Vector2Int> availablePositions, 
-        Vector2Int originPosition, int offset, HashSet<Vector2Int> propPositions)
+        Vector2Int originPosition, int offset)
     {
         List<Vector2Int> freePositions = new();
 
@@ -194,7 +202,6 @@ public class PropPlacer : MonoBehaviour
                 
                 if (availablePositions.Contains(tempPos) )
                 {
-                    
                     for(int x=-offset; x<=offset; x++)
                     {
                         for(int y=-offset; y<=offset; y++)
@@ -235,6 +242,74 @@ public class PropPlacer : MonoBehaviour
         }
         return freePositions;
     }
+
+    private void PlaceTraps(RectangleRoom room, List<Prop> traps)
+    {
+        //avoid placement in entrances path
+        HashSet<Vector2Int> tempPositons = new HashSet<Vector2Int>(room.roomTiles);
+
+        foreach (Prop propToPlace in traps)
+        {
+            //We want to place only certain quantity of each prop
+            int quantity = Random.Range(propToPlace.minQuantity, propToPlace.maxQuantity +1);
+            int diam = (room.size[0] + room.size[1])/2;
+            if(diam > 13) quantity++;
+            if(diam > 16) quantity++;
+            
+            for (int i = 0; i < quantity; i++)
+            {
+                tempPositons.ExceptWith(room.propPositions);
+                List<Vector2Int> availablePositions = tempPositons.ToList();
+                Utility.UnseededShuffle(availablePositions);
+  
+                //If the prop cant be placed, stop trying to place the same prop again
+                if (TryPlacingTrapBruteForce(room, propToPlace, availablePositions) == false) break;
+            }
+        }
+    }
+
+    private bool TryPlacingTrapBruteForce(RectangleRoom room, Prop propToPlace, List<Vector2Int> availablePositions)
+    {
+         //try placing the objects starting from the corner specified by the placement parameter
+        for (int i = 0; i < availablePositions.Count; i++)
+        {
+            //select the specified position (but it can be already taken after placing the corner props as a group)
+            Vector2Int position = availablePositions[i];
+            if (room.propPositions.Contains(position))  continue;
+
+            //check if there is enough space around to fit the prop            
+            float roomSizeAverage = (room.size[0] + room.size[1]) / 2f;
+            roomSizeAverage = Mathf.Round(roomSizeAverage);
+            int offset = 2; //space between 2 objects
+            if(roomSizeAverage < 12) offset = 1;
+            List<Vector2Int> freePositionsAround = TryToFitInnerProp(propToPlace, availablePositions, position, offset);
+            
+
+            //If we have enough spaces place the prop
+            if (freePositionsAround.Count == propToPlace.propSize.x * propToPlace.propSize.y)
+            {
+                //Place the gameobject
+                PlacePropAt(room, position, propToPlace);
+                //Lock all the positions recquired by the prop (based on its size)
+                foreach (Vector2Int pos in freePositionsAround)
+                {
+                    //Hashest will ignore duplicate positions
+                    room.propPositions.Add(pos);
+                }
+
+                //Deal with groups
+                if (propToPlace.placeAsGroup)
+                {
+                    PlaceGroupTrap(room, position, propToPlace);
+                }
+                availablePositions.Except(room.propPositions);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
     private void PlaceCornerGroupProp(RectangleRoom room, Vector2Int startingPos, Prop prop)
     {   //fixed offset and placement position can make bigger prop poorly placed
@@ -355,8 +430,7 @@ public class PropPlacer : MonoBehaviour
                     }
                     if(taken) break;
                 }
-                if(room.inners.Contains(checkPos) && 
-                !DungeonData.path.Contains(checkPos) &&
+                if(room.inners.Contains(checkPos) &&
                 !room.propPositions.Contains(checkPos) && !taken)
                 {                   
                     availableSpaces.Add(checkPos);   
@@ -374,6 +448,53 @@ public class PropPlacer : MonoBehaviour
         for (int i = 0; i < validCount; i++)
         {
             PlacePropAt(room, availableSpaces[i], prop);
+        }
+    }
+
+    private void PlaceGroupTrap(RectangleRoom room, Vector2Int startingPos, Prop trap)
+    {
+        int count = (int) Utility.UnseededRng(trap.minGroupSize, trap.maxGroupSize);
+        //find valid space around group placement startingPos
+        List<Vector2Int> availableSpaces = new();
+        
+        for(int i=0; i<=count; i++)
+        {
+            bool taken = false;
+            for(int x = 0; x < trap.propSize.x; x++)
+            {
+                for(int y = 0; y < trap.propSize.y; y++)
+                {
+                    if(room.propPositions.Contains(startingPos + new Vector2Int(x, y)))
+                    {
+                        taken = true;
+                        break;
+                    }
+                }
+                if(taken) break;
+            }
+            if(room.roomTiles.Contains(startingPos) && 
+            !DungeonData.path.Contains(startingPos) &&
+            !room.propPositions.Contains(startingPos) && !taken)
+            {                   
+                availableSpaces.Add(startingPos);   
+            }
+            while(true)
+            {
+                startingPos += Direction2D.GetRandomDirection();
+                if(availableSpaces.Contains(startingPos))
+                {
+                    startingPos = availableSpaces[Utility.UnseededRng(0, availableSpaces.Count)];
+                    continue;
+                }
+                break;
+            }
+        }
+        
+        int validCount = count < availableSpaces.Count ? count : availableSpaces.Count;
+        
+        for (int i = 0; i < validCount; i++)
+        {
+            PlacePropAt(room, availableSpaces[i], trap);
         }
     }
 

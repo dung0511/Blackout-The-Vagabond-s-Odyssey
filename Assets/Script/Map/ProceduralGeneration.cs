@@ -12,7 +12,7 @@ public static class ProceduralGeneration
 
         for (int i = 0; i < numSteps; i++)
         {
-            currentPos = Direction2D.GetRandomDirection() + currentPos;
+            currentPos += Direction2D.GetRandomDirection();
             path.Add(currentPos);
         }
 

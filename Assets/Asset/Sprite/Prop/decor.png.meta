@@ -189,15 +189,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: decor_0
+      name: bookshelf
       rect:
         serializedVersion: 2
-        x: 3
-        y: 119
-        width: 18
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4
+        y: 120
+        width: 16
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -690,8 +690,8 @@ TextureImporter:
       Pillar: -2603311821418127281
       barrel_1: 6892907418128013141
       barrel_2: -6709542322131757786
+      bookshelf: -6252805913084083930
       crate_1: -8736868614615867972
-      decor_0: -6252805913084083930
       decor_1: 8843726661577706292
       decor_10: -626145753933744596
       decor_11: -5763186658515932357

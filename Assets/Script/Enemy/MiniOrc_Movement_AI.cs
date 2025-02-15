@@ -60,7 +60,15 @@ public class MiniOrc_Movement_AI : MonoBehaviour
         //{
         //    currentWaypoint++;
         //}
-        MoveEnemy();
+        if(enemy.health > 0)
+        {
+            MoveEnemy();
+        }
+        //else if (enemy.health <= 0)
+        //{
+        //    enemy.health = 0;
+        //}
+        
     }
 
     private void MoveEnemy()

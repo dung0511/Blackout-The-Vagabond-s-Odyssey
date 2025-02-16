@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class StageOneDungeonGenerator : StageOne
 {
@@ -26,9 +27,11 @@ public class StageOneDungeonGenerator : StageOne
         
         CreateCorridors(floorPositions, potentialRoomPositions);
         CreateSpawnRoom(floorPositions);
-        HashSet<Vector2Int> deadEnds = GetDeadEnds(floorPositions);
+        HashSet<Vector2Int> deadEnds = GetDeadEnds(DungeonData.path);
         SetRandomRoom(potentialRoomPositions, roomChance, deadEnds);
-        SetRoomType(deadEnds);
+        //store rooms by distance from spawn
+        var roomsByDistAsc = ProceduralGeneration.BFS(startPos, DungeonData.path, DungeonData.rooms.Select(x => x.center).ToHashSet());
+        SetRoomType(roomsByDistAsc);
         var roomPositions = CreateRooms();
         FindRoomEntrances(floorPositions);
         
@@ -80,47 +83,41 @@ public class StageOneDungeonGenerator : StageOne
         // )));    
     }
 
-    private void SetRoomType(HashSet<Vector2Int> deadEnds)
+    private void SetRoomType(Vector2Int[] roomsByDistAsc)
     {
         var tmp = DungeonData.rooms.Where(x => x.roomType != RoomType.Spawn).ToList();
-        //Set exit (furthest), treasure room (2nd furthest)
-        if(deadEnds.Count == 1){
-            DungeonData.rooms.FirstOrDefault(x => x.center == deadEnds.First()).roomType = RoomType.Exit;
-        } else {
-             var exitPos = FindFurthestRoomByWorld(deadEnds); // Furthest room
-            deadEnds.Remove(exitPos);
-            var treasurePos = FindFurthestRoomByWorld(deadEnds); // 2nd furthest room
-            deadEnds.Remove(treasurePos);
+        
+        //exit furthest
+        var exitPos = roomsByDistAsc[^1];
+        var exitRoom = DungeonData.rooms.FirstOrDefault(x => x.center == exitPos);
+        exitRoom.roomType = RoomType.Exit;
+        //treasure room from 3/5 furthest, avoid next to furthest room (exit)
+        var treasurePos = roomsByDistAsc[Random.Range(roomsByDistAsc.Length * 4 / 7, roomsByDistAsc.Length-2)];
+        var treasureRoom = DungeonData.rooms.FirstOrDefault(x => x.center == treasurePos);
+        treasureRoom.roomType = RoomType.Treasure;
 
-            var exitRoom = DungeonData.rooms.FirstOrDefault(x => x.center == exitPos);
-            var treasureRoom = DungeonData.rooms.FirstOrDefault(x => x.center == treasurePos);
-
-            exitRoom.roomType = RoomType.Exit;
-            treasureRoom.roomType = RoomType.Treasure;
-
-            Debug.Log("Exit room: " + exitPos);
-            Debug.Log("Treasure room: " + treasurePos);
-
-            tmp.Remove(exitRoom);
-            tmp.Remove(treasureRoom); //remove exit and treasure room from tmp, prepare tmp for elite room
-        }  
+        tmp.Remove(exitRoom);
+        tmp.Remove(treasureRoom); //remove exit and treasure room from tmp, prepare tmp for elite room
+        Debug.Log("Exit room: " + exitPos);
+        Debug.Log("Treasure room: " + treasurePos);
 
         //set elite room (random)
         var eliteRoomNum = Mathf.CeilToInt(DungeonData.rooms.Count / 10f);
         
-        Utility.SeededShuffle(tmp);
         for(int i=0; i<eliteRoomNum; i++)
         {
             var index = UnityEngine.Random.Range(0, tmp.Count);
-            var r = DungeonData.rooms.ElementAt(index);
+            var r = tmp.ElementAt(index);
+            r = DungeonData.rooms.FirstOrDefault(x => x.center == r.center);
             r.roomType = RoomType.Elite;
-            tmp.RemoveAt(index); //remove elite room from tmp, prepare tmp for shop room
+            tmp.Remove(r); //remove elite room from tmp, avoid duplicate,prepare tmp for shop room
             Debug.Log("Elite: "+r.center);
         }
 
         //set shop room (random)
         var shopIndex = UnityEngine.Random.Range(0, tmp.Count);
-        var sr = DungeonData.rooms.ElementAt(shopIndex);
+        var sr = tmp.ElementAt(shopIndex);
+        sr = DungeonData.rooms.FirstOrDefault(x => x.center == sr.center);
         sr.roomType = RoomType.Shop;
         Debug.Log("Shop: "+sr.center);
     }
@@ -238,42 +235,31 @@ public class StageOneDungeonGenerator : StageOne
         floorPositions.UnionWith(spawnRoom);
     }
     
-    private HashSet<Vector2Int> GetDeadEnds(HashSet<Vector2Int> floorPositions)
+
+    private HashSet<Vector2Int> GetDeadEnds(HashSet<Vector2Int> path)
     {
         HashSet<Vector2Int> deadEnds = new();
-        HashSet<Vector2Int> deadEndsTmp = new();
-        foreach (var pos in floorPositions)
+        foreach (var pos in path)
         {
             int neighborCount = 0;
             foreach (var direction in Direction2D.Directions)
             {
-                if (floorPositions.Contains(pos + direction*2))
+                if (path.Contains(pos + direction))
                 {
                     neighborCount++;
                 }
             }
             if (neighborCount == 1)
             {
-                deadEndsTmp.Add(pos);
+                deadEnds.Add(pos);
             }
         }
-        foreach(var deadEnd in deadEndsTmp)
-        {
-            foreach (var direction in Direction2D.Directions)
-            {
-                if(!floorPositions.Contains(deadEnd + direction))
-                {
-                    deadEnds.Add(deadEnd);
-                    break;
-                }
-            }
-        }
+        deadEnds.Remove(startPos);
         // Debug.Log("DeadEnds: " + deadEnds.Count);
-        // Debug.Log("Deadend positions: " + string.Join(", ", deadEnds));
         return deadEnds;
     }
 
-    private void SetRandomRoom(HashSet<Vector2Int> potentialRoomPositions, float roomChance, HashSet<Vector2Int> deadEnds)
+    private HashSet<Vector2Int> SetRandomRoom(HashSet<Vector2Int> potentialRoomPositions, float roomChance, HashSet<Vector2Int> deadEnds)
     {
         potentialRoomPositions.Remove(startPos); //exclude spawn room
         HashSet<Vector2Int> roomPositions = new HashSet<Vector2Int>();
@@ -288,6 +274,7 @@ public class StageOneDungeonGenerator : StageOne
                 roomType = RoomType.Normal //default
             });
         }
+        return roomToCreate;
     }
 
     private HashSet<Vector2Int> CreateRooms()
@@ -338,30 +325,47 @@ public class StageOneDungeonGenerator : StageOne
         }
     }
 
-    private void CreateCorridors(HashSet<Vector2Int> floorPositions, HashSet<Vector2Int> potentialRoomPositions)
+private void CreateCorridors(HashSet<Vector2Int> floorPositions, HashSet<Vector2Int> potentialRoomPositions)
+{
+    var currentPos = startPos;
+    potentialRoomPositions.Add(currentPos);
+    int safe = 0;
+    for (int i = 0; i < corridorNums; i++)
     {
-
-        var currentPos = startPos;
-        potentialRoomPositions.Add(currentPos);
-        for (int i = 0; i < corridorNums; i++)
+        var direction = Direction2D.GetRandomDirection();
+        var (corridorPath, thinPath) = ProceduralGeneration.DirectedCorridor(currentPos, corridorLength, direction);
+        bool hasRoomable = floorPositions.Contains(currentPos+direction*corridorLength);  
+        bool hasCorridor = floorPositions.Contains(currentPos + direction * (corridorLength / 2));  // check if there is a corridor connection
+        if (hasRoomable)
         {
-            var direction = Direction2D.GetRandomDirection();
-            var (corridorPath, minPath) = ProceduralGeneration.DirectedCorridor(currentPos, corridorLength, direction);
-            bool hasOverlap = corridorPath.Any(pos => floorPositions.Contains(pos+direction*3));  
-            if (!hasOverlap)
-            {
-                currentPos = corridorPath[corridorPath.Count - 1];
-                potentialRoomPositions.Add(currentPos);
-                DungeonData.path.UnionWith(minPath);
-                DungeonData.corridorPath.Add(currentPos);
-                floorPositions.UnionWith(corridorPath); // add corridor path to floorPositions
-            }
-            else
+            if (hasCorridor) // nothing to generate, go elsewhere
             {
                 currentPos = potentialRoomPositions.ElementAt(UnityEngine.Random.Range(0, potentialRoomPositions.Count));
-                i--;
+                --i;
+            }
+            else // connect it
+            {
+                currentPos = thinPath[thinPath.Count-1];
+                DungeonData.path.UnionWith(thinPath);
+                DungeonData.corridorPath.Add(currentPos);
+                floorPositions.UnionWith(corridorPath);
+                --i;
             }
         }
+        else // if destination never reached, do as normal
+        {
+                currentPos = thinPath[thinPath.Count-1];
+            potentialRoomPositions.Add(currentPos);
+            DungeonData.path.UnionWith(thinPath);
+            DungeonData.corridorPath.Add(currentPos);
+            floorPositions.UnionWith(corridorPath);
+        }
 
+        safe++;
+        if (safe > 1000) break;
     }
+    // Debug.Log("potential room: "+String.Join(", ",potentialRoomPositions));
+    //potential room
+}
+
 }

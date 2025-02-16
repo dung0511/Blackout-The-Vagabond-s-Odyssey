@@ -7,37 +7,53 @@ using UnityEngine.UIElements;
 
 public class StageOne : AbstractDungeonGenerator
 {
-    [SerializeField] protected BoxSO boxParams, smallRoom;
-    protected HashSet<StageOneRoom> rooms = new();
+    public PropPlacer propPlacer;
+    
+    private void Awake()
+    {
+        if(propPlacer == null) propPlacer = FindFirstObjectByType<PropPlacer>();
+        propPlacer.Reset();
+    }
 
     protected override void RunProceduralGeneration()
     {
+        Reset();
         AddRoomObjects();
     }
 
     private void AddRoomObjects()
     {
-        foreach (var room in rooms)
+        foreach (var room in DungeonData.rooms)
         {
+            propPlacer.PlaceCornerProps(room);
+            propPlacer.PlaceLights(room);
             switch (room.roomType)
             {
+                case RoomType.Spawn:
+                    propPlacer.PlaceSpawnRoomProps(room);
+                    break;
                 case RoomType.Normal:
-
+                    propPlacer.PlaceNearWallProps(room);
+                    propPlacer.PlaceInnerProps(room);
+                    propPlacer.PlaceTraps(room);
                     break;
                 case RoomType.Elite:
-
+                    propPlacer.PlaceNearWallProps(room);
+                    propPlacer.PlaceInnerProps(room);
+                    propPlacer.PlaceTraps(room);
                     break;
                 case RoomType.Treasure:
-
+                    propPlacer.PlaceTopWallProps(room);
                     break;
-                // case RoomType.Upgrade:
-
-                //     break;
-                // case RoomType.Shop:
-                
-                //     break;
+                case RoomType.Shop:
+                    propPlacer.PlaceLeftWallProps(room);
+                    propPlacer.PlaceRightWallProps(room);
+                    break;
                 case RoomType.Exit:
 
+                    break;
+                default:
+                    Debug.LogError("Invalid room type: " + room.roomType);
                     break;
             }
         }
@@ -50,5 +66,10 @@ public class StageOne : AbstractDungeonGenerator
         var box = ProceduralGeneration.BoxGenerator(currentPos, width, height);
         path.UnionWith(box);
         return path;
+    }
+
+    private void Reset()
+    {
+         propPlacer.Reset();
     }
 }

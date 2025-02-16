@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 5987882279112065515}
   - component: {fileID: 8800501397202938671}
   - component: {fileID: 6000591006596118944}
-  - component: {fileID: 2994139070636016338}
   - component: {fileID: 7046788667847590101}
+  - component: {fileID: 7338429366791597468}
+  - component: {fileID: 3858548430097667943}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -66,7 +67,6 @@ Transform:
   m_Children:
   - {fileID: 5101126616903707845}
   - {fileID: 1942801128081510705}
-  - {fileID: 2742803878399598186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8800501397202938671
@@ -140,8 +140,53 @@ MonoBehaviour:
   rd: {fileID: 0}
   characterSR: {fileID: 5706770268650145479}
   isGamePaused: 0
---- !u!61 &2994139070636016338
-BoxCollider2D:
+  health: 0
+  isHurt: 0
+  isDead: 0
+--- !u!50 &7046788667847590101
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758982948781220748}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &7338429366791597468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758982948781220748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1086fdeb73b1cad4abc1d153132ff52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  isHurt: 0
+  isDead: 0
+--- !u!70 &3858548430097667943
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -174,145 +219,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.115}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.19, y: 0.23}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.19, y: 0.23}
-  m_EdgeRadius: 0
---- !u!50 &7046788667847590101
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758982948781220748}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!1 &1989098651452344991
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2742803878399598186}
-  - component: {fileID: 2473486225059258938}
-  - component: {fileID: 8999071838776344784}
-  m_Layer: 0
-  m_Name: Aim
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2742803878399598186
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989098651452344991}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5987882279112065515}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2473486225059258938
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989098651452344991}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1073077983
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 8088950736359724599, guid: 1731fe6201133454ab2d62578bab6859, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.25, y: 2.22}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &8999071838776344784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989098651452344991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39c74b343df0af4b8fa29da4269a128, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Offset: {x: 0.012259781, y: 0.11850282}
+  m_Size: {x: 0.11994362, y: 0.19146903}
+  m_Direction: 0
 --- !u!1 &2417132290018010663
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +381,7 @@ MonoBehaviour:
   firePos: {fileID: 2955113991683651076}
   TimeBtwFire: 0.2
   bulletForce: 20
-  BulletDame: 0
+  BulletDame: 4
   weapon: {fileID: 2721976071458617508}
   currentCharacterSR: {fileID: 0}
   characterManagement: {fileID: 533319691298597243}
@@ -581,7 +490,7 @@ MonoBehaviour:
   firePos: {fileID: 5932983003645545355}
   TimeBtwFire: 0.2
   bulletForce: 20
-  BulletDame: 0
+  BulletDame: 3
   weapon: {fileID: 2836466400401319338}
   currentCharacterSR: {fileID: 0}
   characterManagement: {fileID: 533319691298597243}
@@ -736,6 +645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860089036251479576}
   - component: {fileID: 2377837566135877497}
+  - component: {fileID: 2173407838643879095}
   m_Layer: 0
   m_Name: Assassin
   m_TagString: Untagged
@@ -810,9 +720,31 @@ SpriteRenderer:
   m_Size: {x: 0.81, y: 0.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2173407838643879095
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5972209093474091486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7586192791194729864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +968,7 @@ MonoBehaviour:
   firePos: {fileID: 5347014651722256327}
   TimeBtwFire: 0.2
   bulletForce: 20
-  BulletDame: 4
+  BulletDame: 1
   weapon: {fileID: 0}
   currentCharacterSR: {fileID: 0}
   characterManagement: {fileID: 533319691298597243}
@@ -1149,5 +1081,5 @@ MonoBehaviour:
   - {fileID: 5972209093474091486}
   - {fileID: 7586192791194729864}
   characterContainer: {fileID: 8723313781297267723}
-  currentCharacter: {fileID: 4896932687885636013}
+  currentCharacter: {fileID: 5972209093474091486}
   currentCharacterSR: {fileID: 0}

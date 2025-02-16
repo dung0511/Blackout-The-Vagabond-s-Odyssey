@@ -8,8 +8,13 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
     [SerializeField] protected Vector2Int startPos = Vector2Int.zero;
     [SerializeField] protected string seed;
 
+    private void Start()
+    {
+        GenerateDungeon();
+    }
+
     [ContextMenu("Generate Dungeon")]
-    public void GenerateDungeon()
+    private void GenerateDungeon()
     {
         if(seed.Trim().Length == 0) seed = GenerateRandomSeed(10);
         UnityEngine.Random.InitState(seed.GetHashCode());

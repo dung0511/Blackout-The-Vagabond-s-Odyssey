@@ -18,8 +18,8 @@ MonoBehaviour:
   minQuantity: 2
   maxQuantity: 3
   placeAsGroup: 1
-  minGroupSize: 2
-  maxGroupSize: 4
+  minGroupSize: 4
+  maxGroupSize: 6
   corner: 0
   nearTopWall: 0
   nearBottomWall: 0

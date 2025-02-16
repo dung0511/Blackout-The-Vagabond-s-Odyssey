@@ -30,7 +30,7 @@ public class StageOne : AbstractDungeonGenerator
             switch (room.roomType)
             {
                 case RoomType.Spawn:
-                    
+                    propPlacer.PlaceSpawnRoomProps(room);
                     break;
                 case RoomType.Normal:
                     propPlacer.PlaceNearWallProps(room);
@@ -50,7 +50,7 @@ public class StageOne : AbstractDungeonGenerator
                     propPlacer.PlaceRightWallProps(room);
                     break;
                 case RoomType.Exit:
-                    propPlacer.PlaceTraps(room);
+
                     break;
                 default:
                     Debug.LogError("Invalid room type: " + room.roomType);

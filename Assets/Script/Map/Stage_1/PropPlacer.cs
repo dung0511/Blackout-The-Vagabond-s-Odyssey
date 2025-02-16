@@ -522,7 +522,7 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    public void PlaceSpawnRoomProps()
+    public void PlaceSpawnRoomProps(RectangleRoom room)
     {
         
     }

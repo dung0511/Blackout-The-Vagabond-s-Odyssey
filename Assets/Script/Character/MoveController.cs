@@ -45,7 +45,7 @@ public class MoveController : MonoBehaviour
            
             transform.Find("Aim").gameObject.SetActive(false);
             transform.Find("WeaponManagemnt").gameObject.SetActive(false);
-            GetComponent<BoxCollider2D>().enabled = false;
+            //GetComponent<BoxCollider2D>().enabled = false;
             Cursor.visible = true;
 
         }

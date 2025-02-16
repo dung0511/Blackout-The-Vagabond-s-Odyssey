@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5834455370910c4bbf84c0e5d5c7497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  isTouchPlayer: 0
 --- !u!1 &4281152196352529285
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +107,10 @@ GameObject:
   - component: {fileID: 1551345848278530995}
   - component: {fileID: 2917697620029927553}
   - component: {fileID: 8258465835187919675}
+  - component: {fileID: 7730102065555310862}
+  - component: {fileID: 8626896361714642038}
+  - component: {fileID: 9165290079858944085}
+  - component: {fileID: 2435112960137754054}
   m_Layer: 0
   m_Name: MiniOrc
   m_TagString: Untagged
@@ -220,7 +224,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 500
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -293,6 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b1939e94bc26248a4928bbf357cbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDetails: {fileID: 0}
+  movementToPositionEvent: {fileID: 0}
   damage: 1
   speed: 0
   health: 10
@@ -312,6 +318,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 0}
   isHurt: 0
+--- !u!114 &7730102065555310862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281152196352529285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 1
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &8626896361714642038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281152196352529285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc53d46e3938c2748a474682e662d139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9165290079858944085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281152196352529285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6cebcad6b77f54d95a7d89a2f79b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2435112960137754054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281152196352529285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e9cddd8397d1b499c29ca7b73fecd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDetails: {fileID: 11400000, guid: 93381b9b42a194244a809cf481c56c5b, type: 2}
+  target: {fileID: 0}
+  nextWaypointDistance: 3
+  moveSpeed: 0
 --- !u!1 &5034844276252855027
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,4 +477,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb47adef41c52f746b2054b8d2ac7538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dame: {fileID: 0}

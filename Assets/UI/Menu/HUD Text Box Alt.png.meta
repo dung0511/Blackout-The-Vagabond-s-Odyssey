@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HUD Text Box Alt_0: 1726049793891985742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

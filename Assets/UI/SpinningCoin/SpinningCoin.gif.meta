@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpinningCoin_0: -1048814748171222420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

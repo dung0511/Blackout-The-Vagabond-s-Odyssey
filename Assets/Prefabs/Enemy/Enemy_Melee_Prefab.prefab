@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9029971717235392391}
   - component: {fileID: 4182749198270952670}
+  - component: {fileID: 7585752146513668882}
   m_Layer: 0
   m_Name: Interaction_Zone
   m_TagString: Untagged
@@ -62,7 +63,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -78,6 +79,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19174224, y: 0.26198137}
   m_EdgeRadius: 0
+--- !u!114 &7585752146513668882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2270585629850534855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5834455370910c4bbf84c0e5d5c7497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchPlayer: 0
 --- !u!1 &3096559005044523152
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +110,7 @@ GameObject:
   - component: {fileID: -5184178693655704162}
   - component: {fileID: 4556064899596513578}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Melee_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +177,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5120410236738981136, guid: 22007226da06d7a4ebc6d986cdb23863, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,9 +185,9 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &8952286539469676990
 Rigidbody2D:
   serializedVersion: 5
@@ -341,6 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9190238782977516675}
   - component: {fileID: 2957499934609179200}
+  - component: {fileID: 3263913026668595762}
   m_Layer: 0
   m_Name: Attack_HitBox
   m_TagString: Untagged
@@ -393,7 +408,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -409,3 +424,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.20736513, y: 0.2464636}
   m_EdgeRadius: 0
+--- !u!114 &3263913026668595762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021366027151146514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb47adef41c52f746b2054b8d2ac7538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

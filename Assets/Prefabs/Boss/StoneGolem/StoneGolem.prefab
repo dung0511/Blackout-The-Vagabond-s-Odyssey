@@ -95,6 +95,22 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Height
+      value: 0.49402866
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Radius
+      value: 0.24701433
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0014455796
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Center.y
+      value: 0.028912688
+      objectReference: {fileID: 0}
     - target: {fileID: 6944673337687591586, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Controller
       value: 

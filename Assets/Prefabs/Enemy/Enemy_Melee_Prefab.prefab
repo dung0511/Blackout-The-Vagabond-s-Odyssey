@@ -109,6 +109,10 @@ GameObject:
   - component: {fileID: 4343173066276566582}
   - component: {fileID: -5184178693655704162}
   - component: {fileID: 4556064899596513578}
+  - component: {fileID: -1070464630553896464}
+  - component: {fileID: 2432826123870871579}
+  - component: {fileID: 1046380362231642876}
+  - component: {fileID: -368399960910352571}
   m_Layer: 0
   m_Name: Enemy_Melee_Prefab
   m_TagString: Untagged
@@ -203,7 +207,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -214,7 +218,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &9148275473671986708
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -266,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDetails: {fileID: 0}
   movementToPositionEvent: {fileID: 0}
+  idleEvent: {fileID: 0}
   damage: 0
   speed: 0
   health: 0
@@ -345,6 +350,63 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1070464630553896464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096559005044523152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023740177ef48214ea9f0f17187e5e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2432826123870871579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096559005044523152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0deb305d31ca56848ae1b5c52066714c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1046380362231642876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096559005044523152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c5944973abc5e4e9878e1c195f9b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
+  isHurt: 0
+--- !u!114 &-368399960910352571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096559005044523152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531484ecfce04b240babfb82a5076b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDetails: {fileID: 0}
+  target: {fileID: 0}
+  nextWaypointDistance: 0.3
+  stopChaseDistance: 1
+  resumeChaseDistance: 2
+  resumeChaseDelay: 1
+  moveSpeed: 0
 --- !u!1 &8021366027151146514
 GameObject:
   m_ObjectHideFlags: 0

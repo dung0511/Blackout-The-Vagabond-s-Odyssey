@@ -6,11 +6,11 @@ public class Enemy : MonoBehaviour
     public EnemyDetailSO enemyDetails;
     private MiniOrc_Movement_AI miniOrc_Movement_AI;
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
-
+    [HideInInspector] public IdleEvent idleEvent;
     public int damage;
     public float speed;
     public int health;
-    public Animator animator;
+    [HideInInspector] public Animator animator;
     public bool isHurt;
     //public bool isAttack1;
 
@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     {
         miniOrc_Movement_AI = GetComponent<MiniOrc_Movement_AI>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
+        idleEvent = GetComponent<IdleEvent>();
 
         // isAttack1 = false;
         animator = GetComponent<Animator>();

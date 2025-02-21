@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8256691088992677775, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8256691088992677775, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 745acd7f68076504b95732578f5ccc4c, type: 2}
+    - target: {fileID: -368399960910352571, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 00d9893ee6f216e40a7023ae36762f80, type: 2}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -84,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4831881393279159307, guid: b34229031b0d11f4883f1522053bd5da, type: 3}
+    - target: {fileID: 5671031365001643435, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
       value: 0.13815986

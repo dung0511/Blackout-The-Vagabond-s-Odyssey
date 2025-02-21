@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
         PlayerHealth player = collision.GetComponent<PlayerHealth>();
         if (player != null)
         {
+            // them script kiem tra xem quai chet chua 
             //isTouchPlayer = true;
             player.takeDame(GetComponentInParent<Enemy>().damage);
             Debug.Log("dealt:"+ GetComponentInParent<Enemy>().damage);

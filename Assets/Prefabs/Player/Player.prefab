@@ -47,7 +47,7 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
@@ -93,8 +93,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7764027545387343176}
-  - component: {fileID: 1548385550461966332}
   - component: {fileID: 5144026458034128438}
+  - component: {fileID: 8408637051143262795}
+  - component: {fileID: 5613841785121754680}
+  - component: {fileID: 7941312488935414583}
+  - component: {fileID: 7039371769991555917}
+  - component: {fileID: 1548385550461966332}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -120,25 +124,6 @@ Transform:
   - {fileID: 510233851210191531}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1548385550461966332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2666623108531603543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29586d5182d1ac544841a6a74295dbd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rd: {fileID: 0}
-  characterSR: {fileID: 0}
-  isGamePaused: 0
-  health: 0
-  isHurt: 0
-  isDead: 0
 --- !u!50 &5144026458034128438
 Rigidbody2D:
   serializedVersion: 5
@@ -166,6 +151,109 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!70 &8408637051143262795
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.000000019868216, y: 0.019256791}
+  m_Size: {x: 0.105512224, y: 0.17878625}
+  m_Direction: 0
+--- !u!114 &5613841785121754680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d08927b2a108a468555f198127ee6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rd: {fileID: 0}
+  characterSR: {fileID: 0}
+  isGamePaused: 0
+  health: 0
+  armor: 0
+  isHurt: 0
+  isDead: 0
+  playerDetailSO: {fileID: 0}
+--- !u!114 &7941312488935414583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b75b6b5cc92bd438793c1703b26e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armorBar: {fileID: 0}
+  currentArmor: 0
+  maxArmor: 0
+--- !u!114 &7039371769991555917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1086fdeb73b1cad4abc1d153132ff52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  health: 0
+  maxHealth: 0
+  isHurt: 0
+  isDead: 0
+--- !u!114 &1548385550461966332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29586d5182d1ac544841a6a74295dbd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rd: {fileID: 0}
 --- !u!1 &4618484644671903064
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +265,7 @@ GameObject:
   - component: {fileID: 6628058848093765976}
   - component: {fileID: 5053069909120121030}
   - component: {fileID: 6480235433492756719}
+  - component: {fileID: 1758712493675102998}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -242,8 +331,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 1797933713778452314, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -251,7 +340,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6480235433492756719
@@ -276,6 +365,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &1758712493675102998
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618484644671903064}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0038337312, y: -0.021724781}
+  m_Size: {x: 0.10290043, y: 0.10290067}
+  m_Direction: 0
 --- !u!1 &4646666327275482720
 GameObject:
   m_ObjectHideFlags: 0

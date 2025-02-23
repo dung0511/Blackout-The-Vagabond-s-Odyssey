@@ -4,7 +4,7 @@ public class EnemyAttack : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerHealth player = collision.GetComponent<PlayerHealth>();
+        PlayerHealthController player = collision.GetComponent<PlayerHealthController>();
         if (player != null)
         {
             // them script kiem tra xem quai chet chua 

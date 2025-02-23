@@ -1,0 +1,2277 @@
+fileFormatVersion: 2
+guid: ba15b4fb0d644bf4885b865ba4acfa33
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1154542442659411007
+    second: Wizard-Recovered_0
+  - first:
+      213: -1138492104133665759
+    second: Wizard-Recovered_1
+  - first:
+      213: -8177979938805956713
+    second: Wizard-Recovered_2
+  - first:
+      213: -8833565325224807230
+    second: Wizard-Recovered_3
+  - first:
+      213: -7971196547290071525
+    second: Wizard-Recovered_4
+  - first:
+      213: 1965283750659104626
+    second: Wizard-Recovered_5
+  - first:
+      213: -815881183379789926
+    second: Wizard-Recovered_6
+  - first:
+      213: 7898396403081410501
+    second: Wizard-Recovered_7
+  - first:
+      213: -6152401966834490616
+    second: Wizard-Recovered_8
+  - first:
+      213: -3983932885847568930
+    second: Wizard-Recovered_9
+  - first:
+      213: -7201168206893359092
+    second: Wizard-Recovered_10
+  - first:
+      213: 7966317030040462476
+    second: Wizard-Recovered_11
+  - first:
+      213: -6792786097014969140
+    second: Wizard-Recovered_12
+  - first:
+      213: 8202228525307041913
+    second: Wizard-Recovered_13
+  - first:
+      213: -3449872247508312212
+    second: Wizard-Recovered_14
+  - first:
+      213: -5171582481121890422
+    second: Wizard-Recovered_15
+  - first:
+      213: -7340386767846957290
+    second: Wizard-Recovered_16
+  - first:
+      213: -254111561234493571
+    second: Wizard-Recovered_17
+  - first:
+      213: -4859573101176458582
+    second: Wizard-Recovered_18
+  - first:
+      213: 4439564779856254824
+    second: Wizard-Recovered_19
+  - first:
+      213: 3737590601881038263
+    second: Wizard-Recovered_20
+  - first:
+      213: 3204771707955205827
+    second: Wizard-Recovered_21
+  - first:
+      213: -7352556079237590883
+    second: Wizard-Recovered_22
+  - first:
+      213: 5657372339098582626
+    second: Wizard-Recovered_23
+  - first:
+      213: 7162941778103648852
+    second: Wizard-Recovered_24
+  - first:
+      213: -2199097043638188104
+    second: Wizard-Recovered_25
+  - first:
+      213: 1812777906966517537
+    second: Wizard-Recovered_26
+  - first:
+      213: 6889013268442801093
+    second: Wizard-Recovered_27
+  - first:
+      213: -171141080598782645
+    second: Wizard-Recovered_28
+  - first:
+      213: 5092791099863532012
+    second: Wizard-Recovered_29
+  - first:
+      213: -6860980547623845176
+    second: Wizard-Recovered_30
+  - first:
+      213: 4048695648587124605
+    second: Wizard-Recovered_31
+  - first:
+      213: -4442965900522801593
+    second: Wizard-Recovered_32
+  - first:
+      213: 1992263129910242623
+    second: Wizard-Recovered_33
+  - first:
+      213: 1984223908007288221
+    second: Wizard-Recovered_34
+  - first:
+      213: -125811393792858280
+    second: Wizard-Recovered_35
+  - first:
+      213: -2095134167287451634
+    second: Wizard-Recovered_36
+  - first:
+      213: -4391822528928082224
+    second: Wizard-Recovered_37
+  - first:
+      213: 8678033502027796528
+    second: Wizard-Recovered_38
+  - first:
+      213: -6393338640796563165
+    second: Wizard-Recovered_39
+  - first:
+      213: -4067336007196637694
+    second: Wizard-Recovered_40
+  - first:
+      213: -3530791330436921174
+    second: Wizard-Recovered_41
+  - first:
+      213: 7420955211691575933
+    second: Wizard-Recovered_42
+  - first:
+      213: 6106186960968551041
+    second: Wizard-Recovered_43
+  - first:
+      213: -425255882319999761
+    second: Wizard-Recovered_44
+  - first:
+      213: -8350182718901551158
+    second: Wizard-Recovered_45
+  - first:
+      213: -1335603151265003506
+    second: Wizard-Recovered_46
+  - first:
+      213: 3019884037153642286
+    second: Wizard-Recovered_47
+  - first:
+      213: 484257748552631603
+    second: Wizard-Recovered_48
+  - first:
+      213: -3119375789594113437
+    second: Wizard-Recovered_49
+  - first:
+      213: -4137218967453527876
+    second: Wizard-Recovered_50
+  - first:
+      213: 1158944130314843823
+    second: Wizard-Recovered_51
+  - first:
+      213: -8113167036201215952
+    second: Wizard-Recovered_52
+  - first:
+      213: -8351562329387042949
+    second: Wizard-Recovered_53
+  - first:
+      213: -4436610694048209215
+    second: Wizard-Recovered_54
+  - first:
+      213: 5704800412846461703
+    second: Wizard-Recovered_55
+  - first:
+      213: 1652802005400304048
+    second: Wizard-Recovered_56
+  - first:
+      213: 2934754216930738697
+    second: Wizard-Recovered_57
+  - first:
+      213: 8309354827194572595
+    second: Wizard-Recovered_58
+  - first:
+      213: 3289207880725485207
+    second: Wizard-Recovered_59
+  - first:
+      213: 8128641901437482983
+    second: Wizard-Recovered_60
+  - first:
+      213: -4482051044407208488
+    second: Wizard-Recovered_61
+  - first:
+      213: 6662967458246524915
+    second: Wizard-Recovered_62
+  - first:
+      213: 5291907900426624983
+    second: Wizard-Recovered_63
+  - first:
+      213: 7105525853637104437
+    second: Wizard-Recovered_64
+  - first:
+      213: 4503205123953656183
+    second: Wizard-Recovered_65
+  - first:
+      213: 7132619338687671559
+    second: Wizard-Recovered_66
+  - first:
+      213: 8615079231497865934
+    second: Wizard-Recovered_67
+  - first:
+      213: -4877198664107660104
+    second: Wizard-Recovered_68
+  - first:
+      213: -260095938914260844
+    second: Wizard-Recovered_69
+  - first:
+      213: -2645812797459416509
+    second: Wizard-Recovered_70
+  - first:
+      213: -7306883462720609515
+    second: Wizard-Recovered_71
+  - first:
+      213: -4641437915121260452
+    second: Wizard-Recovered_72
+  - first:
+      213: 7734258327563494832
+    second: Wizard-Recovered_73
+  - first:
+      213: 1349360559166412188
+    second: Wizard-Recovered_74
+  - first:
+      213: 864475026618150567
+    second: Wizard-Recovered_75
+  - first:
+      213: -662155262811953288
+    second: Wizard-Recovered_76
+  - first:
+      213: 7952673907245034022
+    second: Wizard-Recovered_77
+  - first:
+      213: 5428740360521401987
+    second: Wizard-Recovered_78
+  - first:
+      213: -5746390787479726901
+    second: Wizard-Recovered_79
+  - first:
+      213: 5329079993209519412
+    second: Wizard-Recovered_80
+  - first:
+      213: -4016604655588290239
+    second: Wizard-Recovered_81
+  - first:
+      213: -7339177371603830540
+    second: Wizard-Recovered_82
+  - first:
+      213: 4636098766412432706
+    second: Wizard-Recovered_83
+  - first:
+      213: -809837282886906868
+    second: Wizard-Recovered_84
+  - first:
+      213: -1370859797598894901
+    second: Wizard-Recovered_85
+  - first:
+      213: 3541939303038183947
+    second: Wizard-Recovered_86
+  - first:
+      213: -7176663298291456685
+    second: Wizard-Recovered_87
+  - first:
+      213: 2137595338354640048
+    second: Wizard-Recovered_88
+  - first:
+      213: 5851120949204997435
+    second: Wizard-Recovered_89
+  - first:
+      213: 3461551032434692849
+    second: Wizard-Recovered_90
+  - first:
+      213: -5309390355039922797
+    second: Wizard-Recovered_91
+  - first:
+      213: 7187462375525305683
+    second: Wizard-Recovered_92
+  - first:
+      213: 2938270139232228607
+    second: Wizard-Recovered_93
+  - first:
+      213: 4006761107535171098
+    second: Wizard-Recovered_94
+  - first:
+      213: -3233810433447258668
+    second: Wizard-Recovered_95
+  - first:
+      213: 8885650792331686355
+    second: Wizard-Recovered_96
+  - first:
+      213: 7016028842825224169
+    second: Wizard-Recovered_97
+  - first:
+      213: 994601561901970409
+    second: Wizard-Recovered_98
+  - first:
+      213: 8770726080539433103
+    second: Wizard-Recovered_99
+  - first:
+      213: -5090982834615454922
+    second: Wizard-Recovered_100
+  - first:
+      213: 5662682883061729334
+    second: Wizard-Recovered_101
+  - first:
+      213: -8854335763687293461
+    second: Wizard-Recovered_102
+  - first:
+      213: 6395391449288054127
+    second: Wizard-Recovered_103
+  - first:
+      213: -7073059478295069567
+    second: Wizard-Recovered_104
+  - first:
+      213: 3839566941326643764
+    second: Wizard-Recovered_105
+  - first:
+      213: -4832414497698304995
+    second: Wizard-Recovered_106
+  - first:
+      213: 5264213094361192494
+    second: Wizard-Recovered_107
+  - first:
+      213: -4993192982369594990
+    second: Wizard-Recovered_108
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wizard-Recovered_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb8c23f3cd3affe0800000000000000
+      internalID: -1154542442659411007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c968996734330f0800000000000000
+      internalID: -1138492104133665759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f333f039af18e80800000000000000
+      internalID: -8177979938805956713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c474c1932fd86580800000000000000
+      internalID: -8833565325224807230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e74f339fe906190800000000000000
+      internalID: -7971196547290071525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f12e0a827164b10800000000000000
+      internalID: 1965283750659104626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97e8bde2686da4f0800000000000000
+      internalID: -815881183379789926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7f3ec5eadbc9d60800000000000000
+      internalID: 7898396403081410501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8036a6b02074e9aa0800000000000000
+      internalID: -6152401966834490616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd0f0ae52a36b8c0800000000000000
+      internalID: -3983932885847568930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00e8445baf401c90800000000000000
+      internalID: -7201168206893359092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84e4b7a12b0e8e60800000000000000
+      internalID: 7966317030040462476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccce534d80d2bb1a0800000000000000
+      internalID: -6792786097014969140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_13
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9789081f26b24d170800000000000000
+      internalID: 8202228525307041913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6fd9c618779f10d0800000000000000
+      internalID: -3449872247508312212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fa8163229da38b0800000000000000
+      internalID: -5171582481121890422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f118c2025b12a90800000000000000
+      internalID: -7340386767846957290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f4c43a1e6397cf0800000000000000
+      internalID: -254111561234493571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa27558f2045f8cb0800000000000000
+      internalID: -4859573101176458582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867daac35a08c9d30800000000000000
+      internalID: 4439564779856254824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd25fc89d69ed330800000000000000
+      internalID: 3737590601881038263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_21
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c654e683e2a97c20800000000000000
+      internalID: 3204771707955205827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_22
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9097e1933976f990800000000000000
+      internalID: -7352556079237590883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_23
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e771a1b26038e40800000000000000
+      internalID: 5657372339098582626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_24
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4524ca6a891e76360800000000000000
+      internalID: 7162941778103648852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_25
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7855fd3ec3b71e0800000000000000
+      internalID: -2199097043638188104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1275a61e6e7482910800000000000000
+      internalID: 1812777906966517537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_27
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c36c7e6111ba9f50800000000000000
+      internalID: 6889013268442801093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_28
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dde6c081cff9df0800000000000000
+      internalID: -171141080598782645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce103a6c58a3da640800000000000000
+      internalID: 5092791099863532012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c204000b86e8c0a0800000000000000
+      internalID: -6860980547623845176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f84b1dd3bdf2830800000000000000
+      internalID: 4048695648587124605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_32
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7463a26ad0a6752c0800000000000000
+      internalID: -4442965900522801593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_33
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d686dd2c0f5ab10800000000000000
+      internalID: 1992263129910242623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_34
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d9c97a121698b10800000000000000
+      internalID: 1984223908007288221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857a7443437014ef0800000000000000
+      internalID: -125811393792858280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e003c0a43969ce2e0800000000000000
+      internalID: -2095134167287451634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_37
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d61fa6cdac1d03c0800000000000000
+      internalID: -4391822528928082224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_38
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0305e4ded719e6870800000000000000
+      internalID: 8678033502027796528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_39
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329ca8a216c4647a0800000000000000
+      internalID: -6393338640796563165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_40
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20683ec737bed87c0800000000000000
+      internalID: -4067336007196637694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_41
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8474dedfb100fc0800000000000000
+      internalID: -3530791330436921174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_42
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ac5f672778cf660800000000000000
+      internalID: 7420955211691575933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_43
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a07a460b88db450800000000000000
+      internalID: 6106186960968551041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_44
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feccba33700391af0800000000000000
+      internalID: -425255882319999761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf744eee013e1c80800000000000000
+      internalID: -8350182718901551158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_46
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0805ff920cf67de0800000000000000
+      internalID: -1335603151265003506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_47
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e275a612888c8e920800000000000000
+      internalID: 3019884037153642286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_48
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335c53a4bdd68b600800000000000000
+      internalID: 484257748552631603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_49
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a0a4c1f30c5b4d0800000000000000
+      internalID: -3119375789594113437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_50
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb09ceed445a596c0800000000000000
+      internalID: -4137218967453527876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_51
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6b0f1db85651010800000000000000
+      internalID: 1158944130314843823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_52
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03851d3e09d386f80800000000000000
+      internalID: -8113167036201215952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_53
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77f9555f4a491c80800000000000000
+      internalID: -8351562329387042949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_54
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6ae86741efd62c0800000000000000
+      internalID: -4436610694048209215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_55
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703173a00c58b2f40800000000000000
+      internalID: 5704800412846461703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_56
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b930ffbaaeefe610800000000000000
+      internalID: 1652802005400304048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9028c3b49675ab820800000000000000
+      internalID: 2934754216930738697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_58
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f1c93c032c05370800000000000000
+      internalID: 8309354827194572595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_59
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796de0bf32d95ad20800000000000000
+      internalID: 3289207880725485207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_60
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e77981fdbcbec070800000000000000
+      internalID: 8128641901437482983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_61
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d590f0725e8cc1c0800000000000000
+      internalID: -4482051044407208488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_62
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff75c2f99d977c50800000000000000
+      internalID: 6662967458246524915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df130d9232a07940800000000000000
+      internalID: 5291907900426624983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_64
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533d4600e16eb9260800000000000000
+      internalID: 7105525853637104437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_65
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7710af383399e7e30800000000000000
+      internalID: 4503205123953656183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_66
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d6f809f772cf260800000000000000
+      internalID: 7132619338687671559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_67
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca86499ae8ee8770800000000000000
+      internalID: 8615079231497865934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_68
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc6adec7a5b05cb0800000000000000
+      internalID: -4877198664107660104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_69
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4986e712f14f36cf0800000000000000
+      internalID: -260095938914260844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34abf31674f284bd0800000000000000
+      internalID: -2645812797459416509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_71
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513ac55443cb89a90800000000000000
+      internalID: -7306883462720609515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_72
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58ea2ebecc469fb0800000000000000
+      internalID: -4641437915121260452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_73
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5678798fa955b60800000000000000
+      internalID: 7734258327563494832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9559038744e9b210800000000000000
+      internalID: 1349360559166412188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_75
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae65ced47b3ffb00800000000000000
+      internalID: 864475026618150567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_76
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87720f5fb4d8fc6f0800000000000000
+      internalID: -662155262811953288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard-Recovered_77
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62aabd798c29d5e60800000000000000
+      internalID: 7952673907245034022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f16b34cf648e8014cb9109cb9edd9b77
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Wizard-Recovered_0: -1154542442659411007
+      Wizard-Recovered_1: -1138492104133665759
+      Wizard-Recovered_10: -7201168206893359092
+      Wizard-Recovered_11: 7966317030040462476
+      Wizard-Recovered_12: -6792786097014969140
+      Wizard-Recovered_13: 8202228525307041913
+      Wizard-Recovered_14: -3449872247508312212
+      Wizard-Recovered_15: -5171582481121890422
+      Wizard-Recovered_16: -7340386767846957290
+      Wizard-Recovered_17: -254111561234493571
+      Wizard-Recovered_18: -4859573101176458582
+      Wizard-Recovered_19: 4439564779856254824
+      Wizard-Recovered_2: -8177979938805956713
+      Wizard-Recovered_20: 3737590601881038263
+      Wizard-Recovered_21: 3204771707955205827
+      Wizard-Recovered_22: -7352556079237590883
+      Wizard-Recovered_23: 5657372339098582626
+      Wizard-Recovered_24: 7162941778103648852
+      Wizard-Recovered_25: -2199097043638188104
+      Wizard-Recovered_26: 1812777906966517537
+      Wizard-Recovered_27: 6889013268442801093
+      Wizard-Recovered_28: -171141080598782645
+      Wizard-Recovered_29: 5092791099863532012
+      Wizard-Recovered_3: -8833565325224807230
+      Wizard-Recovered_30: -6860980547623845176
+      Wizard-Recovered_31: 4048695648587124605
+      Wizard-Recovered_32: -4442965900522801593
+      Wizard-Recovered_33: 1992263129910242623
+      Wizard-Recovered_34: 1984223908007288221
+      Wizard-Recovered_35: -125811393792858280
+      Wizard-Recovered_36: -2095134167287451634
+      Wizard-Recovered_37: -4391822528928082224
+      Wizard-Recovered_38: 8678033502027796528
+      Wizard-Recovered_39: -6393338640796563165
+      Wizard-Recovered_4: -7971196547290071525
+      Wizard-Recovered_40: -4067336007196637694
+      Wizard-Recovered_41: -3530791330436921174
+      Wizard-Recovered_42: 7420955211691575933
+      Wizard-Recovered_43: 6106186960968551041
+      Wizard-Recovered_44: -425255882319999761
+      Wizard-Recovered_45: -8350182718901551158
+      Wizard-Recovered_46: -1335603151265003506
+      Wizard-Recovered_47: 3019884037153642286
+      Wizard-Recovered_48: 484257748552631603
+      Wizard-Recovered_49: -3119375789594113437
+      Wizard-Recovered_5: 1965283750659104626
+      Wizard-Recovered_50: -4137218967453527876
+      Wizard-Recovered_51: 1158944130314843823
+      Wizard-Recovered_52: -8113167036201215952
+      Wizard-Recovered_53: -8351562329387042949
+      Wizard-Recovered_54: -4436610694048209215
+      Wizard-Recovered_55: 5704800412846461703
+      Wizard-Recovered_56: 1652802005400304048
+      Wizard-Recovered_57: 2934754216930738697
+      Wizard-Recovered_58: 8309354827194572595
+      Wizard-Recovered_59: 3289207880725485207
+      Wizard-Recovered_6: -815881183379789926
+      Wizard-Recovered_60: 8128641901437482983
+      Wizard-Recovered_61: -4482051044407208488
+      Wizard-Recovered_62: 6662967458246524915
+      Wizard-Recovered_63: 5291907900426624983
+      Wizard-Recovered_64: 7105525853637104437
+      Wizard-Recovered_65: 4503205123953656183
+      Wizard-Recovered_66: 7132619338687671559
+      Wizard-Recovered_67: 8615079231497865934
+      Wizard-Recovered_68: -4877198664107660104
+      Wizard-Recovered_69: -260095938914260844
+      Wizard-Recovered_7: 7898396403081410501
+      Wizard-Recovered_70: -2645812797459416509
+      Wizard-Recovered_71: -7306883462720609515
+      Wizard-Recovered_72: -4641437915121260452
+      Wizard-Recovered_73: 7734258327563494832
+      Wizard-Recovered_74: 1349360559166412188
+      Wizard-Recovered_75: 864475026618150567
+      Wizard-Recovered_76: -662155262811953288
+      Wizard-Recovered_77: 7952673907245034022
+      Wizard-Recovered_8: -6152401966834490616
+      Wizard-Recovered_9: -3983932885847568930
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

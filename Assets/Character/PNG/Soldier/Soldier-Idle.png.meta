@@ -157,12 +157,12 @@ TextureImporter:
       name: Soldier-Idle_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 39
-        width: 19
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: Soldier-Idle_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 39
-        width: 19
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: Soldier-Idle_2
       rect:
         serializedVersion: 2
-        x: 240
-        y: 39
-        width: 19
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: Soldier-Idle_3
       rect:
         serializedVersion: 2
-        x: 340
-        y: 39
-        width: 19
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: Soldier-Idle_4
       rect:
         serializedVersion: 2
-        x: 440
-        y: 39
-        width: 19
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: Soldier-Idle_5
       rect:
         serializedVersion: 2
-        x: 540
-        y: 39
-        width: 19
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

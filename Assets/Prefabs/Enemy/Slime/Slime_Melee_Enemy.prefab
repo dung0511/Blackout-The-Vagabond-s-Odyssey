@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8256691088992677775, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: health
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8256691088992677775, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bbd8cefad47b4548b65bd91a19d002d, type: 2}
+    - target: {fileID: -368399960910352571, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: d228c3c1a365f574fbe61ba71f9334c8, type: 2}
+    - target: {fileID: -368399960910352571, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: resumeChaseDelay
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

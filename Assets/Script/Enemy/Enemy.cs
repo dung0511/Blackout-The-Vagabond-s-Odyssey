@@ -4,21 +4,25 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public EnemyDetailSO enemyDetails;
-    private MiniOrc_Movement_AI miniOrc_Movement_AI;
-    [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
 
+    [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
+    [HideInInspector] public IdleEvent idleEvent;
     public int damage;
-    public float speed;
+    //public float speed;
     public int health;
-    public Animator animator;
+    [HideInInspector] public Animator animator;
     public bool isHurt;
     //public bool isAttack1;
 
+    private void Awake()
+    {
+
+        movementToPositionEvent = GetComponent<MovementToPositionEvent>();
+        idleEvent = GetComponent<IdleEvent>();
+
+    }
     void Start()
     {
-        miniOrc_Movement_AI = GetComponent<MiniOrc_Movement_AI>();
-        movementToPositionEvent = GetComponent<MovementToPositionEvent>();
-
         // isAttack1 = false;
         animator = GetComponent<Animator>();
         isHurt = false;

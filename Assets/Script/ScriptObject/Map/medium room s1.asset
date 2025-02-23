@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: medium room s1
   m_EditorClassIdentifier: 
   minWidth: 10
-  maxWidth: 20
+  maxWidth: 15
   minHeight: 10
-  maxHeight: 20
+  maxHeight: 15

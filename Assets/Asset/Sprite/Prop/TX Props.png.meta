@@ -1206,12 +1206,12 @@ TextureImporter:
       name: TX Props Altar
       rect:
         serializedVersion: 2
-        x: 353
-        y: 171
-        width: 94
-        height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 352
+        y: 159
+        width: 96
+        height: 96
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

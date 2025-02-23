@@ -12,7 +12,7 @@ public class EnemyInteractZone : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        MoveController player = collision.GetComponent<MoveController>();
+        PlayerMoveController player = collision.GetComponent<PlayerMoveController>();
         if (player != null)
         {
             isTouchPlayer = true;

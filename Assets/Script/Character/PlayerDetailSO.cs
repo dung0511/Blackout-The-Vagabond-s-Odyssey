@@ -34,6 +34,15 @@ public class PlayerDetailSO : ScriptableObject
     #endregion
     public int playerHealthAmount;
 
+    #region Header ARMOR
+    [Space(10)]
+    [Header("ARMOR")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Player starting armor amount")]
+    #endregion
+    public int playerArmorAmount;
+
     #region Validation
 #if UNITY_EDITOR
     /// <summary>
@@ -44,6 +53,7 @@ public class PlayerDetailSO : ScriptableObject
         Utility.ValidateCheckEmptyString(this, nameof(playerCharacterName), playerCharacterName);
         Utility.ValidateCheckNullValue(this, nameof(playerPrefab), playerPrefab);
         Utility.ValidateCheckPositiveValue(this, nameof(playerHealthAmount), playerHealthAmount, false);
+        Utility.ValidateCheckPositiveValue(this, nameof(playerArmorAmount), playerArmorAmount, false);
         Utility.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
     }
 #endif

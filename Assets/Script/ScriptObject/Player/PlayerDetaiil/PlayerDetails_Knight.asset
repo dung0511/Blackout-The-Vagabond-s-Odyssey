@@ -15,4 +15,5 @@ MonoBehaviour:
   playerCharacterName: Knight
   playerPrefab: {fileID: 211050452092517740, guid: 99f2256aa7bf1744a895a2474e7ccf5c, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 16f9d101f4554114daf9a1a51c21d8a5, type: 2}
-  playerHealthAmount: 0
+  playerHealthAmount: 5
+  playerArmorAmount: 5

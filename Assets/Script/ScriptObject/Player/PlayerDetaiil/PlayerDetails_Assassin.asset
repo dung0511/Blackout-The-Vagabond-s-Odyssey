@@ -15,4 +15,5 @@ MonoBehaviour:
   playerCharacterName: Assassin
   playerPrefab: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 5d5047a5da792264fae0f30f289ef4a2, type: 2}
-  playerHealthAmount: 0
+  playerHealthAmount: 5
+  playerArmorAmount: 5

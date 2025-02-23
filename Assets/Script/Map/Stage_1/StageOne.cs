@@ -8,20 +8,13 @@ using UnityEngine.UIElements;
 public class StageOne : AbstractDungeonGenerator
 {
     public PropPlacer propPlacer;
-    
-    private void Awake()
-    {
-        if(propPlacer == null) propPlacer = FindFirstObjectByType<PropPlacer>();
-        propPlacer.Reset();
-    }
-
+ 
     protected override void RunProceduralGeneration()
     {
-        Reset();
-        AddRoomObjects();
+        PopulateRooms();
     }
 
-    private void AddRoomObjects()
+    private void PopulateRooms()
     {
         foreach (var room in DungeonData.rooms)
         {
@@ -30,7 +23,7 @@ public class StageOne : AbstractDungeonGenerator
             switch (room.roomType)
             {
                 case RoomType.Spawn:
-                    propPlacer.PlaceSpawnRoomProps(room);
+                    //propPlacer.PlaceSpawnRoomProps(room);
                     break;
                 case RoomType.Normal:
                     propPlacer.PlaceNearWallProps(room);
@@ -48,9 +41,10 @@ public class StageOne : AbstractDungeonGenerator
                 case RoomType.Shop:
                     propPlacer.PlaceLeftWallProps(room);
                     propPlacer.PlaceRightWallProps(room);
+                    propPlacer.PlaceShopRoomProps(room);
                     break;
                 case RoomType.Exit:
-
+                    propPlacer.PlaceExitPortal(room);
                     break;
                 default:
                     Debug.LogError("Invalid room type: " + room.roomType);
@@ -68,8 +62,10 @@ public class StageOne : AbstractDungeonGenerator
         return path;
     }
 
-    private void Reset()
+    protected void Reset()
     {
-         propPlacer.Reset();
+        DungeonData.Reset();
+        propPlacer.Reset();
+
     }
 }

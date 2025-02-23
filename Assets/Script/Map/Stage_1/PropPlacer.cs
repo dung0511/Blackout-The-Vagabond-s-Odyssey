@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,13 +13,11 @@ public class PropPlacer : MonoBehaviour
     [SerializeField] private List<Prop> trapProps;
     [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f;
     [SerializeField] private GameObject propParent;
-    
-    public void ProcessRoom(RectangleRoom room)
-    {
-        Reset();
-    }
+    [SerializeField] private Prop groundPortal;
+    [SerializeField] private Prop shop;
+    [SerializeField] private Prop exit;
 
-    public void PlaceCornerProps(RectangleRoom room)
+    public void PlaceCornerProps(BoxRoom room)
     {
         List<Prop> cornerProps = props.FindAll(p => p.corner);
         float tmpChance = cornerPropChance;
@@ -35,7 +34,7 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    public void PlaceNearWallProps(RectangleRoom room)
+    public void PlaceNearWallProps(BoxRoom room)
     {
         PlaceLeftWallProps(room);
         PlaceRightWallProps(room);
@@ -43,7 +42,7 @@ public class PropPlacer : MonoBehaviour
         PlaceBottomWallProps(room);
     }
 
-    public void PlaceInnerProps(RectangleRoom room)
+    public void PlaceInnerProps(BoxRoom room)
     {
         //Place props near RIGHT wall
         List<Prop> innerProps = props
@@ -53,7 +52,7 @@ public class PropPlacer : MonoBehaviour
         PlaceProps(room, innerProps, room.inners);
     }
     
-    public void PlaceTraps(RectangleRoom room)
+    public void PlaceTraps(BoxRoom room)
     {
         List<Prop> traps = trapProps
         .OrderByDescending(x => x.propSize.x * x.propSize.y)
@@ -61,7 +60,7 @@ public class PropPlacer : MonoBehaviour
         PlaceTraps(room, traps);
     }
 
-    public void PlaceLights(RectangleRoom room)
+    public void PlaceLights(BoxRoom room)
     {
         PlaceProps(room, lightProps, room.nearLeftWall);
         PlaceProps(room, lightProps, room.nearRightWall);
@@ -69,7 +68,7 @@ public class PropPlacer : MonoBehaviour
         PlaceProps(room, lightProps, room.nearBottomWall);
     }
 
-    public void PlaceLeftWallProps(RectangleRoom room)
+    public void PlaceLeftWallProps(BoxRoom room)
     {
         //Place props near LEFT wall
         List<Prop> leftWallProps = props
@@ -79,7 +78,7 @@ public class PropPlacer : MonoBehaviour
         PlaceProps(room, leftWallProps, room.nearLeftWall);
     }
 
-    public void PlaceRightWallProps(RectangleRoom room)
+    public void PlaceRightWallProps(BoxRoom room)
     {
         //Place props near RIGHT wall
         List<Prop> rightWallProps = props
@@ -89,7 +88,7 @@ public class PropPlacer : MonoBehaviour
         PlaceProps(room, rightWallProps, room.nearRightWall);
     }
 
-    public void PlaceTopWallProps(RectangleRoom room)
+    public void PlaceTopWallProps(BoxRoom room)
     {
         //Place props near TOP wall
         List<Prop> topWallProps = props
@@ -99,7 +98,7 @@ public class PropPlacer : MonoBehaviour
         PlaceProps(room, topWallProps, room.nearTopWall);
     }
 
-    public void PlaceBottomWallProps(RectangleRoom room)
+    public void PlaceBottomWallProps(BoxRoom room)
     {
         //Place props near BOTTOM wall
         List<Prop> bottomWallProps = props
@@ -109,7 +108,7 @@ public class PropPlacer : MonoBehaviour
         PlaceProps(room, bottomWallProps, room.nearBottomWall);
     }
 
-    private void PlaceProps(RectangleRoom room, List<Prop> nearWallProps, HashSet<Vector2Int> nearWallTiles)
+    private void PlaceProps(BoxRoom room, List<Prop> nearWallProps, HashSet<Vector2Int> nearWallTiles)
     {
         //avoid placement in entrances path
         HashSet<Vector2Int> tempPositons = new HashSet<Vector2Int>(nearWallTiles);
@@ -119,7 +118,7 @@ public class PropPlacer : MonoBehaviour
         {
             //We want to place only certain quantity of each prop
             int quantity = Random.Range(propToPlace.minQuantity, propToPlace.maxQuantity +1);
-            int diam = (room.size[0] + room.size[1])/2;
+            int diam = (room.size.x + room.size.y)/2;
             if(diam > 13) quantity++;
             if(diam > 16) quantity++;
             
@@ -135,7 +134,7 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    private bool TryPlacingPropBruteForce(RectangleRoom room, Prop propToPlace, List<Vector2Int> availablePositions)
+    private bool TryPlacingPropBruteForce(BoxRoom room, Prop propToPlace, List<Vector2Int> availablePositions)
     {
          //try placing the objects starting from the corner specified by the placement parameter
         for (int i = 0; i < availablePositions.Count; i++)
@@ -151,7 +150,7 @@ public class PropPlacer : MonoBehaviour
             List<Vector2Int> freePositionsAround = new();
             if(propToPlace.inner) 
             {
-                float roomSizeAverage = (room.size[0] + room.size[1]) / 2f;
+                float roomSizeAverage = (room.size.x + room.size.y) / 2f;
                 roomSizeAverage = Mathf.Round(roomSizeAverage);
                 int offset = 2; //space between 2 objects
                 if(roomSizeAverage < 12) offset = 1;
@@ -243,7 +242,7 @@ public class PropPlacer : MonoBehaviour
         return freePositions;
     }
 
-    private void PlaceTraps(RectangleRoom room, List<Prop> traps)
+    private void PlaceTraps(BoxRoom room, List<Prop> traps)
     {
         //avoid placement in entrances path
         HashSet<Vector2Int> tempPositons = new HashSet<Vector2Int>(room.roomTiles);
@@ -252,7 +251,7 @@ public class PropPlacer : MonoBehaviour
         {
             //We want to place only certain quantity of each prop
             int quantity = Random.Range(propToPlace.minQuantity, propToPlace.maxQuantity +1);
-            int diam = (room.size[0] + room.size[1])/2;
+            int diam = (room.size.x + room.size.y)/2;
             if(diam > 13) quantity++;
             if(diam > 16) quantity++;
             
@@ -268,7 +267,7 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    private bool TryPlacingTrapBruteForce(RectangleRoom room, Prop propToPlace, List<Vector2Int> availablePositions)
+    private bool TryPlacingTrapBruteForce(BoxRoom room, Prop propToPlace, List<Vector2Int> availablePositions)
     {
          //try placing the objects starting from the corner specified by the placement parameter
         for (int i = 0; i < availablePositions.Count; i++)
@@ -278,7 +277,7 @@ public class PropPlacer : MonoBehaviour
             if (room.propPositions.Contains(position))  continue;
 
             //check if there is enough space around to fit the prop            
-            float roomSizeAverage = (room.size[0] + room.size[1]) / 2f;
+            float roomSizeAverage = (room.size.x + room.size.y) / 2f;
             roomSizeAverage = Mathf.Round(roomSizeAverage);
             int offset = 2; //space between 2 objects
             if(roomSizeAverage < 12) offset = 1;
@@ -311,12 +310,12 @@ public class PropPlacer : MonoBehaviour
     }
 
 
-    private void PlaceCornerGroupProp(RectangleRoom room, Vector2Int startingPos, Prop prop)
+    private void PlaceCornerGroupProp(BoxRoom room, Vector2Int startingPos, Prop prop)
     {   //fixed offset and placement position can make bigger prop poorly placed
         int count = (int) Utility.UnseededRng(prop.minGroupSize, prop.maxGroupSize)-1;
         //find valid space around group placement startingPos
         List<Vector2Int> availableSpaces = new();
-        var searchOffset = Mathf.Max(Mathf.CeilToInt(room.size[0] / 10f), Mathf.CeilToInt(room.size[1] / 10f));
+        var searchOffset = Mathf.Max(Mathf.CeilToInt(room.size.x / 10f), Mathf.CeilToInt(room.size.y / 10f));
         for (int xOffset = -searchOffset; xOffset <= searchOffset; xOffset++)
         {
             for (int yOffset = -searchOffset; yOffset <= searchOffset; yOffset++)
@@ -356,14 +355,14 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    private void PlaceGroupProp(RectangleRoom room, Vector2Int startingPos, Prop prop)
+    private void PlaceGroupProp(BoxRoom room, Vector2Int startingPos, Prop prop)
     {   //fixed offset and placement position can make bigger prop poorly placedd
         int count = (int) Utility.UnseededRng(prop.minGroupSize, prop.maxGroupSize+1);
         //find valid space around group placement startingPos
         List<Vector2Int> availableSpaces = new();
-        var searchOffset = Mathf.Max(1,Mathf.FloorToInt(room.size[0] / 10f), Mathf.FloorToInt(room.size[1] / 10f));
-        var searchOffsetX = Mathf.FloorToInt(room.size[0] / 10f);
-        var searchOffsetY = Mathf.FloorToInt(room.size[1] / 10f);
+        var searchOffset = Mathf.Max(1,Mathf.FloorToInt(room.size.x / 10f), Mathf.FloorToInt(room.size.y / 10f));
+        var searchOffsetX = Mathf.FloorToInt(room.size.x / 10f);
+        var searchOffsetY = Mathf.FloorToInt(room.size.y / 10f);
         
         for(int xOffset = -searchOffset; xOffset <= searchOffset; xOffset++)
         {
@@ -405,12 +404,12 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    private void PlaceInnerGroupProp(RectangleRoom room, Vector2Int startingPos, Prop prop)
+    private void PlaceInnerGroupProp(BoxRoom room, Vector2Int startingPos, Prop prop)
     {   //fixed offset and placement position can make bigger prop poorly placedd
         int count = (int) Utility.UnseededRng(prop.minGroupSize, prop.maxGroupSize+1)-1;
         //find valid space around group placement startingPos
         List<Vector2Int> availableSpaces = new();
-        var searchOffset = Mathf.Max(1,Mathf.FloorToInt(room.size[0] / 10f), Mathf.FloorToInt(room.size[1] / 10f));
+        var searchOffset = Mathf.Max(1,Mathf.FloorToInt(room.size.x / 10f), Mathf.FloorToInt(room.size.y / 10f));
         
         for(int xOffset = -searchOffset*prop.propSize.x; xOffset < searchOffset*prop.propSize.x; xOffset+=prop.propSize.x)
         {
@@ -451,7 +450,7 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    private void PlaceGroupTrap(RectangleRoom room, Vector2Int startingPos, Prop trap)
+    private void PlaceGroupTrap(BoxRoom room, Vector2Int startingPos, Prop trap)
     {
         int count = (int) Utility.UnseededRng(trap.minGroupSize, trap.maxGroupSize);
         //find valid space around group placement startingPos
@@ -498,7 +497,7 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    private GameObject PlacePropAt(RectangleRoom room, Vector2Int placementPostion, Prop prop)
+    private GameObject PlacePropAt(BoxRoom room, Vector2Int placementPostion, Prop prop)
     {
         GameObject propObject = Instantiate(prop.prefabsVariant[Utility.UnseededRng(0, prop.prefabsVariant.Count)]);
         propObject.transform.position = (Vector2)placementPostion;
@@ -514,6 +513,25 @@ public class PropPlacer : MonoBehaviour
         return propObject;
     }
 
+    private GameObject PlacePropCenterAt(BoxRoom room, Vector2 placementPosition, Prop prop)
+    {
+        var propCenter = new Vector2(prop.propSize.x/2f, prop.propSize.y/2f);
+        var centerProp = placementPosition - propCenter + new Vector2(0.5f,0.5f);  
+        GameObject propObject = Instantiate(prop.prefabsVariant[Utility.UnseededRng(0, prop.prefabsVariant.Count)]);
+        propObject.transform.position = centerProp;
+        propObject.transform.SetParent(propParent.transform);
+        var takenPos = new Vector2Int(Mathf.FloorToInt(centerProp.x), Mathf.FloorToInt(centerProp.y));
+        for(int x = 0; x < prop.propSize.x; x++)
+        {
+            for(int y = 0; y < prop.propSize.y; y++)
+            {
+                room.propPositions.Add(takenPos + new Vector2Int(x, y));
+            }
+        }
+        room.propObjectReferences.Add(propObject);
+        return propObject;
+    }
+
     public void Reset()
     {
         while (propParent.transform.childCount > 0)
@@ -522,8 +540,19 @@ public class PropPlacer : MonoBehaviour
         }
     }
 
-    public void PlaceSpawnRoomProps(RectangleRoom room)
+    public void PlaceSpawnRoomProps(BoxRoom room)
     {
-        
+
+        PlacePropCenterAt(room, Vector2.zero, groundPortal);
+    }
+
+    public void PlaceShopRoomProps(BoxRoom room)
+    {
+        PlacePropCenterAt(room, room.center, shop);
+    }
+
+    public void PlaceExitPortal(BoxRoom room)
+    {
+        PlacePropCenterAt(room, room.center, exit);
     }
 }

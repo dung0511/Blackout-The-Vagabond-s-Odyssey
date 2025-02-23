@@ -1,13 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RectangleRoom : Room
+public class BoxRoom : Room
 {
-    public int[] size = new int[2]; //width, height
-    
-    
-
-    
+    public Vector2Int size = new Vector2Int(); //width, height
+        
 
 }
 

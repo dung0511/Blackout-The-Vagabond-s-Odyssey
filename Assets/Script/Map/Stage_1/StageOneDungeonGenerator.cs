@@ -15,7 +15,7 @@ public class StageOneDungeonGenerator : StageOne
 
     protected override void RunProceduralGeneration()
     {
-        DungeonData.Reset();
+        Reset();
         CorridorFirstGeneration();
         base.RunProceduralGeneration();
     }
@@ -47,10 +47,10 @@ public class StageOneDungeonGenerator : StageOne
     {
         foreach (var room in DungeonData.rooms)
         {
-            int left = room.center.x - room.size[0];
-            int right = room.center.x + room.size[0];
-            int top = room.center.y + room.size[1];
-            int bottom = room.center.y - room.size[1];
+            int left = room.center.x - room.size.x;
+            int right = room.center.x + room.size.x;
+            int top = room.center.y + room.size.y;
+            int bottom = room.center.y - room.size.y;
 
             room.corners = new HashSet<Vector2Int>
             {
@@ -147,10 +147,10 @@ public class StageOneDungeonGenerator : StageOne
 
             var entrances = new Dictionary<string, Vector2Int>
             {
-                { "top", new Vector2Int(center.x, center.y + size[1] + 1) },    //mid top
-                { "bottom", new Vector2Int(center.x, center.y - size[1] - 1) }, //mid bottom
-                { "left", new Vector2Int(center.x - size[0] - 1, center.y) },   //mid left
-                { "right", new Vector2Int(center.x + size[0] + 1, center.y) }   //mid right
+                { "top", new Vector2Int(center.x, center.y + size.y + 1) },    //mid top
+                { "bottom", new Vector2Int(center.x, center.y - size.y - 1) }, //mid bottom
+                { "left", new Vector2Int(center.x - size.x - 1, center.y) },   //mid left
+                { "right", new Vector2Int(center.x + size.x + 1, center.y) }   //mid right
             };
             foreach (var entrance in entrances)
             {
@@ -222,10 +222,10 @@ public class StageOneDungeonGenerator : StageOne
     private void CreateSpawnRoom(HashSet<Vector2Int> floorPositions)
     {
         var spawnRoom = RunBoxGen(startPos, smallRoom.minWidth, smallRoom.minHeight);
-        DungeonData.rooms.Add( new RectangleRoom
+        DungeonData.rooms.Add( new BoxRoom
         {
             center = startPos,
-            size = new int[] {smallRoom.minWidth, smallRoom.minHeight},
+            size = new Vector2Int(smallRoom.minWidth, smallRoom.minHeight),
             roomType = RoomType.Spawn,
             roomTiles = spawnRoom
         });
@@ -268,7 +268,7 @@ public class StageOneDungeonGenerator : StageOne
         roomToCreate.UnionWith(deadEnds);  //ensure no deadend corridor
         foreach (var roomCenter in roomToCreate)
         {
-            DungeonData.rooms.Add( new RectangleRoom
+            DungeonData.rooms.Add( new BoxRoom
             {
                 center = roomCenter,
                 roomType = RoomType.Normal //default
@@ -289,7 +289,7 @@ public class StageOneDungeonGenerator : StageOne
 
             (width, height) = GetRoomDimensions(r.roomType);
             roomBound = RunBoxGen(r.center, width, height);
-            r.size = new int[] { width, height };
+            r.size = new ( width, height );
             r.roomTiles = roomBound;
             roomPositions.UnionWith(roomBound);
         }

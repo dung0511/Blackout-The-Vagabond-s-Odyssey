@@ -8,26 +8,28 @@ using UnityEngine.Tilemaps;
 
 public class PlayerMoveController : MonoBehaviour
 {
-    [SerializeField]
     public float speed = 5f;
-    private Vector3 moveInput;
-    public Rigidbody2D rd;
-    void Start()
+    private Rigidbody2D rd;
+
+    private void Awake()
     {
+        
         rd = GetComponent<Rigidbody2D>();
     }
 
+    
     public bool MoveControl()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
-        if (moveInput.magnitude > 1)
-        {
-            moveInput = moveInput.normalized;
-        }
-        rd.linearVelocity = moveInput * speed;
-        return moveInput.magnitude > 0.01f;
+        Vector2 moveInput = new Vector2(horizontal, vertical);
+        bool isMoving = moveInput.sqrMagnitude > 0.01f; 
+
+        
+        rd.linearVelocity = moveInput.normalized * speed;
+
+        return isMoving;
     }
 
 }

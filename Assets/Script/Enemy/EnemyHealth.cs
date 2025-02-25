@@ -36,6 +36,8 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             isHurt = true;
+            Debug.Log(isHurt + " hurt");
+            enemyHealth.GetComponent<Enemy>().animator.SetBool("isHurt", true);
             StartCoroutine(ResetHurt());
         }
     }

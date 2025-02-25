@@ -4,19 +4,26 @@ using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
-    public Slider healthBar;
-    public int health;
-    public int maxHealth;
-    public bool isHurt;
-    public bool isDead;
-    
+    private Slider healthBar;
+    private int health;
+    private int maxHealth;
+    private bool isHurt;
+    private bool isDead;
+
+    //private void Awake()
+    //{
+        
+    //    maxHealth = health;
+    //    UpdateHealthBar(health,maxHealth);
+    //}
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         health = GetComponent<Player>().health;
-        isHurt = false;
-        isDead = false;
+        isHurt = GetComponent<Player>().isHurt;
+        isDead = GetComponent<Player>().isDead;
         maxHealth = health;
+        // ton rss
         healthBar = GameObject.Find("HealthBar").gameObject.GetComponent<Slider>();
         UpdateHealthBar(health, maxHealth);
         
@@ -32,7 +39,6 @@ public class PlayerHealthController : MonoBehaviour
             {
                 isDead = true;
                 health = 0;
-                //animator.SetBool("isDead",true);
             }
             else isHurt = true;
             StartCoroutine(ResetHurt());
@@ -50,4 +56,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         healthBar.value = (float)currentValue / (float)maxValue;
     }
+
+    public bool IsDead { get { return isDead; } }
+    public bool IsHurt { get { return isHurt; } }
 }

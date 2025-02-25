@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public PlayerHealthController healthController;
     public PlayerArmorController armorController;
     public PlayerMoveController moveController;
-
+    public WeaponController weaponController;
     private void Awake()
     {
         health = playerDetailSO.playerHealthAmount;
@@ -28,8 +28,9 @@ public class Player : MonoBehaviour
         healthController = GetComponent<PlayerHealthController>();
         armorController = GetComponent<PlayerArmorController>();
         moveController = GetComponent<PlayerMoveController>();
+        weaponController=GetComponentInChildren<WeaponController>();
 
-        
+
     }
     //public Rigidbody2D rd;
     //public SpriteRenderer characterSR;
@@ -97,6 +98,15 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            weaponController.ChangeWeapon(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            weaponController.ChangeWeapon(2);
+        }
         if (!healthController.IsDead)
         {
             

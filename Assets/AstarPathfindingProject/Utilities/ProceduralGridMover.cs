@@ -66,8 +66,12 @@ namespace Pathfinding {
 		/// </summary>
 		[HideInInspector]
 		public int graphIndex;
-
-		void Start () {
+        private void Awake()
+        {
+			Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+			target = playerTransform;
+		}
+        void Start () {
 			if (AstarPath.active == null) throw new System.Exception("There is no AstarPath object in the scene");
 
 			// If one creates this component via a script then they may have already set the graph field.

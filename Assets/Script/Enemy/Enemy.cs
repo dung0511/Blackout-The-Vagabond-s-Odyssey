@@ -32,7 +32,8 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("isAttack1", checkAttack());
         isHurt=GetComponent<EnemyHealth>().isHurt;
-        animator.SetBool("isHurt", isHurt);
+        //animator.SetBool("isHurt", isHurt);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

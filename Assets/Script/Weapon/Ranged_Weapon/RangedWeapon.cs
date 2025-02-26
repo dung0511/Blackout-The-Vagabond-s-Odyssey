@@ -26,6 +26,11 @@ public class RangedWeapon : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Fire();
+            firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", true);
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", false);
         }
     }
 

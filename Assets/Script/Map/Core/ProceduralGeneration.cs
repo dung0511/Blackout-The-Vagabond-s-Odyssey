@@ -63,37 +63,6 @@ public static class ProceduralGeneration
         return (corridorPath, minPath);
     }
 
-    public static Vector2Int[] BFS(Vector2Int startPost, HashSet<Vector2Int> map, HashSet<Vector2Int> nodes)
-    {
-        Vector2Int[] reachedNodes = new Vector2Int[nodes.Count]; int count = 0;
-        Queue<Vector2Int> frontier = new Queue<Vector2Int>();
-        HashSet<Vector2Int> visited = new();
-        
-        frontier.Enqueue(startPost);
-
-        while(frontier.Count > 0)
-        {
-            Vector2Int current = frontier.Dequeue();
-            visited.Add(current);
-            if(nodes.Contains(current))
-            {
-                reachedNodes[count] = current;
-                count++;
-            }
-            foreach (var direction in Direction2D.Directions)
-            {
-                Vector2Int neighbour = current + direction;
-                if(map.Contains(neighbour) && !visited.Contains(neighbour) && !frontier.Contains(neighbour))
-                {
-                    frontier.Enqueue(neighbour);
-                }
-            }
-        }
-
-        // Debug.Log("reached nodes order: "+String.Join(", ",reachedNodes));
-        return reachedNodes[..count];
-    }
-
     public static HashSet<Vector2Int> BFS(Vector2Int startPost, HashSet<Vector2Int> map)
     {
         Queue<Vector2Int> frontier = new Queue<Vector2Int>();

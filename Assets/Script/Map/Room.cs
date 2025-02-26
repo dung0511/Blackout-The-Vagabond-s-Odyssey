@@ -15,6 +15,8 @@ public class Room
     public RoomType roomType;
     public HashSet<Vector2Int> propPositions { get; set; } = new HashSet<Vector2Int>();
     public List<GameObject> propObjectReferences { get; set; } = new List<GameObject>();
+    public List<GameObject> enemyObjectReferences { get; set; } = new List<GameObject>();
+    public List<GameObject> doorObjectReferences { get; set; } = new List<GameObject>();
     public Vector2Int topEntrance, bottomEntrance, leftEntrance, rightEntrance;
     public HashSet<Vector2Int> corners = new();
     public HashSet<Vector2Int> nearTopWall = new();
@@ -29,6 +31,6 @@ public enum RoomType
     Spawn,
     Normal, Elite,
     Treasure, Shop,
-    // Upgrade, //Consider
+    // Upgrade,
     Exit
 }

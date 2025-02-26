@@ -11,7 +11,8 @@ public class PropPlacer : MonoBehaviour
     [SerializeField] private List<Prop> props;
     [SerializeField] private List<Prop> lightProps;
     [SerializeField] private List<Prop> trapProps;
-    [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f;
+    [SerializeField] private GameObject[] doors; // 0:front. 1:side
+    [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f, doorChance = 0.6f;
     [SerializeField] private GameObject propParent;
     [SerializeField] private Prop groundPortal;
     [SerializeField] private Prop shop;
@@ -361,20 +362,13 @@ public class PropPlacer : MonoBehaviour
         //find valid space around group placement startingPos
         List<Vector2Int> availableSpaces = new();
         var searchOffset = Mathf.Max(1,Mathf.FloorToInt(room.size.x / 10f), Mathf.FloorToInt(room.size.y / 10f));
-        var searchOffsetX = Mathf.FloorToInt(room.size.x / 10f);
-        var searchOffsetY = Mathf.FloorToInt(room.size.y / 10f);
         
         for(int xOffset = -searchOffset; xOffset <= searchOffset; xOffset++)
         {
             for(int yOffset = -searchOffset; yOffset <= searchOffset; yOffset++)
             {
                 Vector2Int checkPos = startingPos + new Vector2Int(xOffset, yOffset);
-                // if(room.roomTiles.Contains(checkPos) && 
-                // !DungeonData.path.Contains(checkPos) &&
-                // !room.propPositions.Contains(checkPos))
-                // {                  
-                //         availableSpaces.Add(checkPos);
-                // }
+
                 if(room.roomTiles.Contains(checkPos) && 
                 !DungeonData.path.Contains(checkPos))
                 {
@@ -513,10 +507,10 @@ public class PropPlacer : MonoBehaviour
         return propObject;
     }
 
-    private GameObject PlacePropCenterAt(BoxRoom room, Vector2 placementPosition, Prop prop)
+    private void PlacePropCenterAt(BoxRoom room, Vector2 posToCenter, Prop prop)
     {
         var propCenter = new Vector2(prop.propSize.x/2f, prop.propSize.y/2f);
-        var centerProp = placementPosition - propCenter + new Vector2(0.5f,0.5f);  
+        var centerProp = posToCenter - propCenter + new Vector2(0.5f,0.5f);  
         GameObject propObject = Instantiate(prop.prefabsVariant[Utility.UnseededRng(0, prop.prefabsVariant.Count)]);
         propObject.transform.position = centerProp;
         propObject.transform.SetParent(propParent.transform);
@@ -529,7 +523,6 @@ public class PropPlacer : MonoBehaviour
             }
         }
         room.propObjectReferences.Add(propObject);
-        return propObject;
     }
 
     public void Reset()
@@ -554,5 +547,82 @@ public class PropPlacer : MonoBehaviour
     public void PlaceExitPortal(BoxRoom room)
     {
         PlacePropCenterAt(room, room.center, exit);
+    }
+
+    public void SetRoomEntrances(BoxRoom room)
+    {
+        var center = room.center;
+        var size = room.size;
+
+        var entrances = new Dictionary<int, Vector2Int>
+        {
+            { 01, new Vector2Int(center.x, center.y + size.y + 1) },    //mid top
+            { 0-1, new Vector2Int(center.x, center.y - size.y - 1) }, //mid bottom
+            { -10, new Vector2Int(center.x - size.x - 1, center.y) },   //mid left
+            { 10, new Vector2Int(center.x + size.x + 1, center.y) }   //mid right
+        };
+        foreach (var entrance in entrances)
+        {
+            if (DungeonData.path.Contains(entrance.Value))
+            {
+                var beforeEntrance = entrance.Value;
+                switch (entrance.Key)
+                {
+                    case 01:
+                        room.topEntrance = entrance.Value;
+                        beforeEntrance = entrance.Value+Vector2Int.down;
+                        DungeonData.path.Add(beforeEntrance);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.left);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.right);
+                        if(Random.value <= doorChance)
+                        {
+                            PlaceDoor(room.topEntrance, 0, room);
+                        }
+                        break;
+                    case 0-1:
+                        room.bottomEntrance = entrance.Value;
+                        beforeEntrance = entrance.Value+Vector2Int.up;
+                        DungeonData.path.Add(beforeEntrance);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.left);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.right);
+
+                        if (Random.value <= doorChance)
+                        {
+                            PlaceDoor(room.bottomEntrance + Vector2Int.down, 0, room);
+                        }
+                        break;
+                    case -10:
+                        room.leftEntrance = entrance.Value;
+                        beforeEntrance = entrance.Value+Vector2Int.right;
+                        DungeonData.path.Add(beforeEntrance);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.up);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.down);
+                        if (Random.value <= doorChance)
+                        {
+                            PlaceDoor(room.leftEntrance, 1, room);
+                        }
+                        break;
+                    case 10:
+                        room.rightEntrance = entrance.Value;
+                        beforeEntrance = entrance.Value+Vector2Int.left;
+                        DungeonData.path.Add(beforeEntrance);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.up);
+                        DungeonData.path.Add(beforeEntrance+Vector2Int.down);
+                        if (Random.value <= doorChance)
+                        {
+                            PlaceDoor(room.rightEntrance, 1, room);
+                        }
+                        break;
+                }
+            }
+        }
+        
+    }
+
+    private void PlaceDoor(Vector2Int pos, int index, BoxRoom room)
+    {
+        var doorPos = new Vector3(pos.x + 0.5f, pos.y +0.5f, 0);
+        var door = Instantiate(doors[index], doorPos, Quaternion.identity, propParent.transform);
+        room.doorObjectReferences.Add(door);
     }
 }

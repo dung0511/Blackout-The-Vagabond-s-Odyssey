@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class StageOne : AbstractDungeonGenerator
 {
     public PropPlacer propPlacer;
+    public AgentPlacer agentPlacer;
  
     protected override void RunProceduralGeneration()
     {
@@ -18,25 +19,30 @@ public class StageOne : AbstractDungeonGenerator
     {
         foreach (var room in DungeonData.rooms)
         {
+            propPlacer.SetRoomEntrances(room);
             propPlacer.PlaceCornerProps(room);
             propPlacer.PlaceLights(room);
             switch (room.roomType)
             {
                 case RoomType.Spawn:
-                    //propPlacer.PlaceSpawnRoomProps(room);
+                    propPlacer.PlaceSpawnRoomProps(room);
                     break;
                 case RoomType.Normal:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
                     propPlacer.PlaceTraps(room);
+                    agentPlacer.PlaceEnemies(room);
                     break;
                 case RoomType.Elite:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
                     propPlacer.PlaceTraps(room);
+                    agentPlacer.PlaceEnemies(room);
+                    //trap door 
                     break;
                 case RoomType.Treasure:
                     propPlacer.PlaceTopWallProps(room);
+                    // propPlacer.PlaceTreasure(room);
                     break;
                 case RoomType.Shop:
                     propPlacer.PlaceLeftWallProps(room);
@@ -53,6 +59,8 @@ public class StageOne : AbstractDungeonGenerator
         }
     }
 
+
+
     protected HashSet<Vector2Int> RunBoxGen(Vector2Int startPos, int width, int height)
     {
         var currentPos = startPos;
@@ -66,6 +74,6 @@ public class StageOne : AbstractDungeonGenerator
     {
         DungeonData.Reset();
         propPlacer.Reset();
-
+        agentPlacer.Reset();
     }
 }

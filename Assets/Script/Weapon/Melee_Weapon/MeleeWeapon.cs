@@ -7,13 +7,14 @@ public class MeleeWeapon : MonoBehaviour
     public MeleeWeaponSO meleeDetail;
     public SpriteRenderer CharacterSR;
     public Animator anim;
-    public float attackCooldown = 0.5f;
+    private float attackCooldown = 0.5f;
     private float lastAttackTime = 0f;
     public int dame;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
     void Awake()
     {
-        dame=meleeDetail.damageMeleeWeapon;
+        attackCooldown=meleeDetail.attackCooldown;
+        dame =meleeDetail.damageMeleeWeapon;
         CharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
     }

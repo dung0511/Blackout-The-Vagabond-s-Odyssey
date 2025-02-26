@@ -27,10 +27,21 @@ public class MeleeWeaponSO : ScriptableObject
     [Space(10)]
     [Header("DAMAGE")]
     #endregion
+
     #region Tooltip
     [Tooltip("Damage of the melee weapon")]
     #endregion
     public int damageMeleeWeapon;
+
+    #region Header Attack Cooldown
+    [Space(10)]
+    [Header("ATTACK COOLDOWN")]
+    #endregion
+
+    #region Tooltip
+    [Tooltip("Time between each melee attack (in seconds).")]
+    #endregion
+    public float attackCooldown;
 
     #region Validation
 #if UNITY_EDITOR
@@ -43,6 +54,7 @@ public class MeleeWeaponSO : ScriptableObject
         Utility.ValidateCheckNullValue(this, nameof(meleeWeaponPrefab), meleeWeaponPrefab);
         Utility.ValidateCheckPositiveValue(this, nameof(damageMeleeWeapon), damageMeleeWeapon, false);
         Utility.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
+        Utility.ValidateCheckPositiveValue(this, nameof(attackCooldown), attackCooldown, false);
     }
 #endif
     #endregion

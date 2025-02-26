@@ -32,6 +32,20 @@ public class RangedWeaponSO : ScriptableObject
     #endregion
     public int damageRangedWeapon;
 
+    #region Header Fire Rate & Bullet Force
+    [Space(10)]
+    [Header("FIRE RATE & BULLET FORCE")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Time between each shot (lower value means faster shooting).")]
+    #endregion
+    public float TimeBtwFire;
+
+    #region Tooltip
+    [Tooltip("Force applied to the bullet when fired.")]
+    #endregion
+    public float bulletForce;
+
     #region Validation
 #if UNITY_EDITOR
     /// <summary>
@@ -43,6 +57,8 @@ public class RangedWeaponSO : ScriptableObject
         Utility.ValidateCheckNullValue(this, nameof(rangedWeaponPrefab), rangedWeaponPrefab);
         Utility.ValidateCheckPositiveValue(this, nameof(damageRangedWeapon), damageRangedWeapon, false);
         Utility.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
+        Utility.ValidateCheckPositiveValue(this, nameof(TimeBtwFire), TimeBtwFire, false);
+        Utility.ValidateCheckPositiveValue(this, nameof(bulletForce), bulletForce, false);
     }
 #endif
     #endregion

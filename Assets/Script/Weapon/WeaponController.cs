@@ -26,11 +26,13 @@ public class WeaponController : MonoBehaviour
             case 1:
                 Weapon1.active = true;
                 Weapon2.active = false;
+              
                 break;
 
             case 2:
                 Weapon1.active = false;
                 Weapon2.active = true;
+               
                 break;
         }
     }

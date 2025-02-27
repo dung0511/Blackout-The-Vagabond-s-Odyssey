@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
             
             enemy.takeDame(weapon.BulletDame);
             Debug.Log("player dealt: " + weapon.BulletDame);
-            Destroy(gameObject);
+            BulletPoolManagement.Instance.ReturnGameObject(gameObject);
         }
         
     }

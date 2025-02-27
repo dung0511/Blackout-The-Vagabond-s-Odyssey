@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
+using Random = System.Random;
+using Object = System.Object;
 
 public static class Utility
-{
-    private static Random rng = new Random();    
-    
+{    
     public static void UnseededShuffle<T>(List<T> list)
     {
+        Random rng = new Random();
         for (int i = list.Count - 1; i > 0; i--)
         {
             int j = rng.Next(i + 1);
@@ -25,8 +27,68 @@ public static class Utility
 
     public static int UnseededRng(int min, int max)
     {
+        Random rng = new Random();
         return rng.Next(min, max);
     }
+
+    public static List<Vector2Int> BFS(Vector2Int startPost, HashSet<Vector2Int> map, HashSet<Vector2Int> nodes)
+    {
+        List<Vector2Int> reachedNodes = new();
+        Queue<Vector2Int> frontier = new();
+        HashSet<Vector2Int> visited = new();
+        
+        frontier.Enqueue(startPost);
+
+        while(frontier.Count > 0)
+        {
+            Vector2Int current = frontier.Dequeue();
+            visited.Add(current);
+            if(nodes.Contains(current))
+            {
+                reachedNodes.Add(current);
+            }
+            foreach (var direction in Direction2D.Directions)
+            {
+                Vector2Int neighbour = current + direction;
+                if(map.Contains(neighbour) && !visited.Contains(neighbour) && !frontier.Contains(neighbour))
+                {
+                    frontier.Enqueue(neighbour);
+                }
+            }
+        }
+
+        // Debug.Log("reached nodes order: "+String.Join(", ",reachedNodes));
+        return reachedNodes;
+    }
+
+    public static List<Vector2Int> TraverseBFS(Vector2Int startPost, HashSet<Vector2Int> map)
+    {
+        List<Vector2Int> visitedNodes = new();
+        Queue<Vector2Int> frontier = new();
+        HashSet<Vector2Int> visited = new();
+        
+        frontier.Enqueue(startPost);
+        visited.Add(startPost);
+
+        while (frontier.Count > 0)
+        {
+            Vector2Int current = frontier.Dequeue();
+            visitedNodes.Add(current);
+            
+            foreach (var direction in Direction2D.Directions)
+            {
+                Vector2Int neighbour = current + direction;
+                if (map.Contains(neighbour) && !visited.Contains(neighbour))
+                {
+                    frontier.Enqueue(neighbour);
+                    visited.Add(neighbour);
+                }
+            }
+        }
+
+        return visitedNodes;
+    }
+
 
     /// <summary>
     /// Empty string debug check

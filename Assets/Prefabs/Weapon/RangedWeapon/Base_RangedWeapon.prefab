@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40e1295f9e973f498fedba79b9353b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  initialPoolSize: 10
 --- !u!1 &2716264520620643174
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120e3bf7bfaa006438aaf9fa992a8b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 778125498572981149, guid: a646af30f42fe764285c271e9509669c, type: 3}
   firePos: {fileID: 1799196499197247316}
   TimeBtwFire: 0
   bulletForce: 0

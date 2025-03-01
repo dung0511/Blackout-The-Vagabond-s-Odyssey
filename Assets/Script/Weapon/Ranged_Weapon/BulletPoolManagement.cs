@@ -5,49 +5,57 @@ public class BulletPoolManagement : MonoBehaviour
 {
     public static BulletPoolManagement Instance { get; private set; }
 
-    [SerializeField] public GameObject bulletPrefab;
-    [SerializeField] private int initialPoolSize = 10;
-
-    private Queue<GameObject> pool;
+    [SerializeField] public List<GameObject> allBulletPrefab;
+    private Dictionary<GameObject, Queue<GameObject>> bulletPools;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            InitializePools();
         }
-
-
-        pool = new Queue<GameObject>();
-        bulletPrefab = GetComponentInParent<RangedWeapon>().bullet;
-    }
-
-    private void Start()
-    {
-
         
     }
 
-    public GameObject GetGameObject(GameObject obj)
+    private void InitializePools()
     {
-
-
-        if (pool.Count > 0)
+        bulletPools = new Dictionary<GameObject, Queue<GameObject>>();
+        Debug.Log("allbulletPrefab: " + allBulletPrefab.Count);
+        foreach (GameObject bulletPrefab in allBulletPrefab)
         {
-            obj = pool.Dequeue();
+            bulletPools[bulletPrefab] = new Queue<GameObject>();
+            Debug.Log(bulletPrefab.name);
+        }
+    }
+
+    public GameObject GetBullet(GameObject bulletPrefab)
+    {
+        if (!bulletPools.ContainsKey(bulletPrefab))
+        {
+            Debug.LogError("BulletPrefab not found in pool!");
+            return null;
+        }
+
+        if (bulletPools[bulletPrefab].Count > 0)
+        {
+            GameObject bullet = bulletPools[bulletPrefab].Dequeue();
+            bullet.SetActive(true);
+            return bullet;
         }
         else
         {
-            obj = Instantiate(bulletPrefab);
+            GameObject newBullet = Instantiate(bulletPrefab);
+            return newBullet;
         }
-
-        obj.SetActive(true);
-        return obj;
     }
 
-    public void ReturnGameObject(GameObject obj)
+    public void ReturnBullet(GameObject bullet, GameObject bulletPrefab)
     {
-        obj.SetActive(false);
-        pool.Enqueue(obj);
+        Debug.Log("Bullet prefab: " + bulletPrefab);
+        Debug.Log("Bullet : " + bullet);
+        bullet.SetActive(false);
+        bulletPools[bulletPrefab].Enqueue(bullet);
+        
     }
 }

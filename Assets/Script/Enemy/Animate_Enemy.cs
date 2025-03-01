@@ -64,4 +64,5 @@ public static class AnimationParameters
     public static int isAttack3 = Animator.StringToHash("isAttack3");
     public static int isHurt = Animator.StringToHash("isHurt");
     public static int isDead = Animator.StringToHash("isDead");
+
 }

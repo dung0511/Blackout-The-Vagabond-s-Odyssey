@@ -21,6 +21,8 @@ public class EnemyHealth : MonoBehaviour
         {
             enemyHealth.health = 0;
             enemyHealth.GetComponent<Enemy>().animator.SetBool("isDead", true);
+            //enemyHealth.GetComponent<Enemy>().animator.SetTrigger("isDead");
+
             enemyHealth.GetComponent<CapsuleCollider2D>().enabled = false;
             enemyHealth.GetComponent<Enemy_Movement_AI>().enabled = false;
             enemyHealth.GetComponent<MovementToPosition>().enabled = false;
@@ -36,8 +38,8 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             isHurt = true;
-            Debug.Log(isHurt + " hurt");
-            enemyHealth.GetComponent<Enemy>().animator.SetBool("isHurt", true);
+            //Debug.Log(isHurt + " hurt");
+            //enemyHealth.GetComponent<Enemy>().animator.SetBool("isHurt", true);
             StartCoroutine(ResetHurt());
         }
     }

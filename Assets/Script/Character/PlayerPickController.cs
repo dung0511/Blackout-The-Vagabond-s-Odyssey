@@ -1,0 +1,120 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.TextCore.Text;
+using UnityEngine.Tilemaps;
+//using static UnityEngine.GraphicsBuffer;
+
+public class PlayerPickController : MonoBehaviour
+{
+    public bool isTouchItem = false;
+    public bool isMelee = false;
+    public bool isRanged = false;
+    public GameObject Item;
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+
+        if (collision.GetComponent<MeleeWeapon>() != null)
+        {
+
+            //if (_isPicking)
+            //{
+            //    collision.enabled = false;
+            //    collision.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+
+            //    collision.GetComponent<RangedWeapon>().currentCharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
+            //    collision.transform.localScale = new Vector3(0.6f, 0.6f, 1);
+            //    collision.transform.localPosition = new Vector3(0, -0.04f, 1);
+
+            //    GetComponentInChildren<RangedWeapon>().inHand = true;
+            //    GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(collision.gameObject);
+
+
+            //}
+            isTouchItem = true;
+            Item = collision.gameObject;
+            isMelee = true;
+            isRanged = false;
+        }
+        if (collision.GetComponent<RangedWeapon>() != null)
+        {
+            isTouchItem = true;
+            Item = collision.gameObject;
+            isMelee = false;
+            isRanged = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.GetComponent<MeleeWeapon>() != null )
+        {
+
+            //if (_isPicking)
+            //{
+            //    collision.enabled = false;
+            //    collision.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+
+            //    collision.GetComponent<RangedWeapon>().currentCharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
+            //    collision.transform.localScale = new Vector3(0.6f, 0.6f, 1);
+            //    collision.transform.localPosition = new Vector3(0, -0.04f, 1);
+               
+            //    GetComponentInChildren<RangedWeapon>().inHand = true;
+            //    GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(collision.gameObject);
+                
+
+            //}
+            isTouchItem = true;
+            Item = collision.gameObject;
+            isMelee = true;
+            isRanged = false;
+        }
+        if (collision.GetComponent<RangedWeapon>() != null)
+        {
+            isTouchItem = true;
+            Item = collision.gameObject;
+            isMelee = false;
+            isRanged = true;
+        }
+    }
+    private void OnTriggerExit2D()
+    {
+        isTouchItem = false;
+        Item = null;
+    }
+
+    
+
+    public void PickItemWeapon()
+    {
+        if (isMelee)
+        {
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+
+            Item.GetComponent<MeleeWeapon>().CharacterSR = GetComponentInChildren<SpriteRenderer>();
+            Item.transform.localScale = new Vector3(0.7f, 0.7f, 1);
+            Item.transform.localPosition = new Vector3(0, -0.03f, 1);
+
+            Item.GetComponentInChildren<MeleeWeapon>().inHand = true;
+            GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
+        }
+        else if (isRanged)
+        {
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+
+            Item.GetComponent<RangedWeapon>().currentCharacterSR = GetComponentInChildren<SpriteRenderer>();
+            Item.transform.localScale = new Vector3(0.6f, 0.6f, 1);
+            Item.transform.localPosition = new Vector3(0, -0.04f, 1);
+
+            Item.GetComponentInChildren<RangedWeapon>().inHand = true;
+            GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
+        }
+        
+    }
+
+}

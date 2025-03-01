@@ -32,6 +32,54 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.031
       objectReference: {fileID: 0}
+    - target: {fileID: 5059085267850039857, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6852933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059085267850039857, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Size.y
+      value: 0.37524307
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059085267850039857, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.07128079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059085267850039857, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018420279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Size.x
+      value: 0.71286476
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3845741
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08506651
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.01375477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.27180862
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.37604395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 7382873815902496720, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

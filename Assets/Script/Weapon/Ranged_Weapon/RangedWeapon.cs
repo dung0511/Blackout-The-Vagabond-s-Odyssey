@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class RangedWeapon : MonoBehaviour
 {
@@ -10,23 +11,45 @@ public class RangedWeapon : MonoBehaviour
     // private float timeBtwFire = 0;
     private float lastFireTime = 0;
     private bool isFiring = false;
+    public bool inHand;
     public SpriteRenderer currentCharacterSR;
     public RangedWeaponSO rangedDetail;
 
-    void Awake()
+    void Start()
     {
         TimeBtwFire = rangedDetail.TimeBtwFire;
         bulletForce = rangedDetail.bulletForce;
         BulletDame = rangedDetail.damageRangedWeapon;
-        currentCharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
+        if (GetComponentInParent<WeaponController>() != null )
+        {
+            Transform player = transform.parent.parent;
+            currentCharacterSR = player.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            GetComponent<BoxCollider2D>().enabled = false;
+
+        }
+        else
+        {
+            InGround(gameObject);
+        }
+        
     }
 
     void Update()
     {
-        RotateGun();
-        if (Input.GetMouseButton(0))
+        if (inHand)
         {
-            Fire();
+            GetComponent<BoxCollider2D>().enabled = false;
+            RotateGun();
+            if (Input.GetMouseButton(0))
+            {
+                Fire();
+            }
+            
+        }
+        else
+        {
+            InGround(gameObject);
         }
     }
 
@@ -87,5 +110,14 @@ public class RangedWeapon : MonoBehaviour
     {
         isFiring = false;
         firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", false);
+    }
+
+    public void InGround(GameObject game)
+    {
+        game.GetComponent<RangedWeapon>().currentCharacterSR = null;
+        game.transform.rotation = Quaternion.identity;
+        game.GetComponent<RangedWeapon>().inHand = false;
+        game.transform.localScale = new Vector3(5,5,0);
+        game.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

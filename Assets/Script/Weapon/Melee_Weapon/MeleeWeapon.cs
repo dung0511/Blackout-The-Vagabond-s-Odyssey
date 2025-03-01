@@ -10,31 +10,52 @@ public class MeleeWeapon : MonoBehaviour
     private float attackCooldown = 0.5f;
     private float lastAttackTime = 0f;
     public int dame;
-   
-    void Awake()
+    public bool inHand;
+
+    void Start()
     {
         attackCooldown=meleeDetail.attackCooldown;
         dame =meleeDetail.damageMeleeWeapon;
-        CharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
+        if (GetComponentInParent<WeaponController>() != null)
+        {
+            Transform player = transform.parent.parent;
+            CharacterSR = player.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            GetComponent<BoxCollider2D>().enabled = false;
+
+        }
+        else
+        {
+            InGround(gameObject);
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        RotateMeleeWeapon();
-
-        if (Input.GetMouseButton(0))
+        if (inHand)
         {
-            if (Time.time >= lastAttackTime + attackCooldown)
+            RotateMeleeWeapon();
+            GetComponent<BoxCollider2D>().enabled = false;
+            if (Input.GetMouseButton(0))
             {
-                AttackMelee();
-                lastAttackTime = Time.time;
+                if (Time.time >= lastAttackTime + attackCooldown)
+                {
+                    AttackMelee();
+                    lastAttackTime = Time.time;
+                }
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                anim.SetBool("isMeleeAttack", false);
             }
         }
-        else if (Input.GetMouseButtonUp(0))
+
+        else
         {
-            anim.SetBool("isMeleeAttack", false);
+            InGround(gameObject);
         }
 
     }
@@ -71,6 +92,15 @@ public class MeleeWeapon : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         
+    }
+
+    public void InGround(GameObject game)
+    {
+        game.GetComponent<MeleeWeapon>().CharacterSR = null;
+        game.transform.rotation = Quaternion.identity;
+        game.GetComponent<MeleeWeapon>().inHand = false;
+        game.transform.localScale = new Vector3(5, 5, 0);
+        game.GetComponent<BoxCollider2D>().enabled = true;
     }
 
 

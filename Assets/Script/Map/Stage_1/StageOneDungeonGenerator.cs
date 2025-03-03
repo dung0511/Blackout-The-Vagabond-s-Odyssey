@@ -90,8 +90,8 @@ public class StageOneDungeonGenerator : StageOne
         var exitPos = roomsByDistAsc[^1];
         var exitRoom = DungeonData.rooms.FirstOrDefault(x => x.center == exitPos);
         exitRoom.roomType = RoomType.Exit;
-        //treasure room from 3/5 furthest, avoid next to furthest room (exit)
-        var treasurePos = roomsByDistAsc[Random.Range(roomsByDistAsc.Count * 4 / 7, roomsByDistAsc.Count-2)];
+        //treasure room from 5/7 furthest path, avoid next to furthest room (exit)
+        var treasurePos = roomsByDistAsc[Random.Range(roomsByDistAsc.Count * 5 / 7, roomsByDistAsc.Count-2)];
         var treasureRoom = DungeonData.rooms.FirstOrDefault(x => x.center == treasurePos);
         treasureRoom.roomType = RoomType.Treasure;
 
@@ -121,94 +121,6 @@ public class StageOneDungeonGenerator : StageOne
         Debug.Log("Shop: "+sr.center);
     }
 
-    private Vector2Int FindFurthestRoomByWorld(HashSet<Vector2Int> deadEnds)
-    {
-        float maxDistance = 0f;
-        var furthest = deadEnds.First();
-        foreach (var deadEnd in deadEnds)
-        {
-            var distance = Vector2Int.Distance(startPos, deadEnd);
-            if (distance > maxDistance)
-            {
-                maxDistance = distance;
-                furthest = deadEnd;
-            }
-        }
-        return furthest;
-    }
-
-    // private void FindRoomEntrances(HashSet<Vector2Int> floorPositions)
-    // {
-    //     foreach (var room in DungeonData.rooms)
-    //     {
-    //         var center = room.center;
-    //         var size = room.size;
-
-    //         var entrances = new Dictionary<int, Vector2Int>
-    //         {
-    //             { 01, new Vector2Int(center.x, center.y + size.y + 1) },    //mid top
-    //             { 0-1, new Vector2Int(center.x, center.y - size.y - 1) }, //mid bottom
-    //             { -10, new Vector2Int(center.x - size.x - 1, center.y) },   //mid left
-    //             { 10, new Vector2Int(center.x + size.x + 1, center.y) }   //mid right
-    //         };
-    //         foreach (var entrance in entrances)
-    //         {
-    //             if (floorPositions.Contains(entrance.Value))
-    //             {
-    //                 var beforeEntrance = entrance.Value;
-    //                 switch (entrance.Key)
-    //                 {
-    //                     case 01:
-    //                         room.topEntrance = entrance.Value;
-    //                         beforeEntrance = entrance.Value+Vector2Int.down;
-    //                         DungeonData.path.Add(beforeEntrance);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.left);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.right);
-    //                         if(Random.value <= doorChance)
-    //                         {
-    //                             mapVisualizer.PlaceDoor(room.topEntrance, 0);
-    //                         }
-    //                         break;
-    //                     case 0-1:
-    //                         room.bottomEntrance = entrance.Value;
-    //                         beforeEntrance = entrance.Value+Vector2Int.up;
-    //                         DungeonData.path.Add(beforeEntrance);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.left);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.right);
-
-    //                         if (Random.value <= doorChance)
-    //                         {
-    //                             mapVisualizer.PlaceDoor(room.bottomEntrance + Vector2Int.down, 0);
-    //                         }
-    //                         break;
-    //                     case -10:
-    //                         room.leftEntrance = entrance.Value;
-    //                         beforeEntrance = entrance.Value+Vector2Int.right;
-    //                         DungeonData.path.Add(beforeEntrance);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.up);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.down);
-    //                         if (Random.value <= doorChance)
-    //                         {
-    //                             mapVisualizer.PlaceDoor(room.leftEntrance, 1);
-    //                         }
-    //                         break;
-    //                     case 10:
-    //                         room.rightEntrance = entrance.Value;
-    //                         beforeEntrance = entrance.Value+Vector2Int.left;
-    //                         DungeonData.path.Add(beforeEntrance);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.up);
-    //                         DungeonData.path.Add(beforeEntrance+Vector2Int.down);
-    //                         if (Random.value <= doorChance)
-    //                         {
-    //                             mapVisualizer.PlaceDoor(room.rightEntrance, 1);
-    //                         }
-    //                         break;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
     private void CreateSpawnRoom(HashSet<Vector2Int> floorPositions)
     {
         var spawnRoom = RunBoxGen(startPos, smallRoom.minWidth, smallRoom.minHeight);
@@ -219,9 +131,6 @@ public class StageOneDungeonGenerator : StageOne
             roomType = RoomType.Spawn,
             roomTiles = spawnRoom
         });
-        //Placing shits here
-                     
-        //
         floorPositions.UnionWith(spawnRoom);
     }
     
@@ -298,7 +207,10 @@ public class StageOneDungeonGenerator : StageOne
                     UnityEngine.Random.Range(mediumRoom.minWidth, mediumRoom.maxWidth),
                     UnityEngine.Random.Range(mediumRoom.minHeight, mediumRoom.maxHeight)
                 );
-            case RoomType.Treasure: //use Exit room case
+            case RoomType.Treasure: //same as spawn room
+            return (
+                    (smallRoom.minWidth, smallRoom.minHeight)
+                );
             case RoomType.Exit:
                 return (
                     UnityEngine.Random.Range(smallRoom.minWidth, smallRoom.maxWidth),
@@ -306,8 +218,8 @@ public class StageOneDungeonGenerator : StageOne
                 );
             case RoomType.Shop:
                 return (
-                    UnityEngine.Random.Range(smallRoom.maxWidth, smallRoom.maxWidth),
-                    UnityEngine.Random.Range(smallRoom.minHeight, smallRoom.minHeight)
+                    UnityEngine.Random.Range(smallRoom.maxWidth, smallRoom.minHeight),
+                    smallRoom.minHeight
                 );
             default:
                 Debug.LogError("Invalid room type: " + roomType);

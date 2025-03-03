@@ -11,10 +11,9 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
-        
-        if (enemy != null)
+    {        
+        // if (enemy != null)
+        if(collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
             
             enemy.takeDame(weapon.BulletDame);

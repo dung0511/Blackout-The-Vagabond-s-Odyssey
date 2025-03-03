@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8005929235334524522}
   - component: {fileID: 8688479425150387802}
-  - component: {fileID: 6301440398901732882}
-  m_Layer: 0
+  - component: {fileID: 4004680799149840905}
+  m_Layer: 6
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6301440398901732882
+--- !u!95 &4004680799149840905
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 4595298978508868379}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c204d8ddffb03c143b671aeff343d7ed, type: 2}
+  m_Controller: {fileID: 9100000, guid: 64133c4e32e74a841b448d52aff79e81, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

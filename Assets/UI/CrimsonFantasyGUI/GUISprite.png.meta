@@ -306,7 +306,7 @@ TextureImporter:
         width: 61
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,6 +315,28 @@ TextureImporter:
       bones: []
       spriteID: d57b91b55b81825499ffb93939eff7c5
       internalID: 338276251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUISprite_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 162
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ff764048d346a4c9f3da82b2f82c14
+      internalID: 759824221
       vertices: []
       indices: 
       edges: []

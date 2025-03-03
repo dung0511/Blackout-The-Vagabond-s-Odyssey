@@ -15,21 +15,18 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void takeDame(int damage)
     {
         enemyHealth.health-= damage;
-
-
         if (enemyHealth.health <= 0)
         {
             enemyHealth.health = 0;
             enemyHealth.GetComponent<Enemy>().animator.SetBool("isDead", true);
-            //enemyHealth.GetComponent<Enemy>().animator.SetTrigger("isDead");
-
             enemyHealth.GetComponent<CapsuleCollider2D>().enabled = false;
+            enemyHealth.GetComponent<BoxCollider2D>().enabled = false;
             enemyHealth.GetComponent<Enemy_Movement_AI>().enabled = false;
             enemyHealth.GetComponent<MovementToPosition>().enabled = false;
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
-            foreach (var item in enemyHealth.GetComponentsInChildren<CapsuleCollider2D>())
+            foreach (var item in enemyHealth.GetComponentsInChildren<BoxCollider2D>())
             {
                 item.enabled = false;
             }
@@ -38,8 +35,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         else
         {
             isHurt = true;
-            //Debug.Log(isHurt + " hurt");
-            //enemyHealth.GetComponent<Enemy>().animator.SetBool("isHurt", true);
             StartCoroutine(ResetHurt());
         }
     }

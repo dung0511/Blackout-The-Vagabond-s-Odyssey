@@ -31,6 +31,7 @@ namespace Assets.Script.UI.Inventory
         public void OnEndDrag(PointerEventData eventData)
         {
             transform.SetParent(parentAfterDrag);
+            transform.localPosition = Vector3.zero; 
             image.raycastTarget = true;
         }
     }

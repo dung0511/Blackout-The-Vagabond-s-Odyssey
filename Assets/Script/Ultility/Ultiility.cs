@@ -30,6 +30,7 @@ public static class Utility
         Random rng = new Random();
         return rng.Next(min, max);
     }
+    public static bool Chance(int chance) => UnseededRng(0,100) < chance;
 
     public static List<Vector2Int> BFS(Vector2Int startPost, HashSet<Vector2Int> map, HashSet<Vector2Int> nodes)
     {

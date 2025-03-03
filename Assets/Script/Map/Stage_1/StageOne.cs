@@ -42,7 +42,7 @@ public class StageOne : AbstractDungeonGenerator
                     break;
                 case RoomType.Treasure:
                     propPlacer.PlaceTopWallProps(room);
-                    // propPlacer.PlaceTreasure(room);
+                    propPlacer.PlaceTreasure(room);
                     break;
                 case RoomType.Shop:
                     propPlacer.PlaceLeftWallProps(room);

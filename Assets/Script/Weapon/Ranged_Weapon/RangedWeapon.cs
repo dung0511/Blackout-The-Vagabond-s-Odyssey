@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class RangedWeapon : MonoBehaviour
 {
@@ -9,28 +10,46 @@ public class RangedWeapon : MonoBehaviour
     public int BulletDame;
     // private float timeBtwFire = 0;
     private float lastFireTime = 0;
+    private bool isFiring = false;
+    public bool inHand;
     public SpriteRenderer currentCharacterSR;
     public RangedWeaponSO rangedDetail;
 
-    void Awake()
+    void Start()
     {
         TimeBtwFire = rangedDetail.TimeBtwFire;
         bulletForce = rangedDetail.bulletForce;
         BulletDame = rangedDetail.damageRangedWeapon;
-        currentCharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
+        if (GetComponentInParent<WeaponController>() != null )
+        {
+            Transform player = transform.parent.parent;
+            currentCharacterSR = player.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            GetComponent<BoxCollider2D>().enabled = false;
+
+        }
+        else
+        {
+            InGround(gameObject);
+        }
+        
     }
 
     void Update()
     {
-        RotateGun();
-        if (Input.GetMouseButton(0))
+        if (inHand)
         {
-            Fire();
-            firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", true);
+            GetComponent<BoxCollider2D>().enabled = false;
+            RotateGun();
+            if (Input.GetMouseButton(0))
+            {
+                Fire();
+            }
+            
         }
-        else if (Input.GetMouseButtonUp(0))
+        else
         {
-            firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", false);
+            InGround(gameObject);
         }
     }
 
@@ -56,11 +75,27 @@ public class RangedWeapon : MonoBehaviour
         if (elapsedTime >= TimeBtwFire)
         {
             lastFireTime = Time.time;
-            GameObject bulletTmp = Instantiate(bullet, firePos.position, Quaternion.Euler(0, 0, angle - 90));
+            GameObject bulletTmp = BulletPoolManagement.Instance.GetBullet(bullet);
+
+            if (bulletTmp == null) return; 
+
+            bulletTmp.transform.position = firePos.position;
+            bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+
+            rb.linearVelocity = Vector2.zero;
             rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
+
+            
+            if (!isFiring)
+            {
+                isFiring = true;
+                firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", true);
+                Invoke(nameof(StopFiringAnimation), 0.2f);
+            }
         }
     }
+
 
     private float RotateToMousePos()
     {
@@ -70,5 +105,19 @@ public class RangedWeapon : MonoBehaviour
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 lookDir = (Vector2)(worldMousePos - transform.position);
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+    }
+    private void StopFiringAnimation()
+    {
+        isFiring = false;
+        firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", false);
+    }
+
+    public void InGround(GameObject game)
+    {
+        game.GetComponent<RangedWeapon>().currentCharacterSR = null;
+        game.transform.rotation = Quaternion.identity;
+        game.GetComponent<RangedWeapon>().inHand = false;
+        game.transform.localScale = new Vector3(5,5,0);
+        game.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gatling_Ranged
   m_EditorClassIdentifier: 
   rangedWeaponName: Gatling
-  rangedWeaponPrefab: {fileID: 0}
+  rangedWeaponPrefab: {fileID: 3771607849913430330, guid: 8c1ec5b45c5a73845864e58375d20698, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageRangedWeapon: 1
   TimeBtwFire: 0.2

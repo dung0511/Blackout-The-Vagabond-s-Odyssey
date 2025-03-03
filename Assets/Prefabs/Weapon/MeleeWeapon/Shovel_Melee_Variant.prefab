@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shovel_Melee_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7533895328017823390, guid: da481c07828ec0d41a1524d282da9934, type: 3}
+      propertyPath: meleeDetail
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ba0b6103050b8e4fb3d9dc5a715e25e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

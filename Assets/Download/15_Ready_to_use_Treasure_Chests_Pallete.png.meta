@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      15_Ready_to_use_Treasure_Chests_Pallete_0: -1548285609669400193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

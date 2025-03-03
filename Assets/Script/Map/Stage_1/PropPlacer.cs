@@ -17,6 +17,7 @@ public class PropPlacer : MonoBehaviour
     [SerializeField] private Prop groundPortal;
     [SerializeField] private Prop shop;
     [SerializeField] private Prop exit;
+    [SerializeField] private Prop treasure;
 
     public void PlaceCornerProps(BoxRoom room)
     {
@@ -547,6 +548,11 @@ public class PropPlacer : MonoBehaviour
     public void PlaceExitPortal(BoxRoom room)
     {
         PlacePropCenterAt(room, room.center, exit);
+    }
+
+    public void PlaceTreasure(BoxRoom room)
+    {
+        PlacePropCenterAt(room, room.center, treasure);
     }
 
     public void SetRoomEntrances(BoxRoom room)

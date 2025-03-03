@@ -6,29 +6,11 @@ using Random = UnityEngine.Random;
 
 public static class ProceduralGeneration
 {
-    public static HashSet<Vector2Int> RandomWalk(Vector2Int startPos, int numSteps, int width, int height)
-    {
-        HashSet<Vector2Int> path = new HashSet<Vector2Int>();
-
-        Vector2Int currentPos = startPos;
-        path.Add(currentPos);
-
-        for (int i = 0; i < numSteps; i++)
-        {
-            currentPos += Direction2D.GetRandomDirection();
-            path.Add(currentPos);
-        }
-        
-        return path;
-    }
-
     public static HashSet<Vector2Int> BoxGenerator(Vector2Int startPos, int width, int height)
     {
         HashSet<Vector2Int> path = new HashSet<Vector2Int>();
         Vector2Int currentPos = startPos;
         path.Add(currentPos);
-        // int width = Random.Range(minWidth, maxWidth);
-        // int height = Random.Range(minHeight, maxHeight);
         for (int x = -width; x <= width; x++)
         {
             for (int y = -height; y <= height; y++)

@@ -15,6 +15,6 @@ MonoBehaviour:
   rangedWeaponName: AK47
   rangedWeaponPrefab: {fileID: 3635782474816713875, guid: f374a8c42e3a4b242bccef654f531dc1, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 3
-  TimeBtwFire: 0.6
+  damageRangedWeapon: 2
+  TimeBtwFire: 0.2
   bulletForce: 20

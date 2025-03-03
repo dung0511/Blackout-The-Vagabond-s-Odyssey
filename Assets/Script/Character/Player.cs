@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,7 +12,10 @@ public class Player : MonoBehaviour
     public bool isHurt;
     public bool isDead;
     public bool isMove;
+    public bool isOpenBag = false;
     public PlayerDetailSO playerDetailSO;
+
+    public GameObject menu;
 
     public PlayerHealthController healthController;
     public PlayerArmorController armorController;
@@ -20,6 +24,8 @@ public class Player : MonoBehaviour
     public PlayerPickController pickController;
     private void Awake()
     {
+        menu= GameObject.Find("Menu");
+        menu.SetActive(false);
         health = playerDetailSO.playerHealthAmount;
         armor = playerDetailSO.playerArmorAmount;
 
@@ -50,7 +56,29 @@ public class Player : MonoBehaviour
         {
             pickController.PickItemWeapon();
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!isOpenBag)
+            {
+                isOpenBag = true;
+                foreach (Transform child in transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
+                menu.SetActive(true);
+            }
+            else
+            {
+                isOpenBag = false;
+                foreach (Transform child in transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
+                menu.SetActive(false);
+                
+            }
+        }
 
         if (!healthController.IsDead)
         {
@@ -70,5 +98,5 @@ public class Player : MonoBehaviour
             anim.SetBool("isHurt", true);
         else
             anim.SetBool("isHurt", false);
-    }  
+    }
 }

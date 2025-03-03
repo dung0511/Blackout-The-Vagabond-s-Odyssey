@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2526910759466813643}
   - component: {fileID: 5538964141164558251}
   - component: {fileID: 115844122491189493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sarcophagus_straight_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ public class EnemyInteractZone : MonoBehaviour
         if (player != null && !player.isDead)
         {
             isTouchPlayer = true;
-            Debug.Log("is touch true");
+           
         }
     }
 
@@ -20,13 +20,13 @@ public class EnemyInteractZone : MonoBehaviour
         if (player != null && player.isDead)
         {
             isTouchPlayer = false;
-            Debug.Log("is touch false");
+            
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D()
     {
         isTouchPlayer = false;
-        Debug.Log("is touch false");
+        
     }
 }

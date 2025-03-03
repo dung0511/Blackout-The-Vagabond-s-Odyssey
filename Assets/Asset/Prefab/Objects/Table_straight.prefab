@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548066541321009710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5872670889119204483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5251954535999105808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2408436319186841001}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair_long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3696757292190267618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair_long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3283536774670808978}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table_straight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 7017794163971954036}
   - component: {fileID: 3376084950787320356}
   - component: {fileID: 6389075804581413521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table_straight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,6 +348,7 @@ MonoBehaviour:
   - {fileID: 7265396322346602313, guid: 644d8d1d59f57e443b0e2d2627dc88d9, type: 3}
   longChairs:
   - {fileID: 8697026678100813190, guid: 9b0be1a94f1433e4bad9fed5383fa5a7, type: 3}
+  chairChance: 20
 --- !u!1 &5397633788438453005
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6919650477431325974}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4972875764676825063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635147386131933535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}

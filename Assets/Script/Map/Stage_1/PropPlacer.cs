@@ -543,6 +543,7 @@ public class PropPlacer : MonoBehaviour
     public void PlaceShopRoomProps(BoxRoom room)
     {
         PlacePropCenterAt(room, room.center, shop);
+        Debug.Log("shop size:"+shop.propSize+" , sprite bound:" + shop.prefabsVariant[0].GetComponent<SpriteRenderer>().bounds.size);
     }
 
     public void PlaceExitPortal(BoxRoom room)

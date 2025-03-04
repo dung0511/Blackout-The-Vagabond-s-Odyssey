@@ -31,13 +31,13 @@ public class StageOne : AbstractDungeonGenerator
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
                     propPlacer.PlaceTraps(room);
-                    agentPlacer.PlaceEnemies(room);
+                    agentPlacer.PlaceAgents(room);
                     break;
                 case RoomType.Elite:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
                     propPlacer.PlaceTraps(room);
-                    agentPlacer.PlaceEnemies(room);
+                    agentPlacer.PlaceAgents(room);
                     //trap door 
                     break;
                 case RoomType.Treasure:

@@ -6,35 +6,74 @@ public class AgentPlacer : MonoBehaviour
 {
     [SerializeField] private Transform enemyParent;
     [SerializeField] private GameObject player;
-    [SerializeField] private List<GameObject> normalEnemies; //variants
+    [SerializeField] private List<AgentPlacerSO> normalEnemies; //variants
     [SerializeField] private int minNormalEnemies = 4;
     [SerializeField] private int maxNormalEnemies = 6;
-    [SerializeField] private List<GameObject> eliteEnemies; //variants
+    [SerializeField] private List<AgentPlacerSO> eliteEnemies; //variants
     [Header("Elite enemies Modifier Multiplier")]
     [SerializeField] private float eliteHp = 1.5f;
     [SerializeField] private float eliteDamage = 1.5f;
     [SerializeField] private float eliteSize = 1;
 
-    public void PlaceEnemies(BoxRoom room)
+    public void PlaceAgents(BoxRoom room)
     {
         int enemiesCount = Utility.UnseededRng(minNormalEnemies, maxNormalEnemies);
         HashSet<Vector2Int> spawnableTiles = GetTraversableTiles(room);
+        var availableSpaces = spawnableTiles.ToList(); //for shuffle, checking area for agent placement
+        Utility.UnseededShuffle(availableSpaces);
 
         for (int i = 0; i < enemiesCount; i++)
         {
-            Vector2Int spawnPoint = spawnableTiles.Skip(Random.Range(0, spawnableTiles.Count)).First();
-            GameObject variant = normalEnemies[Random.Range(0, normalEnemies.Count)];
-            PlaceAgent(room, variant, spawnPoint);
-            spawnableTiles.Remove(spawnPoint);
+            AgentPlacerSO enemy = normalEnemies[Random.Range(0, normalEnemies.Count)];
+            TryPlacingAgentBruteForce(availableSpaces, enemy);
+
         }
         if(room.roomType == RoomType.Elite)
         {
-            Vector2Int spawnPoint = spawnableTiles.Skip(Random.Range(0, spawnableTiles.Count)).First();
-            GameObject variant = eliteEnemies[Random.Range(0, eliteEnemies.Count)];
-            var elite = PlaceAgent(room, variant, spawnPoint);
+            AgentPlacerSO elite = eliteEnemies[Random.Range(0, eliteEnemies.Count)];
+            TryPlacingAgentBruteForce(availableSpaces, elite);
             // elite.GetComponent<Enemy>().ModifyStats(eliteHp, eliteDamage, eliteSize);
-            spawnableTiles.Remove(spawnPoint);
         }
+    }
+
+    private void TryPlacingAgentBruteForce(List<Vector2Int> availableSpaces, AgentPlacerSO enemy)
+    {
+        foreach(var position in availableSpaces)
+        {
+            var placementPos = GetAgentPlacementPosition(enemy, position);
+            var gridPos = new Vector2Int(Mathf.FloorToInt(placementPos.x), Mathf.FloorToInt(placementPos.y-enemy.size.y/2f));
+            if(TryFitAgent(gridPos, availableSpaces, enemy))
+            {
+                Instantiate(enemy.agentPrefab, placementPos, Quaternion.identity, enemyParent);
+                return;
+            }
+        }
+    }
+
+    private bool TryFitAgent(Vector2Int tryPosition, List<Vector2Int> availableSpaces, AgentPlacerSO enemy)
+    {
+        var left = Mathf.CeilToInt(-enemy.size.x/2f);
+        var right = Mathf.FloorToInt(enemy.size.x/2f);
+        var taken = new List<Vector2Int>();
+        for(int x = left; x <= right; x++) //from center, check 2 sides avaiable
+        {
+            for(int y = 0; y < enemy.size.y; y++) //from bottom, check up
+            {
+                var position = new Vector2Int(tryPosition.x + x, tryPosition.y + y);
+                if(!availableSpaces.Contains(position)) return false;
+                else taken.Add(position);
+            }
+        }
+        availableSpaces.RemoveAll(taken.Contains);
+        return true;
+    }
+
+    private Vector2 GetAgentPlacementPosition(AgentPlacerSO enemy, Vector2Int gridPosition)
+    {
+        //bottom center (enemy feet at anchor point, two sides might be uneven)
+        var centerY = (enemy.spriteHeight - enemy.size.y)/2f;
+        var position = new Vector2(gridPosition.x + 0.5f, gridPosition.y + centerY);
+        return position;
     }
 
     private HashSet<Vector2Int> GetTraversableTiles(BoxRoom room) //bfs from all entrances and center incase prop objects block
@@ -62,14 +101,6 @@ public class AgentPlacer : MonoBehaviour
         if(room.leftEntrance != Vector2Int.zero) entrances.Add(room.leftEntrance+Vector2Int.right);
         if(room.rightEntrance != Vector2Int.zero) entrances.Add(room.rightEntrance+Vector2Int.left);
         return entrances;
-    }
-
-    private GameObject PlaceAgent(BoxRoom room ,GameObject agent, Vector2Int position)
-    {
-        Vector3 spawnPos = new Vector3(position.x +0.5f, position.y +0.5f, 0);
-        var enemy = Instantiate(agent, spawnPos, Quaternion.identity, enemyParent);
-        room.enemyObjectReferences.Add(enemy);
-        return enemy;
     }
 
     public void Reset()

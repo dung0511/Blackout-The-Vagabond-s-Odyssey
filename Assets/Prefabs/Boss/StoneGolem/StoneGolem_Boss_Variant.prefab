@@ -97,11 +97,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410884764870967887, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -35.1
       objectReference: {fileID: 0}
     - target: {fileID: 410884764870967887, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 410884764870967887, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_LocalPosition.z
@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1405193275474351022, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2667090286039281302, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -149,6 +153,26 @@ PrefabInstance:
       objectReference: {fileID: -1819300920, guid: 06352a30bfc017a4497c8f68a9d0c72b, type: 3}
     - target: {fileID: 2667090286039281302, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Height
+      value: 0.44178733
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Radius
+      value: 0.1799902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Center.x
+      value: 0.004812336
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_Center.y
+      value: 0.02646684
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417693268194978710, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944673337687591586, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
@@ -194,5 +218,97 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3572611920110104692, guid: 073b03746acd8d54bbbf9169435616c9, type: 3}
   target: {fileID: 0}
+  targetIndicatorPrefab: {fileID: 4539850266549051690, guid: 5e3f6dd1430699241a64a7ea2f0b62cd, type: 3}
   shootRate: 1
-  projectileMoveSpeed: 5
+  projectileMaxMoveSpeed: 20
+  projectileMaxHeight: 0.3
+  trajectoryAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9963046
+      outSlope: 1.9963046
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50094515
+      value: 1.0000391
+      inSlope: -0.0038571954
+      outSlope: -0.0038571954
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.000076293945
+      inSlope: -2.004019
+      outSlope: -2.004019
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  axisCorrectionAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  projectileSpeedAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -1.3304363
+      outSlope: -1.3304363
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5303658
+      value: 0.29438204
+      inSlope: 0.08602399
+      outSlope: 0.08602399
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.5024843
+      outSlope: 1.5024843
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

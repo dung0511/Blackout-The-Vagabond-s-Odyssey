@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class ProjecttileManager : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform target;
+    [SerializeField] private GameObject targetIndicatorPrefab;
 
     [SerializeField] private float shootRate;
     [SerializeField] private float projectileMaxMoveSpeed;
@@ -13,7 +15,7 @@ public class ProjecttileManager : MonoBehaviour
     [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
     [SerializeField] private AnimationCurve projectileSpeedAnimationCurve;
 
-    
+
     private void Update()
     {
         //shootTimer -= Time.deltaTime;
@@ -23,11 +25,11 @@ public class ProjecttileManager : MonoBehaviour
         //    shootTimer = shootRate;
 
         //}
-        Debug.Log("sdlkghnkdl: "+ target.position);
+
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ShootProjectile(target);
+            StartCoroutine(ShootMultipleProjectiles());
         }
 
     }
@@ -38,6 +40,21 @@ public class ProjecttileManager : MonoBehaviour
         Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<Projectile>();
         projectile.InitializeProjectile(targetPosition, projectileMaxMoveSpeed, projectileMaxHeight);
         projectile.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, projectileSpeedAnimationCurve);
-    }
+        float flightTime = projectile.EstimateFlightTime();
 
+
+        GameObject indicatorGO = Instantiate(targetIndicatorPrefab, targetPosition, Quaternion.identity);
+        TargetIndicator indicator = indicatorGO.GetComponent<TargetIndicator>();
+        indicator.flightDuration = flightTime;
+    }
+    private IEnumerator ShootMultipleProjectiles()
+    {
+        int shots = 0;
+        while (shots < 10)
+        {
+            ShootProjectile(target);
+            shots++;
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
 }

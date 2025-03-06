@@ -22,9 +22,11 @@ public class Bullet : MonoBehaviour
           
             BulletPoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);
         }
-        
+
+        else BulletPoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);     
         //vuong: any collision obstacle, disable bullet
         // this.gameObject.SetActive(false);
+
     }
 
 

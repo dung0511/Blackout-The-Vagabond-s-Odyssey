@@ -21,7 +21,6 @@ public class BulletPoolManagement : MonoBehaviour
     private void InitializePools()
     {
         bulletPools = new Dictionary<GameObject, Queue<GameObject>>();
-        Debug.Log("allbulletPrefab: " + allBulletPrefab.Count);
         foreach (GameObject bulletPrefab in allBulletPrefab)
         {
             bulletPools[bulletPrefab] = new Queue<GameObject>();
@@ -52,8 +51,6 @@ public class BulletPoolManagement : MonoBehaviour
 
     public void ReturnBullet(GameObject bullet, GameObject bulletPrefab)
     {
-        Debug.Log("Bullet prefab: " + bulletPrefab);
-        Debug.Log("Bullet : " + bullet);
         bullet.SetActive(false);
         bulletPools[bulletPrefab].Enqueue(bullet);
         

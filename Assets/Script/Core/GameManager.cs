@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class DungeonManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     #region Singleton
-        public static DungeonManager Instance {get; private set;} //singleton
+        public static GameManager Instance {get; private set;} //singleton
         private void Awake()
         {
             if(Instance != null && Instance != this)
@@ -22,6 +22,8 @@ public class DungeonManager : MonoBehaviour
     */
     [SerializeField] public int currentStage {get; set;} = 1;
     [SerializeField] public int currentLevel {get; set;} = 1;
+
+
 
  
 }

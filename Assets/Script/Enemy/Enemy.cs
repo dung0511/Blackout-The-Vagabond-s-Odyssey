@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private bool isAttacking = false;
  
     public float attackSpeed = 1f;
+    [HideInInspector] public Room roomBelong;
     private void Awake()
     {
 

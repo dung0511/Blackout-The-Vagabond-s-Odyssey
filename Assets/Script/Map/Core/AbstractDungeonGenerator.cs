@@ -22,7 +22,7 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
         RunProceduralGeneration();
     }
 
-    private static string GenerateRandomSeed(int length)
+    private string GenerateRandomSeed(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
         var result = new char[length];

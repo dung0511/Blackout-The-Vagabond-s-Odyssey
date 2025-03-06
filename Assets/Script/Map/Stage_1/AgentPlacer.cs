@@ -25,18 +25,22 @@ public class AgentPlacer : MonoBehaviour
         for (int i = 0; i < enemiesCount; i++)
         {
             AgentPlacerSO enemy = normalEnemies[Random.Range(0, normalEnemies.Count)];
-            TryPlacingAgentBruteForce(availableSpaces, enemy);
+            TryPlacingAgentBruteForce(availableSpaces, enemy, room);
 
         }
         if(room.roomType == RoomType.Elite)
         {
             AgentPlacerSO elite = eliteEnemies[Random.Range(0, eliteEnemies.Count)];
-            TryPlacingAgentBruteForce(availableSpaces, elite);
+            var e = TryPlacingAgentBruteForce(availableSpaces, elite, room);
+            if(e != null)
+            {
+                room.eliteReference = e;
+            }
             // elite.GetComponent<Enemy>().ModifyStats(eliteHp, eliteDamage, eliteSize);
         }
     }
 
-    private void TryPlacingAgentBruteForce(List<Vector2Int> availableSpaces, AgentPlacerSO enemy)
+    private GameObject TryPlacingAgentBruteForce(List<Vector2Int> availableSpaces, AgentPlacerSO enemy, BoxRoom room)
     {
         foreach(var position in availableSpaces)
         {
@@ -44,10 +48,14 @@ public class AgentPlacer : MonoBehaviour
             var gridPos = new Vector2Int(Mathf.FloorToInt(placementPos.x), Mathf.FloorToInt(placementPos.y-enemy.size.y/2f));
             if(TryFitAgent(gridPos, availableSpaces, enemy))
             {
-                Instantiate(enemy.agentPrefab, placementPos, Quaternion.identity, enemyParent);
-                return;
+                var enemyObject = Instantiate(enemy.agentPrefab, placementPos, Quaternion.identity, enemyParent);
+                room.enemyCount++;
+                var enemyScript = enemyObject.GetComponent<Enemy>();
+                enemyScript.roomBelong = room;
+                return enemyObject;
             }
         }
+        return null;
     }
 
     private bool TryFitAgent(Vector2Int tryPosition, List<Vector2Int> availableSpaces, AgentPlacerSO enemy)
@@ -55,9 +63,9 @@ public class AgentPlacer : MonoBehaviour
         var left = Mathf.CeilToInt(-enemy.size.x/2f);
         var right = Mathf.FloorToInt(enemy.size.x/2f);
         var taken = new List<Vector2Int>();
-        for(int x = left; x <= right; x++) //from center, check 2 sides avaiable
+        for(int x = left-1; x <= right+1; x++) //from center, check 2 sides avaiable
         {
-            for(int y = 0; y < enemy.size.y; y++) //from bottom, check up
+            for(int y = 0-1; y < enemy.size.y+1; y++) //from bottom, check up
             {
                 var position = new Vector2Int(tryPosition.x + x, tryPosition.y + y);
                 if(!availableSpaces.Contains(position)) return false;

@@ -15,8 +15,9 @@ public class Room
     public RoomType roomType;
     public HashSet<Vector2Int> propPositions { get; set; } = new HashSet<Vector2Int>();
     public List<GameObject> propObjectReferences { get; set; } = new List<GameObject>();
-    public List<GameObject> enemyObjectReferences { get; set; } = new List<GameObject>();
-    public List<GameObject> doorObjectReferences { get; set; } = new List<GameObject>();
+    public int enemyCount=0;
+    public GameObject eliteReference { get; set; } = null;
+    public GameObject barrierReference { get; set; } = null;
     public Vector2Int topEntrance, bottomEntrance, leftEntrance, rightEntrance;
     public HashSet<Vector2Int> corners = new();
     public HashSet<Vector2Int> nearTopWall = new();
@@ -24,6 +25,17 @@ public class Room
     public HashSet<Vector2Int> nearLeftWall = new();
     public HashSet<Vector2Int> nearRightWall = new();
     public HashSet<Vector2Int> inners = new();
+
+    public void OnEnemyDeath()
+    {
+        Debug.Log("Enemy died " + enemyCount);
+        enemyCount--;
+        if (enemyCount == 0)
+        {
+            Debug.Log("Room Cleared");
+            DungeonManager.Instance.RoomCleared(this);
+        }
+    }
 }
 
 public enum RoomType

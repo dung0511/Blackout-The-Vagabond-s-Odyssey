@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1758712493675102998, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2666623108531603543, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Name
       value: Knight_Variant
@@ -28,6 +32,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 16f9d101f4554114daf9a1a51c21d8a5, type: 2}
+    - target: {fileID: 6628058848093765976, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0693
+      objectReference: {fileID: 0}
     - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

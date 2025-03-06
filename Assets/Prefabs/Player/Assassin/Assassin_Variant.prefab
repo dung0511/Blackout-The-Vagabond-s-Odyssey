@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 40780533710729819, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 40780533710729819, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[4]'
+      value: -708396943
+      objectReference: {fileID: 0}
+    - target: {fileID: 40780533710729819, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[5]'
+      value: 144933197
+      objectReference: {fileID: 0}
+    - target: {fileID: 40780533710729819, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[6]'
+      value: 1510008725
+      objectReference: {fileID: 0}
     - target: {fileID: 450186500124966474, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758712493675102998, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2666623108531603543, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Name
@@ -36,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5d5047a5da792264fae0f30f289ef4a2, type: 2}
+    - target: {fileID: 6628058848093765976, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0737
+      objectReference: {fileID: 0}
     - target: {fileID: 6628058848093765976, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

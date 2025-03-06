@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: b4018bc0ad9bac740b69d9196ab617aa
+guid: 4b2270ca41695fb4e81b058207b5725b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4113829005332862926
-    second: 9_0
+      213: -8472234580906181713
+    second: Bonfire_02-Sheet_0
   - first:
-      213: -215640629934891304
-    second: 9_1
+      213: 3165500491089172435
+    second: Bonfire_02-Sheet_1
   - first:
-      213: 6460059290704040764
-    second: 9_2
+      213: -608702131658807645
+    second: Bonfire_02-Sheet_2
   - first:
-      213: -1084366493605160568
-    second: 9_3
-  - first:
-      213: -6911333492305490673
-    second: 9_4
+      213: -7486611482738379287
+    second: Bonfire_02-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,14 +135,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 9_0
+      name: Bonfire_02-Sheet_0
       rect:
         serializedVersion: 2
-        x: 342
-        y: 194
-        width: 324
-        height: 830
-      alignment: 0
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -153,21 +150,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec750913fa1471930800000000000000
-      internalID: 4113829005332862926
+      spriteID: fab7e4759839c6a80800000000000000
+      internalID: -8472234580906181713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 9_1
+      name: Bonfire_02-Sheet_1
       rect:
         serializedVersion: 2
-        x: 660
-        y: 1000
-        width: 7
-        height: 9
-      alignment: 0
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -175,21 +172,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ded6955df3e10df0800000000000000
-      internalID: -215640629934891304
+      spriteID: 3d7d1b3dced1eeb20800000000000000
+      internalID: 3165500491089172435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 9_2
+      name: Bonfire_02-Sheet_2
       rect:
         serializedVersion: 2
-        x: 340
-        y: 898
-        width: 7
-        height: 10
-      alignment: 0
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -197,21 +194,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c335062b2bdb6a950800000000000000
-      internalID: 6460059290704040764
+      spriteID: 3a62474e2a47d87f0800000000000000
+      internalID: -608702131658807645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 9_3
+      name: Bonfire_02-Sheet_3
       rect:
         serializedVersion: 2
-        x: 660
-        y: 344
-        width: 7
-        height: 9
-      alignment: 0
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -219,30 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88914565b6e83f0f0800000000000000
-      internalID: -1084366493605160568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 9_4
-      rect:
-        serializedVersion: 2
-        x: 536
-        y: 189
-        width: 44
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0d0fda7ec20610a0800000000000000
-      internalID: -6911333492305490673
+      spriteID: 9e5b400b5863a1890800000000000000
+      internalID: -7486611482738379287
       vertices: []
       indices: 
       edges: []
@@ -251,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8fbe998d82abc784992a4572ef4218d5
     internalID: 0
     vertices: []
     indices: 
@@ -261,11 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      9_0: 4113829005332862926
-      9_1: -215640629934891304
-      9_2: 6460059290704040764
-      9_3: -1084366493605160568
-      9_4: -6911333492305490673
+      Bonfire_02-Sheet_0: -8472234580906181713
+      Bonfire_02-Sheet_1: 3165500491089172435
+      Bonfire_02-Sheet_2: -608702131658807645
+      Bonfire_02-Sheet_3: -7486611482738379287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

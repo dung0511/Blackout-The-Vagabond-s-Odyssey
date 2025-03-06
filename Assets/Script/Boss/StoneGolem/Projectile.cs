@@ -4,7 +4,6 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private ProjectileVisual projectileVisual;
 
-    
     private Vector3 targetPosition;
     private float moveSpeed;
     private float maxMoveSpeed;
@@ -35,7 +34,7 @@ public class Projectile : MonoBehaviour
     {
         UpdateProjectilePosition();
 
-
+        
         if (Vector3.Distance(transform.position, targetPosition) < distanceToTargetToDestroyProjectile)
         {
             Destroy(gameObject);
@@ -107,6 +106,7 @@ public class Projectile : MonoBehaviour
         float nextPositionY = trajectoryStartPoint.y + nextYTrajectoryPosition + nextPositionYCorrectionAbsolute;
         Vector3 newPosition = new Vector3(nextPositionX, nextPositionY, 0);
         CalculateNextProjectileSpeed(nextPositionXNormalized);
+
         projectileMoveDir = newPosition - transform.position;
         transform.position = newPosition;
     }
@@ -149,5 +149,32 @@ public class Projectile : MonoBehaviour
     public float GetNextPositionYCorrectionAbsolute()
     {
         return nextPositionYCorrectionAbsolute;
+    }
+
+    public float EstimateFlightTime(int steps = 100)
+    {
+       
+        trajectoryRange = targetPosition - trajectoryStartPoint;
+        float flightTime = 0f;
+        float dp = 1f / steps;
+
+       
+        float scale = Mathf.Abs(trajectoryRange.x);
+        if (Mathf.Abs(trajectoryRange.normalized.x) < Mathf.Abs(trajectoryRange.normalized.y))
+        {
+            scale = Mathf.Abs(trajectoryRange.y);
+        }
+
+    
+        for (int i = 0; i < steps; i++)
+        {
+            float p = i * dp;
+            float v = projectileSpeedAnimationCurve.Evaluate(p) * maxMoveSpeed;
+          
+            if (v < 0.001f) v = 0.001f;
+         
+            flightTime += (scale / v) * dp;
+        }
+        return flightTime;
     }
 }

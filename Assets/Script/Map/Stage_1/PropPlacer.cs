@@ -12,6 +12,7 @@ public class PropPlacer : MonoBehaviour
     [SerializeField] private List<Prop> lightProps;
     [SerializeField] private List<Prop> trapProps;
     [SerializeField] private GameObject[] doors; // 0:front. 1:side
+    [SerializeField] private GameObject[] barrier; // 0:front. 1:side
     [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f, doorChance = 0.6f;
     [SerializeField] private GameObject propParent;
     [SerializeField] private Prop groundPortal;
@@ -583,7 +584,7 @@ public class PropPlacer : MonoBehaviour
                         DungeonData.path.Add(beforeEntrance+Vector2Int.right);
                         if(Random.value <= doorChance)
                         {
-                            PlaceDoor(room.topEntrance, 0, room);
+                            PlaceDoor(room.topEntrance, 1, room);
                         }
                         break;
                     case 0-1:
@@ -595,7 +596,7 @@ public class PropPlacer : MonoBehaviour
 
                         if (Random.value <= doorChance)
                         {
-                            PlaceDoor(room.bottomEntrance + Vector2Int.down, 0, room);
+                            PlaceDoor(room.bottomEntrance, 0, room);
                         }
                         break;
                     case -10:
@@ -606,7 +607,7 @@ public class PropPlacer : MonoBehaviour
                         DungeonData.path.Add(beforeEntrance+Vector2Int.down);
                         if (Random.value <= doorChance)
                         {
-                            PlaceDoor(room.leftEntrance, 1, room);
+                            PlaceDoor(room.leftEntrance, 2, room);
                         }
                         break;
                     case 10:
@@ -617,7 +618,7 @@ public class PropPlacer : MonoBehaviour
                         DungeonData.path.Add(beforeEntrance+Vector2Int.down);
                         if (Random.value <= doorChance)
                         {
-                            PlaceDoor(room.rightEntrance, 1, room);
+                            PlaceDoor(room.rightEntrance, 2, room);
                         }
                         break;
                 }
@@ -630,6 +631,5 @@ public class PropPlacer : MonoBehaviour
     {
         var doorPos = new Vector3(pos.x + 0.5f, pos.y +0.5f, 0);
         var door = Instantiate(doors[index], doorPos, Quaternion.identity, propParent.transform);
-        room.doorObjectReferences.Add(door);
     }
 }

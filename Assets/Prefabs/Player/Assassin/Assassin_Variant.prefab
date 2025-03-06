@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assassin_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2666623108531603543, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5053069909120121030, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Sprite
       value: 

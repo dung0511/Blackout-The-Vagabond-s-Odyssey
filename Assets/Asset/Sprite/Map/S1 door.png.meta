@@ -126,29 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: S1 door_side_left
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 105
-      alignment: 9
-      pivot: {x: 0.5, y: 0.34285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbcd58741a43748d0800000000000000
-      internalID: -2862261170876326724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S1 door_front
+      name: S1 door_top
       rect:
         serializedVersion: 2
         x: 24
@@ -165,28 +143,6 @@ TextureImporter:
       bones: []
       spriteID: aa80ef9d13b1ad944b207660b1058b51
       internalID: -1807763204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S1 door_side_right
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 24
-        height: 105
-      alignment: 9
-      pivot: {x: 0.5, y: 0.34285715}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 505eddd3d77d42f4ca8f48fcdfb735cc
-      internalID: -1789281187
       vertices: []
       indices: 
       edges: []
@@ -209,9 +165,9 @@ TextureImporter:
       S1 door_3: -1544851202
       S1 door_5: 1833091724
       S1 door_6: -1016606094
-      S1 door_front: -1807763204
       S1 door_side_left: -2862261170876326724
       S1 door_side_right: -1789281187
+      S1 door_top: -1807763204
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

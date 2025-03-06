@@ -227,47 +227,48 @@ public class StageOneDungeonGenerator : StageOne
         }
     }
 
-private void CreateCorridors(HashSet<Vector2Int> floorPositions, HashSet<Vector2Int> potentialRoomPositions)
-{
-    var currentPos = startPos;
-    potentialRoomPositions.Add(currentPos);
-    int safe = 0;
-    for (int i = 0; i < corridorNums; i++)
+    private void CreateCorridors(HashSet<Vector2Int> floorPositions, HashSet<Vector2Int> potentialRoomPositions)
     {
-        var direction = Direction2D.GetRandomDirection();
-        var (corridorPath, thinPath) = ProceduralGeneration.DirectedCorridor(currentPos, corridorLength, direction);
-        bool hasRoomable = floorPositions.Contains(currentPos+direction*corridorLength);  
-        bool hasCorridor = floorPositions.Contains(currentPos + direction * (corridorLength / 2));  // check if there is a corridor connection
-        if (hasRoomable)
+        var currentPos = startPos;
+        potentialRoomPositions.Add(currentPos);
+        int safe = 0;
+        for (int i = 0; i < corridorNums; i++)
         {
-            if (hasCorridor) // nothing to generate, go elsewhere
+            var direction = Direction2D.GetRandomDirection();
+            var (corridorPath, thinPath) = ProceduralGeneration.DirectedCorridor(currentPos, corridorLength, direction);
+            bool hasRoomable = floorPositions.Contains(currentPos+direction*corridorLength);  
+            bool hasCorridor = floorPositions.Contains(currentPos + direction * (corridorLength / 2));  // check if there is a corridor connection
+            if (hasRoomable)
             {
-                currentPos = potentialRoomPositions.ElementAt(UnityEngine.Random.Range(0, potentialRoomPositions.Count));
-                --i;
+                if (hasCorridor) // nothing to generate, go elsewhere
+                {
+                    currentPos = potentialRoomPositions.ElementAt(UnityEngine.Random.Range(0, potentialRoomPositions.Count));
+                    --i;
+                }
+                else // connect it
+                {
+                    currentPos = thinPath[thinPath.Count-1];
+                    DungeonData.path.UnionWith(thinPath);
+                    DungeonData.corridorPath.Add(currentPos);
+                    floorPositions.UnionWith(corridorPath);
+                    --i;
+                }
             }
-            else // connect it
+            else // if destination never reached, do as normal
             {
                 currentPos = thinPath[thinPath.Count-1];
+                potentialRoomPositions.Add(currentPos);
                 DungeonData.path.UnionWith(thinPath);
                 DungeonData.corridorPath.Add(currentPos);
                 floorPositions.UnionWith(corridorPath);
-                --i;
             }
-        }
-        else // if destination never reached, do as normal
-        {
-                currentPos = thinPath[thinPath.Count-1];
-            potentialRoomPositions.Add(currentPos);
-            DungeonData.path.UnionWith(thinPath);
-            DungeonData.corridorPath.Add(currentPos);
-            floorPositions.UnionWith(corridorPath);
-        }
 
-        safe++;
-        if (safe > 1000) break;
+            safe++;
+            if (safe > 1000) break;
+        }
+        // Debug.Log("potential room: "+String.Join(", ",potentialRoomPositions));
+        //potential room
     }
-    // Debug.Log("potential room: "+String.Join(", ",potentialRoomPositions));
-    //potential room
-}
 
+    
 }

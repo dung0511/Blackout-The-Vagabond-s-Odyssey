@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             {
                 item.enabled = false;
             }
-
+            enemyHealth.roomBelong.OnEnemyDeath();
         }
         else
         {

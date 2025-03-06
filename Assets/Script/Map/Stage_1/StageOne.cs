@@ -9,6 +9,7 @@ public class StageOne : AbstractDungeonGenerator
 {
     public PropPlacer propPlacer;
     public AgentPlacer agentPlacer;
+    public EliteRoomSetup eliteRoomSetup;
  
     protected override void RunProceduralGeneration()
     {
@@ -38,6 +39,8 @@ public class StageOne : AbstractDungeonGenerator
                     propPlacer.PlaceInnerProps(room);
                     propPlacer.PlaceTraps(room);
                     agentPlacer.PlaceAgents(room);
+
+                    eliteRoomSetup.SetupEliteRoom(room); //elite room setup
                     //trap door 
                     break;
                 case RoomType.Treasure:
@@ -75,5 +78,6 @@ public class StageOne : AbstractDungeonGenerator
         DungeonData.Reset();
         propPlacer.Reset();
         agentPlacer.Reset();
+        eliteRoomSetup.Reset();
     }
 }

@@ -5,21 +5,24 @@ namespace Assets.Script.Boss.StoneGolem
 {
     public class StoneGolem : MonoBehaviour
     {
-
         public EnemyDetailSO enemyDetails;
-
 
         [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
         [HideInInspector] public IdleEvent idleEvent;
+        [HideInInspector] public Animator animator;
+        [HideInInspector] public Room roomBelong;
+
         public int damage;
         public int health;
-        [HideInInspector] public Animator animator;
-        public bool has3Attack;
-        
-        private bool isAttacking = false;
+
+        public bool isAttacking = false;
+        private bool isDead = true;
+        public bool isFiring;
 
         public float attackSpeed = 1f;
-        [HideInInspector] public Room roomBelong;
+        private float lastAttackTime = 0f;
+
+        private ProjecttileManager projectTileManager;
         private void Awake()
         {
 
@@ -29,53 +32,80 @@ namespace Assets.Script.Boss.StoneGolem
         }
         void Start()
         {
+
             animator = GetComponent<Animator>();
-            
+            projectTileManager = GetComponent<ProjecttileManager>();
         }
 
         void Update()
         {
-            
-            if (!isAttacking && checkAttack()) performAttack();
-            else ResetAllAttackParameters();
-            //isHurt = GetComponent<EnemyHealth>().isHurt;
-            
+            //if (getFiring())
+            //{
+            //    animator.SetBool("isRangedAttack", true);
+            //    projectTileManager.Fire();
+            //}
+            //else
+            //{
+            //    animator.SetBool("isRangedAttack", false);
+            //}
 
+
+            if (!isAttacking && checkAttack())
+            {
+
+                performMeleeAttack();
+            }
+            if (!isAttacking && !checkAttack())
+            {
+                performRangedAttack();
+               
+            }
+            //else
+            //{
+            //    ResetAllAttackParameters();
+            //}
+            //isHurt = GetComponent<EnemyHealth>().isHurt;
+            //if (!isAttacking && checkAttack())
+            //{
+            //    animator.SetBool("isMeleeAtatck", true);
+            //    lastAttackTime = Time.time;
+            //}
+            //else if(!isAttacking && Time.time - lastAttackTime >= 2)
+            //{
+            //   
+            //    
+            //    lastAttackTime = Time.time;
+            //    isAttacking = true;
+            //}
+            //ResetAllAttackParameters();
         }
-        void performAttack()
+        void performRangedAttack()
         {
             isAttacking = true;
-            int attackType = has3Attack ? Random.Range(1, 4) : Random.Range(1, 3);
+            int attackType = Random.Range(1, 3);
             ResetAllAttackParameters();
 
             switch (attackType)
             {
                 case 1:
-                    animator.SetBool("isAttack1", true);
+                    animator.SetBool("isRangedAttack", true);
+                     projectTileManager.Fire();
                     break;
                 case 2:
-                    animator.SetBool("isAttack2", true);
+                    animator.SetBool("isLaserCast", true);
+                    //gameObject.transform.GetChild(2).gameObject.SetActive(true);
                     break;
-                case 3:
-                    animator.SetBool("isAttack3", true);
-                    break;
+
             }
             StartCoroutine(AttackCooldown(attackSpeed));
         }
 
         void ResetAllAttackParameters()
         {
-            if (has3Attack)
-            {
-                animator.SetBool("isAttack1", false);
-                animator.SetBool("isAttack2", false);
-                animator.SetBool("isAttack3", false);
-            }
-            else
-            {
-                animator.SetBool("isAttack1", false);
-                animator.SetBool("isAttack2", false);
-            }
+            animator.SetBool("isMeleeAtatck", false);
+            animator.SetBool("isRangedAttack", false);
+            animator.SetBool("isLaserCast", false);
+
         }
         IEnumerator AttackCooldown(float cooldownTime)
         {
@@ -88,5 +118,18 @@ namespace Assets.Script.Boss.StoneGolem
             return GetComponentInChildren<EnemyInteractZone>().isTouchPlayer;
         }
 
+
+        void performMeleeAttack()
+        {
+            isAttacking = true;
+            ResetAllAttackParameters();
+            animator.SetBool("isMeleeAtatck", true);
+            StartCoroutine(AttackCooldown(attackSpeed));
+        }
+
+        private bool getFiring()
+        {
+            return GetComponent<ProjecttileManager>().firingDone;
+        }
     }
 }

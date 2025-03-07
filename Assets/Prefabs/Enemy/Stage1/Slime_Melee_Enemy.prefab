@@ -32,6 +32,18 @@ PrefabInstance:
       propertyPath: resumeChaseDelay
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Radius
+      value: 0.072233774
+      objectReference: {fileID: 0}
+    - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.015866961
+      objectReference: {fileID: 0}
+    - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03337788
+      objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalScale.x
       value: 7

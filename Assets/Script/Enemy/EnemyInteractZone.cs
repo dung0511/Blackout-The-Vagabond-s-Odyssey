@@ -11,7 +11,7 @@ public class EnemyInteractZone : MonoBehaviour
 
     private void OnTriggerStay2D()
     {
-        isTouchPlayer = false;
+        isTouchPlayer = true;
     }
 
     private void OnTriggerExit2D()

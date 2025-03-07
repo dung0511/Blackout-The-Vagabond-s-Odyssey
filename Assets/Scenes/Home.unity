@@ -18206,6 +18206,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 920070883}
     m_Modifications:
+    - target: {fileID: -1974262341776259063, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f84881abde25b48904c0ff67bca145, type: 2}
     - target: {fileID: 2055102311959635369, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -18262,6 +18266,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -708396943
       objectReference: {fileID: 0}
+    - target: {fileID: 2055102312182832480, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f3f1f0060a4d6a4980ea3283643fbdd, type: 2}
     - target: {fileID: 2055102312182832482, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -18274,6 +18282,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -708396943
       objectReference: {fileID: 0}
+    - target: {fileID: 2444991506894079395, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f84881abde25b48904c0ff67bca145, type: 2}
     - target: {fileID: 4370152849212869299, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
       propertyPath: m_SortingLayer
       value: 4
@@ -18282,6 +18294,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -708396943
       objectReference: {fileID: 0}
+    - target: {fileID: 4370152849212869299, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f84881abde25b48904c0ff67bca145, type: 2}
     - target: {fileID: 7508116785346154267, guid: f681a54372d73d74785b9c9d4ac477e8, type: 3}
       propertyPath: m_Layer
       value: 12

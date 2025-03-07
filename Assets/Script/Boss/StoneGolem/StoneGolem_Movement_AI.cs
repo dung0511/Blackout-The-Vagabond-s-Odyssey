@@ -42,7 +42,7 @@ public class StoneGolem_Movement_AI : MonoBehaviour
     }
     void UpdatePath()
     {
-        if (chasePlayer && seeker.IsDone())
+        if (chasePlayer && seeker.IsDone() && !GetComponent<StoneGolem>().isAttacking)
         {
             Vector3 adjustedTargetPosition = new Vector3(target.position.x, target.position.y + 0.5f, target.position.z);
             seeker.StartPath(rb.position, adjustedTargetPosition, OnPathComplete);

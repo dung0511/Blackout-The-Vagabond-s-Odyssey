@@ -20,6 +20,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             enemyHealth.health = 0;
             enemyHealth.GetComponent<Enemy>().animator.SetBool("isDead", true);
             enemyHealth.GetComponent<CapsuleCollider2D>().enabled = false;
+            enemyHealth.GetComponent<CircleCollider2D>().enabled = false;
             enemyHealth.GetComponent<BoxCollider2D>().enabled = false;
             enemyHealth.GetComponent<Enemy_Movement_AI>().enabled = false;
             enemyHealth.GetComponent<MovementToPosition>().enabled = false;

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3187812325330829971}
+  - component: {fileID: -587432790456756736}
   m_Layer: 20
   m_Name: Portal_ground
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   - {fileID: 5257410957468463918}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &-587432790456756736
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307152982452504124}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
 --- !u!1 &5228063191895032118
 GameObject:
   m_ObjectHideFlags: 0

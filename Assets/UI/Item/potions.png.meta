@@ -601,7 +601,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: small_potion
+      name: health_potion_i
       rect:
         serializedVersion: 2
         x: 51
@@ -609,7 +609,7 @@ TextureImporter:
         width: 10
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -623,7 +623,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: medium_potion
+      name: health_potion_ii
       rect:
         serializedVersion: 2
         x: 50
@@ -631,7 +631,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -645,7 +645,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: large_potion
+      name: health_potion_iii
       rect:
         serializedVersion: 2
         x: 49
@@ -653,7 +653,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -662,6 +662,72 @@ TextureImporter:
       bones: []
       spriteID: 23929b47b866d684f91c3a1a9435f047
       internalID: -1344099165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana_potion_iii
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 160
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b182fdca9015649ae44c859e249a12
+      internalID: -429469122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana_potion_ii
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 32
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1339bb1e2280544b1846e6f2dc610f
+      internalID: 1700114005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana_potion_i
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805f2a70ed40dc447b9e0aed2434bff1
+      internalID: 6285645462315052536
       vertices: []
       indices: 
       edges: []
@@ -680,8 +746,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      large_potion: -1344099165
-      medium_potion: -7118549172432436139
+      health_potion_i: -8485995304713028149
+      health_potion_ii: -7118549172432436139
+      health_potion_iii: -1344099165
+      mana_potion_i: 6285645462315052536
+      mana_potion_ii: 1700114005
+      mana_potion_iii: -429469122
       potions_10: 4509870559624745009
       potions_100: -8023915840727494872
       potions_101: -8742516453333734803
@@ -761,7 +831,6 @@ TextureImporter:
       potions_17: -2084351690456893787
       potions_18: 7609141741743858336
       potions_19: 8315393284229150241
-      potions_2: 6285645462315052536
       potions_20: -6833605272670426149
       potions_21: 238123427065737258
       potions_22: -1851980184198936363
@@ -849,7 +918,6 @@ TextureImporter:
       potions_97: 1368885292939833544
       potions_98: -7221329466641627091
       potions_99: 2187393044218561261
-      small_potion: -8485995304713028149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

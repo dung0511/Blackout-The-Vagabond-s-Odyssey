@@ -22,6 +22,10 @@ TagManager:
   - 
   - 
   - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
+  - 
   - 
   - 
   - 
@@ -50,6 +54,15 @@ TagManager:
     locked: 0
   - name: Aim
     uniqueID: 2721257671
+    locked: 0
+  - name: Layer 1
+    uniqueID: 3586570353
+    locked: 0
+  - name: Layer 2
+    uniqueID: 144933197
+    locked: 0
+  - name: Layer 3
+    uniqueID: 1510008725
     locked: 0
   m_RenderingLayers:
   - Default

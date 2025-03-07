@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 7382873815902496720}
   - component: {fileID: 1532190317244686400}
   - component: {fileID: 934467681116527374}
-  - component: {fileID: 3401494015262918377}
   - component: {fileID: 6989095968074540068}
   m_Layer: 0
   m_Name: Base_RangedWeapon
@@ -218,23 +217,9 @@ MonoBehaviour:
   TimeBtwFire: 0
   bulletForce: 0
   BulletDame: 0
+  inHand: 0
   currentCharacterSR: {fileID: 0}
   rangedDetail: {fileID: 0}
---- !u!114 &3401494015262918377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8641872895628273777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40e1295f9e973f498fedba79b9353b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allBulletPrefab:
-  - {fileID: 778125498572981149, guid: a646af30f42fe764285c271e9509669c, type: 3}
-  - {fileID: 8938172560668752952, guid: bfc64907172aa0441af2b6f55908c3b0, type: 3}
 --- !u!61 &6989095968074540068
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ namespace Assets.Script.Boss.StoneGolem
         public int damage;
         public int health;
         [HideInInspector] public Animator animator;
-        public bool isHurt;
         public bool has3Attack;
         
         private bool isAttacking = false;
@@ -31,7 +30,7 @@ namespace Assets.Script.Boss.StoneGolem
         void Start()
         {
             animator = GetComponent<Animator>();
-            isHurt = false;
+            
         }
 
         void Update()
@@ -39,8 +38,8 @@ namespace Assets.Script.Boss.StoneGolem
             
             if (!isAttacking && checkAttack()) performAttack();
             else ResetAllAttackParameters();
-            isHurt = GetComponent<EnemyHealth>().isHurt;
-            animator.SetBool("isHurt", isHurt);
+            //isHurt = GetComponent<EnemyHealth>().isHurt;
+            
 
         }
         void performAttack()

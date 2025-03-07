@@ -24,7 +24,6 @@ public class BulletPoolManagement : MonoBehaviour
         foreach (GameObject bulletPrefab in allBulletPrefab)
         {
             bulletPools[bulletPrefab] = new Queue<GameObject>();
-            Debug.Log(bulletPrefab.name);
         }
     }
 

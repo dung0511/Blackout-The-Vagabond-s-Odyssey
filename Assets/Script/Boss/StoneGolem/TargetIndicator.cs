@@ -7,7 +7,7 @@ public class TargetIndicator : MonoBehaviour
     public float flightDuration = 1f;
 
     public Vector3 startScale = Vector3.zero;
-    public Vector3 endScale = new Vector3(1, 1, 1);
+    public Vector3 endScale = new Vector3(1.5f, 1.5f, 1.5f);
 
     private void Start()
     {

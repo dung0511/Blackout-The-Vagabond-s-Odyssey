@@ -3,58 +3,58 @@ using UnityEngine;
 
 public class ProjecttileManager : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform target;
-    [SerializeField] private GameObject targetIndicatorPrefab;
+    public float flightTime;
 
-    [SerializeField] private float shootRate;
-    [SerializeField] private float projectileMaxMoveSpeed;
-    [SerializeField] private float projectileMaxHeight;
-    private float shootTimer;
-    [SerializeField] private AnimationCurve trajectoryAnimationCurve;
-    [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
-    [SerializeField] private AnimationCurve projectileSpeedAnimationCurve;
+    public Transform target;
 
+    public GameObject projectile;
+    public Transform firePos;
+    public float TimeBtwFire = 0.2f;
+    public float projectileForce;
+    public int projectileDame;
+    private float lastFireTime = 0;
 
-    private void Update()
+    public RangedWeaponSO rangedDetail;
+
+    void Start()
     {
-        //shootTimer -= Time.deltaTime;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        TimeBtwFire = rangedDetail.TimeBtwFire;
+        projectileForce = rangedDetail.bulletForce;
+        projectileDame = rangedDetail.damageRangedWeapon;
+    }
 
-        //if (shootTimer <= 0)
-        //{
-        //    shootTimer = shootRate;
-
-        //}
-
-
+    void Update()
+    {
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
-            StartCoroutine(ShootMultipleProjectiles());
+            Fire();
         }
-
     }
 
-    public void ShootProjectile(Transform target)
+    public void Fire()
     {
-        Vector3 targetPosition = target.position;
-        Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<Projectile>();
-        projectile.InitializeProjectile(targetPosition, projectileMaxMoveSpeed, projectileMaxHeight);
-        projectile.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, projectileSpeedAnimationCurve);
-        float flightTime = projectile.EstimateFlightTime();
 
-
-        GameObject indicatorGO = Instantiate(targetIndicatorPrefab, targetPosition, Quaternion.identity);
-        TargetIndicator indicator = indicatorGO.GetComponent<TargetIndicator>();
-        indicator.flightDuration = flightTime;
-    }
-    private IEnumerator ShootMultipleProjectiles()
-    {
-        int shots = 0;
-        while (shots < 10)
+        float elapsedTime = Time.time - lastFireTime;
+        if (elapsedTime >= TimeBtwFire)
         {
-            ShootProjectile(target);
-            shots++;
-            yield return new WaitForSeconds(0.2f);
+            lastFireTime = Time.time;
+            GameObject bulletTmp = BulletPoolManagement.Instance.GetBullet(projectile);
+            if (bulletTmp == null) return;
+
+            bulletTmp.transform.position = firePos.position;     
+            Vector2 direction = (Vector2)(target.position - firePos.position);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+           
+            bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = Vector2.zero;
+
+          
+            Vector2 shootDirection = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+            rb.AddForce(shootDirection * projectileForce, ForceMode2D.Impulse);
         }
     }
 }

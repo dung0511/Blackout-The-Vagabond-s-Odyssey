@@ -146,8 +146,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -168,8 +168,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,8 +190,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -212,8 +212,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,8 +234,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -256,8 +256,8 @@ TextureImporter:
         y: 144
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,15 +275,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_1
+      name: Void
       rect:
         serializedVersion: 2
         x: 48
         y: 144
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -292,50 +292,6 @@ TextureImporter:
       bones: []
       spriteID: 8dc7f887e7d9dc643a9fc65b0d9dae91
       internalID: 290961881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b00ffb8f7a404b243b79096914248edd
-      internalID: -2133752002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24e6ae0e5c8b5c04dbb84bcabd32d91e
-      internalID: -2143180993
       vertices: []
       indices: 
       edges: []
@@ -363,50 +319,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_5
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0e3594c6d67d8b42952a58d5258ed69
-      internalID: 382123571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_6
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 940018a5b456a0946b98e489c94e5a72
-      internalID: -1182708308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wall_top_corner2_right
       rect:
         serializedVersion: 2
@@ -424,72 +336,6 @@ TextureImporter:
       bones: []
       spriteID: 97f7a61ad8f6b9746b229f725955479b
       internalID: 1412007094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_8
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 816942d1c0d5ee74a99c084fe990256b
-      internalID: 1782717324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_9
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f348fab1b66ad340bcecf524abfefea
-      internalID: 311679565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_10
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d84e1a878ecfd045badadf2a9e3805c
-      internalID: -1835496326
       vertices: []
       indices: 
       edges: []
@@ -546,8 +392,8 @@ TextureImporter:
         y: 120
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -572,8 +418,8 @@ TextureImporter:
         y: 120
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -586,72 +432,6 @@ TextureImporter:
       bones: []
       spriteID: f1d6b1e9d83b4d74288e329cfcda3add
       internalID: 418858539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_16
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cad026dae893bf741bbfa234e24eee12
-      internalID: -1732568239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_17
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d553f50497212246ad0a5153e4a614a
-      internalID: -179545388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_18
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4186d30b69590b145839c60bf3bbc44a
-      internalID: 1005949248
       vertices: []
       indices: 
       edges: []
@@ -708,8 +488,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -767,28 +547,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_25
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8c4bdaad8c87fc45b96e8bdad038185
-      internalID: -788899050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wall_top_corner_left
       rect:
         serializedVersion: 2
@@ -796,8 +554,8 @@ TextureImporter:
         y: 96
         width: 24
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -862,8 +620,8 @@ TextureImporter:
         y: 72
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1060,8 +818,8 @@ TextureImporter:
         y: 72
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1136,28 +894,6 @@ TextureImporter:
       bones: []
       spriteID: 450ee388c468b8947bf922e36f3c438b
       internalID: -2101743406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_42
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3caf675223d3f5c46afd5d7c06e58c51
-      internalID: -1268987060
       vertices: []
       indices: 
       edges: []
@@ -1339,28 +1075,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_51
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e52dbabda469be4abe137ad940db0ea
-      internalID: -157857652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wall_52
       rect:
         serializedVersion: 2
@@ -1434,8 +1148,8 @@ TextureImporter:
         y: 24
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1449,58 +1163,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 7}
-        - {x: -12, y: 7}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7aa1bb5169587e4ea5b6ab3138fada2
-      internalID: -717769299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_57
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 7}
-        - {x: -12, y: 7}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6077f4ff2411cea498cd39a3163cbda8
-      internalID: -1086667939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: wall_bottom_corner_up_left
       rect:
         serializedVersion: 2
@@ -1508,8 +1170,8 @@ TextureImporter:
         y: 24
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1578,8 +1240,8 @@ TextureImporter:
         y: 24
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1592,58 +1254,6 @@ TextureImporter:
       bones: []
       spriteID: 40258a2187ef33c419cdff2cbc724ce1
       internalID: 1620001685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_62
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 7}
-        - {x: -12, y: 7}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 695d75ddbf1b38e49a344698c93384c6
-      internalID: -1062892897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_63
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 7}
-        - {x: -12, y: 7}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d9b0fe1b14c75a439a9f3accaba0bff
-      internalID: -911968894
       vertices: []
       indices: 
       edges: []
@@ -1715,72 +1325,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_67
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 019f4c282f450f347bfc7b66fbca133d
-      internalID: 1185949231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_68
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90046391e8205eb4584b899a09f85d75
-      internalID: 86504295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_69
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d07a13487e50184bae5d1a798003651
-      internalID: -901479076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wall_70
       rect:
         serializedVersion: 2
@@ -1803,58 +1347,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_71
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 7}
-        - {x: -12, y: 7}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a90263e012fed824c8b9f72baa02fae0
-      internalID: -777399371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_72
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 12, y: 7}
-        - {x: -12, y: 7}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 138744813d0737041882210b35032193
-      internalID: -447751368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wall_73
       rect:
         serializedVersion: 2
@@ -1872,72 +1364,6 @@ TextureImporter:
       bones: []
       spriteID: 398ba061105154442a85d3e1e26b1987
       internalID: 1519211010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_74
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f479e6febefaff84f8b096d4d7007cc0
-      internalID: 1717976294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_75
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 609e4295f2236ce4e8cb055a4b560fa6
-      internalID: 103437235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_76
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b835ab14937d63544bce1cd8b6c75cf2
-      internalID: -1515728535
       vertices: []
       indices: 
       edges: []
@@ -2043,8 +1469,8 @@ TextureImporter:
       Floor_middle_4: -1487329547
       Floor_middle_5: -1187896866
       Floor_middle_6: 1878823100
+      Void: 290961881
       Wall: -717769299
-      Wall_1: 290961881
       Wall_10: -1835496326
       Wall_11: -229469616
       Wall_12: -811016186

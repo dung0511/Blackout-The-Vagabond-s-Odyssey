@@ -14,13 +14,16 @@ namespace Assets.Script.Boss.StoneGolem
 
         public int damage;
         public int health;
+        public int maxHealth;
+        
 
         public bool isAttacking = false;
-        private bool isDead = true;
-        public bool isFiring;
+        public bool isDead = false;
+        public bool isHealed = false;
+        public bool isImmune = false;
 
         public float attackSpeed = 1f;
-        private float lastAttackTime = 0f;
+        //private float lastAttackTime = 0f;
 
         private ProjecttileManager projectTileManager;
         private void Awake()
@@ -32,104 +35,106 @@ namespace Assets.Script.Boss.StoneGolem
         }
         void Start()
         {
-
+            //Laser laser = GetComponent<Laser>();
+          //  laser.enabled = false;
+            maxHealth = health;
             animator = GetComponent<Animator>();
             projectTileManager = GetComponent<ProjecttileManager>();
         }
 
         void Update()
         {
-            //if (getFiring())
-            //{
-            //    animator.SetBool("isRangedAttack", true);
-            //    projectTileManager.Fire();
-            //}
-            //else
-            //{
-            //    animator.SetBool("isRangedAttack", false);
-            //}
 
-
-            if (!isAttacking && checkAttack())
+            if (!isAttacking && checkAttack() && !getFiring())
             {
-
                 performMeleeAttack();
             }
-            if (!isAttacking && !checkAttack())
+            if (!isAttacking && !checkAttack() && !getFiring())
             {
                 performRangedAttack();
-               
             }
-            //else
-            //{
-            //    ResetAllAttackParameters();
-            //}
-            //isHurt = GetComponent<EnemyHealth>().isHurt;
-            //if (!isAttacking && checkAttack())
-            //{
-            //    animator.SetBool("isMeleeAtatck", true);
-            //    lastAttackTime = Time.time;
-            //}
-            //else if(!isAttacking && Time.time - lastAttackTime >= 2)
-            //{
-            //   
-            //    
-            //    lastAttackTime = Time.time;
-            //    isAttacking = true;
-            //}
-            //ResetAllAttackParameters();
+            if ((health <= (maxHealth * 0.5f)) && !getFiring() && !isHealed)
+            {
+                animator.SetBool("isImmune", true);
+                isHealed=true;
+                StartCoroutine(ImmuneCooldown());
+            }
         }
         void performRangedAttack()
         {
             isAttacking = true;
             int attackType = Random.Range(1, 3);
-            ResetAllAttackParameters();
+            ResetRangedAttackParameters();
 
             switch (attackType)
             {
                 case 1:
                     animator.SetBool("isRangedAttack", true);
-                     projectTileManager.Fire();
                     break;
                 case 2:
                     animator.SetBool("isLaserCast", true);
-                    //gameObject.transform.GetChild(2).gameObject.SetActive(true);
                     break;
 
             }
-            StartCoroutine(AttackCooldown(attackSpeed));
+            StartCoroutine(RangedAttackCooldown(attackSpeed));
         }
 
-        void ResetAllAttackParameters()
+        void performMeleeAttack()
         {
-            animator.SetBool("isMeleeAtatck", false);
+            isAttacking = true;
+
+            ResetMeleeAttackParameters();
+            animator.SetBool("isMeleeAtatck", true);
+
+            StartCoroutine(MeleeAttackCooldown());
+        }
+
+        
+
+        void ResetRangedAttackParameters()
+        {
             animator.SetBool("isRangedAttack", false);
             animator.SetBool("isLaserCast", false);
-
         }
-        IEnumerator AttackCooldown(float cooldownTime)
+
+        void ResetMeleeAttackParameters()
+        {
+            animator.SetBool("isMeleeAtatck", false);
+        }
+        IEnumerator RangedAttackCooldown(float cooldownTime)
         {
             yield return new WaitForSeconds(cooldownTime);
             isAttacking = false;
-            ResetAllAttackParameters();
+            ResetRangedAttackParameters();
         }
+
+        IEnumerator MeleeAttackCooldown()
+        {
+            yield return new WaitForSeconds(1f);
+            isAttacking = false;
+            ResetMeleeAttackParameters();
+        }
+
+        IEnumerator ImmuneCooldown()
+        {
+            yield return new WaitForSeconds(6f);
+            
+            animator.SetBool("isImmune", false);
+        }
+
         private bool checkAttack()
         {
             return GetComponentInChildren<EnemyInteractZone>().isTouchPlayer;
         }
 
-
-        void performMeleeAttack()
-        {
-            isAttacking = true;
-            ResetAllAttackParameters();
-            animator.SetBool("isMeleeAtatck", true);
-            StartCoroutine(AttackCooldown(attackSpeed));
-        }
-
         private bool getFiring()
         {
-            return GetComponent<ProjecttileManager>().firingDone;
+            return GetComponent<ProjecttileManager>().isFiring;
         }
+
+        //private bool getLasering()
+        //{
+        //    return GetComponentInChildren<Laser>().isLasering;
+        //}
     }
 }

@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         isAttacking = true;
         int attackType = has3Attack ? Random.Range(1, 4) : Random.Range(1, 3);
         ResetAllAttackParameters();
-        //Debug.Log(attackType);
+       
         switch (attackType)
         {
             case 1:
@@ -67,9 +67,17 @@ public class Enemy : MonoBehaviour
 
     void ResetAllAttackParameters()
     {
-        animator.SetBool("isAttack1", false);
-        animator.SetBool("isAttack2", false);
-        animator.SetBool("isAttack3", false);
+        if (has3Attack)
+        {
+            animator.SetBool("isAttack1", false);
+            animator.SetBool("isAttack2", false);
+            animator.SetBool("isAttack3", false);
+        }
+        else
+        {
+            animator.SetBool("isAttack1", false);
+            animator.SetBool("isAttack2", false);
+        }
     }
     IEnumerator AttackCooldown(float cooldownTime)
     {

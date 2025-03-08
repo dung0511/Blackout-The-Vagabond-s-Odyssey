@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: movementDetails
       value: 
       objectReference: {fileID: 11400000, guid: 93381b9b42a194244a809cf481c56c5b, type: 2}
+    - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.048
+      objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -94,19 +102,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.077902704
+      value: 0.24048078
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.0447751
+      value: 0.07712895
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0006934535
+      value: 0.044371143
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.04747702
+      value: -0.063653946
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

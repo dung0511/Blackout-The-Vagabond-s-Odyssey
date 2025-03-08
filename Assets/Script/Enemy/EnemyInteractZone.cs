@@ -3,30 +3,20 @@ using UnityEngine;
 public class EnemyInteractZone : MonoBehaviour
 {
     public bool isTouchPlayer = false;
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D()
     {
-        Player player = collision.GetComponent<Player>();
-        if (player != null && !player.isDead)
-        {
-            isTouchPlayer = true;
-           
-        }
+        isTouchPlayer = true;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D()
     {
-        Player player = collision.GetComponent<Player>();
-        if (player != null && player.isDead)
-        {
-            isTouchPlayer = false;
-            
-        }
+        isTouchPlayer = true;
     }
 
     private void OnTriggerExit2D()
     {
         isTouchPlayer = false;
-        
+
     }
 }

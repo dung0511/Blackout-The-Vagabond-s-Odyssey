@@ -22,15 +22,15 @@ public class WeaponController : MonoBehaviour
         {
             Weapon1 = ListObj[0];
             haveOneWepon = true;
-            Weapon1.active = true;
+            Weapon1.SetActive(true);
         }
         else
         {
             Weapon1 = ListObj[0];
             Weapon2 = ListObj[1];
             haveOneWepon = false;
-            Weapon1.active = true;
-            Weapon2.active = false;
+            Weapon1.SetActive(true);
+            Weapon2.SetActive(false);
         }
 
     }

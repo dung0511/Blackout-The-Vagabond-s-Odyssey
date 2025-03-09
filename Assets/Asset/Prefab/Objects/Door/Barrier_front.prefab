@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2585623731944773423}
   - component: {fileID: 7593536757157426665}
   - component: {fileID: 7721429567753809709}
-  - component: {fileID: 5387814577204853835}
   m_Layer: 0
-  m_Name: Door_top
+  m_Name: Barrier_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -1807763204, guid: 40ad11a1b302d374cb0c633d8864bed6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,16 +134,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 0.7701347}
   m_EdgeRadius: 0
---- !u!114 &5387814577204853835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5840927637952434948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc23c44f3acb34d4d975d53a9a9de859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5

@@ -15,7 +15,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
 
     public void takeDame(int damage)
     {
-        if(!stoneGolemHealth.isDead || !stoneGolemHealth.isImmune)
+        if(!stoneGolemHealth.isDead && !stoneGolemHealth.isImmune)
         {
             stoneGolemHealth.health -= damage;
             if (stoneGolemHealth.health <= 0)
@@ -26,7 +26,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
                 stoneGolemHealth.GetComponent<CapsuleCollider2D>().enabled = false;
                 stoneGolemHealth.GetComponent<BoxCollider2D>().enabled = false;
                 stoneGolemHealth.GetComponent<CircleCollider2D>().enabled = false;
-                stoneGolemHealth.GetComponent<Enemy_Movement_AI>().enabled = false;
+                stoneGolemHealth.GetComponent<StoneGolem_Movement_AI>().enabled = false;
                 stoneGolemHealth.GetComponent<MovementToPosition>().enabled = false;
                 stoneGolemHealth.GetComponent<ProjecttileManager>().enabled = false;
                 Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -45,10 +45,10 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
 
     public void HealthAfterImmune()
     {
-        int percentHPHeal = Random.Range(10, 26);
+        int percentHPHeal = Random.Range(20, 36);
         int healAmount = (stoneGolemHealth.maxHealth * percentHPHeal) / 100; 
         float healDuration = 5f;
-        Debug.Log("Healed: "+healAmount);
+        
         StartCoroutine(GradualHeal(healAmount, healDuration));
     }
 
@@ -58,7 +58,9 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
         int healedAmount = 0; 
         while (healedAmount < totalHeal)
         {
-            int healThisFrame = Mathf.Min(healPerFrame, totalHeal - healedAmount); 
+            
+            int healThisFrame = Mathf.Min(healPerFrame, totalHeal - healedAmount);
+            Debug.Log("healThisFrame: " + healThisFrame);
             stoneGolemHealth.health = Mathf.Min(stoneGolemHealth.health + healThisFrame, stoneGolemHealth.maxHealth);
             healedAmount += healThisFrame;
 

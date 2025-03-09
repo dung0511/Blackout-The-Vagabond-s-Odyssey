@@ -26,7 +26,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
                 stoneGolemHealth.GetComponent<CapsuleCollider2D>().enabled = false;
                 stoneGolemHealth.GetComponent<BoxCollider2D>().enabled = false;
                 stoneGolemHealth.GetComponent<CircleCollider2D>().enabled = false;
-                stoneGolemHealth.GetComponent<Enemy_Movement_AI>().enabled = false;
+                stoneGolemHealth.GetComponent<StoneGolem_Movement_AI>().enabled = false;
                 stoneGolemHealth.GetComponent<MovementToPosition>().enabled = false;
                 stoneGolemHealth.GetComponent<ProjecttileManager>().enabled = false;
                 Rigidbody2D rb = GetComponent<Rigidbody2D>();

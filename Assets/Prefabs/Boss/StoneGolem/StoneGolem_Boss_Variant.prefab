@@ -596,7 +596,11 @@ MonoBehaviour:
   animator: {fileID: 0}
   damage: 0
   health: 300
+  maxHealth: 0
   isAttacking: 0
+  isDead: 0
+  isHealed: 0
+  isImmune: 0
   attackSpeed: 1
 --- !u!114 &2114772018673793371
 MonoBehaviour:

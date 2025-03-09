@@ -34,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Radius
-      value: 0.05
+      value: 0.056117866
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.01394799
+      value: 0.013947986
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.048
+      value: 0.04151083
       objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2957499934609179200, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3096559005044523152, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Name
       value: GreatswordOrc_Melee_Enemy
@@ -94,19 +98,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.4394889
+      value: 0.36284754
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.32265404
+      value: 0.2660573
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.25324237
+      value: 0.2149217
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.016001925
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4556064899596513578, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Controller
@@ -134,7 +138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.054144647
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
@@ -150,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.01645752
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2910404210503667977}
   - component: {fileID: 7439082487712672078}
   - component: {fileID: 2361997252065179214}
+  - component: {fileID: 2470227500489935581}
   m_Layer: 3
   m_Name: Shop
   m_TagString: Untagged
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!68 &7439082487712672078
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -163,3 +164,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &2470227500489935581
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567440241349511722}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0

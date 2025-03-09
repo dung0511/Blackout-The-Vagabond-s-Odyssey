@@ -30,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Radius
-      value: 0.05
+      value: 0.0578996
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.031003868
+      value: 0.018996267
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.048
+      value: 0.028768804
       objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2957499934609179200, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3096559005044523152, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Name
       value: ArmoredSkeleton_Melee_Enemy
@@ -98,19 +102,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.4182149
+      value: 0.3721157
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.38506433
+      value: 0.31879678
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.25429022
+      value: 0.23124062
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.04256709
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4556064899596513578, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Controller
@@ -124,21 +128,29 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8021366027151146514, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.20541137
+      value: 0.21331817
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.09216732
+      value: 0.10919736
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.030145902
+      value: 0.034099296
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.05474946
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
@@ -154,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.013465688
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

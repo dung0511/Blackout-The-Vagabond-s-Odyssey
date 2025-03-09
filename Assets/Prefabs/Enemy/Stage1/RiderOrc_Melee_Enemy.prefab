@@ -38,15 +38,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Radius
-      value: 0.05
+      value: 0.089628145
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: -0.010180107
+      value: -0.016068025
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.048
+      value: 0.06691583
       objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2957499934609179200, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3096559005044523152, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Name
       value: RiderOrc_Melee_Enemy
@@ -98,19 +102,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.4846266
+      value: 0.41673625
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.5577095
+      value: 0.36101753
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.3145742
+      value: 0.28062904
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.07825798
+      value: 0.11749077
       objectReference: {fileID: 0}
     - target: {fileID: 4556064899596513578, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Controller
@@ -130,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.14241153
+      value: 0.15076114
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
@@ -138,23 +142,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.033783004
+      value: 0.055678584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.27211738
+      value: 0.25885886
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.28196228
+      value: 0.28191417
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.004861355
+      value: 0.011490669
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.05508929
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

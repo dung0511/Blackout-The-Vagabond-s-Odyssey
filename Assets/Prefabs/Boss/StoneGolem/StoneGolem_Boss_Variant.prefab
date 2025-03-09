@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 370898874396224655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.242, y: 0.122, z: 0}
+  m_LocalPosition: {x: 0.24, y: 0.389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 7367156366757098884}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,8 +109,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 908251845, guid: fd22f4db2d50699469406a752b1872e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,8 +180,8 @@ BoxCollider2D:
   m_Offset: {x: 1.2352831, y: 0.0031145513}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    pivot: {x: 0.1728434, y: 0.66844726}
+    oldSize: {x: 3, y: 1}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -213,11 +213,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410884764870967887, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 410884764870967887, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 410884764870967887, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_LocalPosition.z
@@ -337,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662699178855631222, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.y
-      value: 0.4213366
+      value: 0.5184736
       objectReference: {fileID: 0}
     - target: {fileID: 1662699178855631222, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.x
@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1662699178855631222, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.y
-      value: 0.012916543
+      value: 0.2944396
       objectReference: {fileID: 0}
     - target: {fileID: 2667090286039281302, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.x
@@ -393,11 +393,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4778370825942337647, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.x
-      value: -0.01236185
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4778370825942337647, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.y
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6944673337687591586, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Controller
@@ -409,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231267959149751441, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.y
-      value: 0.44167653
+      value: 0.44352707
       objectReference: {fileID: 0}
     - target: {fileID: 7231267959149751441, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.x
@@ -417,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231267959149751441, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.y
-      value: 0.026422549
+      value: 0.33633736
       objectReference: {fileID: 0}
     - target: {fileID: 7323029246505741206, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Name
@@ -429,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.y
-      value: 0.21467106
+      value: 0.48536578
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.x
@@ -437,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.y
-      value: -0.116249435
+      value: 0.23927628
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -546,7 +546,7 @@ MonoBehaviour:
   target: {fileID: 0}
   projectile: {fileID: 3572611920110104692, guid: 073b03746acd8d54bbbf9169435616c9, type: 3}
   firePos: {fileID: 4149400533198022286}
-  projectileForce: 20
+  projectileForce: 10
   projectileDame: 1
   isFiring: 0
   countBullet: 0
@@ -559,7 +559,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6606143029826326960}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -594,10 +594,14 @@ MonoBehaviour:
   movementToPositionEvent: {fileID: 0}
   idleEvent: {fileID: 0}
   animator: {fileID: 0}
-  damage: 0
-  health: 300
+  damage: 1
+  health: 10
+  maxHealth: 0
   isAttacking: 0
-  attackSpeed: 1
+  isDead: 0
+  isHealed: 0
+  isImmune: 0
+  attackSpeed: 4
 --- !u!114 &2114772018673793371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +644,7 @@ MonoBehaviour:
   movementDetails: {fileID: 11400000, guid: e92f074a2a59ad348a4e025fbddecfb1, type: 2}
   target: {fileID: 0}
   nextWaypointDistance: 0.3
-  stopChaseDistance: 1
-  resumeChaseDistance: 2
-  resumeChaseDelay: 1
+  stopChaseDistance: 2
+  resumeChaseDistance: 1
+  resumeChaseDelay: 4
   moveSpeed: 0

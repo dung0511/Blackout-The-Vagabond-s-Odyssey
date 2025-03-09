@@ -15,7 +15,7 @@ namespace Assets.Script.Boss.StoneGolem
         public int damage;
         public int health;
         public int maxHealth;
-        
+
 
         public bool isAttacking = false;
         public bool isDead = false;
@@ -36,7 +36,7 @@ namespace Assets.Script.Boss.StoneGolem
         void Start()
         {
             //Laser laser = GetComponent<Laser>();
-          //  laser.enabled = false;
+            //  laser.enabled = false;
             maxHealth = health;
             animator = GetComponent<Animator>();
             projectTileManager = GetComponent<ProjecttileManager>();
@@ -44,21 +44,23 @@ namespace Assets.Script.Boss.StoneGolem
 
         void Update()
         {
-
-            if (!isAttacking && checkAttack() && !getFiring())
+            if ((health <= (maxHealth * 0.5f)) && !isAttacking && !getFiring() && !isHealed)
+            {
+                isImmune = true;
+                animator.SetBool("isImmune", true);
+                isHealed = true;
+                GetComponent<StoneGolem_Movement_AI>().enabled = false;
+                StartCoroutine(ImmuneCooldown());
+            }
+            if (!isAttacking && checkAttack() && !getFiring() && !isImmune)
             {
                 performMeleeAttack();
             }
-            if (!isAttacking && !checkAttack() && !getFiring())
+            if (!isAttacking && !checkAttack() && !getFiring() && !isImmune)
             {
                 performRangedAttack();
             }
-            if ((health <= (maxHealth * 0.5f)) && !getFiring() && !isHealed)
-            {
-                animator.SetBool("isImmune", true);
-                isHealed=true;
-                StartCoroutine(ImmuneCooldown());
-            }
+
         }
         void performRangedAttack()
         {
@@ -89,7 +91,7 @@ namespace Assets.Script.Boss.StoneGolem
             StartCoroutine(MeleeAttackCooldown());
         }
 
-        
+
 
         void ResetRangedAttackParameters()
         {
@@ -117,9 +119,11 @@ namespace Assets.Script.Boss.StoneGolem
 
         IEnumerator ImmuneCooldown()
         {
-            yield return new WaitForSeconds(6f);
-            
+            yield return new WaitForSeconds(3f);
+
             animator.SetBool("isImmune", false);
+            GetComponent<StoneGolem_Movement_AI>().enabled = true;
+            isImmune = false;
         }
 
         private bool checkAttack()

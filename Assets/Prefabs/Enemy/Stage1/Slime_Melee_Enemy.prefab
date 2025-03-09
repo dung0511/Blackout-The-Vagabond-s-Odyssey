@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Radius
-      value: 0.072233774
+      value: 0.06586043
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633756715417442029, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.48
+      value: 0.058148574
       objectReference: {fileID: 0}
     - target: {fileID: 1736963211916112559, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2957499934609179200, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3096559005044523152, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Name
       value: Slime_Melee_Enemy
@@ -94,19 +98,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
-      value: 0.5532879
+      value: 0.4837795
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.y
-      value: 0.4230662
+      value: 0.36425135
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.3202677
+      value: 0.2855135
       objectReference: {fileID: 0}
     - target: {fileID: 4182749198270952670, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.5
+      value: 0.050592586
       objectReference: {fileID: 0}
     - target: {fileID: 4556064899596513578, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Controller
@@ -134,11 +138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.45
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8679675341373734580, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Size.x
@@ -154,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9148275473671986708, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Offset.y
-      value: 0.5
+      value: 0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

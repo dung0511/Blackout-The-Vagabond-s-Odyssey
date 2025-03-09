@@ -12,9 +12,8 @@ public class PropPlacer : MonoBehaviour
     [SerializeField] private List<Prop> lightProps;
     [SerializeField] private List<Prop> trapProps;
     [SerializeField] private GameObject[] doors; // 0:front. 1:side
-    [SerializeField] private GameObject[] barrier; // 0:front. 1:side
     [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f, doorChance = 0.6f;
-    [SerializeField] private GameObject propParent;
+    [SerializeField] private Transform propParent;
     [SerializeField] private Prop groundPortal;
     [SerializeField] private Prop shop;
     [SerializeField] private Prop exit;
@@ -291,7 +290,7 @@ public class PropPlacer : MonoBehaviour
             if (freePositionsAround.Count == propToPlace.propSize.x * propToPlace.propSize.y)
             {
                 //Place the gameobject
-                PlacePropAt(room, position, propToPlace);
+                PlaceTrapAt(room, position, propToPlace);
                 //Lock all the positions recquired by the prop (based on its size)
                 foreach (Vector2Int pos in freePositionsAround)
                 {
@@ -489,15 +488,31 @@ public class PropPlacer : MonoBehaviour
         
         for (int i = 0; i < validCount; i++)
         {
-            PlacePropAt(room, availableSpaces[i], trap);
+            PlaceTrapAt(room, availableSpaces[i], trap);
         }
+    }
+
+    private GameObject PlaceTrapAt(BoxRoom room, Vector2Int placementPostion, Prop prop)
+    {
+        GameObject propObject = Instantiate(prop.prefabsVariant[Utility.UnseededRng(0, prop.prefabsVariant.Count)]);
+        propObject.transform.position = (Vector2)placementPostion;
+        propObject.transform.SetParent(propParent);
+        for(int x = 0; x < prop.propSize.x; x++)
+        {
+            for(int y = 0; y < prop.propSize.y; y++)
+            {
+                room.propPositions.Add(placementPostion + new Vector2Int(x, y));
+            }
+        }
+        room.propObjectReferences.Add(propObject);
+        return propObject;
     }
 
     private GameObject PlacePropAt(BoxRoom room, Vector2Int placementPostion, Prop prop)
     {
         GameObject propObject = Instantiate(prop.prefabsVariant[Utility.UnseededRng(0, prop.prefabsVariant.Count)]);
-        propObject.transform.position = (Vector2)placementPostion;
-        propObject.transform.SetParent(propParent.transform);
+        propObject.transform.position = (Vector2)placementPostion + new Vector2(0, 0.25f);
+        propObject.transform.SetParent(propParent);
         for(int x = 0; x < prop.propSize.x; x++)
         {
             for(int y = 0; y < prop.propSize.y; y++)
@@ -515,7 +530,7 @@ public class PropPlacer : MonoBehaviour
         var centerProp = posToCenter - propCenter + new Vector2(0.5f,0.5f);  
         GameObject propObject = Instantiate(prop.prefabsVariant[Utility.UnseededRng(0, prop.prefabsVariant.Count)]);
         propObject.transform.position = centerProp;
-        propObject.transform.SetParent(propParent.transform);
+        propObject.transform.SetParent(propParent);
         var takenPos = new Vector2Int(Mathf.FloorToInt(centerProp.x), Mathf.FloorToInt(centerProp.y));
         for(int x = 0; x < prop.propSize.x; x++)
         {
@@ -529,9 +544,9 @@ public class PropPlacer : MonoBehaviour
 
     public void Reset()
     {
-        while (propParent.transform.childCount > 0)
+        while (propParent.childCount > 0)
         {
-            DestroyImmediate(propParent.transform.GetChild(0).gameObject);
+            DestroyImmediate(propParent.GetChild(0).gameObject);
         }
     }
 
@@ -584,7 +599,7 @@ public class PropPlacer : MonoBehaviour
                         DungeonData.path.Add(beforeEntrance+Vector2Int.right);
                         if(Random.value <= doorChance)
                         {
-                            PlaceDoor(room.topEntrance, 1, room);
+                            PlaceDoor(room.topEntrance, 0);
                         }
                         break;
                     case 0-1:
@@ -596,7 +611,7 @@ public class PropPlacer : MonoBehaviour
 
                         if (Random.value <= doorChance)
                         {
-                            PlaceDoor(room.bottomEntrance, 0, room);
+                            PlaceDoor(room.bottomEntrance, 0);
                         }
                         break;
                     case -10:
@@ -607,7 +622,7 @@ public class PropPlacer : MonoBehaviour
                         DungeonData.path.Add(beforeEntrance+Vector2Int.down);
                         if (Random.value <= doorChance)
                         {
-                            PlaceDoor(room.leftEntrance, 2, room);
+                            PlaceDoor(room.leftEntrance, 1);
                         }
                         break;
                     case 10:
@@ -618,7 +633,7 @@ public class PropPlacer : MonoBehaviour
                         DungeonData.path.Add(beforeEntrance+Vector2Int.down);
                         if (Random.value <= doorChance)
                         {
-                            PlaceDoor(room.rightEntrance, 2, room);
+                            PlaceDoor(room.rightEntrance, 1);
                         }
                         break;
                 }
@@ -627,9 +642,9 @@ public class PropPlacer : MonoBehaviour
         
     }
 
-    private void PlaceDoor(Vector2Int pos, int index, BoxRoom room)
+    private void PlaceDoor(Vector2Int pos, int index)
     {
         var doorPos = new Vector3(pos.x + 0.5f, pos.y +0.5f, 0);
-        var door = Instantiate(doors[index], doorPos, Quaternion.identity, propParent.transform);
+        var door = Instantiate(doors[index], doorPos, Quaternion.identity, propParent);
     }
 }

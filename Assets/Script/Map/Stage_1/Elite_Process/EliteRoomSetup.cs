@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EliteRoomSetup : MonoBehaviour
 {
-    public GameObject[] barriers;
+    public GameObject[] barriers; //0:front 1:side
     public GameObject triggerPrefab;
     public Transform objectParent;
     private BoxRoom eliteRoom;
@@ -41,10 +41,10 @@ public class EliteRoomSetup : MonoBehaviour
         var barrierList = new List<GameObject>();
         var barrierPlace = new[]
         {
-            (eliteRoom.topEntrance, barriers[1]),
+            (eliteRoom.topEntrance, barriers[0]),
             (eliteRoom.bottomEntrance, barriers[0]),
-            (eliteRoom.leftEntrance, barriers[2]),
-            (eliteRoom.rightEntrance, barriers[2])
+            (eliteRoom.leftEntrance, barriers[1]),
+            (eliteRoom.rightEntrance, barriers[1])
         };
 
         foreach (var (entrance, prefab) in barrierPlace)

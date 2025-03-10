@@ -9,59 +9,13 @@ using UnityEngine;
 
 namespace Assets.Script.UI.Inventory
 {
-    [CreateAssetMenu(menuName = "Scriptable Objects/Item")]
-
+    [CreateAssetMenu(fileName = "New Item", menuName = "Item/Create New Item")]
     public class Item : ScriptableObject
     {
-        [Header("Only UI")]
-        public bool stackable = true;
+        public int id;
+        public int value;
 
-        [Header("Only Gameplay")]
-        public ItemType type;
-
-        // Common properties for all items
-        public string itemName;
-        public Sprite icon;
     }
 
-    public enum ItemType
-    {
-        Equipment,
-        Weapon,
-        Potion
-    }
-
-    public enum ActionType
-    {
-        Attack,
-        Equip,
-        Use
-    }
-
-    // Subclass for Weapon
-    [CreateAssetMenu(menuName = "Scriptable object/Weapon")]
-    public class Weapon : Item
-    {
-        public int damage;
-        public float attackRange;
-
-        public Weapon()
-        {
-            type = ItemType.Weapon;
-            stackable = false; // Weapons are usually not stackable
-        }
-    }
-
-    // Subclass for Potion
-    [CreateAssetMenu(menuName = "Scriptable object/Potion")]
-    public class Potion : Item
-    {
-        public int regen;
-
-        public Potion()
-        {
-            type = ItemType.Potion;
-            stackable = true; // Potions are usually stackable
-        }
-    }
+    
 }

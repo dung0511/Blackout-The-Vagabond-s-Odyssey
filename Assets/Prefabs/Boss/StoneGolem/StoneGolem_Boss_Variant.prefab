@@ -203,6 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rotationSpeed: 3
+  stoneGolem: {fileID: 0}
+  isTargetAtLeft: 0
 --- !u!1001 &4471261174733601318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.y
-      value: 0.48536578
+      value: 0.23749669
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.x
@@ -437,7 +439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.y
-      value: 0.23927628
+      value: 0.11534173
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -595,7 +597,7 @@ MonoBehaviour:
   idleEvent: {fileID: 0}
   animator: {fileID: 0}
   damage: 1
-  health: 10
+  health: 300
   maxHealth: 0
   isAttacking: 0
   isDead: 0

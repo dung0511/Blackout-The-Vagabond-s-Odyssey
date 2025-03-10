@@ -11,6 +11,7 @@ public class StoneGolemAnimate : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("Stone Golem2");
         // Load components
         enemy = GetComponent<StoneGolem>();
     }

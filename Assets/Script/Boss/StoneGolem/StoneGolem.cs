@@ -28,7 +28,7 @@ namespace Assets.Script.Boss.StoneGolem
         private ProjecttileManager projectTileManager;
         private void Awake()
         {
-
+            Debug.Log("Stone Golem1");
             movementToPositionEvent = GetComponent<MovementToPositionEvent>();
             idleEvent = GetComponent<IdleEvent>();
 

@@ -1,3 +1,4 @@
+using Assets.Script.UI.Inventory;
 using UnityEditor;
 using UnityEngine;
 
@@ -22,6 +23,10 @@ public class Player : MonoBehaviour
     public PlayerMoveController moveController;
     public WeaponController weaponController;
     public PlayerPickController pickController;
+    
+    //quang_ui_inventory
+    public InventoryObject inventory;
+
     private void Awake()
     {
         menu= GameObject.Find("Menu");
@@ -98,5 +103,16 @@ public class Player : MonoBehaviour
             anim.SetBool("isHurt", true);
         else
             anim.SetBool("isHurt", false);
+    }
+
+    //quang_ui_inventory
+    public void OnTriggerEnter(Collider other)
+    {
+        var item = other.GetComponent<Item>();
+        if (item)
+        {
+            inventory.addItem(item.item, 1);
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -10,6 +10,6 @@ public class AimPoint : MonoBehaviour
     void Start()
     {
         cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
-        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.ForceSoftware);
     }
 }

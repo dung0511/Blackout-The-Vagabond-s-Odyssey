@@ -36,7 +36,7 @@ public class ProjecttileManager : MonoBehaviour
         switch (fireType)
         {
             case 1:
-                StartCoroutine(FireMultipleProjectiles(10, 0.3f));
+                StartCoroutine(FireMultipleProjectiles(4, 0.75f));
                 break;
             case 2:
                 StartCoroutine(FireMultipleProjectilesRandomAngle(4, 0.75f));

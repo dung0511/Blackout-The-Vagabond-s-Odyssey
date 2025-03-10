@@ -60,7 +60,6 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
         {
             
             int healThisFrame = Mathf.Min(healPerFrame, totalHeal - healedAmount);
-            Debug.Log("healThisFrame: " + healThisFrame);
             stoneGolemHealth.health = Mathf.Min(stoneGolemHealth.health + healThisFrame, stoneGolemHealth.maxHealth);
             healedAmount += healThisFrame;
 

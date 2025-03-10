@@ -8,19 +8,19 @@ public class Enemy : MonoBehaviour
 
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
     [HideInInspector] public IdleEvent idleEvent;
-    public int damage;
-    //public float speed;
-    public int health;
     [HideInInspector] public Animator animator;
+    [HideInInspector] public Room roomBelong;
+
+    public int damage;
+    public int health;
+
     public bool isHurt;
     public bool has3Attack;
-    //public bool isAttack1;
-
-
+    public bool isArcher = false;
     private bool isAttacking = false;
- 
+
     public float attackSpeed = 1f;
-    [HideInInspector] public Room roomBelong;
+
     private void Awake()
     {
 
@@ -38,18 +38,34 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         //animator.SetBool("isAttack1", checkAttack());
-        if (!isAttacking && checkAttack()) performAttack();
+        if (!isAttacking && checkAttack() && !isArcher)
+        {
+            performAttack();
+        }
+        else if (!isAttacking && checkAttack() && isArcher)
+        {
+            performRangedAttack();
+        }
         else ResetAllAttackParameters();
-        isHurt=GetComponent<EnemyHealth>().isHurt;
+        isHurt = GetComponent<EnemyHealth>().isHurt;
         animator.SetBool("isHurt", isHurt);
-        
+
     }
+
+    void performRangedAttack()
+    {
+        isAttacking = true;
+        ResetAllAttackParameters();
+        animator.SetBool("isAttack1", true);
+        StartCoroutine(AttackCooldown(attackSpeed));
+    }
+
     void performAttack()
     {
         isAttacking = true;
         int attackType = has3Attack ? Random.Range(1, 4) : Random.Range(1, 3);
         ResetAllAttackParameters();
-       
+
         switch (attackType)
         {
             case 1:
@@ -67,17 +83,26 @@ public class Enemy : MonoBehaviour
 
     void ResetAllAttackParameters()
     {
-        if (has3Attack)
+        if (isArcher)
         {
             animator.SetBool("isAttack1", false);
-            animator.SetBool("isAttack2", false);
-            animator.SetBool("isAttack3", false);
         }
         else
         {
-            animator.SetBool("isAttack1", false);
-            animator.SetBool("isAttack2", false);
+            if (has3Attack)
+            {
+                animator.SetBool("isAttack1", false);
+                animator.SetBool("isAttack2", false);
+                animator.SetBool("isAttack3", false);
+            }
+            else
+            {
+                animator.SetBool("isAttack1", false);
+                animator.SetBool("isAttack2", false);
+            }
         }
+
+
     }
     IEnumerator AttackCooldown(float cooldownTime)
     {
@@ -119,5 +144,5 @@ public class Enemy : MonoBehaviour
         return GetComponentInChildren<EnemyInteractZone>().isTouchPlayer;
     }
 
-    
+
 }

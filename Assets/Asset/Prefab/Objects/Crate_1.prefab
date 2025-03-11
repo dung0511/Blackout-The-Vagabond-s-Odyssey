@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 889304181529974505}
   - component: {fileID: 7310949520306947904}
   - component: {fileID: 4566223238411180171}
+  - component: {fileID: 7258877673055651622}
   m_Layer: 3
   m_Name: Crate_1
   m_TagString: Untagged
@@ -134,3 +135,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5833333, y: 0.44456482}
   m_EdgeRadius: 0
+--- !u!114 &7258877673055651622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824006317161249655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc23c44f3acb34d4d975d53a9a9de859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3

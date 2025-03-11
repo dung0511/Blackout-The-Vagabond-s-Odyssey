@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2185695025667154397}
   - component: {fileID: 3559250936108352654}
   - component: {fileID: 6225403900542608517}
+  - component: {fileID: 194464577168836505}
   m_Layer: 3
   m_Name: sarcophagus_side_3
   m_TagString: Untagged
@@ -134,3 +135,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.37, y: 0.17989138}
   m_EdgeRadius: 0
+--- !u!114 &194464577168836505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533076913995644434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc23c44f3acb34d4d975d53a9a9de859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10

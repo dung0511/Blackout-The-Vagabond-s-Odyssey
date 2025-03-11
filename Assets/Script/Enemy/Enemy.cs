@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public Animator animator;
     [HideInInspector] public Room roomBelong;
 
+    [HideInInspector] public Enemy_Movement_AI ai;
+
     public int damage;
     public int health;
 
@@ -26,7 +28,7 @@ public class Enemy : MonoBehaviour
 
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         idleEvent = GetComponent<IdleEvent>();
-
+        ai = GetComponent<Enemy_Movement_AI>();
     }
     void Start()
     {
@@ -54,6 +56,7 @@ public class Enemy : MonoBehaviour
 
     void performRangedAttack()
     {
+        ai.UpdateEnemyFacingDirection();
         isAttacking = true;
         ResetAllAttackParameters();
         animator.SetBool("isAttack1", true);

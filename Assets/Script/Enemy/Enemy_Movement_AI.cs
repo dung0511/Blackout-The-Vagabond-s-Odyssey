@@ -110,7 +110,7 @@ public class Enemy_Movement_AI : MonoBehaviour
         }
         isWaitingToResumeChase = false;
     }
-    private void UpdateEnemyFacingDirection()
+    public void UpdateEnemyFacingDirection()
     {
         if (target == null) return;
 

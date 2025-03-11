@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 7017794163971954036}
   - component: {fileID: 3376084950787320356}
   - component: {fileID: 6389075804581413521}
+  - component: {fileID: 3351031023819280533}
   m_Layer: 3
   m_Name: Table_straight
   m_TagString: Untagged
@@ -349,6 +350,19 @@ MonoBehaviour:
   longChairs:
   - {fileID: 8697026678100813190, guid: 9b0be1a94f1433e4bad9fed5383fa5a7, type: 3}
   chairChance: 20
+--- !u!114 &3351031023819280533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078428863851701151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc23c44f3acb34d4d975d53a9a9de859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!1 &5397633788438453005
 GameObject:
   m_ObjectHideFlags: 0

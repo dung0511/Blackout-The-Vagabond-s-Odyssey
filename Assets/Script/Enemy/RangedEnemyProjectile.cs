@@ -25,7 +25,7 @@ public class RangedEnemyProjectile : MonoBehaviour
     void Fire()
     {
 
-        GameObject bulletTmp = BulletPoolManagement.Instance.GetBullet(projectile);
+        GameObject bulletTmp = PoolManagement.Instance.GetBullet(projectile);
         if (bulletTmp == null) return;
 
         bulletTmp.transform.position = firePos.position;

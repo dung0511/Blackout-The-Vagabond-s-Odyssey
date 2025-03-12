@@ -75,7 +75,7 @@ public class RangedWeapon : MonoBehaviour
         if (elapsedTime >= TimeBtwFire)
         {
             lastFireTime = Time.time;
-            GameObject bulletTmp = BulletPoolManagement.Instance.GetBullet(bullet);
+            GameObject bulletTmp = PoolManagement.Instance.GetBullet(bullet);
 
             if (bulletTmp == null) return; 
 

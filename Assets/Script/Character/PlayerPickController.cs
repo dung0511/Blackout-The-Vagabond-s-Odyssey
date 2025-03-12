@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Script.Weapon.Throwable_Weapon;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,6 +13,7 @@ public class PlayerPickController : MonoBehaviour
     public bool isTouchItem = false;
     public bool isMelee = false;
     public bool isRanged = false;
+    public bool isThrowable = false;
     public GameObject Item;
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,25 +22,11 @@ public class PlayerPickController : MonoBehaviour
 
         if (collision.GetComponent<MeleeWeapon>() != null)
         {
-
-            //if (_isPicking)
-            //{
-            //    collision.enabled = false;
-            //    collision.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
-
-            //    collision.GetComponent<RangedWeapon>().currentCharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
-            //    collision.transform.localScale = new Vector3(0.6f, 0.6f, 1);
-            //    collision.transform.localPosition = new Vector3(0, -0.04f, 1);
-
-            //    GetComponentInChildren<RangedWeapon>().inHand = true;
-            //    GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(collision.gameObject);
-
-
-            //}
             isTouchItem = true;
             Item = collision.gameObject;
             isMelee = true;
             isRanged = false;
+            isThrowable = false;
         }
         if (collision.GetComponent<RangedWeapon>() != null)
         {
@@ -46,33 +34,28 @@ public class PlayerPickController : MonoBehaviour
             Item = collision.gameObject;
             isMelee = false;
             isRanged = true;
+            isThrowable = false;
+        }
+        if (collision.GetComponent<ThrowableWeapon>() != null)
+        {
+            isTouchItem = true;
+            Item = collision.gameObject;
+            isMelee = false;
+            isRanged = false;
+            isThrowable = true;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (collision.GetComponent<MeleeWeapon>() != null )
+        if (collision.GetComponent<MeleeWeapon>() != null)
         {
-
-            //if (_isPicking)
-            //{
-            //    collision.enabled = false;
-            //    collision.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
-
-            //    collision.GetComponent<RangedWeapon>().currentCharacterSR = GameObject.Find("Character").GetComponent<SpriteRenderer>();
-            //    collision.transform.localScale = new Vector3(0.6f, 0.6f, 1);
-            //    collision.transform.localPosition = new Vector3(0, -0.04f, 1);
-               
-            //    GetComponentInChildren<RangedWeapon>().inHand = true;
-            //    GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(collision.gameObject);
-                
-
-            //}
             isTouchItem = true;
             Item = collision.gameObject;
             isMelee = true;
             isRanged = false;
+            isThrowable = false;
         }
         if (collision.GetComponent<RangedWeapon>() != null)
         {
@@ -80,6 +63,15 @@ public class PlayerPickController : MonoBehaviour
             Item = collision.gameObject;
             isMelee = false;
             isRanged = true;
+            isThrowable = false;
+        }
+        if (collision.GetComponent<ThrowableWeapon>() != null)
+        {
+            isTouchItem = true;
+            Item = collision.gameObject;
+            isMelee = false;
+            isRanged = false;
+            isThrowable = true;
         }
     }
     private void OnTriggerExit2D()
@@ -112,6 +104,17 @@ public class PlayerPickController : MonoBehaviour
             Item.transform.localPosition = new Vector3(0, -0.04f, 1);
 
             Item.GetComponentInChildren<RangedWeapon>().inHand = true;
+            GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
+        }
+        else if (isThrowable)
+        {
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+
+            Item.GetComponent<ThrowableWeapon>().currentCharacterSR = GetComponentInChildren<SpriteRenderer>();
+            Item.transform.localScale = new Vector3(0.7f, 0.7f, 1);
+            Item.transform.localPosition = new Vector3(0, -0.04f, 1);
+
+            Item.GetComponentInChildren<ThrowableWeapon>().inHand = true;
             GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
         }
         

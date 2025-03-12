@@ -117,20 +117,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 88f7f423c9a345d499d78ede6728393e, type: 2}
     - target: {fileID: 8405928646924559893, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
+      propertyPath: resumeChaseDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405928646924559893, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: stopChaseDistance
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8405928646924559893, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: resumeChaseDistance
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8689345582590568780, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.12
       objectReference: {fileID: 0}
     - target: {fileID: 8689345582590568780, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 8689345582590568780, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -20,10 +20,10 @@ public class Bullet : MonoBehaviour
             
             enemy.takeDame(weapon.BulletDame);
           
-            BulletPoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);
+            PoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);
         }
 
-        else BulletPoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);     
+        else PoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);     
         //vuong: any collision obstacle, disable bullet
         // this.gameObject.SetActive(false);
 

@@ -362,6 +362,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1819300920, guid: 06352a30bfc017a4497c8f68a9d0c72b, type: 3}
     - target: {fileID: 2667090286039281302, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667090286039281302, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -431,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Size.y
-      value: 0.23749669
+      value: 0.5922566
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.x
@@ -439,7 +443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Offset.y
-      value: 0.11534173
+      value: 0.29272166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 1160
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -548,8 +556,8 @@ MonoBehaviour:
   target: {fileID: 0}
   projectile: {fileID: 3572611920110104692, guid: 073b03746acd8d54bbbf9169435616c9, type: 3}
   firePos: {fileID: 4149400533198022286}
-  projectileForce: 10
-  projectileDame: 1
+  projectileForce: 15
+  projectileDame: 2
   isFiring: 0
   countBullet: 0
   rangedDetail: {fileID: 0}

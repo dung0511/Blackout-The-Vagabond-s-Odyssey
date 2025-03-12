@@ -86,7 +86,7 @@ public class ProjecttileManager : MonoBehaviour
     void FireSingleProjectile()
     {
 
-        GameObject bulletTmp = BulletPoolManagement.Instance.GetBullet(projectile);
+        GameObject bulletTmp = PoolManagement.Instance.GetBullet(projectile);
         if (bulletTmp == null) return;
 
         bulletTmp.transform.position = firePos.position;
@@ -116,7 +116,7 @@ public class ProjecttileManager : MonoBehaviour
 
         foreach (Vector2 dir in directions)
         {
-            GameObject bulletTmp = BulletPoolManagement.Instance.GetBullet(projectile);
+            GameObject bulletTmp = PoolManagement.Instance.GetBullet(projectile);
             if (bulletTmp == null) continue;
 
             bulletTmp.transform.position = firePos.position;

@@ -12,10 +12,10 @@ public class Projectile : MonoBehaviour
 
             player.takeDame(projecttileManager.projectileDame);
 
-            BulletPoolManagement.Instance.ReturnBullet(gameObject, projecttileManager.projectile);
+            PoolManagement.Instance.ReturnBullet(gameObject, projecttileManager.projectile);
         }
 
-        else BulletPoolManagement.Instance.ReturnBullet(gameObject, projecttileManager.projectile);
+        else PoolManagement.Instance.ReturnBullet(gameObject, projecttileManager.projectile);
     }
 
 

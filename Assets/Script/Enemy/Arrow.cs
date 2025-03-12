@@ -14,10 +14,10 @@ public class Arrow : MonoBehaviour
             player.healthController.takeDame(arrow.projectileDame);
             
 
-            BulletPoolManagement.Instance.ReturnBullet(gameObject, arrow.projectile);
+            PoolManagement.Instance.ReturnBullet(gameObject, arrow.projectile);
         }
 
-        else BulletPoolManagement.Instance.ReturnBullet(gameObject, arrow.projectile);
+        else PoolManagement.Instance.ReturnBullet(gameObject, arrow.projectile);
     }
 
 

@@ -45,7 +45,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
 
     public void HealthAfterImmune()
     {
-        int percentHPHeal = Random.Range(20, 36);
+        int percentHPHeal = Random.Range(10, 26);
         int healAmount = (stoneGolemHealth.maxHealth * percentHPHeal) / 100; 
         float healDuration = 5f;
         

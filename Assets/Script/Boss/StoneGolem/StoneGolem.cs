@@ -16,6 +16,7 @@ namespace Assets.Script.Boss.StoneGolem
         public int health;
         public int maxHealth;
 
+        public float immuneCooldownDuration=20f;
 
         public bool isAttacking = false;
         public bool isDead = false;
@@ -44,8 +45,9 @@ namespace Assets.Script.Boss.StoneGolem
 
         void Update()
         {
-            if ((health <= (maxHealth * 0.5f)) && !isAttacking && !getFiring() && !isHealed)
+            if ((health <= (maxHealth * 0.75f)) && !isAttacking && !getFiring() && !isHealed)
             {
+
                 isImmune = true;
                 animator.SetBool("isImmune", true);
                 isHealed = true;
@@ -124,6 +126,8 @@ namespace Assets.Script.Boss.StoneGolem
             animator.SetBool("isImmune", false);
             GetComponent<StoneGolem_Movement_AI>().enabled = true;
             isImmune = false;
+            yield return new WaitForSeconds(immuneCooldownDuration);
+            isHealed = false;
         }
 
         private bool checkAttack()

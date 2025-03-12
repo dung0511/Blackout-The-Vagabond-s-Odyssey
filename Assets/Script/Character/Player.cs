@@ -93,6 +93,7 @@ public class Player : MonoBehaviour
         else
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
+            GameObject.Find("Weapon").gameObject.active = false;
             armorController.ArmorWhenPlayerDie();
             rd.linearVelocity = Vector2.zero;
             Cursor.visible = true;

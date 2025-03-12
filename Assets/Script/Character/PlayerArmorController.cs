@@ -7,7 +7,7 @@ public class PlayerArmorController : MonoBehaviour
     private Slider armorBar;
     private int currentArmor;
     private int maxArmor; 
-    private float timeHealArmor = 5f;
+    private float timeHealArmor = 7f;
     private float lastDamageTime;
     private bool isRegenerating = false;
 

@@ -1,3 +1,4 @@
+using Assets.Script.Weapon.Throwable_Weapon;
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
@@ -84,8 +85,10 @@ public class WeaponController : MonoBehaviour
         {
             bool isHoldingRanged = GetComponentInChildren<RangedWeapon>() != null;
             bool isHoldingMelee = GetComponentInChildren<MeleeWeapon>() != null;
+            bool isHoldingThrowable = GetComponentInChildren<ThrowableWeapon>() != null;
             bool isPickingRanged = obj.GetComponent<RangedWeapon>() != null;
             bool isPickingMelee = obj.GetComponent<MeleeWeapon>() != null;
+            bool isPickingThrowable = obj.GetComponent<ThrowableWeapon>() != null;
             if ((isHoldingMelee && isPickingRanged) || (isHoldingRanged && isPickingMelee))
             {
 
@@ -96,48 +99,7 @@ public class WeaponController : MonoBehaviour
 
                 SwapWeapon(obj);
             }
-            //    if (GetComponentInChildren<RangedWeapon>() != null)
-            //{
-            //    if (Weapon1.activeInHierarchy)
-            //    {
-            //        //Instantiate(Weapon1, playerPos, Quaternion.identity);
-            //        Weapon1.transform.SetParent(null, true);
-            //        Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
-            //        Weapon1 = obj;
-            //        Weapon1.SetActive(true);
-            //        Weapon2.SetActive(false);
 
-            //    }
-            //    else if (Weapon2.activeInHierarchy)
-            //    {
-            //        Weapon2.transform.SetParent(null, true);
-            //        Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
-            //        Weapon2 = obj;
-            //        Weapon1.SetActive(false);
-            //        Weapon2.SetActive(true);
-            //    }
-            //}
-            //else if (GetComponentInChildren<MeleeWeapon>() != null)
-            //{
-            //    if (Weapon1.activeInHierarchy)
-            //    {
-            //        //Instantiate(Weapon1, playerPos, Quaternion.identity);
-            //        Weapon1.transform.SetParent(null, true);
-            //        Weapon1.GetComponent<MeleeWeapon>().InGround(Weapon1);
-            //        Weapon1 = obj;
-            //        Weapon1.SetActive(true);
-            //        Weapon2.SetActive(false);
-
-            //    }
-            //    else if (Weapon2.activeInHierarchy)
-            //    {
-            //        Weapon2.transform.SetParent(null, true);
-            //        Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
-            //        Weapon2 = obj;
-            //        Weapon1.SetActive(false);
-            //        Weapon2.SetActive(true);
-            //    }
-            //}
         }
 
     }
@@ -149,9 +111,17 @@ public class WeaponController : MonoBehaviour
             Weapon1.transform.SetParent(null, true);
 
             if (Weapon1.GetComponent<RangedWeapon>() != null)
+            {
                 Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
+            }
             else if (Weapon1.GetComponent<MeleeWeapon>() != null)
+            {
                 Weapon1.GetComponent<MeleeWeapon>().InGround(Weapon1);
+            }
+            else if (Weapon1.GetComponent<ThrowableWeapon>() != null)
+            {
+                Weapon1.GetComponent<ThrowableWeapon>().InGround(Weapon1);
+            }
 
             Weapon1 = newWeapon;
             Weapon1.SetActive(true);
@@ -162,10 +132,19 @@ public class WeaponController : MonoBehaviour
             Weapon2.transform.SetParent(null, true);
 
             if (Weapon2.GetComponent<RangedWeapon>() != null)
+            {
                 Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
-            else if (Weapon2.GetComponent<MeleeWeapon>() != null)
-                Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
+            }
 
+            else if (Weapon2.GetComponent<MeleeWeapon>() != null)
+            {
+                Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
+            }
+
+            else if (Weapon2.GetComponent<ThrowableWeapon>() != null)
+            {
+                Weapon2.GetComponent<ThrowableWeapon>().InGround(Weapon2);
+            }
             Weapon2 = newWeapon;
             Weapon1.SetActive(false);
             Weapon2.SetActive(true);
@@ -180,9 +159,19 @@ public class WeaponController : MonoBehaviour
             Weapon1.transform.SetParent(null, true);
 
             if (Weapon1.GetComponent<RangedWeapon>() != null)
+            {
                 Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
+            }
+
             else if (Weapon1.GetComponent<MeleeWeapon>() != null)
+            {
                 Weapon1.GetComponent<MeleeWeapon>().InGround(Weapon1);
+            }
+
+            else if (Weapon1.GetComponent<ThrowableWeapon>() != null)
+            {
+                Weapon1.GetComponent<ThrowableWeapon>().InGround(Weapon1);
+            }
 
             Weapon1 = newWeapon;
             Weapon1.SetActive(true);
@@ -193,10 +182,19 @@ public class WeaponController : MonoBehaviour
             Weapon2.transform.SetParent(null, true);
 
             if (Weapon2.GetComponent<RangedWeapon>() != null)
+            {
                 Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
-            else if (Weapon2.GetComponent<MeleeWeapon>() != null)
-                Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
+            }
 
+            else if (Weapon2.GetComponent<MeleeWeapon>() != null)
+            {
+                Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
+            }
+
+            else if (Weapon2.GetComponent<ThrowableWeapon>() != null)
+            {
+                Weapon2.GetComponent<ThrowableWeapon>().InGround(Weapon2);
+            }
             Weapon2 = newWeapon;
             Weapon1.SetActive(false);
             Weapon2.SetActive(true);

@@ -43,6 +43,7 @@ namespace Assets.Script.Weapon.Throwable_Weapon
             }
             else
             {
+                inHand = false;
                 InGround(gameObject);
             }
 
@@ -60,10 +61,7 @@ namespace Assets.Script.Weapon.Throwable_Weapon
                 }
 
             }
-            else
-            {
-                InGround(gameObject);
-            }
+            
         }
 
         void RotateGun()

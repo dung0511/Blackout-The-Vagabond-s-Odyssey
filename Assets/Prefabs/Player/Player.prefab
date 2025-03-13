@@ -208,12 +208,16 @@ MonoBehaviour:
   armor: 0
   isHurt: 0
   isDead: 0
+  isMove: 0
+  isOpenBag: 0
   playerDetailSO: {fileID: 0}
+  menu: {fileID: 0}
   healthController: {fileID: 0}
   armorController: {fileID: 0}
   moveController: {fileID: 0}
   weaponController: {fileID: 0}
   pickController: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &1548385550461966332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98dfba8f86bbc5241b625f1aa7777532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTouchItem: 0
+  isMelee: 0
+  isRanged: 0
+  isThrowable: 0
+  Item: {fileID: 0}
 --- !u!1 &4618484644671903064
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +469,8 @@ MonoBehaviour:
   currentWeaponIndex: 0
   Weapon1: {fileID: 0}
   Weapon2: {fileID: 0}
-  obj: []
+  ListObj: []
+  haveOneWepon: 0
 --- !u!1001 &995537589195694143
 PrefabInstance:
   m_ObjectHideFlags: 0

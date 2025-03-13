@@ -15,7 +15,7 @@ public class PlayerPickController : MonoBehaviour
     public bool isRanged = false;
     public bool isThrowable = false;
     public GameObject Item;
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -76,48 +76,51 @@ public class PlayerPickController : MonoBehaviour
     }
     private void OnTriggerExit2D()
     {
+        isMelee = false;
+        isRanged = false;
+        isThrowable = false;
         isTouchItem = false;
         Item = null;
     }
 
-    
+
 
     public void PickItemWeapon()
     {
         if (isMelee)
         {
-            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform, false);
 
             Item.GetComponent<MeleeWeapon>().CharacterSR = GetComponentInChildren<SpriteRenderer>();
-            Item.transform.localScale = new Vector3(0.7f, 0.7f, 1);
-            Item.transform.localPosition = new Vector3(0, -0.03f, 1);
+            Item.transform.localScale = new Vector3(0.7f, 0.7f, 0);
+            Item.transform.localPosition = new Vector3(0, -0.03f, 0);
 
             Item.GetComponentInChildren<MeleeWeapon>().inHand = true;
             GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
         }
         else if (isRanged)
         {
-            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform, false);
 
             Item.GetComponent<RangedWeapon>().currentCharacterSR = GetComponentInChildren<SpriteRenderer>();
-            Item.transform.localScale = new Vector3(0.6f, 0.6f, 1);
-            Item.transform.localPosition = new Vector3(0, -0.04f, 1);
+            Item.transform.localScale = new Vector3(0.6f, 0.6f, 0);
+            Item.transform.localPosition = new Vector3(0, -0.04f, 0);
 
             Item.GetComponentInChildren<RangedWeapon>().inHand = true;
             GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
         }
         else if (isThrowable)
         {
-            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform);
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform, false);
 
             Item.GetComponent<ThrowableWeapon>().currentCharacterSR = GetComponentInChildren<SpriteRenderer>();
-            Item.transform.localScale = new Vector3(0.7f, 0.7f, 1);
-            Item.transform.localPosition = new Vector3(0, -0.04f, 1);
+            Item.transform.localScale = new Vector3(0.7f, 0.7f, 0);
+            Item.transform.localPosition = new Vector3(0, -0.04f, 0);
 
             Item.GetComponentInChildren<ThrowableWeapon>().inHand = true;
             GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
         }
-        
+
     }
 
 }

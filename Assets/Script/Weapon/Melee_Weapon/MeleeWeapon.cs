@@ -27,6 +27,7 @@ public class MeleeWeapon : MonoBehaviour
         }
         else
         {
+            inHand = false;
             InGround(gameObject);
         }
         
@@ -53,10 +54,6 @@ public class MeleeWeapon : MonoBehaviour
             }
         }
 
-        else
-        {
-            InGround(gameObject);
-        }
 
     }
 

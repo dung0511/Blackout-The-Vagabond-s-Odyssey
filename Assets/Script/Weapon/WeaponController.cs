@@ -89,12 +89,14 @@ public class WeaponController : MonoBehaviour
             bool isPickingRanged = obj.GetComponent<RangedWeapon>() != null;
             bool isPickingMelee = obj.GetComponent<MeleeWeapon>() != null;
             bool isPickingThrowable = obj.GetComponent<ThrowableWeapon>() != null;
-            if ((isHoldingMelee && isPickingRanged) || (isHoldingRanged && isPickingMelee))
+            if ((isHoldingMelee && (isPickingRanged || isPickingThrowable)) ||
+           (isHoldingRanged && (isPickingMelee || isPickingThrowable)) ||
+           (isHoldingThrowable && (isPickingMelee || isPickingRanged)))
             {
 
                 ReplaceWeapon(obj);
             }
-            else
+            else if ((isHoldingThrowable && isPickingThrowable) || (isHoldingMelee&&isPickingMelee) || (isHoldingRanged&& isPickingRanged))
             {
 
                 SwapWeapon(obj);

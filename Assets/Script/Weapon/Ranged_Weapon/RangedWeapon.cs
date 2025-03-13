@@ -30,6 +30,7 @@ public class RangedWeapon : MonoBehaviour
         }
         else
         {
+            inHand = false;
             InGround(gameObject);
         }
         
@@ -47,10 +48,7 @@ public class RangedWeapon : MonoBehaviour
             }
             
         }
-        else
-        {
-            InGround(gameObject);
-        }
+         
     }
 
     void RotateGun()

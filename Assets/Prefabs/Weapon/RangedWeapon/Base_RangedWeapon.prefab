@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1532190317244686400}
   - component: {fileID: 934467681116527374}
   - component: {fileID: 6989095968074540068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base_RangedWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

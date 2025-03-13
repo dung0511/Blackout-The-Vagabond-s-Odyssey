@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
     public PlayerMoveController moveController;
     public WeaponController weaponController;
     public PlayerPickController pickController;
-    
-    //quang_ui_inventory
-    public InventoryObject inventory;
+
+
+    private Inventory inventory;
 
     private void Awake()
     {
@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
         weaponController = GetComponentInChildren<WeaponController>();
         pickController = GetComponent<PlayerPickController>();
 
+        inventory = new Inventory();
     }
 
     private void Update()
@@ -106,14 +107,5 @@ public class Player : MonoBehaviour
             anim.SetBool("isHurt", false);
     }
 
-    //quang_ui_inventory
-    public void OnTriggerEnter(Collider other)
-    {
-        var item = other.GetComponent<Item>();
-        if (item)
-        {
-            inventory.addItem(item.item, 1);
-            Destroy(other.gameObject);
-        }
-    }
+    
 }

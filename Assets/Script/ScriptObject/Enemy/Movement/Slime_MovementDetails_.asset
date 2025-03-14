@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341525b4191bb9d44b17145a8cbf3a0f, type: 3}
   m_Name: Slime_MovementDetails_
   m_EditorClassIdentifier: 
-  minMoveSpeed: 1
-  maxMoveSpeed: 2
+  minMoveSpeed: 2
+  maxMoveSpeed: 4

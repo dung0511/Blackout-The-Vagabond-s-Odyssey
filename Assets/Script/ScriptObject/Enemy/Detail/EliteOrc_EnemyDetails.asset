@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: EliteOrc
   enemyPrefab: {fileID: 5174919836615312060, guid: 603c34d99b046434db691ab360708c9c, type: 3}
-  chaseDistance: 4
+  chaseDistance: 12

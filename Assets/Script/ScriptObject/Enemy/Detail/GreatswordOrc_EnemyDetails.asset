@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: GreatswordOrc
   enemyPrefab: {fileID: 3722632510837022731, guid: b02c7df9fa7560f4990880b260a46f78, type: 3}
-  chaseDistance: 4
+  chaseDistance: 12

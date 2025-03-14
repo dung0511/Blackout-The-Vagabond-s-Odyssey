@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341525b4191bb9d44b17145a8cbf3a0f, type: 3}
   m_Name: ArmoredOrc_MovementDetails
   m_EditorClassIdentifier: 
-  minMoveSpeed: 2
-  maxMoveSpeed: 4
+  minMoveSpeed: 4
+  maxMoveSpeed: 6

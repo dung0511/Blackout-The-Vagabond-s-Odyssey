@@ -4,28 +4,37 @@ public class Chest : Lootable, IInteractable
 {
     private Animator[] chestAnimator = new Animator[2];
     private GameObject outline;
+    private bool isOpen = false;
 
     private void Awake()
     {
         chestAnimator[0] = GetComponent<Animator>(); // Chest animator
-        chestAnimator[1] = transform.GetChild(0).GetComponent<Animator>(); //outline animator
         outline = transform.GetChild(0).gameObject;
+        chestAnimator[1] = outline.GetComponent<Animator>(); //outline animator
     }
 
     public void Interact()
     {
-        chestAnimator[0].SetTrigger("isOpen");
-        chestAnimator[1].SetTrigger("isOpen");
-        DropLoot();
+        if(!isOpen)
+        {
+            isOpen = true;
+            chestAnimator[0].SetTrigger("isOpen");
+            chestAnimator[1].SetTrigger("isOpen");
+            //DropLoot();
+        }
     }
 
     public void HighLightOn()
     {
-        outline.SetActive(true);
+        if(outline != null) outline.SetActive(true);
     }
 
     public void HighLightOff()
     {
-        outline.SetActive(false);
+        if(isOpen)
+        {
+            Destroy(outline);
+        }
+        else outline.SetActive(false);
     }
 }

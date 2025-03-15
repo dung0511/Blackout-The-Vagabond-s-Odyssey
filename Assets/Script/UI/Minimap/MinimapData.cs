@@ -8,7 +8,7 @@ public static class MinimapData
     public static HashSet<Vector2Int> revealedTiles = new();
 }
 
-public class MinimapCell
+public class MinimapCell //
 {
     public TileBase tile;
     public Vector2Int position;

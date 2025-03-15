@@ -14,6 +14,5 @@ public static class DungeonData
         rooms = new();
         path = new();
         corridorPath = new();
-        MinimapData.minimapTiles = new();
     }
 }

@@ -113,18 +113,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -163,10 +151,6 @@ PrefabInstance:
     - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8408637051143262795, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Size.x
@@ -209,8 +193,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd70eba6c001e264687963df160ad9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3
+  range: 5
+  interactAction:
+    m_Name: Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6b70c60c-e8ac-4998-959e-3b92e46c0e14
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  playerInput: {fileID: 0}
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
-  interact: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

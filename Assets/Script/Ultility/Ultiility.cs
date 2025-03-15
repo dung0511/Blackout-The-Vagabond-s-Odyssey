@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 using Object = System.Object;
-using System.Linq;
 
 public static class Utility
 {    
@@ -33,9 +32,8 @@ public static class Utility
     }
     public static bool Chance(int chance) => UnseededRng(0,100) < chance;
 
-    public static List<Vector2Int> BFS(Vector2Int startPost, IEnumerable<Vector2Int> map, HashSet<Vector2Int> nodes)
+    public static List<Vector2Int> BFS(Vector2Int startPost, HashSet<Vector2Int> map, HashSet<Vector2Int> nodes)
     {
-        var graph = new HashSet<Vector2Int>(map);
         List<Vector2Int> reachedNodes = new();
         Queue<Vector2Int> frontier = new();
         HashSet<Vector2Int> visited = new();
@@ -53,7 +51,7 @@ public static class Utility
             foreach (var direction in Direction2D.Directions)
             {
                 Vector2Int neighbour = current + direction;
-                if(graph.Contains(neighbour) && !visited.Contains(neighbour) && !frontier.Contains(neighbour))
+                if(map.Contains(neighbour) && !visited.Contains(neighbour) && !frontier.Contains(neighbour))
                 {
                     frontier.Enqueue(neighbour);
                 }
@@ -64,9 +62,8 @@ public static class Utility
         return reachedNodes;
     }
 
-    public static List<Vector2Int> TraverseBFS(Vector2Int startPost, IEnumerable<Vector2Int> map)
+    public static List<Vector2Int> TraverseBFS(Vector2Int startPost, HashSet<Vector2Int> map)
     {
-        var graph = new HashSet<Vector2Int>(map);
         List<Vector2Int> visitedNodes = new();
         Queue<Vector2Int> frontier = new();
         HashSet<Vector2Int> visited = new();
@@ -82,7 +79,7 @@ public static class Utility
             foreach (var direction in Direction2D.Directions)
             {
                 Vector2Int neighbour = current + direction;
-                if (graph.Contains(neighbour) && !visited.Contains(neighbour))
+                if (map.Contains(neighbour) && !visited.Contains(neighbour))
                 {
                     frontier.Enqueue(neighbour);
                     visited.Add(neighbour);
@@ -93,36 +90,6 @@ public static class Utility
         return visitedNodes;
     }
 
-    public static List<Vector2Int> TraverseRadiusBFS(Vector2Int startPost, IEnumerable<Vector2Int> map, int radius)
-    {
-        var graph = new HashSet<Vector2Int>(map);
-        List<Vector2Int> visitedNodes = new();
-        Queue<Vector2Int> frontier = new();
-        HashSet<Vector2Int> visited = new();
-        
-        frontier.Enqueue(startPost);
-        visited.Add(startPost);
-
-        while (frontier.Count > 0)
-        {
-            Vector2Int current = frontier.Dequeue();
-            if(Vector2Int.Distance(current,startPost) > radius) continue;
-            visitedNodes.Add(current);
-            
-            foreach (var direction in Direction2D.Directions)
-            {
-                Vector2Int neighbour = current + direction;
-                if (graph.Contains(neighbour) && !visited.Contains(neighbour))
-                {
-                    frontier.Enqueue(neighbour);
-                    visited.Add(neighbour);
-                }
-            }
-        }
-
-        return visitedNodes;
-    }
-    
 
     /// <summary>
     /// Empty string debug check

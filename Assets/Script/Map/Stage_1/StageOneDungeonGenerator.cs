@@ -36,12 +36,12 @@ public class StageOneDungeonGenerator : StageOne
         var roomPositions = CreateRooms();
         
         floorPositions.UnionWith(roomPositions);
-        mapVisualizer.VisualizeLayout(floorPositions);
+        mapVisualizer.PlaceTiles(floorPositions);
+        WallGenerator.CreateWalls(floorPositions, mapVisualizer, bottomHeight);
         SetRoomTileData();
         // Debug.Log("DungeonData.Rooms: " + DungeonData.rooms.Count);/
         // Debug.Log("DungeonData.Rooms: " + string.Join(", ", DungeonData.rooms.OfType<StageOneRoom>().Select(x => new {x.center, x.topDoor, x.bottomDoor,x.leftDoor,x.rightDoor})));
     }
-
 
     private void SetRoomTileData()
     {

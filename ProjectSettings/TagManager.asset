@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Menu
-  - InputManager
-  - MinimapTilemap
   layers:
   - Default
   - TransparentFX
@@ -38,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - Minimap
+  - 
   - 
   m_SortingLayers:
   - name: Default
@@ -61,9 +59,6 @@ TagManager:
     locked: 0
   - name: Layer 3
     uniqueID: 1510008725
-    locked: 0
-  - name: Minimap
-    uniqueID: 617381461
     locked: 0
   m_RenderingLayers:
   - Default

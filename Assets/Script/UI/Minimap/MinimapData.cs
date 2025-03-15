@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 public static class MinimapData
 {
     public static Dictionary<Vector2Int, TileBase> minimapTiles = new(); 
+    public static HashSet<Vector2Int> revealedTiles = new();
 }
 
 public class MinimapCell

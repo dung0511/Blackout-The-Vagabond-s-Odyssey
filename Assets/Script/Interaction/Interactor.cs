@@ -4,17 +4,21 @@ using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
-    [SerializeField] private float range = 5f;
-    [SerializeField] private InputAction interactAction;
-    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private float range = 3f;
     [SerializeField] private LayerMask interactableLayer;
-
+    [SerializeField] private InputActionReference interact;
     private IInteractable interactTarget;
 
-    void Start()
+    void OnEnable()
     {
-        interactAction = playerInput.actions["Interact"];
-        interactAction.performed += Interact;
+        interact.action.Enable();
+        interact.action.performed += Interact;
+    }
+
+    void OnDisable()
+    {
+        interact.action.performed -= Interact;
+        interact.action.Disable();
     }
 
     void Update()
@@ -22,10 +26,11 @@ public class Interactor : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, range, interactableLayer);
         if(hit == null)
         {
-            if(interactTarget != null)
+            var previousTarget = interactTarget;
+            interactTarget = null;
+            if (previousTarget != null)
             {
-                interactTarget.HighLightOff();
-                interactTarget = null;
+                previousTarget.HighLightOff();
             }
         } else
         {

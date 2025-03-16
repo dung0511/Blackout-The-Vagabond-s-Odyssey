@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Werebear
   enemyPrefab: {fileID: 7549764245959590995, guid: de95cfdc08677b24a9286c701e5aa551, type: 3}
-  chaseDistance: 5
+  chaseDistance: 12

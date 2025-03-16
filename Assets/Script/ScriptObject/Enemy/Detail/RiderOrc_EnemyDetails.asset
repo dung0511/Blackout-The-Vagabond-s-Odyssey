@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: RiderOrc
   enemyPrefab: {fileID: 1510285459609464349, guid: f408b741563be794f8f084a329bee1e3, type: 3}
-  chaseDistance: 7
+  chaseDistance: 18

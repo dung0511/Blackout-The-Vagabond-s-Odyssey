@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public PlayerPickController pickController;
 
 
-    private Inventory inventory;
+    //private Inventory inventory;
 
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         weaponController = GetComponentInChildren<WeaponController>();
         pickController = GetComponent<PlayerPickController>();
 
-        inventory = new Inventory();
+        //inventory = new Inventory();
     }
 
     private void Update()

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ThrowableWeapon_Curve : MonoBehaviour
@@ -37,10 +38,33 @@ public class ThrowableWeapon_Curve : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target) < distanceToTargetToDestroyProjectile)
         {
-            //PoolManagement.Instance.ReturnBullet(gameObject, curveManager.projectilePrefab);
-            Destroy(gameObject);
+           moveSpeed = 0f;
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
+           //PoolManagement.Instance.ReturnBullet(gameObject, curveManager.projectilePrefab);
+           foreach(Transform child in gameObject.transform)
+            {
+                child.gameObject.SetActive(true);
+                StartCoroutine(ReturnToPoolWithDelay(gameObject, curveManager.projectilePrefab, 3f) );
+            }
+            //Destroy(gameObject);
         }
     }
+
+    private IEnumerator ReturnToPoolWithDelay(GameObject gameobject, GameObject gameObjectPrefab, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
+        //PoolManagement.Instance.ReturnBullet(gameObject, curveManager.projectilePrefab);
+        foreach (Transform child in gameObject.transform)
+        {
+            child.gameObject.SetActive(false);
+            StartCoroutine(ReturnToPoolWithDelay(gameObject, curveManager.projectilePrefab, 3f));
+        }
+        PoolManagement.Instance.ReturnBullet(gameobject, gameObjectPrefab);
+    }
+
 
     private void UpdateProjectilePosition()
     {
@@ -125,7 +149,8 @@ public class ThrowableWeapon_Curve : MonoBehaviour
         float xDistanceToTarget = target.x - transform.position.x;
         this.trajectoryMaxRelativeHeight = Mathf.Abs(xDistanceToTarget) * trajectoryMaxHeight;
 
-       
+        trajectoryStartPoint = transform.position;
+
         projectileVisual.SetTarget(target);
     }
 

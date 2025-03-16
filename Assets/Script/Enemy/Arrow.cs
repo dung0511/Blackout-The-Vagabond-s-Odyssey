@@ -1,4 +1,4 @@
-﻿using Assets.Script.UI.Inventory;
+﻿using Assets.Script;
 using Unity.VisualScripting;
 using UnityEngine;
 

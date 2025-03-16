@@ -11,12 +11,14 @@ public class Interactor : MonoBehaviour
 
     void OnEnable()
     {
-        interact.action.started += Interact;
+        interact.action.Enable();
+        interact.action.performed += Interact;
     }
 
     void OnDisable()
     {
-        interact.action.started -= Interact;
+        interact.action.performed -= Interact;
+        interact.action.Disable();
     }
 
     void Update()

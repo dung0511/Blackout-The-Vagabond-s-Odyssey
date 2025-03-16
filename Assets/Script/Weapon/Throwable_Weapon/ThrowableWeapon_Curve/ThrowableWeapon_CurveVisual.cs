@@ -59,7 +59,14 @@ public class ThrowableWeapon_CurveVisual : MonoBehaviour
     private void UpdateProjectileRotation()
     {
         Vector3 projectileMoveDir = projectile.GetProjectileMoveDir();
-        projectileVisual.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(projectileMoveDir.y, projectileMoveDir.x) * Mathf.Rad2Deg);
+        float angle = Mathf.Atan2(projectileMoveDir.y, projectileMoveDir.x) * Mathf.Rad2Deg;
+
+        if (projectileMoveDir.x < 0) 
+        {
+            angle += 180;
+        }
+
+        projectileVisual.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private void UpdateProjectileShadowRotation()

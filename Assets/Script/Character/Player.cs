@@ -1,4 +1,4 @@
-using Assets.Script.UI.Inventory;
+using Assets.Script;
 using UnityEditor;
 using UnityEngine;
 
@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        menu= GameObject.Find("Menu");
-        menu.SetActive(false);
+        //menu= GameObject.Find("Menu");
+        //menu.SetActive(false);
         health = playerDetailSO.playerHealthAmount;
         armor = playerDetailSO.playerArmorAmount;
 
@@ -63,28 +63,28 @@ public class Player : MonoBehaviour
             pickController.PickItemWeapon();
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (!isOpenBag)
-            {
-                isOpenBag = true;
-                foreach (Transform child in transform)
-                {
-                    child.gameObject.SetActive(false);
-                }
-                menu.SetActive(true);
-            }
-            else
-            {
-                isOpenBag = false;
-                foreach (Transform child in transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-                menu.SetActive(false);
+        //if (Input.GetKeyDown(KeyCode.Tab))
+        //{
+        //    if (!isOpenBag)
+        //    {
+        //        isOpenBag = true;
+        //        foreach (Transform child in transform)
+        //        {
+        //            child.gameObject.SetActive(false);
+        //        }
+        //        menu.SetActive(true);
+        //    }
+        //    else
+        //    {
+        //        isOpenBag = false;
+        //        foreach (Transform child in transform)
+        //        {
+        //            child.gameObject.SetActive(true);
+        //        }
+        //        menu.SetActive(false);
                 
-            }
-        }
+        //    }
+        //}
 
         if (!healthController.IsDead)
         {

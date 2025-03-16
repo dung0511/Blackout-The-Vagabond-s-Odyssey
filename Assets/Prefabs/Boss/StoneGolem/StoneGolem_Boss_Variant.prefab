@@ -177,7 +177,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.2352831, y: 0.0031145513}
+  m_Offset: {x: 1.2352831, y: -0.010299334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.1728434, y: 0.66844726}
@@ -187,7 +187,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5159926, y: 0.21203846}
+  m_Size: {x: 2.5159926, y: 0.095784664}
   m_EdgeRadius: 0
 --- !u!114 &8253420006749680247
 MonoBehaviour:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rotationSpeed: 3
-  stoneGolem: {fileID: 0}
+  stoneGolem: {fileID: 5884146518059585625}
   isTargetAtLeft: 0
 --- !u!1001 &4471261174733601318
 PrefabInstance:
@@ -604,9 +604,10 @@ MonoBehaviour:
   movementToPositionEvent: {fileID: 0}
   idleEvent: {fileID: 0}
   animator: {fileID: 0}
-  damage: 1
+  damage: 2
   health: 300
   maxHealth: 0
+  immuneCooldownDuration: 20
   isAttacking: 0
   isDead: 0
   isHealed: 0
@@ -626,6 +627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stoneGolemHealth: {fileID: 0}
   isHurt: 0
+  text: {fileID: 0}
 --- !u!114 &1590518287072163015
 MonoBehaviour:
   m_ObjectHideFlags: 0

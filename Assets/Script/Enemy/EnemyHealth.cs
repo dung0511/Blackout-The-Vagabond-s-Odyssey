@@ -36,6 +36,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         else
         {
             isHurt = true;
+            enemyHealth.GetComponent<Enemy_Movement_AI>().StartChase();
             StartCoroutine(ResetHurt());
         }
     }

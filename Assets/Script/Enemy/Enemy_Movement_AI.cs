@@ -158,8 +158,13 @@ public class Enemy_Movement_AI : MonoBehaviour
         );
         UpdateEnemyFacingDirection();
     }
+    public void StartChase()
+    {
+        chasePlayer = true;
+    }
     void OnDisable()
     {
         StopAllCoroutines();
     }
+
 }

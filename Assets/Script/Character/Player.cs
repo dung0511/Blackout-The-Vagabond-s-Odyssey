@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
     public PlayerPickController pickController;
 
 
+    private void Start()
+    {
+        gameObject.transform.position= new Vector3(0.5f, 0.5f,0);
+    }
     //private Inventory inventory;
 
     private void Awake()

@@ -11,7 +11,7 @@ public class PlayerMoveController : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rd;
 
-    private void Awake()
+    private void Start()
     {
         
         rd = GetComponent<Rigidbody2D>();

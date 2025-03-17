@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class BreakableProp : MonoBehaviour, IDamageable
+public class Damageable : MonoBehaviour, IDamageable
 {
     [SerializeField] private int health = 3;
     private Lootable lootable;

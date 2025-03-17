@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Lootable : MonoBehaviour
+public class Lootable : MonoBehaviour, ILootable
 {
     [SerializeField] private LootTableSO lootTables;
     public void DropLoot()
@@ -16,17 +16,4 @@ public abstract class Lootable : MonoBehaviour
             }
         }
     }
-}
-
-public class LootTable 
-{
-    public List<GameObject> loots = new List<GameObject>();
-    public int tableChance = 50;
-}
-
-
-[CreateAssetMenu(fileName = "LootTable", menuName = "Scriptable Objects/Loot/Table")]
-public class LootTableSO : ScriptableObject
-{
-    public List<LootTable> table;
 }

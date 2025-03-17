@@ -90,6 +90,34 @@ public static class Utility
         return visitedNodes;
     }
 
+    public static List<Vector2Int> TraverseRadiusBFS(Vector2Int startPost, IEnumerable<Vector2Int> traverseMap, int radius)
+    {
+        var map = new HashSet<Vector2Int>(traverseMap);
+        List<Vector2Int> visitedNodes = new();
+        Queue<Vector2Int> frontier = new();
+        HashSet<Vector2Int> visited = new();
+        
+        frontier.Enqueue(startPost);
+        visited.Add(startPost);
+
+        while (frontier.Count > 0)
+        {
+            Vector2Int current = frontier.Dequeue();
+            visitedNodes.Add(current);
+            
+            foreach (var direction in Direction2D.Directions)
+            {
+                Vector2Int neighbour = current + direction;
+                if (map.Contains(neighbour) && !visited.Contains(neighbour) && Vector2Int.Distance(startPost, neighbour) <= radius)
+                {
+                    frontier.Enqueue(neighbour);
+                    visited.Add(neighbour);
+                }
+            }
+        }
+
+        return visitedNodes;
+    }
 
     /// <summary>
     /// Empty string debug check

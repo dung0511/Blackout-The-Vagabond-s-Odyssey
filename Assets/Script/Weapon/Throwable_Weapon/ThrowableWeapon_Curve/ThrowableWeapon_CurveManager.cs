@@ -15,10 +15,10 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
 
     private float shootTimer;
     public SpriteRenderer currentCharacterSR;
-
+    private SpriteRenderer weaponSpriteRenderer;
     private void Start()
     {
-
+        weaponSpriteRenderer=GetComponent<SpriteRenderer>();
         Transform player = transform.parent.parent;
         currentCharacterSR = player.GetComponentInChildren<SpriteRenderer>();
       //  inHand = true;
@@ -32,6 +32,7 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
         RotateGun();
         if (Input.GetMouseButtonDown(0) && shootTimer <= 0)
         {
+            TurnOffSpriteRenderer();
             shootTimer = shootRate;
             //ThrowableWeapon_Curve projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<ThrowableWeapon_Curve>();
 
@@ -80,5 +81,15 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 lookDir = (Vector2)(worldMousePos - transform.position);
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+    }
+
+    public void TurnOffSpriteRenderer()
+    {
+        weaponSpriteRenderer.enabled=false;
+    }
+
+    public void TurnOnSpriteRenderer()
+    {
+        weaponSpriteRenderer.enabled = true;
     }
 }

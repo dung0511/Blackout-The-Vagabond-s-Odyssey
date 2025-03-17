@@ -26,9 +26,11 @@ public class ThrowableWeapon_Curve : MonoBehaviour
 
     public ThrowableWeapon_CurveManager curveManager;
 
+    private bool isTurnOn = false;
+
     private void Start()
     {
-       
+
         trajectoryStartPoint = transform.position;
     }
 
@@ -38,14 +40,18 @@ public class ThrowableWeapon_Curve : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target) < distanceToTargetToDestroyProjectile)
         {
-           moveSpeed = 0f;
+            moveSpeed = 0f;
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.enabled = false;
-           //PoolManagement.Instance.ReturnBullet(gameObject, curveManager.projectilePrefab);
-           foreach(Transform child in gameObject.transform)
+            if (!isTurnOn)
+            {
+                curveManager.TurnOnSpriteRenderer();
+                isTurnOn = true;
+            }
+            foreach (Transform child in gameObject.transform)
             {
                 child.gameObject.SetActive(true);
-                StartCoroutine(ReturnToPoolWithDelay(gameObject, curveManager.projectilePrefab, 3f) );
+                StartCoroutine(ReturnToPoolWithDelay(gameObject, curveManager.projectilePrefab, 3f));
             }
             //Destroy(gameObject);
         }

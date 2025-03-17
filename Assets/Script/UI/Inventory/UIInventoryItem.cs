@@ -5,13 +5,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UIInventoryItem : MonoBehaviour
+public class UIInventoryItem : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     private Image itemImage;
 
     [SerializeField]
     private TMP_Text quantityTxt;
+
+    [SerializeField]
+    private Image borderImage;
 
     public event Action<UIInventoryItem> OnItemClicked, OnItemDroppedOn
         , OnItemBeginDrag, OnItemEndDrag
@@ -22,12 +25,23 @@ public class UIInventoryItem : MonoBehaviour
     private void Awake()
     {
         ResetData();
+        DeSelect();
     }
 
     private void ResetData()
     {
         this.itemImage.gameObject.SetActive(false);
         empty = true;
+    }
+
+    public void DeSelect()
+    {
+        borderImage.enabled = false;
+    }
+
+    public void Select()
+    {
+        borderImage.enabled = true;
     }
 
     public void SetData(Sprite sprite, int quantity)
@@ -54,12 +68,13 @@ public class UIInventoryItem : MonoBehaviour
         OnItemEndDrag?.Invoke(this);
     }
 
-    public void OnPointerClick(BaseEventData data)
+    public void OnPointerClick(PointerEventData eventData)
     {
         if (empty) return;
 
-        PointerEventData pointerData = (PointerEventData)data;
-        if (pointerData.button == PointerEventData.InputButton.Right)
+        Debug.Log("OnPointerClick called");
+
+        if (eventData.button == PointerEventData.InputButton.Right)
         {
             OnRightMouseBtnClick?.Invoke(this);
         }
@@ -68,7 +83,7 @@ public class UIInventoryItem : MonoBehaviour
             OnItemClicked?.Invoke(this);
         }
     }
-    
 
-    
+
+
 }

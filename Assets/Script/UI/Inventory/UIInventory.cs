@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,17 +18,25 @@ public class UIInventory : MonoBehaviour
         for (int i = 0; i < size; i++)
         {
             UIInventoryItem uiItem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
-            uiItem.transform.SetParent(contentPanel);
+
+            uiItem.transform.SetParent(contentPanel, false); 
+
+            RectTransform rectTransform = uiItem.GetComponent<RectTransform>();
+            rectTransform.anchoredPosition = Vector2.zero; 
+            rectTransform.sizeDelta = new Vector2(100, 100); 
+            rectTransform.localScale = Vector3.one; 
+
             listOfItems.Add(uiItem);
+
             uiItem.OnItemClicked += HandleItemSelection;
-            uiItem.OnItemBeginDrag  += HandleBeginDrag;
+            uiItem.OnItemBeginDrag += HandleBeginDrag;
             uiItem.OnItemDroppedOn += HandleSwap;
             uiItem.OnItemEndDrag += HandleEndDrag;
-            uiItem.OnRightMouseBtnClick += HandleShowItemsAction;
+            uiItem.OnRightMouseBtnClick += HandleShowItemsActions;
         }
     }
 
-    private void HandleShowItemsAction(UIInventoryItem obj)
+    private void HandleShowItemsActions(UIInventoryItem obj)
     {
         
     }
@@ -50,6 +58,8 @@ public class UIInventory : MonoBehaviour
 
     private void HandleItemSelection(UIInventoryItem obj)
     {
+        Debug.Log("HandleItemSelection called");
+
         Debug.Log(obj.name);    
     }
 

@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3285721170894196757, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: interact
+      value: 
+      objectReference: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 4406657442301605094, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -191,39 +195,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2666623108531603543, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6796597567508082265}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
---- !u!1 &6254051911090353691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2666623108531603543, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
-  m_PrefabInstance: {fileID: 8343873258549640780}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6796597567508082265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6254051911090353691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd70eba6c001e264687963df160ad9c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 5
-  interactAction:
-    m_Name: Interact
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6b70c60c-e8ac-4998-959e-3b92e46c0e14
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  playerInput: {fileID: 0}
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 64

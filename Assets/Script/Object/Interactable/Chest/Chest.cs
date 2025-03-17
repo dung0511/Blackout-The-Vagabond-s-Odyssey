@@ -1,31 +1,37 @@
 using UnityEngine;
 
-public class Chest : Lootable, IInteractable
+public class Chest : Interactable
 {
-    private Animator[] chestAnimator = new Animator[2];
-    private GameObject outline;
+    private Lootable lootable;
+    private bool isOpen = false;
 
-    private void Awake()
+    protected override void Awake()
     {
-        chestAnimator[0] = GetComponent<Animator>(); // Chest animator
-        chestAnimator[1] = transform.GetChild(0).GetComponent<Animator>(); //outline animator
-        outline = transform.GetChild(0).gameObject;
+        base.Awake();
+        lootable = GetComponent<Lootable>();
     }
 
-    public void Interact()
+    public override void Interact()
     {
-        chestAnimator[0].SetTrigger("isOpen");
-        chestAnimator[1].SetTrigger("isOpen");
-        DropLoot();
+        if(!isOpen)
+         {
+            isOpen = true;
+            base.Interact();
+            //lootable.DropLoot();
+         }
     }
 
-    public void HighLightOn()
+    public override void HighLightOn()
     {
-        outline.SetActive(true);
+         if(!isOpen) base.HighLightOn();
     }
 
-    public void HighLightOff()
+    public override void HighLightOff()
     {
-        outline.SetActive(false);
+        if(isOpen)
+         {
+             Destroy(transform.GetChild(0).gameObject);
+         }
+         else base.HighLightOff();
     }
 }

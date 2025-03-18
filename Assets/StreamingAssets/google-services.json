@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1040577562159",
+    "firebase_url": "https://blackout-the-vagabond-odyssey-default-rtdb.firebaseio.com",
+    "project_id": "blackout-the-vagabond-odyssey",
+    "storage_bucket": "blackout-the-vagabond-odyssey.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040577562159:android:1f62d4029a434811f928da",
+        "android_client_info": {
+          "package_name": "com.FPTU.BlackoutTheVagabondsOdyssey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgZnGk-BVzR3VSsafJxLj7HGefSRni-s8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

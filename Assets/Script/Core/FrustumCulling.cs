@@ -2,16 +2,23 @@ using UnityEngine;
 
 public class FrustumCulling : MonoBehaviour
 {
-    [SerializeField] private Camera playerCamera;
+    [SerializeField, Range(1,100)] private float cullingOffset = 5.0f; // offset for culling
     [SerializeField] private GameObject[] CullingObjectsParent; 
+    private Camera playerCamera;
+
+    void Awake()
+    {
+        playerCamera = GetComponent<Camera>(); 
+    }
 
     void FixedUpdate()
     {
-        float cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height); 
-        float cameraRight = playerCamera.transform.position.x + cameraHalfWidth;
-        float cameraLeft = playerCamera.transform.position.x - cameraHalfWidth;
-        float cameraTop = playerCamera.transform.position.y + playerCamera.orthographicSize;
-        float cameraBottom = playerCamera.transform.position.y - playerCamera.orthographicSize;
+        // Calculate camera bounds with an offset
+        float cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height);
+        float cameraRight = playerCamera.transform.position.x + cameraHalfWidth + cullingOffset;
+        float cameraLeft = playerCamera.transform.position.x - cameraHalfWidth - cullingOffset;
+        float cameraTop = playerCamera.transform.position.y + playerCamera.orthographicSize + cullingOffset;
+        float cameraBottom = playerCamera.transform.position.y - playerCamera.orthographicSize - cullingOffset;
 
         foreach (GameObject parent in CullingObjectsParent)
         {

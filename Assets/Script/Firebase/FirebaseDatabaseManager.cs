@@ -16,15 +16,16 @@ public class FirebaseDatabaseManager : MonoBehaviour
     private void Start()
     {
         string deviceId = SystemInfo.deviceUniqueIdentifier;
-       // WriteDatabase(deviceId, "Stage 1.1", 100, 100);
+        UpdateStageAndFloor(deviceId, "2", "2" );
         ReadDatabase(deviceId);
     }
 
-    public void WriteDatabase(string id, string stageCame, int playTime, int enemiesKilled)
+    public void WriteDatabase(string id, string floor, string stage, int playTime, int enemiesKilled)
     {
         Dictionary<string, object> userData = new Dictionary<string, object>
     {
-        { "stageCame", stageCame },
+        { "floor", floor },
+        { "stage", stage },
         { "playTime", playTime },  
         { "enemiesKilled", enemiesKilled } 
     };
@@ -54,10 +55,11 @@ public class FirebaseDatabaseManager : MonoBehaviour
                 {
                     Dictionary<string, object> userData = snapshot.Value as Dictionary<string, object>;
 
-                    string stageCame = userData["stageCame"].ToString();
+                    string floor = userData["floor"].ToString();
+                    string stage = userData["stage"].ToString();
                     int playTime = int.Parse(userData["playTime"].ToString());
                     int enemiesKilled = int.Parse(userData["enemiesKilled"].ToString());
-                    Debug.Log($"Player data:\n Man nguoi den: {stageCame}\n Thoi gian choi: {playTime} giay\n So quai da giet: {enemiesKilled}");
+                    Debug.Log($"Player data:\n Man nguoi den: {stage}, {floor}\n Thoi gian choi: {playTime} giay\n So quai da giet: {enemiesKilled}");
                 }
                 else
                 {
@@ -71,4 +73,42 @@ public class FirebaseDatabaseManager : MonoBehaviour
         });
     }
 
+
+    public void UpdateMonsterKillCount(string id, int newKillCount)
+    {
+        reference.Child("PlayerData").Child(id).Child("enemiesKilled").SetValueAsync(newKillCount)
+        .ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCompleted)
+            {
+                Debug.Log("update enemy kill success!");
+            }
+            else
+            {
+                Debug.Log("update enemy kill fail: " + task.Exception);
+            }
+        });
+    }
+
+    public void UpdateStageAndFloor(string id, string newFloor, string newStage)
+    {
+        Dictionary<string, object> updateData = new Dictionary<string, object>
+    {
+        { "floor", newFloor },
+        { "stage", newStage }
+    };
+
+        reference.Child("PlayerData").Child(id).UpdateChildrenAsync(updateData)
+        .ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCompleted)
+            {
+                Debug.Log("update floor and stage success!");
+            }
+            else
+            {
+                Debug.Log("update floor and stage fail " + task.Exception);
+            }
+        });
+    }
 }

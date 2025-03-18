@@ -9,7 +9,7 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        inventoryUI.InitializeInventoryUI(inventorySize);    
+        inventoryUI.InitializeInventoryUI(inventorySize);
     }
 
     private void Update()

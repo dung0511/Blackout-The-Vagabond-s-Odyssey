@@ -298,7 +298,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.74
 --- !u!114 &6598837912508769786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +445,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 7239335744943768997, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
   contentPanel: {fileID: 2365999931653119785}
   itemDescription: {fileID: 6957342083433564737}
+  mouseFw: {fileID: 0}
 --- !u!1 &3823616862794114499
 GameObject:
   m_ObjectHideFlags: 0

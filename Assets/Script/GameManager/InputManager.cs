@@ -7,8 +7,7 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance {get; private set;}
     private void Awake()
     {
-        Debug.Log("InputManager Awake called"); // Check if this runs
-        if(Instance != null && Instance != this)
+        if(Instance != null)
         {
             Destroy(gameObject);
             return;
@@ -16,7 +15,6 @@ public class InputManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         playerInput = new PlayerControls();
-        playerInput.Enable();
     }
 
     private void OnEnable()

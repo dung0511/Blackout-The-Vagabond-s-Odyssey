@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabsVariant:
   - {fileID: 5567440241349511722, guid: 628fd66084b58f94da30dd516a398e17, type: 3}
-  propSize: {x: 9, y: 7}
+  propSize: {x: 9, y: 4}
   minQuantity: 1
   maxQuantity: 1
   placeAsGroup: 0

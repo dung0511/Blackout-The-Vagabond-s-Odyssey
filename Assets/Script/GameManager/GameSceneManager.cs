@@ -1,0 +1,33 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameSceneManager : MonoBehaviour
+{
+    public static GameSceneManager Instance {get; private set;}
+    private void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadHomeScene()
+    {
+        SceneManager.LoadScene("Home");
+    }
+
+    public void LoadBossStageScene(int stage)
+    {
+        SceneManager.LoadScene("Boss_"+stage);
+    }
+
+
+}

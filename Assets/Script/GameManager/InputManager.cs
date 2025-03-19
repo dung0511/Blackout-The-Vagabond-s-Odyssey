@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance {get; private set;}
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if(Instance != null)
         {
             Destroy(gameObject);
             return;
@@ -15,6 +15,16 @@ public class InputManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         playerInput = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        playerInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInput.Disable();
     }
 
 }

@@ -8,7 +8,7 @@ public class MinimapFOW : MonoBehaviour
     private Tilemap minimap;
     private Vector2Int lastPlayerPos;
 
-    void Awake()
+    void OnEnable()
     {
         minimap = GameObject.FindGameObjectWithTag("MinimapTilemap").GetComponent<Tilemap>();
     }

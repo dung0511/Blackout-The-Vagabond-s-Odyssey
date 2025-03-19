@@ -5,7 +5,7 @@ using UnityEngine;
 public class AgentPlacer : MonoBehaviour
 {
     [SerializeField] private Transform enemyParent;
-    [SerializeField] private GameObject player;
+    [SerializeField] private Transform player;
     [SerializeField] private List<AgentPlacerSO> normalEnemies; //variants
     [SerializeField] private int minNormalEnemies = 4;
     [SerializeField] private int maxNormalEnemies = 6;
@@ -109,6 +109,12 @@ public class AgentPlacer : MonoBehaviour
         if(room.leftEntrance != Vector2Int.zero) entrances.Add(room.leftEntrance+Vector2Int.right);
         if(room.rightEntrance != Vector2Int.zero) entrances.Add(room.rightEntrance+Vector2Int.left);
         return entrances;
+    }
+
+    public void PlacePlayer(BoxRoom room)
+    {
+        var playerPos = room.center;
+        player.position = new Vector3(playerPos.x + 0.5f, playerPos.y + 0.5f, 0);
     }
 
     public void Reset()

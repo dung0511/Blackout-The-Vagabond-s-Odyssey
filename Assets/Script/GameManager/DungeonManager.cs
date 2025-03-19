@@ -1,23 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
-    #region Singleton
-        public static DungeonManager Instance {get; private set;}
-        private void Awake()
-        {
-            if(Instance != null && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+    public string currentSeed; 
 
+    #region Singleton
+    public static DungeonManager Instance {get; private set;}
+    private void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
         }
+        Instance = this;
+
+        currentSeed = GameManager.Instance.levelSeeds.Pop();
+    }
     #endregion
 
-    public void RoomCleared(Room room)
+
+    public void OnRoomCleared(Room room)
     {
         Destroy(room.barrierReference);
     }    

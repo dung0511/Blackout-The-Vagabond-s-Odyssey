@@ -6,7 +6,8 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
 {
     [SerializeField] protected MapVisualizer mapVisualizer; 
     [SerializeField] protected Vector2Int startPos = Vector2Int.zero;
-    [SerializeField] protected string seed;
+    [SerializeField] private bool editorMode = false;
+    [SerializeField] private string seed;
 
     private void Start()
     {
@@ -16,21 +17,17 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
     [ContextMenu("Generate Dungeon")]
     private void GenerateDungeon()
     {
-        if(seed.Trim().Length == 0) seed = GenerateRandomSeed(10);
+        if(editorMode)
+        {
+            if(seed == null) seed = Utility.GenerateRandomSeed(10);
+        } else 
+        {
+            seed = DungeonManager.Instance.currentSeed;
+        }
+        Debug.Log($"Dungeon seed: {seed}");
         UnityEngine.Random.InitState(seed.GetHashCode());
         mapVisualizer.ClearMap();
         RunProceduralGeneration();
-    }
-
-    private string GenerateRandomSeed(int length)
-    {
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-        var result = new char[length];
-        for (int i = 0; i < length; i++)
-        {
-            result[i] = chars[UnityEngine.Random.Range(0, chars.Length)];
-        }
-        return new string(result);
     }
 
     protected abstract void RunProceduralGeneration();

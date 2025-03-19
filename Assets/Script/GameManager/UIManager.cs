@@ -17,7 +17,6 @@ public class UIManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     #endregion
 

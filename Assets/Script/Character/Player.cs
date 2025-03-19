@@ -1,9 +1,14 @@
+using System;
+using System.Collections.Generic;
 using Assets.Script;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    
     public Rigidbody2D rd;
     public SpriteRenderer characterSR;
     private Animator anim;
@@ -24,20 +29,34 @@ public class Player : MonoBehaviour
     public WeaponController weaponController;
     public PlayerPickController pickController;
 
-
-    private void Start()
-    {
-        gameObject.transform.position= new Vector3(0.5f, 0.5f,0);
-    }
     //private Inventory inventory;
 
+    void Start()
+    {
+        transform.position = new Vector3(0.5f, 0.5f, 0);
+    }
+
+    public static Player Instance { get; private set; }
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
         //menu= GameObject.Find("Menu");
         //menu.SetActive(false);
-        health = playerDetailSO.playerHealthAmount;
-        armor = playerDetailSO.playerArmorAmount;
-
+        if(GameManager.Instance.currentStage == 1 && GameManager.Instance.currentLevel == 1)
+        {
+            health = playerDetailSO.playerHealthAmount;
+            armor = playerDetailSO.playerArmorAmount;
+        } else 
+        {
+            health = PlayerDataManager.Instance.health;
+            armor = PlayerDataManager.Instance.armor;
+        }
 
         rd = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
@@ -49,7 +68,6 @@ public class Player : MonoBehaviour
 
         //inventory = new Inventory();
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -98,7 +116,7 @@ public class Player : MonoBehaviour
         else
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
-            GameObject.Find("Weapon").gameObject.active = false;
+            GameObject.Find("Weapon").gameObject.SetActive(false);
             armorController.ArmorWhenPlayerDie();
             rd.linearVelocity = Vector2.zero;
             Cursor.visible = true;

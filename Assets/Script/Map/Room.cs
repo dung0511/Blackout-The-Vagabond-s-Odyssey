@@ -33,7 +33,7 @@ public class Room
         if (enemyCount == 0)
         {
             Debug.Log("Room Cleared");
-            DungeonManager.Instance.RoomCleared(this);
+            DungeonManager.Instance.OnRoomCleared(this);
         }
     }
 }

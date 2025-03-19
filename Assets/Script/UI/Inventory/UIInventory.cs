@@ -82,11 +82,11 @@ public class UIInventory : MonoBehaviour
         int index = listOfItems.IndexOf(inventoryItemUI);
         if (index == -1)
         {
-
             return;
         }
 
         OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
+        HandleItemSelection(inventoryItemUI);
     }
 
     private void ResetDraggedItem()
@@ -98,7 +98,8 @@ public class UIInventory : MonoBehaviour
     private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
     {
         int index = listOfItems.IndexOf(inventoryItemUI);
-        if (index == -1) return;
+        if (index == -1)
+            return;
         currentlyDraggedItemIndex = index;
 
         HandleItemSelection(inventoryItemUI);
@@ -114,7 +115,8 @@ public class UIInventory : MonoBehaviour
     public void HandleItemSelection(UIInventoryItem inventoryItemUI)
     {
         int index = listOfItems.IndexOf(inventoryItemUI);
-        if (index == -1) return;
+        if (index == -1)
+            return;
         OnDescriptionRequested?.Invoke(index);
     }
 
@@ -124,7 +126,7 @@ public class UIInventory : MonoBehaviour
         ResetSelection();
     }
 
-    private void ResetSelection()
+    public void ResetSelection()
     {
         itemDescription.ResetDescription();
         DeselectAllItems();
@@ -144,5 +146,19 @@ public class UIInventory : MonoBehaviour
         ResetDraggedItem();
     }
 
+    public void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)
+    {
+        itemDescription.SetDiscription(itemImage, name, description);
+        DeselectAllItems();
+        listOfItems[itemIndex].Select();
+    }
 
+    public void ResetAllItems()
+    {
+        foreach (UIInventoryItem item in listOfItems)
+        {
+            item.ResetData();
+            item.DeSelect();
+        }
+    }
 }

@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class MapVisualizer : MonoBehaviour
 {
+    [SerializeField] private int wallHeight = 1;
     [SerializeField] private Tilemap floorTilemap, wallTilemap, minimap;
     [SerializeField] private TileBase floorTile, wallTile;
     [SerializeField] private TileBase minimapFloor, minimapWall;
@@ -16,7 +17,7 @@ public class MapVisualizer : MonoBehaviour
     {
         PlaceTiles(floorTilemap, floorTile, floor);
         DrawMinimap(floor, minimapFloor);
-        HashSet<Vector2Int> wall = GetAroundFloor(floor, 1);
+        HashSet<Vector2Int> wall = GetAroundFloor(floor, wallHeight);
         PlaceTiles(wallTilemap, wallTile, wall);
         wall = ConvertWallToMinimap(floor);
         DrawMinimap(wall, minimapWall);

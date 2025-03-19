@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDropHandler, IDragHandler
+public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
+    IEndDragHandler, IDropHandler, IDragHandler
 {
     [SerializeField]
     private Image itemImage;
@@ -22,13 +23,13 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHa
 
     private bool empty = true;
 
-    private void Awake()
+    public void Awake()
     {
         ResetData();
         DeSelect();
     }
 
-    private void ResetData()
+    public void ResetData()
     {
         this.itemImage.gameObject.SetActive(false);
         empty = true;
@@ -82,6 +83,6 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHa
 
     public void OnDrag(PointerEventData eventData)
     {
-        
+
     }
 }

@@ -8,7 +8,6 @@ using Random = UnityEngine.Random;
 public class StageOneDungeonGenerator : StageOne
 {
     [SerializeField] protected Box mediumRoom, smallRoom;
-    [SerializeField] int bottomHeight = 1;
     [SerializeField] private int corridorLength = 10;
     [SerializeField] private int corridorNums = 3;
     [SerializeField] [Range(0, 1)]private float roomChance = 0.8f;

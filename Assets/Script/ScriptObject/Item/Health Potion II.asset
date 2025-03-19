@@ -15,5 +15,5 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <maxStackSize>k__BackingField: 10
   <Name>k__BackingField: Health Potion II
-  <Description>k__BackingField: Heals 25hp
+  <Description>k__BackingField: Restores 25hp
   <ItemImage>k__BackingField: {fileID: -7118549172432436139, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}

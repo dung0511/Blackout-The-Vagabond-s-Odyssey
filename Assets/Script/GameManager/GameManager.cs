@@ -6,21 +6,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int MaxStage = 3;
-    public int levelPerStage = 3;
+    public int maxStage = 3;
+    public int levelsPerStage = 3;
     public int currentStage = 1;
     public int currentLevel = 1;
     public string rootSeed;
-    public Stack<string> levelSeeds = new(); //all level seeds pregenerated
+    public Queue<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
 
     public void NextLevel()
     {
         currentLevel++;
-        if(currentLevel > levelPerStage)
+        if(currentLevel > levelsPerStage)
         {
             currentLevel = 0;
-            GameSceneManager.Instance.LoadBossStageScene(currentStage++);
+            GameSceneManager.Instance.LoadStageBossScene(currentStage++);
         } else 
         {
             GameSceneManager.Instance.ReloadScene();
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         GenerateLevelSeeds();
-        seedList = new List<string>(levelSeeds);
+        seedList = new List<string>(levelSeeds); //For editor view
     }
     #endregion
 
@@ -51,9 +51,9 @@ public class GameManager : MonoBehaviour
             rootSeed = Utility.GenerateRandomSeed(10);
         } 
         UnityEngine.Random.InitState(rootSeed.GetHashCode());
-        for(int i = 0; i < MaxStage * levelPerStage; i++)
+        for(int i = 0; i < maxStage * levelsPerStage + maxStage; i++)
         {
-            levelSeeds.Push(Utility.GenerateRandomSeed(10));
+            levelSeeds.Enqueue(Utility.GenerateRandomSeed(10));
         }
         seedList = new List<string>(levelSeeds);
     }

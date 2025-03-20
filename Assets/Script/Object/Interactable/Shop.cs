@@ -1,19 +1,18 @@
-public class Shop : IInteractable
+public class Shop : Interactable
 {
-    public void Interact()
+    public override void Interact()
     {
         throw new System.NotImplementedException();
     }
 
-    public void HighLightOn()
+    public override void HighLightOn()
     {
-        //todo
+        base.HighLightOn();
     }
 
-    public void HighLightOff()
+    public override void HighLightOff()
     {
-        //todo
+        base.HighLightOff();
     }
-
     
 }

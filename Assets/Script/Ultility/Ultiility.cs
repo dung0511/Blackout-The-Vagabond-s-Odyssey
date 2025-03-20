@@ -31,7 +31,8 @@ public static class Utility
         return rng.Next(min, max);
     }
     public static bool Chance(int chance) => UnseededRng(0,100) < chance;
-
+    
+    //BFS with given map and targets
     public static List<Vector2Int> BFS(Vector2Int startPost, HashSet<Vector2Int> map, HashSet<Vector2Int> nodes)
     {
         List<Vector2Int> reachedNodes = new();
@@ -62,7 +63,8 @@ public static class Utility
         return reachedNodes;
     }
 
-    public static List<Vector2Int> TraverseBFS(Vector2Int startPost, HashSet<Vector2Int> map)
+    //BFS entire given map
+    public static List<Vector2Int> FloodFill(Vector2Int startPost, HashSet<Vector2Int> map)
     {
         List<Vector2Int> visitedNodes = new();
         Queue<Vector2Int> frontier = new();
@@ -90,7 +92,8 @@ public static class Utility
         return visitedNodes;
     }
 
-    public static List<Vector2Int> TraverseRadiusBFS(Vector2Int startPost, IEnumerable<Vector2Int> traverseMap, int radius)
+    //BFS entire given map in a radius
+    public static List<Vector2Int> FloodFillRadius(Vector2Int startPost, IEnumerable<Vector2Int> traverseMap, int radius)
     {
         var map = new HashSet<Vector2Int>(traverseMap);
         List<Vector2Int> visitedNodes = new();

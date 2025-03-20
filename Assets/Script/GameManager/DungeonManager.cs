@@ -17,7 +17,7 @@ public class DungeonManager : MonoBehaviour
         }
         Instance = this;
 
-        currentSeed = GameManager.Instance.levelSeeds.Pop();
+        currentSeed = GameManager.Instance.levelSeeds.Dequeue();
     }
     #endregion
 

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class PlayerArmorController : MonoBehaviour
 {
-    private Slider armorBar;
     private int currentArmor;
     private int maxArmor; 
     private float timeHealArmor = 7f;
@@ -14,7 +13,6 @@ public class PlayerArmorController : MonoBehaviour
     void Start()
     {
         currentArmor = GetComponent<Player>().armor;
-        armorBar = GameObject.Find("ShieldBar").gameObject.GetComponent<Slider>();       
         maxArmor = currentArmor;
         UpdateArmorBar(currentArmor, maxArmor);
     }
@@ -78,7 +76,7 @@ public class PlayerArmorController : MonoBehaviour
 
     public void UpdateArmorBar(int currentValue, int maxValue)
     {
-        armorBar.value = (float)currentValue / (float)maxValue;
+        UIManager.Instance.shieldBarEvent.Invoke(currentValue, maxValue);
     }
 
     public void ArmorWhenPlayerDie()

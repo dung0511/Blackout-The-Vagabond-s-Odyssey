@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class MinimapFOW : MonoBehaviour
 {
@@ -9,6 +12,10 @@ public class MinimapFOW : MonoBehaviour
     private Vector2Int lastPlayerPos;
 
     void OnEnable()
+    {
+        Binding();
+    }
+    private void Binding()
     {
         minimap = GameObject.FindGameObjectWithTag("MinimapTilemap").GetComponent<Tilemap>();
     }

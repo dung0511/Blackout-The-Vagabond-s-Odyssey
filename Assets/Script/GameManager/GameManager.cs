@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        PlayerDataManager.Instance.Save();
         currentLevel++;
         if(currentLevel > levelPerStage)
         {

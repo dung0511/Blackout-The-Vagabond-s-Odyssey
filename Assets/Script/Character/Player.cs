@@ -31,11 +31,6 @@ public class Player : MonoBehaviour
 
     //private Inventory inventory;
 
-    void Start()
-    {
-        transform.position = new Vector3(0.5f, 0.5f, 0);
-    }
-
     public static Player Instance { get; private set; }
     private void Awake()
     {
@@ -45,18 +40,14 @@ public class Player : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
 
         //menu= GameObject.Find("Menu");
         //menu.SetActive(false);
-        if(GameManager.Instance.currentStage == 1 && GameManager.Instance.currentLevel == 1)
-        {
-            health = playerDetailSO.playerHealthAmount;
-            armor = playerDetailSO.playerArmorAmount;
-        } else 
-        {
-            health = PlayerDataManager.Instance.health;
-            armor = PlayerDataManager.Instance.armor;
-        }
+
+        health = playerDetailSO.playerHealthAmount;
+        armor = playerDetailSO.playerArmorAmount;
+
 
         rd = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();

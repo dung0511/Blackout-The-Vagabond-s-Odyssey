@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using ModestTree;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int levelPerStage = 3;
     public int currentStage = 1;
     public int currentLevel = 1;
+    public string rootSeed;
     public Stack<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
 
@@ -43,11 +46,16 @@ public class GameManager : MonoBehaviour
 
     public void GenerateLevelSeeds()
     {
-        for(int i = 0; i < MaxStage * levelPerStage + MaxStage; i++)
+        if(String.IsNullOrWhiteSpace(rootSeed))
         {
-            var seed = Utility.GenerateRandomSeed(10);
-            levelSeeds.Push(seed);
+            rootSeed = Utility.GenerateRandomSeed(10);
+        } 
+        UnityEngine.Random.InitState(rootSeed.GetHashCode());
+        for(int i = 0; i < MaxStage * levelPerStage; i++)
+        {
+            levelSeeds.Push(Utility.GenerateRandomSeed(10));
         }
+        seedList = new List<string>(levelSeeds);
     }
 
 }

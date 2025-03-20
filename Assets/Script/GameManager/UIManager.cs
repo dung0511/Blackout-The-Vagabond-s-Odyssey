@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
     public IUIScreen currentScreen;
+    public UnityEvent<float,float> healthBarEvent;
+    public UnityEvent<float,float> shieldBarEvent;
+
     //private Stack<IUIScreen> uiStack = new(); //stack for closing ui
 
     #region Singleton
@@ -17,10 +21,15 @@ public class UIManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        if(healthBarEvent == null) healthBarEvent = new();
+        if(shieldBarEvent == null) shieldBarEvent = new();
     }
     #endregion
 
-    public void Toggle(IUIScreen screen)
+
+
+    public void ToggleScreen(IUIScreen screen)
     {
         if (screen == null) return;
 

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
-    private Slider healthBar;
     private int health;
     private int maxHealth;
     private bool isHurt;
@@ -24,9 +23,7 @@ public class PlayerHealthController : MonoBehaviour
         isDead = GetComponent<Player>().isDead;
         maxHealth = health;
         // ton rss
-        healthBar = GameObject.Find("HealthBar").gameObject.GetComponent<Slider>();
-        UpdateHealthBar(health, maxHealth);
-        
+        UpdateHealthBar(maxHealth, maxHealth);
     }
 
     public void takeDame(int dame)
@@ -52,9 +49,9 @@ public class PlayerHealthController : MonoBehaviour
         isHurt = false;
     }
 
-    public void UpdateHealthBar(int currentValue, int maxValue)
+    private void UpdateHealthBar(int currentHealth, int maxHealth)
     {
-        healthBar.value = (float)currentValue / (float)maxValue;
+        UIManager.Instance.healthBarEvent.Invoke(currentHealth, maxHealth);
     }
 
     public bool IsDead { get { return isDead; } }

@@ -45,7 +45,7 @@ public class MapUI : MonoBehaviour, IUIScreen
 
     private void Toggle(InputAction.CallbackContext context)
     {
-        UIManager.Instance.Toggle(this);
+        UIManager.Instance.ToggleScreen(this);
     }
 
     private void Zoom(InputAction.CallbackContext context)

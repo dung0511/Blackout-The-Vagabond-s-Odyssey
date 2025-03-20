@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 17994727}
   - component: {fileID: 17994726}
   - component: {fileID: 17994728}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &17994724
 Transform:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1074151423
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2323,7 +2323,7 @@ GameObject:
   - component: {fileID: 217136345}
   - component: {fileID: 217136344}
   - component: {fileID: 217136346}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Assassin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2384,7 +2384,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &217136342
 Transform:
   m_ObjectHideFlags: 0
@@ -2464,7 +2464,7 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1074151295
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -21541,7 +21541,7 @@ GameObject:
   - component: {fileID: 1413510874}
   - component: {fileID: 1413510873}
   - component: {fileID: 1413510876}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21602,7 +21602,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1413510872
 Transform:
   m_ObjectHideFlags: 0

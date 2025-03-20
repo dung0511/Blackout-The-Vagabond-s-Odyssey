@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryController : MonoBehaviour
+public class InventoryController : MonoBehaviour, IUIScreen
 {
     [SerializeField]
     private UIInventory inventoryUI;
@@ -86,20 +86,23 @@ public class InventoryController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (inventoryUI.isActiveAndEnabled == false)
-            {
-                inventoryUI.Show();
-                foreach (var item in inventoryData.GetCurrentState())
-                {
-                    inventoryUI.UpdateData(item.Key,
-                        item.Value.item.ItemImage,
-                        item.Value.quantity);
-                }
-            }
-            else
-            {
-                inventoryUI.Hide();
-            }
+            UIManager.Instance.ToggleScreen(this);
         }
+    }
+
+    public void Open()
+    {
+        inventoryUI.Show();
+        foreach (var item in inventoryData.GetCurrentState())
+        {
+            inventoryUI.UpdateData(item.Key,
+                item.Value.item.ItemImage,
+                item.Value.quantity);
+        }
+    }
+
+    public void Close()
+    {
+        inventoryUI.Hide();
     }
 }

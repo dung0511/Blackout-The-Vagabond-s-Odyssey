@@ -6,27 +6,27 @@ using UnityEngine.Tilemaps;
 public class ThrowableWeaponCollider : MonoBehaviour
 {
     private ThrowableWeapon weapon;
-    
+
     private void Awake()
     {
-         weapon = GameObject.Find("Weapon").GetComponentInChildren<ThrowableWeapon>();
+        weapon = GameObject.Find("Weapon").GetComponentInChildren<ThrowableWeapon>();
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {        
+    {
         // if (enemy != null)
-        if(collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
+        if (collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
-            
-            enemy.takeDame(weapon.BulletDame);
-          
-            PoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);
+
+            enemy.takeDame(weapon.dame);
+
+            PoolManagement.Instance.ReturnBullet(gameObject, weapon.throwablePrefab);
         }
 
-        else PoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);     
-        //vuong: any collision obstacle, disable bullet
-        // this.gameObject.SetActive(false);
+        else PoolManagement.Instance.ReturnBullet(gameObject, weapon.throwablePrefab);
+        ////vuong: any collision obstacle, disable bullet
+        //// this.gameObject.SetActive(false);
 
     }
 

@@ -27,6 +27,7 @@ public class StageOne : AbstractDungeonGenerator
             {
                 case RoomType.Spawn:
                     propPlacer.PlaceSpawnRoomProps(room);
+                    agentPlacer.PlacePlayer(room);
                     break;
                 case RoomType.Normal:
                     propPlacer.PlaceNearWallProps(room);

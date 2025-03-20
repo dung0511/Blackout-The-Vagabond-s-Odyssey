@@ -41,7 +41,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2716264520620643174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6bd225ec0bbc58f48a9e931e80308270, type: 2}
   m_CullingMode: 0
@@ -212,14 +212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120e3bf7bfaa006438aaf9fa992a8b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 778125498572981149, guid: a646af30f42fe764285c271e9509669c, type: 3}
+  characterSR: {fileID: 0}
   firePos: {fileID: 1799196499197247316}
-  TimeBtwFire: 0
+  bulletPrefab: {fileID: 0}
+  fireRate: 0.5
   bulletForce: 0
-  BulletDame: 0
-  inHand: 0
-  currentCharacterSR: {fileID: 0}
-  rangedDetail: {fileID: 0}
+  dam: 1
 --- !u!61 &6989095968074540068
 BoxCollider2D:
   m_ObjectHideFlags: 0

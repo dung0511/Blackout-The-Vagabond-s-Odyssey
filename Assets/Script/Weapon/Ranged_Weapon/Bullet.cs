@@ -18,12 +18,12 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
             
-            enemy.takeDame(weapon.BulletDame);
+            enemy.takeDame(weapon.dam);
           
-            PoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);
+            PoolManagement.Instance.ReturnBullet(gameObject, weapon.bulletPrefab);
         }
 
-        else PoolManagement.Instance.ReturnBullet(gameObject, weapon.bullet);     
+        else PoolManagement.Instance.ReturnBullet(gameObject, weapon.bulletPrefab);     
         //vuong: any collision obstacle, disable bullet
         // this.gameObject.SetActive(false);
 

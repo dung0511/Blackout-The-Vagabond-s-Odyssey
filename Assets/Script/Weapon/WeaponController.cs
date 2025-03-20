@@ -114,15 +114,15 @@ public class WeaponController : MonoBehaviour
 
             if (Weapon1.GetComponent<RangedWeapon>() != null)
             {
-                Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
+                //Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
             }
             else if (Weapon1.GetComponent<MeleeWeapon>() != null)
             {
-                Weapon1.GetComponent<MeleeWeapon>().InGround(Weapon1);
+                Weapon1.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon1);
             }
             else if (Weapon1.GetComponent<ThrowableWeapon>() != null)
             {
-                Weapon1.GetComponent<ThrowableWeapon>().InGround(Weapon1);
+                Weapon1.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon1);
             }
 
             Weapon1 = newWeapon;
@@ -135,17 +135,17 @@ public class WeaponController : MonoBehaviour
 
             if (Weapon2.GetComponent<RangedWeapon>() != null)
             {
-                Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
+               // Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
             }
 
             else if (Weapon2.GetComponent<MeleeWeapon>() != null)
             {
-                Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
+                Weapon2.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon2);
             }
 
             else if (Weapon2.GetComponent<ThrowableWeapon>() != null)
             {
-                Weapon2.GetComponent<ThrowableWeapon>().InGround(Weapon2);
+                Weapon2.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon2);
             }
             Weapon2 = newWeapon;
             Weapon1.SetActive(false);
@@ -162,17 +162,17 @@ public class WeaponController : MonoBehaviour
 
             if (Weapon1.GetComponent<RangedWeapon>() != null)
             {
-                Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
+               // Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
             }
 
             else if (Weapon1.GetComponent<MeleeWeapon>() != null)
             {
-                Weapon1.GetComponent<MeleeWeapon>().InGround(Weapon1);
+                Weapon1.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon1);
             }
 
             else if (Weapon1.GetComponent<ThrowableWeapon>() != null)
             {
-                Weapon1.GetComponent<ThrowableWeapon>().InGround(Weapon1);
+                Weapon1.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon1);
             }
 
             Weapon1 = newWeapon;
@@ -185,17 +185,17 @@ public class WeaponController : MonoBehaviour
 
             if (Weapon2.GetComponent<RangedWeapon>() != null)
             {
-                Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
+               // Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
             }
 
             else if (Weapon2.GetComponent<MeleeWeapon>() != null)
             {
-                Weapon2.GetComponent<MeleeWeapon>().InGround(Weapon2);
+                Weapon2.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon2);
             }
 
             else if (Weapon2.GetComponent<ThrowableWeapon>() != null)
             {
-                Weapon2.GetComponent<ThrowableWeapon>().InGround(Weapon2);
+                Weapon2.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon2);
             }
             Weapon2 = newWeapon;
             Weapon1.SetActive(false);

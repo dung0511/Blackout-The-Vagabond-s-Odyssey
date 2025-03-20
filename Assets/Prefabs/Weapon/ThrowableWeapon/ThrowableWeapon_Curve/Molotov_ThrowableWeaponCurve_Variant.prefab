@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4013436442668898190, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
       propertyPath: projectileMaxMoveSpeed
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7362977808248016145, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
       propertyPath: m_Name

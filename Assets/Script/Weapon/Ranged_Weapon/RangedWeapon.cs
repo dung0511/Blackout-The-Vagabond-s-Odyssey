@@ -130,8 +130,9 @@ public class RangedWeapon : MonoBehaviour
 
     void Start()
     {
-       // bulletPrefab.GetComponent<Bullet>().dame =
-            rangedWeapon = new RangedWeaponService(
+        characterSR= GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
+        // bulletPrefab.GetComponent<Bullet>().dame =
+        rangedWeapon = new RangedWeaponService(
                 new WeaponRepository(),
                 true,
                 characterSR,

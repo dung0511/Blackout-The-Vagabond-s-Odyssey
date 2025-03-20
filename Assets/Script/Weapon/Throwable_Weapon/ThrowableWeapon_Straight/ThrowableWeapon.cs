@@ -134,8 +134,9 @@ namespace Assets.Script.Weapon.Throwable_Weapon
 
         void Start()
         {
+            characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
             // bulletPrefab.GetComponent<Bullet>().dame =
-           // throwablePrefab.GetComponent<ThrowableWeaponCollider>().weapon.dame = dame;
+            // throwablePrefab.GetComponent<ThrowableWeaponCollider>().weapon.dame = dame;
             throwStraightWeapon = new ThrowableWeaponStraightService(
                 new WeaponRepository(),
                 true,

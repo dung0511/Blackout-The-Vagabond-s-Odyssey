@@ -4,6 +4,7 @@ using UnityEngine;
 using Firebase.Extensions;
 using System.Collections.Generic;
 using System;
+using Microsoft.Win32;
 
 public class FirebaseDatabaseManager : MonoBehaviour
 {
@@ -14,25 +15,41 @@ public class FirebaseDatabaseManager : MonoBehaviour
         FirebaseApp app = FirebaseApp.DefaultInstance;
         reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
+
+    private const string PlayerIdKey = "";
+
     private void Start()
     {
-        string deviceId = SystemInfo.deviceUniqueIdentifier;
-        WriteDatabase(deviceId,"0","0",0f,0);
-
-
-       // ReadDatabase(deviceId);
+        string playerId = GetOrCreatePlayerId();
+        WriteDatabase(playerId, 0, 0, 0, 0);
+        Debug.Log("Player ID: " + playerId);
     }
 
-    public void WriteDatabase(string id, string floor, string stage, float playTime, int enemiesKilled)
+    string GetOrCreatePlayerId()
     {
-        string today = DateTime.UtcNow.ToString("dd-MM-yyyy"); 
-       
+        if (PlayerPrefs.HasKey(PlayerIdKey))
+        {
+            return PlayerPrefs.GetString(PlayerIdKey);
+        }
+        else
+        {
+            string newId = System.Guid.NewGuid().ToString();
+            PlayerPrefs.SetString(PlayerIdKey, newId);
+            PlayerPrefs.Save();
+            return newId;
+        }
+    }
+
+    public void WriteDatabase(string id, int floor, int stage, float playTime, int enemiesKilled)
+    {
+        string today = DateTime.UtcNow.ToString("dd-MM-yyyy");
+
         Dictionary<string, object> userData = new Dictionary<string, object>
     {
         { "floor", floor },
         { "stage", stage },
-        { "playTime", playTime },  
-        { "enemiesKilled", enemiesKilled } 
+        { "playTime", playTime },
+        { "enemiesKilled", enemiesKilled }
     };
 
         reference.Child("PlayerData").Child(id).Child(today).SetValueAsync(userData).ContinueWithOnMainThread(task =>
@@ -50,8 +67,8 @@ public class FirebaseDatabaseManager : MonoBehaviour
 
     public void ReadDatabase(string id)
     {
-        string today = DateTime.UtcNow.ToString("dd-MM-yyyy"); 
-       
+        string today = DateTime.UtcNow.ToString("dd-MM-yyyy");
+
 
         reference.Child("PlayerData").Child(id).Child(today).GetValueAsync().ContinueWithOnMainThread(task =>
         {
@@ -64,8 +81,8 @@ public class FirebaseDatabaseManager : MonoBehaviour
 
                     Dictionary<string, object> userData = snapshot.Value as Dictionary<string, object>;
 
-                    string floor = userData["floor"].ToString();
-                    string stage = userData["stage"].ToString();
+                    int floor = int.Parse(userData["floor"].ToString());
+                    int stage = int.Parse(userData["stage"].ToString());
                     float playTime = float.Parse(userData["playTime"].ToString());
                     int enemiesKilled = int.Parse(userData["enemiesKilled"].ToString());
 
@@ -86,7 +103,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
 
     public void ReadDatabaseByDate(string id, string date)
     {
-        
+
         reference.Child("PlayerData").Child(id).Child(date).GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsCompleted)
@@ -107,8 +124,8 @@ public class FirebaseDatabaseManager : MonoBehaviour
                     if (userData.ContainsKey("floor") && userData.ContainsKey("stage") &&
                         userData.ContainsKey("playTime") && userData.ContainsKey("enemiesKilled"))
                     {
-                        string floor = userData["floor"].ToString();
-                        string stage = userData["stage"].ToString();
+                        int floor = int.Parse(userData["floor"].ToString());
+                        int stage = int.Parse(userData["stage"].ToString());
                         float playTime = float.Parse(userData["playTime"].ToString());
                         int enemiesKilled = int.Parse(userData["enemiesKilled"].ToString());
 
@@ -175,10 +192,10 @@ public class FirebaseDatabaseManager : MonoBehaviour
         });
     }
 
-    public void UpdatePlayTimeAndEnemiesKilled(string id, string floor, string stage, float playTime, int enemiesKilled)
+    public void UpdatePlayTimeAndEnemiesKilled(string id, int floor, int stage, float playTime, int enemiesKilled)
     {
-        string today = DateTime.UtcNow.ToString("dd-MM-yyyy"); 
-        
+        string today = DateTime.UtcNow.ToString("dd-MM-yyyy");
+
         reference.Child("PlayerData").Child(id).Child(today).GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsCompleted && task.Result.Exists)
@@ -198,7 +215,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
             }
             else
             {
-                
+
                 WriteDatabase(id, floor, stage, playTime, enemiesKilled);
             }
         });

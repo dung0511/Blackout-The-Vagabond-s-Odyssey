@@ -108,6 +108,7 @@ public class MeleeWeapon : MonoBehaviour
 
     void Start()
     {
+        characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
         meleeWeapon = new MeleeWeaponService(
             new WeaponRepository(),

@@ -112,6 +112,7 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
 
     void Start()
     {
+        characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
         weaponSpriteRenderer = GetComponent<SpriteRenderer>();
         projectilePrefab.GetComponent<ThrowableWeapon_Curve>().curveManager = GetComponent<ThrowableWeapon_CurveManager>();
         // bulletPrefab.GetComponent<Bullet>().dame =

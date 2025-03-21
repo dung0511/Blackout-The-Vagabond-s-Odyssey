@@ -30,7 +30,7 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene("Home");
     }
 
-    public void LoadStageBossScene(int stage)
+    public void LoadBossStageScene(int stage)
     {
         SceneManager.LoadScene("Boss_"+stage);
     }

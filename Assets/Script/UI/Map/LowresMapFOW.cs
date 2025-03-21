@@ -27,7 +27,7 @@ public class MinimapFOW : MonoBehaviour
         if (playerPos != lastPlayerPos) // Check if the player has moved to a new tile
         {
             lastPlayerPos = playerPos; 
-            var vision = Utility.TraverseRadiusBFS(playerPos, MinimapData.minimapTiles.Keys, visionRange);
+            var vision = Utility.FloodFillRadius(playerPos, MinimapData.minimapTiles.Keys, visionRange);
 
             foreach (var pos in vision)
             {

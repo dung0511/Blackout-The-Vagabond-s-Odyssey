@@ -34,6 +34,12 @@ public class GameManager : MonoBehaviour
         );
     }
     // long
+
+    public void StartDungeon()
+    {
+        GameSceneManager.Instance.LoadScene("Dungeon");
+    }
+
     public void NextLevel()
     {
 

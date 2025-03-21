@@ -3,35 +3,33 @@ using UnityEngine;
 public class Chest : Interactable
 {
     private Lootable lootable;
-    private bool isOpen = false;
+    private Animator animator;
 
     protected override void Awake()
     {
         base.Awake();
-        lootable = GetComponent<Lootable>();
+        animator = GetComponent<Animator>(); // object animator
     }
 
     public override void Interact()
     {
-        if(!isOpen)
-         {
-            isOpen = true;
-            base.Interact();
-            //lootable.DropLoot();
-         }
+
+        base.Interact();
+        animator.SetTrigger("Interact");
+        if(lootable != null)
+        {
+            lootable.DropLoot();
+        }
+        
     }
 
     public override void HighLightOn()
     {
-         if(!isOpen) base.HighLightOn();
+        base.HighLightOn();
     }
 
     public override void HighLightOff()
     {
-        if(isOpen)
-         {
-             Destroy(transform.GetChild(0).gameObject);
-         }
-         else base.HighLightOff();
+        base.HighLightOff();
     }
 }

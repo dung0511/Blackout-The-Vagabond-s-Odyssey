@@ -92,11 +92,11 @@ public class AgentPlacer : MonoBehaviour
         var entrances = GetRoomEntrances(room);
         foreach(var entrance in entrances)
         {
-            if(!traversableTiles.Contains(entrance)) traversableTiles.UnionWith(Utility.TraverseBFS(entrance, openTiles)); //bfs from all entrances
+            if(!traversableTiles.Contains(entrance)) traversableTiles.UnionWith(Utility.FloodFill(entrance, openTiles)); //bfs from all entrances
         }
         if(!traversableTiles.Contains(room.center) || !openTiles.Contains(room.center))
         {
-            traversableTiles.UnionWith(Utility.TraverseBFS(room.center, openTiles)); //bfs from center
+            traversableTiles.UnionWith(Utility.FloodFill(room.center, openTiles)); //bfs from center
         }
         return traversableTiles;
     }

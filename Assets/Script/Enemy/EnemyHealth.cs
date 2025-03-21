@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         enemyHealth.health-= damage;
         if (enemyHealth.health <= 0)
         {
+            GameManager.Instance.UpdateEnemyKilled();
             enemyHealth.health = 0;
             enemyHealth.GetComponent<Enemy>().animator.SetBool("isDead", true);
             enemyHealth.GetComponent<CapsuleCollider2D>().enabled = false;

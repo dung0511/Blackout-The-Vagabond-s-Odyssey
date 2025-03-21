@@ -14,8 +14,29 @@ public class GameManager : MonoBehaviour
     public Stack<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
 
+    //long
+    public int EnemyKilled = 0;
+    public float TimePlayed = 0f;
+    public void UpdateEnemyKilled()
+    {
+        EnemyKilled++;
+    }
+
+    private void OnApplicationQuit()
+    {
+        TimePlayed = Time.time - TimePlayed;
+        FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(
+            FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(),
+            currentLevel,
+            currentStage,
+            TimePlayed,
+            EnemyKilled
+        );
+    }
+    // long
     public void NextLevel()
     {
+
         currentLevel++;
         if(currentLevel > levelPerStage)
         {
@@ -25,6 +46,10 @@ public class GameManager : MonoBehaviour
         {
             GameSceneManager.Instance.ReloadScene();
         }
+        //long
+        TimePlayed = Time.time-TimePlayed;
+        FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(), currentLevel, currentStage, TimePlayed, EnemyKilled);
+        //long
     }
 
     #region Singleton

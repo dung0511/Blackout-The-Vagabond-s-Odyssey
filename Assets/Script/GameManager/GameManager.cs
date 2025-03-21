@@ -8,11 +8,16 @@ public class GameManager : MonoBehaviour
 {
     public int maxStage = 3;
     public int levelsPerStage = 3;
+    public string rootSeed;
     public int currentStage = 1;
     public int currentLevel = 1;
-    public string rootSeed;
     public Queue<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
+
+    public void StartDungeon()
+    {
+        GameSceneManager.Instance.LoadScene("Dungeon");
+    }
 
     public void NextLevel()
     {
@@ -40,7 +45,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         GenerateLevelSeeds();
-        seedList = new List<string>(levelSeeds); //For editor view
     }
     #endregion
 

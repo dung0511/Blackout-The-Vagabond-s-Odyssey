@@ -5,30 +5,36 @@ using Firebase.Extensions;
 using System.Collections.Generic;
 using System;
 using Microsoft.Win32;
+using Zenject.SpaceFighter;
 
 public class FirebaseDatabaseManager : MonoBehaviour
 {
     private DatabaseReference reference;
+    public static FirebaseDatabaseManager Instance { get; private set; } //singleton
 
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         FirebaseApp app = FirebaseApp.DefaultInstance;
         reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
     private const string PlayerIdKey = "";
 
-    private void Start()
-    {
-        string playerId = GetOrCreatePlayerId();
-        WriteDatabase(playerId, 0, 0, 0, 0);
-        Debug.Log("Player ID: " + playerId);
-    }
+    
 
-    string GetOrCreatePlayerId()
+    public string GetOrCreatePlayerId()
     {
         if (PlayerPrefs.HasKey(PlayerIdKey))
         {
+            Debug.Log("Player ID: " + PlayerIdKey);
             return PlayerPrefs.GetString(PlayerIdKey);
         }
         else
@@ -36,6 +42,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
             string newId = System.Guid.NewGuid().ToString();
             PlayerPrefs.SetString(PlayerIdKey, newId);
             PlayerPrefs.Save();
+            Debug.Log("Player ID: " + newId);
             return newId;
         }
     }
@@ -200,13 +207,21 @@ public class FirebaseDatabaseManager : MonoBehaviour
         {
             if (task.IsCompleted && task.Result.Exists)
             {
-                float oldPlayTime = float.Parse(task.Result.Child("playTime").Value.ToString());
-                int oldEnemiesKilled = int.Parse(task.Result.Child("enemiesKilled").Value.ToString());
+                DataSnapshot snapshot = task.Result;
+
+                float oldPlayTime = float.Parse(snapshot.Child("playTime").Value.ToString());
+                int oldEnemiesKilled = int.Parse(snapshot.Child("enemiesKilled").Value.ToString());
+                int oldFloor = int.Parse(snapshot.Child("floor").Value.ToString());
+                int oldStage = int.Parse(snapshot.Child("stage").Value.ToString());
+
+               
+                int updatedFloor = Mathf.Max(oldFloor, floor);
+                int updatedStage = Mathf.Max(oldStage, stage);
 
                 Dictionary<string, object> updatedData = new Dictionary<string, object>
             {
-                { "floor", floor },
-                { "stage", stage },
+                { "floor", updatedFloor },
+                { "stage", updatedStage },
                 { "playTime", oldPlayTime + playTime },
                 { "enemiesKilled", oldEnemiesKilled + enemiesKilled }
             };
@@ -215,9 +230,10 @@ public class FirebaseDatabaseManager : MonoBehaviour
             }
             else
             {
-
+               
                 WriteDatabase(id, floor, stage, playTime, enemiesKilled);
             }
         });
     }
+
 }

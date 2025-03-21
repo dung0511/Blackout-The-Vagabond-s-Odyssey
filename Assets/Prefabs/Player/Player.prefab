@@ -101,6 +101,9 @@ GameObject:
   - component: {fileID: 7941312488935414583}
   - component: {fileID: 5382135352202998101}
   - component: {fileID: 3285721170894196757}
+  - component: {fileID: 9010915929501675603}
+  - component: {fileID: 8272109283687327007}
+  - component: {fileID: 4123507685168032249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -290,6 +293,52 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   interact: {fileID: 0}
+--- !u!114 &9010915929501675603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c556c0dbb5f85f9438a27ac856bba11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: 532a70100838c9c439a71bc332853dd7, type: 2}
+--- !u!114 &8272109283687327007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4453563e90024ab80d35516ea3aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 0}
+  inventoryData: {fileID: 11400000, guid: 532a70100838c9c439a71bc332853dd7, type: 2}
+  initialItems:
+  - quantity: 9
+    item: {fileID: 11400000, guid: 98607d71f0fb51244898f6c9aa90b325, type: 2}
+  - quantity: 2
+    item: {fileID: 11400000, guid: 646da61713962d1449746eb08074c879, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+--- !u!210 &4123507685168032249
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666623108531603543}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
 --- !u!1 &4618484644671903064
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +416,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1797933713778452314, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -378,7 +427,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &6480235433492756719
 Animator:
   serializedVersion: 7

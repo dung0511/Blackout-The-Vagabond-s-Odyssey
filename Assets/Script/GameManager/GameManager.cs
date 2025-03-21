@@ -6,30 +6,50 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int maxStage = 3;
-    public int levelsPerStage = 3;
-    public string rootSeed;
+    public int MaxStage = 3;
+    public int levelPerStage = 3;
     public int currentStage = 1;
     public int currentLevel = 1;
-    public Queue<string> levelSeeds = new(); //all level seeds pregenerated
+    public string rootSeed;
+    public Stack<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
 
-    public void StartDungeon()
+    //long
+    public int EnemyKilled = 0;
+    public float TimePlayed = 0f;
+    public void UpdateEnemyKilled()
     {
-        GameSceneManager.Instance.LoadScene("Dungeon");
+        EnemyKilled++;
     }
 
+    private void OnApplicationQuit()
+    {
+        TimePlayed = Time.time - TimePlayed;
+        FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(
+            FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(),
+            currentLevel,
+            currentStage,
+            TimePlayed,
+            EnemyKilled
+        );
+    }
+    // long
     public void NextLevel()
     {
+
         currentLevel++;
-        if(currentLevel > levelsPerStage)
+        if(currentLevel > levelPerStage)
         {
             currentLevel = 0;
-            GameSceneManager.Instance.LoadStageBossScene(currentStage++);
+            GameSceneManager.Instance.LoadBossStageScene(currentStage++);
         } else 
         {
             GameSceneManager.Instance.ReloadScene();
         }
+        //long
+        TimePlayed = Time.time-TimePlayed;
+        FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(), currentLevel, currentStage, TimePlayed, EnemyKilled);
+        //long
     }
 
     #region Singleton
@@ -45,6 +65,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         GenerateLevelSeeds();
+        seedList = new List<string>(levelSeeds);
     }
     #endregion
 
@@ -55,9 +76,9 @@ public class GameManager : MonoBehaviour
             rootSeed = Utility.GenerateRandomSeed(10);
         } 
         UnityEngine.Random.InitState(rootSeed.GetHashCode());
-        for(int i = 0; i < maxStage * levelsPerStage + maxStage; i++)
+        for(int i = 0; i < MaxStage * levelPerStage; i++)
         {
-            levelSeeds.Enqueue(Utility.GenerateRandomSeed(10));
+            levelSeeds.Push(Utility.GenerateRandomSeed(10));
         }
         seedList = new List<string>(levelSeeds);
     }

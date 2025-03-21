@@ -4,7 +4,9 @@ using UnityEngine;
  public class HomePlayerController : MonoBehaviour
  {
     public GameObject selectedCharacter;
+    private GameObject previousCharacter;
     private Vector2 originalPosition;
+    private Vector3 originalScale; 
 
     [SerializeField] private float speed = 5f;
     private bool isFacingRight; 
@@ -23,31 +25,33 @@ using UnityEngine;
         Instance = this;
     }
 
-    private GameObject r;
     public void Start()
     {
-        rd = selectedCharacter.GetComponent<Rigidbody2D>(); //bind player
+        transform.SetParent(selectedCharacter.transform); transform.localPosition = Vector2.zero;   //bind player
+        rd = selectedCharacter.GetComponent<Rigidbody2D>(); 
         animator = selectedCharacter.GetComponent<Animator>();
         moveAnimation = Animator.StringToHash("isMoving");
         isFacingRight = selectedCharacter.transform.localScale.x > 0;
         originalPosition = selectedCharacter.transform.position;
+        originalScale = selectedCharacter.transform.localScale;
         
         selectedCharacter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation; //unlock physics
-        r = selectedCharacter.GetComponentInChildren<SelectCharacter>().gameObject; r.SetActive(false); //disable for selectionr
-        // selectedCharacter.GetComponentInChildren<SelectCharacter>().enabled = false;
+        previousCharacter = selectedCharacter.GetComponentInChildren<SelectCharacter>().gameObject; 
+        previousCharacter.SetActive(false); //disable for selection
     }
 
-    public void ResetCurrentCharacter() //reset character to default position
+    public void ResetCurrentCharacter() //reset previous selected character to default 
     {
         selectedCharacter.transform.position = originalPosition;
-        selectedCharacter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll; //lock physics
-        r.SetActive(true); //enable for selection
-        // selectedCharacter.GetComponentInChildren<SelectCharacter>().enabled = true;
+        selectedCharacter.transform.localScale = originalScale;
+        var prevRb = selectedCharacter.GetComponent<Rigidbody2D>();
+        animator.SetBool(moveAnimation, false); //reset to idle
+        prevRb.constraints = RigidbodyConstraints2D.FreezeAll; //lock physics
+        previousCharacter.SetActive(true); //enable for selection
     }
 
     private void Update()
     {
-        transform.position = selectedCharacter.transform.position;
         animator.SetBool(moveAnimation, MoveControl());
     }
 

@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
 
         if(healthBarEvent == null) healthBarEvent = new();
         if(shieldBarEvent == null) shieldBarEvent = new();

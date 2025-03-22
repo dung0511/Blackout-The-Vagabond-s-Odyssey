@@ -11,15 +11,25 @@ using UnityEngine.Tilemaps;
 
 public class PlayerPickController : MonoBehaviour
 {
+    [SerializeField]
+    private InventorySO inventoryData;
     public bool isTouchItem = false;
     public GameObject Item;
-
+    public bool isWeapon;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<IPickService>(out var weapon))
         {
-            Item = weapon.GetPickWeaponGameOject();
-            isTouchItem=true;
+            Item = weapon.GetPickGameOject();
+            isTouchItem = true;
+            if (weapon.IsPickingItemOrWeapon())
+            {
+                isWeapon = true;
+            }
+            else
+            {
+                isWeapon = false;
+            }
         }
     }
 
@@ -28,7 +38,7 @@ public class PlayerPickController : MonoBehaviour
 
         if (collision.gameObject.TryGetComponent<IPickService>(out var weapon))
         {
-            Item = weapon.GetPickWeaponGameOject();
+            Item = weapon.GetPickGameOject();
             isTouchItem = true;
         }
     }
@@ -40,10 +50,27 @@ public class PlayerPickController : MonoBehaviour
 
     public void PickItemWeapon()
     {
-        Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform, false);
-        GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
-        var weapon=Item.GetComponent<IPickService>();
-        weapon.Pick();
+        if (isWeapon)
+        {
+            Item.transform.SetParent(GetComponentInChildren<WeaponController>().gameObject.transform, false);
+            GetComponentInChildren<WeaponController>().ChangeAndAddWeaponIfHaveOne(Item);
+            var weapon = Item.GetComponent<IPickService>();
+            weapon.Pick();
+        }
+        else
+        {
+            var item = Item.GetComponent<Item>();
+            int reminder = inventoryData.AddItem(item.inventoryItem, item.quantity);
+            if (reminder == 0)
+            {
+                item.DestroyItem();
+            }
+            else
+            {
+                item.quantity = reminder;
+            }
+        }
+
     }
 
 }

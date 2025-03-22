@@ -145,7 +145,7 @@ namespace Assets.Script.Weapon.Throwable_Weapon
             throwStraightWeapon.DropWeapon();
         }
 
-        public GameObject GetPickWeaponGameOject()
+        public GameObject GetPickGameOject()
         {
             return gameObject;
         }
@@ -155,6 +155,11 @@ namespace Assets.Script.Weapon.Throwable_Weapon
             characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
             inHand = true;
             throwStraightWeapon.PickWeapon();
+        }
+
+        public bool IsPickingItemOrWeapon()
+        {
+            return true;
         }
 
         void Start()

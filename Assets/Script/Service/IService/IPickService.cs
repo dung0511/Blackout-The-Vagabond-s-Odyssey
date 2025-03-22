@@ -9,10 +9,11 @@ namespace Assets.Script.Service.IService
 {
     public interface IPickService
     {
-        GameObject GetPickWeaponGameOject();
+        GameObject GetPickGameOject();
         //void SetCharacterSRAndInHand();      
         //void UnSetCharacterSRAndInHand();
         void Pick();
         void Drop();
+        bool IsPickingItemOrWeapon();
     }
 }

@@ -173,7 +173,7 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour, IPickService
         weaponSpriteRenderer.enabled = true;
     }
 
-    public GameObject GetPickWeaponGameOject()
+    public GameObject GetPickGameOject()
     {
         return gameObject;
     }
@@ -190,5 +190,10 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour, IPickService
         characterSR = null;
         inHand = false;
         weaponCurveService.DropWeapon();
+    }
+
+    public bool IsPickingItemOrWeapon()
+    {
+        return true;
     }
 }

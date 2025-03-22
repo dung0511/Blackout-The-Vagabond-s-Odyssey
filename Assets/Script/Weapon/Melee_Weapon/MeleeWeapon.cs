@@ -74,7 +74,7 @@ public class MeleeWeapon : MonoBehaviour, IPickService
 
     //    yield return new WaitForSeconds(0.4f);
     //}
-    public GameObject GetPickWeaponGameOject()
+    public GameObject GetPickGameOject()
     {
         return gameObject;
     }
@@ -91,5 +91,10 @@ public class MeleeWeapon : MonoBehaviour, IPickService
         characterSR = null;
         inHand = false;
         meleeWeapon.DropWeapon();
+    }
+
+    public bool IsPickingItemOrWeapon()
+    {
+        return true;
     }
 }

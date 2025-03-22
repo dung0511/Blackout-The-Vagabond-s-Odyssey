@@ -133,7 +133,7 @@ public class RangedWeapon : MonoBehaviour, IPickService
     public RangedWeaponSO RangedWeaponSO;
 
 
-    public GameObject GetPickWeaponGameOject()
+    public GameObject GetPickGameOject()
     {
         return gameObject;
     }
@@ -150,6 +150,11 @@ public class RangedWeapon : MonoBehaviour, IPickService
         characterSR = null;
         inHand = false;
         rangedWeapon.DropWeapon();
+    }
+
+    public bool IsPickingItemOrWeapon()
+    {
+        return true;
     }
 
     void Start()

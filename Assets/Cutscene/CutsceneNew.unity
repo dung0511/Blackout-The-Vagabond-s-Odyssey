@@ -14256,7 +14256,10 @@ GameObject:
   - component: {fileID: 254242395}
   - component: {fileID: 254242397}
   - component: {fileID: 254242396}
-  m_Layer: 0
+  - component: {fileID: 254242398}
+  - component: {fileID: 254242399}
+  - component: {fileID: 254242400}
+  m_Layer: 16
   m_Name: Swordsman-Recovered_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14272,7 +14275,7 @@ Transform:
   m_GameObject: {fileID: 254242394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.12, y: 10.41, z: 0.02917353}
+  m_LocalPosition: {x: 6.96, y: 10.68, z: 0.02917353}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14342,8 +14345,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1510008725
-  m_SortingLayer: 7
+  m_SortingLayerID: -708396943
+  m_SortingLayer: 5
   m_SortingOrder: 15
   m_Sprite: {fileID: 1797933713778452314, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
   m_Color: {r: 0.7529412, g: 0.89411765, b: 0.8563821, a: 1}
@@ -14356,6 +14359,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &254242398
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254242394}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.069999926}
+  m_Size: {x: 0.2, y: 0.2}
+  m_Direction: 0
+--- !u!210 &254242399
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254242394}
+  m_Enabled: 1
+  m_SortingLayerID: -708396943
+  m_SortingLayer: 5
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
+--- !u!50 &254242400
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254242394}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &255519442
 GameObject:
   m_ObjectHideFlags: 0
@@ -15550,6 +15629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 174337772}
     m_Modifications:
+    - target: {fileID: 4442653431165992162, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
+      propertyPath: sortingLayer
+      value: Layer 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974975622417, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -15594,8 +15677,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Props Stair M (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253373, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253373, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253374, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3256064665225810532, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
@@ -44325,7 +44421,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 0.3132075, g: 0.31143463, b: 0.31143463, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -93606,7 +93702,6 @@ GameObject:
   - component: {fileID: 1896384210}
   - component: {fileID: 1896384213}
   - component: {fileID: 1896384212}
-  - component: {fileID: 1896384211}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -93633,18 +93728,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030518, y: -0.00013733}
   m_SizeDelta: {x: 1920, y: 884.87}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1896384211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896384209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3369de01c5db03b4989f443967c9913c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1896384212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104135,7 +104218,7 @@ SpriteRenderer:
   m_SortingLayerID: 1510008725
   m_SortingLayer: 7
   m_SortingOrder: 15
-  m_Sprite: {fileID: 1797933713778452314, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
+  m_Sprite: {fileID: -5301832489551877214, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
   m_Color: {r: 0.7529412, g: 0.89411765, b: 0.8563821, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108402,7 +108485,7 @@ Transform:
   m_GameObject: {fileID: 2138432856}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.85, y: 19.92, z: -106.65381}
+  m_LocalPosition: {x: 4.7, y: 20.9, z: -106.65381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -17,3 +17,4 @@ MonoBehaviour:
   runtimeAnimatorController: {fileID: 9100000, guid: 5d5047a5da792264fae0f30f289ef4a2, type: 2}
   playerHealthAmount: 10
   playerArmorAmount: 10
+  playerSpeedAmount: 5

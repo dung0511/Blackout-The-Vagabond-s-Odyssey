@@ -1,7 +1,9 @@
+using Assets.Script.Service.IService;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
-public class RangedWeapon : MonoBehaviour
+public class RangedWeapon : MonoBehaviour, IPickService
 {
     //public GameObject bullet;
     //public Transform firePos;
@@ -126,35 +128,79 @@ public class RangedWeapon : MonoBehaviour
     public float bulletForce = 20f;
     public int dam = 1;
     public RangedWeaponService rangedWeapon;
-    private bool isFiring=false;
+    //private bool isFiring=false;
+    public bool inHand;
+    public RangedWeaponSO RangedWeaponSO;
+
+
+    public GameObject GetPickGameOject()
+    {
+        return gameObject;
+    }
+
+    public void Pick()
+    {
+        characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+        inHand = true;
+        rangedWeapon.PickWeapon();
+    }
+
+    public void Drop()
+    {
+        characterSR = null;
+        inHand = false;
+        rangedWeapon.DropWeapon();
+    }
+
+    public bool IsPickingItemOrWeapon()
+    {
+        return true;
+    }
 
     void Start()
     {
-        characterSR= GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
-        // bulletPrefab.GetComponent<Bullet>().dame =
+        fireRate = RangedWeaponSO.TimeBtwFire;
+        bulletForce = RangedWeaponSO.bulletForce;
+        dam = RangedWeaponSO.damageRangedWeapon;
+
         rangedWeapon = new RangedWeaponService(
-                new WeaponRepository(),
-                true,
-                characterSR,
-                transform,
-                fireRate,
-                bulletPrefab,
-                firePos,
-                bulletForce, 
-                dam
-            );
+                   new WeaponRepository(),
+                   true,
+                   characterSR,
+                   transform,
+                   fireRate,
+                   bulletPrefab,
+                   firePos,
+                   bulletForce,
+                   dam
+               );
+
+        if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
+        {
+            characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            rangedWeapon.SetCharacterSpriteRenderer(characterSR);
+            rangedWeapon.SetInHand(inHand);
+        }
+        else
+        {
+
+            inHand = false;
+            rangedWeapon.SetInHand(inHand);
+            rangedWeapon.DropWeapon();
+        }
     }
 
     void Update()
     {
-
+        if (!inHand) return;
         rangedWeapon.RotateWeapon();
 
 
         if (Input.GetMouseButton(0))
         {
             rangedWeapon.Attack();
-          //  Invoke(nameof(StopFiringAnimation), 0.2f);
+            //  Invoke(nameof(StopFiringAnimation), 0.2f);
         }
     }
 

@@ -31,6 +31,39 @@ public class ThrowableWeaponCurveService : WeaponService
         _projectileMaxMoveSpeed = projectileMaxMoveSpeed;
     }
 
+    public float GetThrowCooldown() => _throwCooldown;
+    public void SetThrowCooldown(float value) => _throwCooldown = value;
+
+    public GameObject GetProjectilePrefab() => _projectilePrefab;
+    public void SetProjectilePrefab(GameObject value) => _projectilePrefab = value;
+
+    public float GetProjectileMaxMoveSpeed() => _projectileMaxMoveSpeed;
+    public void SetProjectileMaxMoveSpeed(float value) => _projectileMaxMoveSpeed = value;
+
+    public float GetProjectileMaxHeight() => _projectileMaxHeight;
+    public void SetProjectileMaxHeight(float value) => _projectileMaxHeight = value;
+
+    public SpriteRenderer GetWeaponSpriteRenderer() => _weaponSpriteRenderer;
+    public void SetWeaponSpriteRenderer(SpriteRenderer value) => _weaponSpriteRenderer = value;
+
+    public AnimationCurve GetTrajectoryCurve() => _trajectoryCurve;
+    public void SetTrajectoryCurve(AnimationCurve value) => _trajectoryCurve = value;
+
+    public AnimationCurve GetAxisCorrectionCurve() => _axisCorrectionCurve;
+    public void SetAxisCorrectionCurve(AnimationCurve value) => _axisCorrectionCurve = value;
+
+    public AnimationCurve GetSpeedCurve() => _speedCurve;
+    public void SetSpeedCurve(AnimationCurve value) => _speedCurve = value;
+
+    public bool IsInHand() => _inHand;
+    public void SetInHand(bool value) => _inHand = value;
+
+    public Transform GetTransform() => _transform;
+    public void SetTransform(Transform value) => _transform = value;
+
+    public SpriteRenderer GetCharacterSpriteRenderer() => _characterSR;
+    public void SetCharacterSpriteRenderer(SpriteRenderer value) => _characterSR = value;
+
     public override void Attack()
     {
         if (Time.time >= _lastThrowTime + _throwCooldown)
@@ -73,10 +106,6 @@ public class ThrowableWeaponCurveService : WeaponService
 
     }
 
-    public override void DropWeapon(GameObject game)
-    {
-        // Drop logic
-    }
     private float RotateToMousePos()
     {
         Vector3 mousePos = Input.mousePosition;
@@ -87,5 +116,20 @@ public class ThrowableWeaponCurveService : WeaponService
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
     }
 
-   
+    public override void DropWeapon()
+    {
+        _characterSR = null;
+        _transform.rotation = Quaternion.identity;
+        _transform.localScale = new Vector3(5, 5, 0);
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        _inHand = false;
+    }
+    public override void PickWeapon()
+    {
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        _characterSR = _transform.root.GetComponentInChildren<SpriteRenderer>();
+        _transform.localScale = new Vector3(0.6f, 0.6f, 0);
+        _transform.localPosition = new Vector3(0, -0.04f, 0);
+        _inHand = true;
+    }
 }

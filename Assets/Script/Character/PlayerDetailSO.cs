@@ -43,6 +43,16 @@ public class PlayerDetailSO : ScriptableObject
     #endregion
     public int playerArmorAmount;
 
+
+    #region Header SPEED
+    [Space(10)]
+    [Header("SPEED")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Player starting speed amount")]
+    #endregion
+    public float playerSpeedAmount;
+
     #region Validation
 #if UNITY_EDITOR
     /// <summary>
@@ -54,6 +64,7 @@ public class PlayerDetailSO : ScriptableObject
         Utility.ValidateCheckNullValue(this, nameof(playerPrefab), playerPrefab);
         Utility.ValidateCheckPositiveValue(this, nameof(playerHealthAmount), playerHealthAmount, false);
         Utility.ValidateCheckPositiveValue(this, nameof(playerArmorAmount), playerArmorAmount, false);
+        Utility.ValidateCheckPositiveValue(this, nameof(playerSpeedAmount), playerSpeedAmount, false);
         Utility.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
     }
 #endif

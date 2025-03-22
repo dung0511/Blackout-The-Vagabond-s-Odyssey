@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Assets.Script.Service.IService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Script.Weapon.Throwable_Weapon
 {
-    public class ThrowableWeapon: MonoBehaviour
+    public class ThrowableWeapon : MonoBehaviour, IPickService
     {
         //    public GameObject bullet;
         //    public Transform firePos;
@@ -129,14 +131,45 @@ namespace Assets.Script.Weapon.Throwable_Weapon
         public float throwCoolDown = 0.5f;
         public float bulletForce = 20f;
         public int dame = 1;
+        public Animation animation;
         public ThrowableWeaponStraightService throwStraightWeapon;
-       // private bool isFiring = false;
+
+        public ThrowableWeaponSO throwableWeaponSO;
+        // private bool isFiring = false;
+        public bool inHand;
+
+        public void Drop()
+        {
+            characterSR = null;
+            inHand = false;
+            throwStraightWeapon.DropWeapon();
+        }
+
+        public GameObject GetPickGameOject()
+        {
+            return gameObject;
+        }
+
+        public void Pick()
+        {
+            characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            throwStraightWeapon.PickWeapon();
+        }
+
+        public bool IsPickingItemOrWeapon()
+        {
+            return true;
+        }
 
         void Start()
         {
-            characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
-            // bulletPrefab.GetComponent<Bullet>().dame =
-            // throwablePrefab.GetComponent<ThrowableWeaponCollider>().weapon.dame = dame;
+            throwCoolDown = throwableWeaponSO.TimeBtwFire;
+            bulletForce = throwableWeaponSO.throwableForce;
+            dame = throwableWeaponSO.damageThrowableWeapon;
+
+           // animation = GetComponent<Animation>();
+            //characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
             throwStraightWeapon = new ThrowableWeaponStraightService(
                 new WeaponRepository(),
                 true,
@@ -146,13 +179,29 @@ namespace Assets.Script.Weapon.Throwable_Weapon
                 throwablePrefab,
                 firePos,
                 bulletForce,
-                dame
+                dame,
+                animation
             );
+
+            if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
+            {
+                characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+                inHand = true;
+                throwStraightWeapon.SetCharacterSpriteRenderer(characterSR);
+                throwStraightWeapon.SetInHand(inHand);
+            }
+            else
+            {
+
+                inHand = false;
+                throwStraightWeapon.SetInHand(inHand);
+                throwStraightWeapon.DropWeapon();
+            }
         }
 
         void Update()
         {
-
+            if (!inHand) return;
             throwStraightWeapon.RotateWeapon();
 
 

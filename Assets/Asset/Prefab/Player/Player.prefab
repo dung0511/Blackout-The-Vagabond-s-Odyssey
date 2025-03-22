@@ -212,6 +212,7 @@ MonoBehaviour:
   isGamePaused: 0
   health: 0
   armor: 0
+  speed: 0
   isHurt: 0
   isDead: 0
   isMove: 0
@@ -235,7 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29586d5182d1ac544841a6a74295dbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &7039371769991555917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,11 +272,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98dfba8f86bbc5241b625f1aa7777532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: 532a70100838c9c439a71bc332853dd7, type: 2}
   isTouchItem: 0
-  isMelee: 0
-  isRanged: 0
-  isThrowable: 0
   Item: {fileID: 0}
+  isWeapon: 0
 --- !u!114 &3285721170894196757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0a93cf11c4417479dacd43ba39a4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeaponIndex: 0
   Weapon1: {fileID: 0}
   Weapon2: {fileID: 0}
   ListObj: []

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051365429cf4dd849aba1b1aba42134e, type: 3}
+  m_Name: PlayerDetails_Wizard
+  m_EditorClassIdentifier: 
+  playerCharacterName: Wizard
+  playerPrefab: {fileID: 1731823609027247997, guid: 567d2f01d4d7de545be419badcf308e8, type: 3}
+  runtimeAnimatorController: {fileID: 9100000, guid: 66a96f9b3499c7741af6a03a971a5727, type: 2}
+  playerHealthAmount: 5
+  playerArmorAmount: 5

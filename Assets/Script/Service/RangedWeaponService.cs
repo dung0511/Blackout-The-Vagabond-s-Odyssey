@@ -8,7 +8,7 @@ public class RangedWeaponService : WeaponService
     private GameObject _bulletPrefab;
     private Transform _firePos;
     private float _bulletForce;
-  //  private bool _isFiring = false;
+    //  private bool _isFiring = false;
     private int _dame;
     public RangedWeaponService(IWeaponRepository weaponRepository, bool inHand, SpriteRenderer characterSR, Transform transform, float fireRate, GameObject bulletPrefab, Transform firePos, float bulletForce, int dame)
         : base(weaponRepository, inHand, characterSR, transform)
@@ -18,8 +18,39 @@ public class RangedWeaponService : WeaponService
         _firePos = firePos;
         _bulletForce = bulletForce;
         _dame = dame;
-       // _isFiring = isFiring;
+        // _isFiring = isFiring;
     }
+
+    public float GetFireRate() => _fireRate;
+    public void SetFireRate(float value) => _fireRate = value;
+
+   
+    public GameObject GetBulletPrefab() => _bulletPrefab;
+    public void SetBulletPrefab(GameObject value) => _bulletPrefab = value;
+
+   
+    public Transform GetFirePos() => _firePos;
+    public void SetFirePos(Transform value) => _firePos = value;
+
+   
+    public float GetBulletForce() => _bulletForce;
+    public void SetBulletForce(float value) => _bulletForce = value;
+
+   
+    public int GetDamage() => _dame;
+    public void SetDamage(int value) => _dame = value;
+
+   
+    public bool IsInHand() => _inHand;
+    public void SetInHand(bool value) => _inHand = value;
+
+   
+    public Transform GetTransform() => _transform;
+    public void SetTransform(Transform value) => _transform = value;
+
+    
+    public SpriteRenderer GetCharacterSpriteRenderer() => _characterSR;
+    public void SetCharacterSpriteRenderer(SpriteRenderer value) => _characterSR = value;
 
     public override void Attack()
     {
@@ -73,13 +104,21 @@ public class RangedWeaponService : WeaponService
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
     }
 
-    public override void DropWeapon(GameObject game)
+    public override void DropWeapon()
     {
-        game.GetComponent<RangedWeapon>().rangedWeapon._characterSR = null;
-            game.transform.rotation = Quaternion.identity;
-            game.GetComponent<RangedWeapon>().rangedWeapon._inHand = false;
-            game.transform.localScale = new Vector3(5,5,0);
-            game.GetComponent<BoxCollider2D>().enabled = true;
+        _characterSR = null;
+        _transform.rotation = Quaternion.identity;
+        _transform.localScale = new Vector3(5, 5, 0);      
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        _inHand = false;
+    }
+    public override void PickWeapon()
+    {
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        _characterSR = _transform.root.GetComponentInChildren<SpriteRenderer>();
+        _transform.localScale = new Vector3(0.6f, 0.6f, 0);
+        _transform.localPosition = new Vector3(0, -0.04f, 0);
+        _inHand = true;
     }
 
 }

@@ -1,128 +1,54 @@
+using Assets.Script.Service.IService;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
-public class MeleeWeapon : MonoBehaviour
+public class MeleeWeapon : MonoBehaviour, IPickService
 {
-    //public MeleeWeaponSO meleeDetail;
-    //public SpriteRenderer CharacterSR;
-    //public Animator anim;
-    //private float attackCooldown = 0.5f;
-    //private float lastAttackTime = 0f;
-    //public int dame;
-    //public bool inHand;
-
-    //void Start()
-    //{
-    //    attackCooldown=meleeDetail.attackCooldown;
-    //    dame =meleeDetail.damageMeleeWeapon;
-    //    anim = GetComponentInChildren<Animator>();
-    //    if (GetComponentInParent<WeaponController>() != null)
-    //    {
-    //        Transform player = transform.parent.parent;
-    //        CharacterSR = player.GetComponentInChildren<SpriteRenderer>();
-    //        inHand = true;
-    //        GetComponent<BoxCollider2D>().enabled = false;
-
-    //    }
-    //    else
-    //    {
-    //        inHand = false;
-    //        InGround(gameObject);
-    //    }
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (inHand)
-    //    {
-    //        RotateMeleeWeapon();
-    //        GetComponent<BoxCollider2D>().enabled = false;
-    //        if (Input.GetMouseButton(0))
-    //        {
-    //            if (Time.time >= lastAttackTime + attackCooldown)
-    //            {
-    //                AttackMelee();
-    //                lastAttackTime = Time.time;
-    //            }
-    //        }
-    //        else if (Input.GetMouseButtonUp(0))
-    //        {
-    //            anim.SetBool("isMeleeAttack", false);
-    //        }
-    //    }
-
-
-    //}
-
-    //void RotateMeleeWeapon()
-    //{
-    //    Vector3 mousePos = Input.mousePosition;
-    //    mousePos.z = Camera.main.nearClipPlane;
-
-    //    Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
-    //    Vector2 lookDir = (Vector2)(worldMousePos - transform.position);
-    //    float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-
-    //    transform.rotation = Quaternion.Euler(0, 0, angle);
-
-    //    bool isFlipped = angle > 90 || angle < -90;
-
-    //    CharacterSR.gameObject.transform.localScale = new Vector3(isFlipped ? -1 : 1,
-    //                                                                 CharacterSR.gameObject.transform.localScale.y, 1);
-
-
-    //    transform.localScale = new Vector3(0.7f, isFlipped ? -0.7f : 0.7f, 1);
-
-    //}
-    //void AttackMelee()
-    //{
-    //    StartCoroutine(AttackCoroutine());
-    //}
-
-    //IEnumerator AttackCoroutine()
-    //{
-    //    anim.SetBool("isMeleeAttack", true);
-
-    //    yield return new WaitForSeconds(0.4f);
-
-
-    //}
-
-    //public void InGround(GameObject game)
-    //{
-    //    game.GetComponent<MeleeWeapon>().CharacterSR = null;
-    //    game.transform.rotation = Quaternion.identity;
-    //    game.GetComponent<MeleeWeapon>().inHand = false;
-    //    game.transform.localScale = new Vector3(5, 5, 0);
-    //    game.GetComponent<BoxCollider2D>().enabled = true;
-    //}
-    public SpriteRenderer characterSR;
-    public Animator animator;
-    public float attackCoolDown = 0.5f;
-    public int dam = 1;
+    private SpriteRenderer characterSR;
+    private Animator animator;
     public MeleeWeaponService meleeWeapon;
-    private float lastAttackTime;
+    private float lastAttackTime=0f;
+    public float attackCoolDown;
+    private bool inHand;
+    private int dam;
+    public MeleeWeaponSO MeleeWeaponSO;
 
     void Start()
     {
-        characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
+
+        attackCoolDown = MeleeWeaponSO.attackCooldown;
+        dam = MeleeWeaponSO.damageMeleeWeapon;
         animator = GetComponentInChildren<Animator>();
         meleeWeapon = new MeleeWeaponService(
             new WeaponRepository(),
-            true,
+            false,
             characterSR,
             animator,
             transform,
            attackCoolDown,
             dam
         );
+
+        if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
+        {
+            // characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
+            characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            meleeWeapon.SetInHand(inHand);
+            meleeWeapon.SetCharacterSpriteRenderer(characterSR);
+        }
+        else
+        {
+            inHand = false;
+            meleeWeapon.SetInHand(inHand);
+            meleeWeapon.DropWeapon();
+        }
     }
 
     void Update()
     {
+        if (!inHand) return;
         meleeWeapon.RotateWeapon();
         if (Input.GetMouseButton(0))
         {
@@ -137,5 +63,33 @@ public class MeleeWeapon : MonoBehaviour
             animator.SetBool("isMeleeAttack", false);
         }
     }
+    //void AttackMelee()
+    //{
+    //    StartCoroutine(AttackCoroutine());
+    //}
 
+    //IEnumerator AttackCoroutine()
+    //{
+        
+
+    //    yield return new WaitForSeconds(0.4f);
+    //}
+    public GameObject GetPickWeaponGameOject()
+    {
+        return gameObject;
+    }
+
+    public void Pick()
+    {
+        characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+        inHand = true;
+        meleeWeapon.PickWeapon();
+    }
+
+    public void Drop()
+    {
+        characterSR = null;
+        inHand = false;
+        meleeWeapon.DropWeapon();
+    }
 }

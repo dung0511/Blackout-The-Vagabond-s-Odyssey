@@ -12,7 +12,8 @@ public class ThrowableWeaponStraightService : WeaponService
     private Transform _firePos;
     private float _throwForce;
     private int _damage;
-    public ThrowableWeaponStraightService(IWeaponRepository weaponRepository, bool inHand, SpriteRenderer characterSR, Transform transform, float throwCooldown, GameObject throwablePrefab, Transform firePos, float throwForce,int damage)
+    private Animation _animation;
+    public ThrowableWeaponStraightService(IWeaponRepository weaponRepository, bool inHand, SpriteRenderer characterSR, Transform transform, float throwCooldown, GameObject throwablePrefab, Transform firePos, float throwForce,int damage, Animation animation)
         : base(weaponRepository, inHand, characterSR, transform)
     {
         _throwCooldown = throwCooldown;
@@ -20,7 +21,35 @@ public class ThrowableWeaponStraightService : WeaponService
         _firePos = firePos;
         _throwForce = throwForce;
         _damage = damage;
+        _animation = animation;
     }
+
+    public float GetThrowCooldown() => _throwCooldown;
+    public void SetThrowCooldown(float value) => _throwCooldown = value;
+
+    public float GetLastThrowTime() => _lastThrowTime;
+    public void SetLastThrowTime(float value) => _lastThrowTime = value;
+
+    public GameObject GetThrowablePrefab() => _throwablePrefab;
+    public void SetThrowablePrefab(GameObject value) => _throwablePrefab = value;
+
+    public Transform GetFirePos() => _firePos;
+    public void SetFirePos(Transform value) => _firePos = value;
+
+    public float GetThrowForce() => _throwForce;
+    public void SetThrowForce(float value) => _throwForce = value;
+
+    public int GetDamage() => _damage;
+    public void SetDamage(int value) => _damage = value;
+
+    public bool IsInHand() => _inHand;
+    public void SetInHand(bool value) => _inHand = value;
+
+    public Transform GetTransform() => _transform;
+    public void SetTransform(Transform value) => _transform = value;
+
+    public SpriteRenderer GetCharacterSpriteRenderer() => _characterSR;
+    public void SetCharacterSpriteRenderer(SpriteRenderer value) => _characterSR = value;
 
     public override void Attack()
     {
@@ -56,14 +85,6 @@ public class ThrowableWeaponStraightService : WeaponService
         _transform.localScale = new Vector3(0.6f, isFlipped ? -0.6f : 0.6f, 1);
     }
 
-    public override void DropWeapon(GameObject game)
-    {
-        //game.GetComponent<ThrowableWeapon>().currentCharacterSR = null;
-        //game.transform.rotation = Quaternion.identity;
-        //game.GetComponent<ThrowableWeapon>().inHand = false;
-        //game.transform.localScale = new Vector3(5, 5, 0);
-        //game.GetComponent<BoxCollider2D>().enabled = true;
-    }
     private float RotateToMousePos()
     {
         Vector3 mousePos = Input.mousePosition;
@@ -74,5 +95,20 @@ public class ThrowableWeaponStraightService : WeaponService
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
     }
 
-   
+    public override void DropWeapon()
+    {
+        _characterSR = null;
+        _transform.rotation = Quaternion.identity;
+        _transform.localScale = new Vector3(5, 5, 0);
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        _inHand = false;
+    }
+    public override void PickWeapon()
+    {
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        _characterSR = _transform.root.GetComponentInChildren<SpriteRenderer>();
+        _transform.localScale = new Vector3(0.6f, 0.6f, 0);
+        _transform.localPosition = new Vector3(0, -0.04f, 0);
+        _inHand = true;
+    }
 }

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6124870356856834160}
   - component: {fileID: 2203416375770899183}
   - component: {fileID: 7421989065815555888}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Base_Throwable_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,11 +202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28241296736d8034ea2b2915e641e338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  characterSR: {fileID: 0}
   firePos: {fileID: 3240814153227571968}
-  TimeBtwFire: 0.2
+  throwablePrefab: {fileID: 0}
+  throwCoolDown: 0.5
   bulletForce: 0
-  BulletDame: 0
+  dame: 1
+  animation: {fileID: 0}
+  throwableWeaponSO: {fileID: 0}
   inHand: 0
-  currentCharacterSR: {fileID: 0}
-  throwableWeaponDetail: {fileID: 0}

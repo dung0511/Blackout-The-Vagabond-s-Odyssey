@@ -1,3 +1,4 @@
+using Assets.Script.Service.IService;
 using Assets.Script.Weapon.Throwable_Weapon;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -5,13 +6,12 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-
-    public int currentWeaponIndex = 0;
-
     public GameObject Weapon1;
     public GameObject Weapon2;
     public List<GameObject> ListObj;
     public bool haveOneWepon;
+
+    private static GameObject sceneHolder;
     void Start()
     {
         ListObj = GetAllChild();
@@ -50,13 +50,11 @@ public class WeaponController : MonoBehaviour
                     Weapon1.SetActive(true);
                     Weapon2.SetActive(false);
                 }
-                currentWeaponIndex = 0;
                 break;
 
             case 2:
                 Weapon1.SetActive(false);
                 Weapon2.SetActive(true);
-                currentWeaponIndex = 1;
                 break;
         }
     }
@@ -75,135 +73,53 @@ public class WeaponController : MonoBehaviour
     {
         if (haveOneWepon)
         {
-            ListObj.Add(obj);
-            Weapon1.SetActive(false);
-            Weapon2 = obj;
-            Weapon2.SetActive(true);
-            haveOneWepon = false;
+            AddWeapon(obj);
         }
         else
         {
-            bool isHoldingRanged = GetComponentInChildren<RangedWeapon>() != null;
-            bool isHoldingMelee = GetComponentInChildren<MeleeWeapon>() != null;
-            bool isHoldingThrowable = GetComponentInChildren<ThrowableWeapon>() != null;
-            bool isPickingRanged = obj.GetComponent<RangedWeapon>() != null;
-            bool isPickingMelee = obj.GetComponent<MeleeWeapon>() != null;
-            bool isPickingThrowable = obj.GetComponent<ThrowableWeapon>() != null;
-            if ((isHoldingMelee && (isPickingRanged || isPickingThrowable)) ||
-           (isHoldingRanged && (isPickingMelee || isPickingThrowable)) ||
-           (isHoldingThrowable && (isPickingMelee || isPickingRanged)))
-            {
-
-                ReplaceWeapon(obj);
-            }
-            else if ((isHoldingThrowable && isPickingThrowable) || (isHoldingMelee&&isPickingMelee) || (isHoldingRanged&& isPickingRanged))
-            {
-
-                SwapWeapon(obj);
-            }
-
+            ChangeWeapon(obj);
         }
 
     }
 
-    private void SwapWeapon(GameObject newWeapon)
+    private void AddWeapon(GameObject newWeapon)
     {
+        ListObj.Add(newWeapon);
+        Weapon1.SetActive(false);
+        Weapon2 = newWeapon;
+        Weapon2.SetActive(true);
+        haveOneWepon = false;
+    }
+
+    private void ChangeWeapon(GameObject newWeapon)
+    {
+        if (sceneHolder == null)
+        {
+            sceneHolder = new GameObject("SceneObjectHolder");
+        }
         if (Weapon1.activeInHierarchy)
         {
-            Weapon1.transform.SetParent(null, true);
-
-            if (Weapon1.GetComponent<RangedWeapon>() != null)
+            Weapon1.transform.SetParent(sceneHolder.transform, true);
+            if (Weapon1.TryGetComponent<IPickService>(out var weapon))
             {
-                //Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
+                weapon.Drop();
             }
-            else if (Weapon1.GetComponent<MeleeWeapon>() != null)
-            {
-                Weapon1.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon1);
-            }
-            else if (Weapon1.GetComponent<ThrowableWeapon>() != null)
-            {
-                Weapon1.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon1);
-            }
-
             Weapon1 = newWeapon;
+            ListObj[0] = newWeapon;
             Weapon1.SetActive(true);
             Weapon2.SetActive(false);
         }
         else if (Weapon2.activeInHierarchy)
         {
-            Weapon2.transform.SetParent(null, true);
-
-            if (Weapon2.GetComponent<RangedWeapon>() != null)
+            Weapon2.transform.SetParent(sceneHolder.transform, true);
+            if (Weapon2.TryGetComponent<IPickService>(out var weapon))
             {
-               // Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
-            }
-
-            else if (Weapon2.GetComponent<MeleeWeapon>() != null)
-            {
-                Weapon2.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon2);
-            }
-
-            else if (Weapon2.GetComponent<ThrowableWeapon>() != null)
-            {
-                Weapon2.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon2);
+                weapon.Drop();
             }
             Weapon2 = newWeapon;
+            ListObj[1] = newWeapon;
             Weapon1.SetActive(false);
             Weapon2.SetActive(true);
         }
     }
-
-
-    private void ReplaceWeapon(GameObject newWeapon)
-    {
-        if (Weapon1.activeInHierarchy)
-        {
-            Weapon1.transform.SetParent(null, true);
-
-            if (Weapon1.GetComponent<RangedWeapon>() != null)
-            {
-               // Weapon1.GetComponent<RangedWeapon>().InGround(Weapon1);
-            }
-
-            else if (Weapon1.GetComponent<MeleeWeapon>() != null)
-            {
-                Weapon1.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon1);
-            }
-
-            else if (Weapon1.GetComponent<ThrowableWeapon>() != null)
-            {
-                Weapon1.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon1);
-            }
-
-            Weapon1 = newWeapon;
-            Weapon1.SetActive(true);
-            Weapon2.SetActive(false);
-        }
-        else if (Weapon2.activeInHierarchy)
-        {
-            Weapon2.transform.SetParent(null, true);
-
-            if (Weapon2.GetComponent<RangedWeapon>() != null)
-            {
-               // Weapon2.GetComponent<RangedWeapon>().InGround(Weapon2);
-            }
-
-            else if (Weapon2.GetComponent<MeleeWeapon>() != null)
-            {
-                Weapon2.GetComponent<MeleeWeapon>().meleeWeapon.DropWeapon(Weapon2);
-            }
-
-            else if (Weapon2.GetComponent<ThrowableWeapon>() != null)
-            {
-                Weapon2.GetComponent<ThrowableWeapon>().throwStraightWeapon.DropWeapon(Weapon2);
-            }
-            Weapon2 = newWeapon;
-            Weapon1.SetActive(false);
-            Weapon2.SetActive(true);
-        }
-
-
-    }
-
-
 }

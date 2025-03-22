@@ -15,5 +15,6 @@ MonoBehaviour:
   playerCharacterName: Wizard
   playerPrefab: {fileID: 1731823609027247997, guid: 567d2f01d4d7de545be419badcf308e8, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 66a96f9b3499c7741af6a03a971a5727, type: 2}
-  playerHealthAmount: 5
-  playerArmorAmount: 5
+  playerHealthAmount: 10
+  playerArmorAmount: 10
+  playerSpeedAmount: 5

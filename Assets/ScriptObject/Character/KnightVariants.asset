@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9b62fd9407e4248acef08b6061b20f, type: 3}
   m_Name: KnightVariants
   m_EditorClassIdentifier: 
-  home: {fileID: 4343319806019316382, guid: e5cfcc6d58c6ec04e9183a9caeea262d, type: 3}
+  home: {fileID: 5990494557785393302, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
   dungeon: {fileID: 211050452092517740, guid: 99f2256aa7bf1744a895a2474e7ccf5c, type: 3}

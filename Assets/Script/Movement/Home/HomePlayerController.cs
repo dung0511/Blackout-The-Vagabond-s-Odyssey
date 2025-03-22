@@ -88,3 +88,6 @@ using UnityEngine;
         selectedCharacter.transform.localScale = scale;
     }
  }
+
+
+

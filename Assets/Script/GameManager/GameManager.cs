@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int MaxStage = 3;
-    public int levelPerStage = 3;
+    public CharacterVariantSO playerCharacter;
     public int currentStage = 1;
     public int currentLevel = 1;
+    public int MaxStage = 3;
+    public int levelPerStage = 3;
     public string rootSeed;
     public Stack<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
@@ -35,9 +36,33 @@ public class GameManager : MonoBehaviour
     }
     // long
 
+
+    #region Singleton
+    public static GameManager Instance {get; private set;} //singleton
+    private void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        GenerateLevelSeeds();
+        seedList = new List<string>(levelSeeds);
+    }
+    #endregion
+
+    public void SetPlayerCharacter(CharacterVariantSO player)
+    {
+        playerCharacter = player;
+    }
+
     public void StartDungeon()
     {
         GameSceneManager.Instance.LoadScene("Dungeon");
+        Instantiate(playerCharacter.dungeon, Vector3.zero, Quaternion.identity);
     }
 
     public void NextLevel()
@@ -58,24 +83,7 @@ public class GameManager : MonoBehaviour
         //long
     }
 
-    #region Singleton
-    public static GameManager Instance {get; private set;} //singleton
-    private void Awake()
-    {
-        if(Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        GenerateLevelSeeds();
-        seedList = new List<string>(levelSeeds);
-    }
-    #endregion
-
-    public void GenerateLevelSeeds()
+    private void GenerateLevelSeeds()
     {
         if(String.IsNullOrWhiteSpace(rootSeed))
         {
@@ -86,7 +94,6 @@ public class GameManager : MonoBehaviour
         {
             levelSeeds.Push(Utility.GenerateRandomSeed(10));
         }
-        seedList = new List<string>(levelSeeds);
     }
 
 }

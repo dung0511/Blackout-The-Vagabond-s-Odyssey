@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SelectCharacter : Interactable
+public class SelectableCharacter : Interactable
 {
     protected override void Awake()
     {
@@ -12,7 +12,7 @@ public class SelectCharacter : Interactable
         base.Interact();
         HomePlayerController.Instance.ResetCurrentCharacter();
         HomePlayerController.Instance.selectedCharacter = transform.parent.gameObject;
-        HomePlayerController.Instance.Start();
+        HomePlayerController.Instance.RebindCharacter();
     }
 
     public override void HighLightOn()

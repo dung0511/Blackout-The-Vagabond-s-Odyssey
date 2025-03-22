@@ -6,14 +6,14 @@ public class FrustumCulling : MonoBehaviour
     [SerializeField] private GameObject[] CullingObjectsParent; 
     private Camera playerCamera;
 
-    void Awake()
+    void OnEnable()
     {
-        playerCamera = GetComponent<Camera>(); 
+        playerCamera = GetComponent<Camera>();
     }
 
     void FixedUpdate()
     {
-        // Calculate camera bounds with an offset
+        // Calculate camera bounds with offset
         float cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height);
         float cameraRight = playerCamera.transform.position.x + cameraHalfWidth + cullingOffset;
         float cameraLeft = playerCamera.transform.position.x - cameraHalfWidth - cullingOffset;
@@ -26,8 +26,7 @@ public class FrustumCulling : MonoBehaviour
             
             foreach (Transform child in parent.transform)
             {
-                Renderer objRenderer = child.GetComponent<Renderer>();
-                if (objRenderer != null)
+                if (child.TryGetComponent<Renderer>(out var objRenderer))
                 {
                     Bounds bounds = objRenderer.bounds; // get sprite bounding box
                     float objLeft = bounds.min.x;

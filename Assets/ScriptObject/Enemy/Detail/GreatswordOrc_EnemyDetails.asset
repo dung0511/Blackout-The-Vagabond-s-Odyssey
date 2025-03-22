@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f5576c794c33d41ad19c7ca86d41c1, type: 3}
+  m_Name: GreatswordOrc_EnemyDetails
+  m_EditorClassIdentifier: 
+  enemyName: GreatswordOrc
+  enemyPrefab: {fileID: 3722632510837022731, guid: b02c7df9fa7560f4990880b260a46f78, type: 3}
+  chaseDistance: 12

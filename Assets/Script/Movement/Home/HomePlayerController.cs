@@ -27,7 +27,12 @@ using UnityEngine;
 
     public void Start()
     {
-        transform.SetParent(selectedCharacter.transform); transform.localPosition = Vector2.zero;   //bind player
+        RebindCharacter();
+    }
+
+    public void RebindCharacter()
+    {
+        transform.SetParent(selectedCharacter.transform); transform.localPosition = new Vector2(0,0.069f);   //follow
         rd = selectedCharacter.GetComponent<Rigidbody2D>(); 
         animator = selectedCharacter.GetComponent<Animator>();
         moveAnimation = Animator.StringToHash("isMoving");
@@ -36,7 +41,7 @@ using UnityEngine;
         originalScale = selectedCharacter.transform.localScale;
         
         selectedCharacter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation; //unlock physics
-        previousCharacter = selectedCharacter.GetComponentInChildren<SelectCharacter>().gameObject; 
+        previousCharacter = selectedCharacter.GetComponentInChildren<SelectableCharacter>().gameObject; 
         previousCharacter.SetActive(false); //disable for selection
     }
 

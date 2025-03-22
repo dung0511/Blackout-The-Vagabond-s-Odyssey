@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051365429cf4dd849aba1b1aba42134e, type: 3}
+  m_Name: PlayerDetails_Assassin
+  m_EditorClassIdentifier: 
+  playerCharacterName: Assassin
+  playerPrefab: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+  runtimeAnimatorController: {fileID: 9100000, guid: 5d5047a5da792264fae0f30f289ef4a2, type: 2}
+  playerHealthAmount: 10
+  playerArmorAmount: 10

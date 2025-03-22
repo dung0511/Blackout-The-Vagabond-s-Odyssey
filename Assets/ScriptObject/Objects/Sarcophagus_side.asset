@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd16debb83e02d14bb08d4e31e10b5e8, type: 3}
+  m_Name: Sarcophagus_side
+  m_EditorClassIdentifier: 
+  prefabsVariant:
+  - {fileID: 3949230236958713933, guid: 69c69d88e054e5b4bbe12d031ef144a8, type: 3}
+  - {fileID: 7089313507843635198, guid: 6dc46824a777af749b0f756a81a9d704, type: 3}
+  - {fileID: 3802455083236091432, guid: 4caa33ca36707e24197127603efd192f, type: 3}
+  - {fileID: 2533076913995644434, guid: 49abc5074796f764090ef69990f729e0, type: 3}
+  - {fileID: 1904891612894318416, guid: 92a5e7d92a4a8bd479f5fbe90c84942a, type: 3}
+  propSize: {x: 3, y: 1}
+  minQuantity: 1
+  maxQuantity: 2
+  placeAsGroup: 1
+  minGroupSize: 2
+  maxGroupSize: 4
+  corner: 0
+  nearTopWall: 0
+  nearBottomWall: 0
+  nearLeftWall: 0
+  nearRightWall: 0
+  inner: 1
+  groupWithOthers: 1

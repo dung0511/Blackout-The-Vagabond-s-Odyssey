@@ -84,5 +84,6 @@ public class StageOne : AbstractDungeonGenerator
         propPlacer.Reset();
         agentPlacer.Reset();
         eliteRoomSetup.Reset();
+        MinimapData.Reset();
     }
 }

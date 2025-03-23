@@ -3,8 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(HomeMovement))]
 public class CharacterBinder : MonoBehaviour
 {
-
-    [SerializeField] private GameObject selectedCharacter;
+    private GameObject selectedCharacter;
     private GameObject interactComponent;
     private Vector2 originalPosition;
     private Vector3 originalScale;

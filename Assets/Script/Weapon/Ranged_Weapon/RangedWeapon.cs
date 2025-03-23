@@ -181,6 +181,7 @@ public class RangedWeapon : MonoBehaviour, IPickService
             inHand = true;
             rangedWeapon.SetCharacterSpriteRenderer(characterSR);
             rangedWeapon.SetInHand(inHand);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         else
         {

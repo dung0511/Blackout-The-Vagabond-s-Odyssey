@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public CharacterVariantSO playerCharacter;
     public int currentStage = 1;
     public int currentLevel = 1;
-    public int MaxStage = 3;
-    public int levelPerStage = 3;
+    public int maxStage = 3;
+    public int levelsPerStage = 3;
     public string rootSeed;
-    public Stack<string> levelSeeds = new(); //all level seeds pregenerated
+    public Queue<string> levelSeeds = new(); //all level seeds pregenerated
     [SerializeField] private List<string> seedList = new(); //For editor view
 
     //long
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
 
     #region Singleton
-    public static GameManager Instance {get; private set;} //singleton
+    public static GameManager Instance {get; private set;}
     private void Awake()
     {
         if(Instance != null)
@@ -61,15 +61,15 @@ public class GameManager : MonoBehaviour
 
     public void StartDungeon()
     {
-        GameSceneManager.Instance.LoadScene("Dungeon");
         Instantiate(playerCharacter.dungeon, Vector3.zero, Quaternion.identity);
+        GameSceneManager.Instance.LoadScene("Dungeon");
     }
 
     public void NextLevel()
     {
 
         currentLevel++;
-        if(currentLevel > levelPerStage)
+        if(currentLevel > levelsPerStage)
         {
             currentLevel = 0;
             GameSceneManager.Instance.LoadBossStageScene(currentStage++);
@@ -90,9 +90,9 @@ public class GameManager : MonoBehaviour
             rootSeed = Utility.GenerateRandomSeed(10);
         } 
         UnityEngine.Random.InitState(rootSeed.GetHashCode());
-        for(int i = 0; i < MaxStage * levelPerStage; i++)
+        for(int i = 0; i < maxStage * levelsPerStage + maxStage; i++)
         {
-            levelSeeds.Push(Utility.GenerateRandomSeed(10));
+            levelSeeds.Enqueue(Utility.GenerateRandomSeed(10));
         }
     }
 

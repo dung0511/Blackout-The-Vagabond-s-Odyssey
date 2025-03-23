@@ -111,13 +111,6 @@ public class AgentPlacer : MonoBehaviour
         return entrances;
     }
 
-    public void PlacePlayer(BoxRoom room)
-    {
-        var player = FindFirstObjectByType<Player>();
-        var playerPos = room.center;
-        player.transform.position = new Vector3(playerPos.x + 0.5f, playerPos.y + 0.5f, 0);
-    }
-
     public void Reset()
     {
         while (enemyParent.childCount > 0)

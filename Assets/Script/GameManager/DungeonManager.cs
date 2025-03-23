@@ -17,12 +17,12 @@ public class DungeonManager : MonoBehaviour
         }
         Instance = this;
 
-        currentSeed = GameManager.Instance.levelSeeds.Pop();
+        currentSeed = GameManager.Instance.levelSeeds.Dequeue();
     }
     #endregion
 
 
-    public void OnRoomCleared(Room room)
+    public void OpenRoomBarrier(Room room)
     {
         Destroy(room.barrierReference);
     }    

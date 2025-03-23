@@ -27,14 +27,15 @@ public class StageOne : AbstractDungeonGenerator
             {
                 case RoomType.Spawn:
                     propPlacer.PlaceSpawnRoomProps(room);
-                    agentPlacer.PlacePlayer(room);
                     break;
+
                 case RoomType.Normal:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
                     propPlacer.PlaceTraps(room);
                     agentPlacer.PlaceAgents(room);
                     break;
+
                 case RoomType.Elite:
                     propPlacer.PlaceNearWallProps(room);
                     propPlacer.PlaceInnerProps(room);
@@ -42,20 +43,23 @@ public class StageOne : AbstractDungeonGenerator
                     agentPlacer.PlaceAgents(room);
 
                     eliteRoomSetup.SetupEliteRoom(room); //elite room setup
-                    //trap door 
                     break;
+
                 case RoomType.Treasure:
                     propPlacer.PlaceTopWallProps(room);
                     propPlacer.PlaceTreasure(room);
                     break;
+
                 case RoomType.Shop:
                     propPlacer.PlaceLeftWallProps(room);
                     propPlacer.PlaceRightWallProps(room);
                     propPlacer.PlaceShopRoomProps(room);
                     break;
+
                 case RoomType.Exit:
                     propPlacer.PlaceExitPortal(room);
                     break;
+                    
                 default:
                     Debug.LogError("Invalid room type: " + room.roomType);
                     break;

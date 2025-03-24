@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Lootable : MonoBehaviour, ILootable
 {
@@ -12,8 +13,10 @@ public class Lootable : MonoBehaviour, ILootable
             if (Utility.Chance(table.tableChance))
             {
                 GameObject loot = table.loots[Utility.UnseededRng(0, table.loots.Count)];
-                Instantiate(loot, transform.position, Quaternion.identity);
+                var randomPosition = Utility.GetRandomPositionInCircle(transform.position, 5f);
+                Instantiate(loot, randomPosition, Quaternion.identity);
             }
         }
     }
+
 }

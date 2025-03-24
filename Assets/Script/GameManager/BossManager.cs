@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DungeonManager : MonoBehaviour
+public class BossManager : MonoBehaviour
 {
-    public string currentSeed;
+    public List<GameObject> bossList;
+    public UnityEvent bossKillEvent;
 
     #region Singleton
-    public static DungeonManager Instance {get; private set;}
+    public static BossManager Instance {get; private set;}
     private void Awake()
     {
         if(Instance != null)
@@ -17,13 +18,9 @@ public class DungeonManager : MonoBehaviour
             return;
         }
         Instance = this;
-
-        currentSeed = GameManager.Instance.levelSeeds.Dequeue();
+        
+        bossKillEvent = new();
     }
     #endregion
 
-    public void OpenRoomBarrier(Room room)
-    {
-        Destroy(room.barrierReference);
-    }    
 }

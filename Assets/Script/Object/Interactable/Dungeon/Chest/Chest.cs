@@ -8,19 +8,19 @@ public class Chest : Interactable
     protected override void Awake()
     {
         base.Awake();
+        TryGetComponent<Lootable>(out lootable);
         animator = GetComponent<Animator>(); // object animator
     }
 
     public override void Interact()
     {
-
         base.Interact();
         animator.SetTrigger("Interact");
         if(lootable != null)
         {
             lootable.DropLoot();
         }
-        
+        this.enabled = false;
     }
 
     public override void HighLightOn()

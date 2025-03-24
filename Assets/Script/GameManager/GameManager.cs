@@ -61,7 +61,9 @@ public class GameManager : MonoBehaviour
 
     public void StartDungeon()
     {
-        Instantiate(playerCharacter.dungeon, Vector3.zero, Quaternion.identity);
+        var p = Instantiate(playerCharacter.dungeon, Vector3.zero, Quaternion.identity);
+        var ps = p.GetComponentsInChildren<SpriteRenderer>();
+        foreach(var s in ps) s.enabled = false;
         GameSceneManager.Instance.LoadScene("Dungeon");
     }
 
@@ -77,7 +79,7 @@ public class GameManager : MonoBehaviour
         {
             GameSceneManager.Instance.ReloadScene();
         }
-        //long
+        //long //behind load scence, never reach
         TimePlayed = Time.time-TimePlayed;
         FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(), currentLevel, currentStage, TimePlayed, EnemyKilled);
         //long

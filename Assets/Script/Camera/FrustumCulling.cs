@@ -5,20 +5,22 @@ public class FrustumCulling : MonoBehaviour
     [SerializeField, Range(1,100)] private float cullingOffset = 5.0f; // offset for culling
     [SerializeField] private GameObject[] CullingObjectsParent; 
     private Camera playerCamera;
+    private float cameraHalfWidth;
 
     void OnEnable()
     {
         playerCamera = GetComponent<Camera>();
+        cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height);
     }
 
     void FixedUpdate()
     {
+        var cameraPos = playerCamera.transform.position;
         // Calculate camera bounds with offset
-        float cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height);
-        float cameraRight = playerCamera.transform.position.x + cameraHalfWidth + cullingOffset;
-        float cameraLeft = playerCamera.transform.position.x - cameraHalfWidth - cullingOffset;
-        float cameraTop = playerCamera.transform.position.y + playerCamera.orthographicSize + cullingOffset;
-        float cameraBottom = playerCamera.transform.position.y - playerCamera.orthographicSize - cullingOffset;
+        float cameraRight = cameraPos.x + cameraHalfWidth + cullingOffset;
+        float cameraLeft = cameraPos.x - cameraHalfWidth - cullingOffset;
+        float cameraTop = cameraPos.y + playerCamera.orthographicSize + cullingOffset;
+        float cameraBottom = cameraPos.y - playerCamera.orthographicSize - cullingOffset;
 
         foreach (GameObject parent in CullingObjectsParent)
         {

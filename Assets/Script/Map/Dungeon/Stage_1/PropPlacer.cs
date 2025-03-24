@@ -11,7 +11,7 @@ public class PropPlacer : MonoBehaviour
     [SerializeField] private List<Prop> props;
     [SerializeField] private List<Prop> lightProps;
     [SerializeField] private List<Prop> trapProps;
-    [SerializeField] private GameObject[] doors; // 0:front. 1:side
+    [SerializeField] private GameObject[] doors; // 0:bottom. 1:side. 2:top
     [SerializeField, Range(0,1)] private float cornerPropChance = 0.6f, doorChance = 0.6f;
     [SerializeField] private Transform propParent;
     [SerializeField] private Prop groundPortal;
@@ -575,6 +575,7 @@ public class PropPlacer : MonoBehaviour
     {
         var center = room.center;
         var size = room.size;
+        var path = DungeonData.path;
 
         var entrances = new Dictionary<int, Vector2Int>
         {
@@ -593,20 +594,20 @@ public class PropPlacer : MonoBehaviour
                     case 01:
                         room.topEntrance = entrance.Value;
                         beforeEntrance = entrance.Value+Vector2Int.down;
-                        DungeonData.path.Add(beforeEntrance);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.left);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.right);
+                        path.Add(beforeEntrance);
+                        path.Add(beforeEntrance+Vector2Int.left);
+                        path.Add(beforeEntrance+Vector2Int.right);
                         if(Random.value <= doorChance)
                         {
-                            PlaceDoor(room.topEntrance, 0);
+                            PlaceDoor(room.topEntrance, 2);
                         }
                         break;
                     case 0-1:
                         room.bottomEntrance = entrance.Value;
                         beforeEntrance = entrance.Value+Vector2Int.up;
-                        DungeonData.path.Add(beforeEntrance);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.left);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.right);
+                        path.Add(beforeEntrance);
+                        path.Add(beforeEntrance+Vector2Int.left);
+                        path.Add(beforeEntrance+Vector2Int.right);
 
                         if (Random.value <= doorChance)
                         {
@@ -616,9 +617,9 @@ public class PropPlacer : MonoBehaviour
                     case -10:
                         room.leftEntrance = entrance.Value;
                         beforeEntrance = entrance.Value+Vector2Int.right;
-                        DungeonData.path.Add(beforeEntrance);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.up);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.down);
+                        path.Add(beforeEntrance);
+                        path.Add(beforeEntrance+Vector2Int.up);
+                        path.Add(beforeEntrance+Vector2Int.down);
                         if (Random.value <= doorChance)
                         {
                             PlaceDoor(room.leftEntrance, 1);
@@ -627,9 +628,9 @@ public class PropPlacer : MonoBehaviour
                     case 10:
                         room.rightEntrance = entrance.Value;
                         beforeEntrance = entrance.Value+Vector2Int.left;
-                        DungeonData.path.Add(beforeEntrance);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.up);
-                        DungeonData.path.Add(beforeEntrance+Vector2Int.down);
+                        path.Add(beforeEntrance);
+                        path.Add(beforeEntrance+Vector2Int.up);
+                        path.Add(beforeEntrance+Vector2Int.down);
                         if (Random.value <= doorChance)
                         {
                             PlaceDoor(room.rightEntrance, 1);

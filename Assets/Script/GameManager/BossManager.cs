@@ -19,7 +19,6 @@ public class BossManager : MonoBehaviour
         }
         Instance = this;
         
-        bossKillEvent = new();
     }
     #endregion
 

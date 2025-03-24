@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject spawnEffectAnim;
+    [SerializeField] private GameObject spawnEffect;
     [SerializeField] private float delaySpawn = 1f;
     [SerializeField] private float delayPlayer = 0.2f;
     private GameObject[] players;
@@ -23,7 +23,7 @@ public class PlayerSpawner : MonoBehaviour
     private IEnumerator DelaySpawn()
     {
         yield return new WaitForSeconds(delaySpawn);
-        var anime = Instantiate(spawnEffectAnim, this.transform.position + new Vector3(0,-0.25f,0), Quaternion.identity);
+        var anime = Instantiate(spawnEffect, this.transform.position + new Vector3(0,-0.25f,0), Quaternion.identity);
         Destroy(anime, 5);
         StartCoroutine(DelayPlayer());
     }

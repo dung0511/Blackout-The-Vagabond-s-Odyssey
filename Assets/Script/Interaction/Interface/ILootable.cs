@@ -4,9 +4,10 @@ using UnityEngine;
 
 public interface ILootable 
 {
-        public void DropLoot();
+    public void DropLoot();
 }
 
+[Serializable]
 public class LootTable 
 {
     public List<GameObject> loots = new List<GameObject>();

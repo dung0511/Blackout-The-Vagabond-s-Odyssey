@@ -122,6 +122,17 @@ public static class Utility
         return visitedNodes;
     }
 
+    public static Vector2 GetRandomPositionInCircle(Vector2 center, float radius)
+    {
+        float angle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
+        float randomRadius = Mathf.Sqrt(UnityEngine.Random.Range(0f, 1f)) * radius;
+        
+        float x = center.x + randomRadius * Mathf.Cos(angle);
+        float y = center.y + randomRadius * Mathf.Sin(angle);
+        
+        return new Vector2(x, y);
+    }
+
     public static string GenerateRandomSeed(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";

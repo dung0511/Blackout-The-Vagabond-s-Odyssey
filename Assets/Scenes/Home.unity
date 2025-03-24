@@ -11219,7 +11219,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 262208
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1074216895
@@ -19352,7 +19352,7 @@ GameObject:
   - component: {fileID: 1709735052}
   - component: {fileID: 1709735053}
   - component: {fileID: 1709735054}
-  m_Layer: 6
+  m_Layer: 18
   m_Name: Interact Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}

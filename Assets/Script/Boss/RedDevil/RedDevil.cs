@@ -8,8 +8,6 @@ public class RedDevil : MonoBehaviour
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
     [HideInInspector] public IdleEvent idleEvent;
     [HideInInspector] public Animator animator;
-    [HideInInspector] public Room roomBelong;
-
 
     public int damage;
     public int health;

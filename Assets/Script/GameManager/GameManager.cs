@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             GameSceneManager.Instance.LoadBossStageScene(currentStage++);
         } else 
         {
-            GameSceneManager.Instance.ReloadScene();
+            GameSceneManager.Instance.LoadScene("Dungeon");
         }
         //long //behind load scence, never reach
         TimePlayed = Time.time-TimePlayed;

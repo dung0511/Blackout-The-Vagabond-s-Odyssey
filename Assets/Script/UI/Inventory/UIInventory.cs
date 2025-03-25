@@ -29,6 +29,9 @@ public class UIInventory : MonoBehaviour
 
     private int currentlyDraggedItemIndex = -1;
 
+    [SerializeField]
+    private ItemActionPanel actionPanel;
+
     private void Awake()
     {
         Hide();
@@ -69,7 +72,12 @@ public class UIInventory : MonoBehaviour
 
     private void HandleShowItemsActions(UIInventoryItem inventoryItemUI)
     {
-
+        int index = listOfItems.IndexOf(inventoryItemUI);
+        if (index == -1)
+        {
+            return;
+        }
+        OnItemActionRequested?.Invoke(index);
     }
 
     private void HandleEndDrag(UIInventoryItem inventoryItemUI)
@@ -132,16 +140,29 @@ public class UIInventory : MonoBehaviour
         DeselectAllItems();
     }
 
+    public void AddAction(string actionName, Action performAction)
+    {
+        actionPanel.AddButton(actionName, performAction); 
+    }
+
+    public void ShowItemAction(int itemIndex)
+    {
+        actionPanel.Toggle(true);
+        actionPanel.transform.position = listOfItems[itemIndex].transform.position; 
+    }
+
     private void DeselectAllItems()
     {
         foreach (UIInventoryItem item in listOfItems)
         {
             item.DeSelect();
         }
+        actionPanel.Toggle(false);
     }
 
     public void Hide()
     {
+        actionPanel.Toggle(false);
         gameObject.SetActive(false);
         ResetDraggedItem();
     }

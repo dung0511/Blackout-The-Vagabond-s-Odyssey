@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
-    private int health;
-    private int maxHealth;
+    public int health;
+    public int maxHealth;
     private bool isHurt;
     private bool isDead;
 
@@ -49,10 +49,16 @@ public class PlayerHealthController : MonoBehaviour
         isHurt = false;
     }
 
-    private void UpdateHealthBar(int currentHealth, int maxHealth)
+    public void UpdateHealthBar(int currentHealth, int maxHealth)
     {
         UIManager.Instance.healthBarEvent.Invoke(currentHealth, maxHealth);
     }
+
+    public void RegenHealth (int value)
+    {
+        health += value;
+    }
+
 
     public bool IsDead { get { return isDead; } }
     public bool IsHurt { get { return isHurt; } }

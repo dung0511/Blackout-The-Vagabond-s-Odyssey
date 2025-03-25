@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3289534807027896987}
   - component: {fileID: 447417443367141567}
   - component: {fileID: 5312217403512451251}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Health Potion II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.07
+  m_Radius: 0.15
 --- !u!114 &5312217403512451251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e00f9384effcf4599ae645f2c31416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <inventoryItem>k__BackingField: {fileID: 11400000, guid: 98607d71f0fb51244898f6c9aa90b325, type: 2}
+  <inventoryItem>k__BackingField: {fileID: 11400000, guid: e6d889ca307ec0a43b0684525545f37b, type: 2}
   <quantity>k__BackingField: 2
   duration: 0.3

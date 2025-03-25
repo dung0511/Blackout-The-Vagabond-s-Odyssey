@@ -9,7 +9,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 934467681116527374, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: bulletForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 934467681116527374, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 778125498572981149, guid: a646af30f42fe764285c271e9509669c, type: 3}
+    - target: {fileID: 934467681116527374, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
       propertyPath: rangedDetail
+      value: 
+      objectReference: {fileID: 11400000, guid: f3436618774ed5a4894b911cb27fd784, type: 2}
+    - target: {fileID: 934467681116527374, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: RangedWeaponSO
       value: 
       objectReference: {fileID: 11400000, guid: f3436618774ed5a4894b911cb27fd784, type: 2}
     - target: {fileID: 1532190317244686400, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
@@ -119,6 +131,10 @@ PrefabInstance:
     - target: {fileID: 8641872895628273777, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
       propertyPath: m_Name
       value: Piston
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641872895628273777, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

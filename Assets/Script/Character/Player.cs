@@ -8,13 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    
+
     public Rigidbody2D rd;
     public SpriteRenderer characterSR;
     private Animator anim;
     public bool isGamePaused = false;
     public int health;
     public int armor;
+    public float speed;
     public bool isHurt;
     public bool isDead;
     public bool isMove;
@@ -31,15 +32,8 @@ public class Player : MonoBehaviour
 
     //private Inventory inventory;
 
-    public static Player Instance { get; private set; }
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
         DontDestroyOnLoad(gameObject);
 
         //menu= GameObject.Find("Menu");
@@ -47,7 +41,7 @@ public class Player : MonoBehaviour
 
         health = playerDetailSO.playerHealthAmount;
         armor = playerDetailSO.playerArmorAmount;
-
+        speed = playerDetailSO.playerSpeedAmount;
 
         rd = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
@@ -95,7 +89,7 @@ public class Player : MonoBehaviour
         //            child.gameObject.SetActive(true);
         //        }
         //        menu.SetActive(false);
-                
+
         //    }
         //}
 
@@ -120,5 +114,5 @@ public class Player : MonoBehaviour
             anim.SetBool("isHurt", false);
     }
 
-    
+
 }

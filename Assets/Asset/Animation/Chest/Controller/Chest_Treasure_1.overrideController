@@ -8,4 +8,6 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Chest_Treasure_1
   m_Controller: {fileID: 9100000, guid: 013f40663c9fd224084cb71b94b80a8b, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e4a04860680ab2b428ea314eb0fe03f9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e4a04860680ab2b428ea314eb0fe03f9, type: 2}

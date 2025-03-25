@@ -1,8 +1,10 @@
+using Assets.Script.Service.IService;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.XR;
 
-public class ThrowableWeapon_CurveManager : MonoBehaviour
+public class ThrowableWeapon_CurveManager : MonoBehaviour, IPickService
 {
     //[SerializeField] public GameObject projectilePrefab;
 
@@ -110,12 +112,12 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
 
     public ThrowableWeaponCurveService weaponCurveService;
 
+    public bool inHand;
     void Start()
     {
-        characterSR = GetComponentInParent<Transform>().root.Find("Character").GetComponent<SpriteRenderer>();
+      
         weaponSpriteRenderer = GetComponent<SpriteRenderer>();
         projectilePrefab.GetComponent<ThrowableWeapon_Curve>().curveManager = GetComponent<ThrowableWeapon_CurveManager>();
-        // bulletPrefab.GetComponent<Bullet>().dame =
         weaponCurveService = new ThrowableWeaponCurveService(
             new WeaponRepository(),
             true,
@@ -129,12 +131,27 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
             trajectoryAnimationCurve,
             axisCorrectionAnimationCurve,
             projectileSpeedAnimationCurve
-        );
+        ); 
+        
+        if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
+        {
+            characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+            inHand = true;
+            weaponCurveService.SetCharacterSpriteRenderer(characterSR);
+            weaponCurveService.SetInHand(inHand);
+        }
+        else
+        {
+
+            inHand = false;
+            weaponCurveService.SetInHand(inHand);
+            weaponCurveService.DropWeapon();
+        }
     }
 
     void Update()
     {
-
+        if (!inHand) return;
         weaponCurveService.RotateWeapon();
         shootTimer -= Time.deltaTime;
 
@@ -154,5 +171,29 @@ public class ThrowableWeapon_CurveManager : MonoBehaviour
     public void TurnOnSpriteRenderer()
     {
         weaponSpriteRenderer.enabled = true;
+    }
+
+    public GameObject GetPickGameOject()
+    {
+        return gameObject;
+    }
+
+    public void Pick()
+    {
+        characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
+        inHand = true;
+        weaponCurveService.PickWeapon();
+    }
+
+    public void Drop()
+    {
+        characterSR = null;
+        inHand = false;
+        weaponCurveService.DropWeapon();
+    }
+
+    public bool IsPickingItemOrWeapon()
+    {
+        return true;
     }
 }

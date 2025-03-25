@@ -1,21 +1,20 @@
-using System.Threading;
+
 using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
+    public int Damege;
+
+    private void Start()
+    {
+       // Damege=GetComponentInParent<MeleeWeapon>().meleeWeapon.GetDamage();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        //EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
-        //if (enemy != null)
-        //{
-           
-        //    enemy.takeDame(GetComponentInParent<MeleeWeapon>().meleeWeapon._damage);
-        //    Debug.Log("Melee Dealt:" + GetComponentInParent<MeleeWeapon>().dame);
-        //}
-        //else if(collision.gameObject.TryGetComponent<IDamageable>(out var prob))
-        //{
-        //    prob.takeDame(GetComponentInParent<MeleeWeapon>().dame);
-        //}
+        if (collision.gameObject.TryGetComponent<IDamageable>(out var prob))
+        {
+            prob.takeDame(Damege);
+            Debug.Log("Dealt: " + Damege);
+        }
     }
 }

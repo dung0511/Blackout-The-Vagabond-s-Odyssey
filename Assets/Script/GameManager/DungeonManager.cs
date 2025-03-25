@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DungeonManager : MonoBehaviour
 {
-    public string currentSeed; 
+    public string currentSeed;
 
     #region Singleton
     public static DungeonManager Instance {get; private set;}
@@ -17,12 +18,11 @@ public class DungeonManager : MonoBehaviour
         }
         Instance = this;
 
-        currentSeed = GameManager.Instance.levelSeeds.Pop();
+        currentSeed = GameManager.Instance.levelSeeds.Dequeue();
     }
     #endregion
 
-
-    public void OnRoomCleared(Room room)
+    public void OpenRoomBarrier(Room room)
     {
         Destroy(room.barrierReference);
     }    

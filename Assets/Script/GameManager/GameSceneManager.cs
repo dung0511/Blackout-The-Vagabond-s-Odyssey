@@ -12,6 +12,12 @@ public class GameSceneManager : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public void ReloadScene()
@@ -26,7 +32,7 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadBossStageScene(int stage)
     {
-        SceneManager.LoadScene("Boss_"+stage);
+        SceneManager.LoadScene("Boss_Stage"+stage);
     }
 
 

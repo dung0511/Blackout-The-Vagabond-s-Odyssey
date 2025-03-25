@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: ArmoredOrc
   enemyPrefab: {fileID: 1073056586785637240, guid: 936f2c7a20d1b9c47ab5d504a4e6b54e, type: 3}
-  chaseDistance: 10
+  chaseDistance: 5

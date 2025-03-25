@@ -36,6 +36,7 @@ public class Interactor : MonoBehaviour
             {
                 if (currentInteractable != null) currentInteractable.HighLightOff();
                 interactable.HighLightOn();
+                // them ui panel o day
                 currentInteractable = interactable;
             }
         }

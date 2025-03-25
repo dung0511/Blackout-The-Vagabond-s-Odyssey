@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Slime
   enemyPrefab: {fileID: 9183551631663956581, guid: e021627b4702fa04981d77a7db232ca4, type: 3}
-  chaseDistance: 5
+  chaseDistance: 2

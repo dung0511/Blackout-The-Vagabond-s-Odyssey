@@ -55,7 +55,7 @@ public class Interactor : MonoBehaviour
     {
         if (currentInteractable != null)
         {
-            currentInteractable.Interact();
+            currentInteractable.Interact(this);
 
             currentInteractable.HighLightOff(); //if teleport away from trigger range
             currentInteractable = null;

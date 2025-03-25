@@ -11,7 +11,6 @@ public class InventoryController : MonoBehaviour, IUIScreen
     [SerializeField]
     private InventorySO inventoryData;
 
-    [SerializeField] 
     private PlayerHealthController playerHealth;
 
     public List<InventoryItem> initialItems = new List<InventoryItem>();
@@ -20,6 +19,7 @@ public class InventoryController : MonoBehaviour, IUIScreen
     {
         PrepareUI();
         PrepareInventoryData();
+        playerHealth = GetComponent<PlayerHealthController>();
     }
 
     private void PrepareInventoryData()

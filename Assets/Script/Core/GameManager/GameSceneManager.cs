@@ -35,5 +35,7 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene("Boss_Stage"+stage);
     }
 
-
+    #region Progression based
+    //unlockable character
+    #endregion
 }

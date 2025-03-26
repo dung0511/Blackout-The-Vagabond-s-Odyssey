@@ -9,11 +9,12 @@ public class PlayableCharacter : Interactable
         base.Awake();
     }
 
-    public override void Interact()
+    public override void Interact(Interactor interactPlayer)
     {
-        base.Interact();
-        CharacterBinder.Instance.ResetBindedCharacter();
-        CharacterBinder.Instance.BindCharacter(transform.parent.gameObject);
+        base.Interact(interactPlayer);
+        var binder = interactPlayer.GetComponent<CharacterBinder>();
+        binder.ResetBindedCharacter();
+        binder.BindCharacter(transform.parent.gameObject);
         GameManager.Instance.SetPlayerCharacter(selectedCharacter);
     }
 

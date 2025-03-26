@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         else ResetAllAttackParameters();
         isHurt = GetComponent<EnemyHealth>().isHurt;
         animator.SetBool("isHurt", isHurt);
-
+        animator.SetBool("isAttacking", isAttacking);
     }
 
     void performRangedAttack()
@@ -66,6 +66,8 @@ public class Enemy : MonoBehaviour
     void performAttack()
     {
         isAttacking = true;
+        //animator.SetBool("isAttacking", isAttacking);
+        //Debug.Log("set animator : isAttacking = true ");
         int attackType = has3Attack ? Random.Range(1, 4) : Random.Range(1, 3);
         ResetAllAttackParameters();
 
@@ -109,6 +111,8 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator AttackCooldown(float cooldownTime)
     {
+        //animator.SetBool("isAttacking", false);
+        //Debug.Log("set animator : isAttacking = false ");
         yield return new WaitForSeconds(cooldownTime);
         isAttacking = false;
         ResetAllAttackParameters();

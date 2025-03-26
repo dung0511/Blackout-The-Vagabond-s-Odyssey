@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skeleton
   enemyPrefab: {fileID: 4778308679941660179, guid: f126581fa8a24ad468a4d5235e042fc7, type: 3}
-  chaseDistance: 7
+  chaseDistance: 3

@@ -8,15 +8,9 @@ public class CharacterBinder : MonoBehaviour
     private Vector2 originalPosition;
     private Vector3 originalScale;
     private int animationHash;
-    public static CharacterBinder Instance { get; private set; }
+    
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
         animationHash = Animator.StringToHash("isMoving");
     }
 

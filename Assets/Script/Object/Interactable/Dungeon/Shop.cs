@@ -1,8 +1,8 @@
 public class Shop : Interactable
 {
-    public override void Interact()
+    public override void Interact(Interactor interactPlayer)
     {
-        throw new System.NotImplementedException();
+        base.Interact(interactPlayer);
     }
 
     public override void HighLightOn()

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class StatueUpgrade : Interactable
 {
-    public override void Interact()
+    public override void Interact(Interactor interactPlayer)
     {
-        base.Interact();
+        base.Interact(interactPlayer);
     }
 
     public override void HighLightOn()

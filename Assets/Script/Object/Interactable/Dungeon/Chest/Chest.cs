@@ -4,23 +4,28 @@ public class Chest : Interactable
 {
     private Lootable lootable;
     private Animator animator;
+    private bool isOpen = false;
 
     protected override void Awake()
     {
         base.Awake();
-        TryGetComponent<Lootable>(out lootable);
+        lootable = GetComponent<Lootable>();
         animator = GetComponent<Animator>(); // object animator
     }
 
-    public override void Interact()
+    public override void Interact(Interactor interactPlayer)
     {
-        base.Interact();
-        animator.SetTrigger("Interact");
-        if(lootable != null)
+        if(!isOpen)
         {
-            lootable.DropLoot();
+            base.Interact(interactPlayer);
+            animator.SetTrigger("Interact");
+            if(lootable != null)
+            {
+                lootable.DropLoot();
+            }
+            isOpen = true;
+            Destroy(outline);
         }
-        this.enabled = false;
     }
 
     public override void HighLightOn()
@@ -30,6 +35,6 @@ public class Chest : Interactable
 
     public override void HighLightOff()
     {
-        base.HighLightOff();
+        if(outline) base.HighLightOff();
     }
 }

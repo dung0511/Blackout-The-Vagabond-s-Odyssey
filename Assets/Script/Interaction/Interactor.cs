@@ -36,6 +36,7 @@ public class Interactor : MonoBehaviour
             {
                 if (currentInteractable != null) currentInteractable.HighLightOff();
                 interactable.HighLightOn();
+                // them ui panel o day
                 currentInteractable = interactable;
             }
         }
@@ -55,7 +56,7 @@ public class Interactor : MonoBehaviour
     {
         if (currentInteractable != null)
         {
-            currentInteractable.Interact();
+            currentInteractable.Interact(this);
 
             currentInteractable.HighLightOff(); //if teleport away from trigger range
             currentInteractable = null;

@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        DataManager.playerData = SaveSystem.LoadLocal<PlayerData>("save.sav");
+        DataManager.Load();
     }
     #endregion
 

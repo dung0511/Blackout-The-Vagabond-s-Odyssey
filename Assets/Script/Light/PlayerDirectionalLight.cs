@@ -9,7 +9,6 @@ public class PlayerDirectionalLight : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log(delayLight);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void OnDestroy()

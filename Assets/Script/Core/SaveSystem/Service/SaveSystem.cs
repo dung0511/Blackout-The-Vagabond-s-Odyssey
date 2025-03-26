@@ -7,7 +7,7 @@ public static class SaveSystem
 {
     public static bool SaveLocal<T>(string savePath, T Data)
     {
-        var relativePath = Path.Combine(Application.persistentDataPath, savePath);  //relative path for different machine systems
+        var relativePath = Application.persistentDataPath + savePath;  //relative path for different machine systems
         var backupPath = Path.ChangeExtension(relativePath, ".bak");
         try
         {
@@ -25,6 +25,7 @@ public static class SaveSystem
             using FileStream stream = File.Create(relativePath);
             stream.Close();
             File.WriteAllText(relativePath, JsonConvert.SerializeObject(Data, Formatting.Indented));
+            Debug.Log(relativePath);
             return true;
         } catch (Exception e)
         {
@@ -35,7 +36,7 @@ public static class SaveSystem
 
     public static T LoadLocal<T>(string loadPath)
     {
-        var relativePath = Path.Combine(Application.persistentDataPath, loadPath);
+        var relativePath = Application.persistentDataPath + loadPath;
         if(!File.Exists(relativePath))
         {
             throw new FileNotFoundException($"Load failed: No save file at {relativePath}");
@@ -44,6 +45,7 @@ public static class SaveSystem
         try
         {
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(relativePath));
+            if(data == null) throw new NullReferenceException("data null");
             Debug.Log("Load success");
             return data;
         }

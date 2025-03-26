@@ -10,8 +10,6 @@ public class MapVisualizer : MonoBehaviour
     [SerializeField] private Tilemap floorTilemap, wallTilemap, minimap;
     [SerializeField] private TileBase floorTile, wallTile;
     [SerializeField] private TileBase minimapFloor, minimapWall;
-    [SerializeField] private GameObject doorParent; // up/down, left, right
-    [SerializeField] private GameObject[] doors; // front. side
 
     public void VisualizeLayout(HashSet<Vector2Int> floor)
     {
@@ -41,10 +39,6 @@ public class MapVisualizer : MonoBehaviour
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
         minimap.ClearAllTiles();
-        //clear doors
-        while (doorParent.transform.childCount > 0) {
-            DestroyImmediate(doorParent.transform.GetChild(0).gameObject);
-        }
     }
 
     public void DrawMinimap(HashSet<Vector2Int> floor, TileBase tile)

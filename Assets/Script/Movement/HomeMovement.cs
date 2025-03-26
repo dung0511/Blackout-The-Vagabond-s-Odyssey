@@ -50,5 +50,6 @@ public class HomeMovement : MonoBehaviour
         Vector3 scale = bindedObj.transform.localScale;
         scale.x *= -1;
         bindedObj.transform.localScale = scale;
+        Debug.Log("flip " +bindedObj.transform.localScale);
     }
 }

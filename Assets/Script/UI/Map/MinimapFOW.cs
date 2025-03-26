@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class MinimapFOW : MonoBehaviour
 {
     [SerializeField] private int visionRange = 5;
-    private Tilemap minimap;
+    public Tilemap minimap;
     private Vector2Int lastPlayerPos;
 
     void OnEnable()

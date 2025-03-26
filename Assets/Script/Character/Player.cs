@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     public WeaponController weaponController;
     public PlayerPickController pickController;
 
+    public AssassinSkill assassinSkill;
+
     //private Inventory inventory;
 
     private void Awake()
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour
         moveController = GetComponent<PlayerMoveController>();
         weaponController = GetComponentInChildren<WeaponController>();
         pickController = GetComponent<PlayerPickController>();
-
+        assassinSkill=GetComponentInChildren<AssassinSkill>();
         //inventory = new Inventory();
     }
     private void Update()
@@ -112,6 +114,16 @@ public class Player : MonoBehaviour
             anim.SetBool("isHurt", true);
         else
             anim.SetBool("isHurt", false);
+
+        if (Input.GetKeyDown(KeyCode.E) && assassinSkill.CanDash)
+        {
+            anim.SetBool("isSkill1", true);
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && assassinSkill.CanUltimate)
+        {
+            anim.SetBool("isSkill2", true);
+        }
     }
 
 

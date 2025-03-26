@@ -11560,7 +11560,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6fabd7afa8ec6c845b924f4974ce666c, type: 2}
   - {fileID: 11400000, guid: a42398099368d6848ad1ebd07363a78c, type: 2}
   - {fileID: 11400000, guid: db6078d1620772749b605b30b5ffb73e, type: 2}
-  playerData: {fileID: 11400000, guid: 41acd0bc3bc047e4a8f80d8a790e943d, type: 2}
 --- !u!4 &951762961
 Transform:
   m_ObjectHideFlags: 0
@@ -15282,7 +15281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cd6c3917ec5ad45883f7e26c387165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 41acd0bc3bc047e4a8f80d8a790e943d, type: 2}
   playerCharacter: {fileID: 11400000, guid: 6fabd7afa8ec6c845b924f4974ce666c, type: 2}
   currentStage: 1
   currentLevel: 1

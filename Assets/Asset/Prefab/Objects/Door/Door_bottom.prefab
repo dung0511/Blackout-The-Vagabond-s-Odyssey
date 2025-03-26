@@ -171,12 +171,11 @@ MonoBehaviour:
   m_AlphaCutoff: 0.1
   m_ApplyToSortingLayers: cb69e65300000000557ecc24170f47e5dfdef53fc71833a271b8c6d54d81a30895e7005a
   m_ShapePath:
-  - {x: -12.882675, y: -0.27375937, z: 0}
-  - {x: -12.537071, y: -0.30753803, z: 0}
-  - {x: 1.5068741, y: -0.4076352, z: 0}
-  - {x: 12.941811, y: -0.5993571, z: 0}
-  - {x: 12.981144, y: -0.47139454, z: 0}
-  m_ShapePathHash: -1998337861
+  - {x: -12.882675, y: -0.045592785, z: 0}
+  - {x: -12.924957, y: -0.3531742, z: 0}
+  - {x: 12.964626, y: -0.37119102, z: 0}
+  - {x: 12.940002, y: -0.0431118, z: 0}
+  m_ShapePathHash: -329759199
   m_InstanceId: 0
   m_ShadowShape2DComponent: {fileID: 0}
   m_ShadowShape2DProvider:
@@ -185,8 +184,8 @@ MonoBehaviour:
   m_ShadowMesh:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
-      m_Center: {x: 0.04923439, y: -0.43655825, z: 0}
-      m_Extent: {x: 12.93191, y: 0.16279888, z: 0}
+      m_Center: {x: 0.019834518, y: -0.20715141, z: 0}
+      m_Extent: {x: 12.944792, y: 0.16403961, z: 0}
     m_EdgeProcessing: 1
     m_TrimEdge: 0.2
     m_FlipX: 0

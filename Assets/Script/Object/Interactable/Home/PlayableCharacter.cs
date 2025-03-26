@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayableCharacter : Interactable
 {
-    public CharacterVariantSO selectedCharacter;
+    public CharacterVariantSO selectedCharacter; //them ttin nhan vat vao SO
 
     protected override void Awake()
     {
@@ -21,6 +21,7 @@ public class PlayableCharacter : Interactable
     public override void HighLightOn()
     {
         base.HighLightOn();
+        //them ui panel o day
     }
 
     public override void HighLightOff()

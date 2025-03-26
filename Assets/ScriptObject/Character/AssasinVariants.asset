@@ -15,3 +15,12 @@ MonoBehaviour:
   id: 6fabd7afa8ec6c845b924f4974ce666c
   home: {fileID: 3309401052809838026, guid: ee08315fac9154349b08c2579d09897e, type: 3}
   dungeon: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+  characterImage: {fileID: 6269351798954565519, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
+  characterName: Cool Assasin or sth idk
+  maxHealth: 10
+  maxArmor: 10
+  moveSpeed: 5
+  characterSkillIcon1: {fileID: 21300000, guid: 8eed508ac516b1e4fab083d6ebed19eb, type: 3}
+  characterSkillDescription1: Cool assasin skill #1
+  characterSkillIcon2: {fileID: 21300000, guid: 38c5706dd4e5f36489e0a0bf11da95ac, type: 3}
+  characterSkillDescription2: Cool assasin skill #2

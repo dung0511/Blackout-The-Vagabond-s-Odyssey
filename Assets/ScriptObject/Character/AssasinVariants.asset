@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9b62fd9407e4248acef08b6061b20f, type: 3}
   m_Name: AssasinVariants
   m_EditorClassIdentifier: 
+  id: 6fabd7afa8ec6c845b924f4974ce666c
   home: {fileID: 3309401052809838026, guid: ee08315fac9154349b08c2579d09897e, type: 3}
   dungeon: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}

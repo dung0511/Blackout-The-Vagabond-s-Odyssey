@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ModestTree;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class GameManager : MonoBehaviour
     public int maxStage = 3;
     public int levelsPerStage = 3;
     public string rootSeed;
-    public Queue<string> levelSeeds = new(); //all level seeds pregenerated
-    [SerializeField] private List<string> seedList = new(); //For editor view
+    public Queue<string> levelSeeds = new(); //pre generate levels seed
+    [SerializeField] private List<string> seedList = new(); //for editor view
 
     //long
     public int EnemyKilled = 0;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        DataManager.Save();
         TimePlayed = Time.time - TimePlayed;
         FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(
             FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(),
@@ -49,35 +51,41 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        GenerateLevelSeeds();
-        seedList = new List<string>(levelSeeds);
+        DataManager.playerData = SaveSystem.LoadLocal<PlayerData>("save.sav");
     }
     #endregion
+
+    
 
     public void SetPlayerCharacter(CharacterVariantSO player)
     {
         playerCharacter = player;
+        DataManager.playerData.characterId = player.id;
     }
 
     public void StartDungeon()
     {
-        var p = Instantiate(playerCharacter.dungeon, Vector3.zero, Quaternion.identity);
+        var p = Instantiate(playerCharacter.dungeon, Vector3.zero, Quaternion.identity);  //hide player
         var ps = p.GetComponentsInChildren<SpriteRenderer>();
         foreach(var s in ps) s.enabled = false;
-        GameSceneManager.Instance.LoadScene("Dungeon");
+
+        GenerateLevelSeeds();   //dungeon seed
+        seedList = new List<string>(levelSeeds);
+
+        SceneManager.LoadScene("Dungeon");
     }
 
     public void NextLevel()
     {
-
+        UpdatePlayerData();
         currentLevel++;
         if(currentLevel > levelsPerStage)
         {
             currentLevel = 0;
-            GameSceneManager.Instance.LoadBossStageScene(currentStage++);
+            SceneManager.LoadScene("Boss_Stage"+ currentStage++);
         } else 
         {
-            GameSceneManager.Instance.LoadScene("Dungeon");
+            SceneManager.LoadScene("Dungeon");
         }
         //long //behind load scence, never reach
         TimePlayed = Time.time-TimePlayed;
@@ -96,6 +104,11 @@ public class GameManager : MonoBehaviour
         {
             levelSeeds.Enqueue(Utility.GenerateRandomSeed(10));
         }
+    }
+
+    public void UpdatePlayerData()
+    {
+        
     }
 
 }

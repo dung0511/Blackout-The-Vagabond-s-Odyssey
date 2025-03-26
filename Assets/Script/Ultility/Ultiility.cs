@@ -124,13 +124,8 @@ public static class Utility
 
     public static Vector2 GetRandomPositionInCircle(Vector2 center, float radius)
     {
-        float angle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
-        float randomRadius = Mathf.Sqrt(UnityEngine.Random.Range(0f, 1f)) * radius;
-        
-        float x = center.x + randomRadius * Mathf.Cos(angle);
-        float y = center.y + randomRadius * Mathf.Sin(angle);
-        
-        return new Vector2(x, y);
+        var point = UnityEngine.Random.insideUnitCircle * radius;
+        return point;
     }
 
     public static string GenerateRandomSeed(int length)
@@ -139,7 +134,7 @@ public static class Utility
         var result = new char[length];
         for (int i = 0; i < length; i++)
         {
-            result[i] = chars[UnityEngine.Random.Range(0, chars.Length)];
+            result[i] = chars[UnseededRng(0, chars.Length)];
         }
         return new string(result);
     }

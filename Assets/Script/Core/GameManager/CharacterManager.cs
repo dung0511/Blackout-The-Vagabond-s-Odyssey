@@ -1,20 +1,19 @@
+
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    public Dictionary<int,CharacterVariantSO> characters;
+    public List<CharacterVariantSO> characterList;
 
-    public static CharacterManager Instance;
-    private void Awake()
+    void Awake()
     {
-        if(Instance != null)
+        var charId = DataManager.playerData.characterId;
+        var character = characterList.FirstOrDefault(c => c.id == charId); 
+        if(character)
         {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
+            GameManager.Instance.playerCharacter = character;   //load prev played char
+        }      
     }
-
-
 }

@@ -96,8 +96,8 @@ public class StageOneDungeonGenerator : StageOne
 
         tmp.Remove(exitRoom);
         tmp.Remove(treasureRoom); //remove exit and treasure room from tmp, prepare tmp for elite room
-        Debug.Log("Exit room: " + exitPos);
-        Debug.Log("Treasure room: " + treasurePos);
+        // Debug.Log("Exit room: " + exitPos);
+        // Debug.Log("Treasure room: " + treasurePos);
 
         //set elite room (random)
         var eliteRoomNum = Mathf.CeilToInt(DungeonData.rooms.Count / 10f);
@@ -109,7 +109,7 @@ public class StageOneDungeonGenerator : StageOne
             r = DungeonData.rooms.FirstOrDefault(x => x.center == r.center);
             r.roomType = RoomType.Elite;
             tmp.Remove(r); //remove elite room from tmp, avoid duplicate,prepare tmp for shop room
-            Debug.Log("Elite: "+r.center);
+            // Debug.Log("Elite: "+r.center);
         }
 
         //set shop room (random)
@@ -117,7 +117,7 @@ public class StageOneDungeonGenerator : StageOne
         var sr = tmp.ElementAt(shopIndex);
         sr = DungeonData.rooms.FirstOrDefault(x => x.center == sr.center);
         sr.roomType = RoomType.Shop;
-        Debug.Log("Shop: "+sr.center);
+        // Debug.Log("Shop: "+sr.center);
     }
 
     private void CreateSpawnRoom(HashSet<Vector2Int> floorPositions)

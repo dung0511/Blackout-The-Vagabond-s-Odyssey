@@ -30,14 +30,13 @@ public class Interactor : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Interactable interactable))
+        if (collision.TryGetComponent(out Interactable newInteractable))
         {
-            if (currentInteractable != interactable)
+            if (currentInteractable != newInteractable)
             {
                 if (currentInteractable != null) currentInteractable.HighLightOff();
-                interactable.HighLightOn();
-                // them ui panel o day
-                currentInteractable = interactable;
+                newInteractable.HighLightOn();
+                currentInteractable = newInteractable;
             }
         }
     }

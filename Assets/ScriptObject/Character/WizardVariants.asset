@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9b62fd9407e4248acef08b6061b20f, type: 3}
   m_Name: WizardVariants
   m_EditorClassIdentifier: 
+  id: db6078d1620772749b605b30b5ffb73e
   home: {fileID: 9188130133351135442, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
   dungeon: {fileID: 1731823609027247997, guid: 567d2f01d4d7de545be419badcf308e8, type: 3}

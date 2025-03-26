@@ -9,6 +9,11 @@ public class CharacterVariantSO : ScriptableObject
     public GameObject home;
     public GameObject dungeon;
 
+    #region Header 
+    [Space(10)]
+    [Header("CHARACTER INFO")]
+    #endregion
+
     public Sprite characterImage;
     public string characterName;
     public float maxHealth;

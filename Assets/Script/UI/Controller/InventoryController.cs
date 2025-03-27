@@ -97,6 +97,16 @@ public class InventoryController : MonoBehaviour, IUIScreen
 
     private void DropItem(int itemIndex, int quantity)
     {
+        //InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+        //if (inventoryItem.isEmpty || inventoryItem.item.DropPrefab == null) return;
+
+        //Vector3 dropPosition = transform.position + new Vector3(1f, 0, 0); 
+
+        //for (int i = 0; i < quantity; i++)
+        //{
+        //    GameObject droppedItem = Instantiate(inventoryItem.item.DropPrefab, dropPosition, Quaternion.identity);
+        //}
+
         inventoryData.RemoveItem(itemIndex, quantity);
         inventoryUI.ResetSelection();
     }

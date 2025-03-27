@@ -9,7 +9,7 @@ public class ConsumableItemSO : ItemSO, IDestroyableItem, IItemAction
     [SerializeField]
     private List<ModifierData> modifiersData = new List<ModifierData>();
 
-    public string ActionName => "Consume";
+    public string ActionName => "Use";
 
     public bool PerformAction(GameObject player)
     {

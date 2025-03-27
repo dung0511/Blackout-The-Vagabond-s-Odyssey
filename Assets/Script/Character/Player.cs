@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     public WeaponController weaponController;
     public PlayerPickController pickController;
 
-    public AssassinSkill assassinSkill;
+    public BaseSkill Skill { get; private set; }
 
     //private Inventory inventory;
 
@@ -52,22 +52,27 @@ public class Player : MonoBehaviour
         moveController = GetComponent<PlayerMoveController>();
         weaponController = GetComponentInChildren<WeaponController>();
         pickController = GetComponent<PlayerPickController>();
-        assassinSkill=GetComponentInChildren<AssassinSkill>();
+        Skill = GetComponentInChildren<BaseSkill>();
+
+        if (Skill == null)
+        {
+            Debug.LogError("Skill Controller is missing on Player!");
+        }
         //inventory = new Inventory();
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !Skill.IsUsingSkill())
         {
             weaponController.ChangeWeapon(1);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon && !Skill.IsUsingSkill())
         {
             weaponController.ChangeWeapon(2);
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && pickController.isTouchItem)
+        if (Input.GetKeyDown(KeyCode.F) && pickController.isTouchItem && !Skill.IsUsingSkill())
         {
             pickController.PickItemWeapon();
         }
@@ -95,7 +100,7 @@ public class Player : MonoBehaviour
         //    }
         //}
 
-        if (!healthController.IsDead)
+        if (!healthController.IsDead && !Skill.IsUsingSkill())
         {
             isMove = moveController.MoveControl();
             anim.SetBool("isMoving", isMove);
@@ -115,14 +120,15 @@ public class Player : MonoBehaviour
         else
             anim.SetBool("isHurt", false);
 
-        if (Input.GetKeyDown(KeyCode.E) && assassinSkill.CanDash)
+        if (Input.GetKeyDown(KeyCode.E) && Skill.CanUseSkill1())
         {
             anim.SetBool("isSkill1", true);
 
         }
-        if (Input.GetKeyDown(KeyCode.Q) && assassinSkill.CanUltimate)
+        if (Input.GetKeyDown(KeyCode.Q) && Skill.CanUseSkill2())
         {
-            anim.SetBool("isSkill2", true);
+           anim.SetBool("isSkill2", true);
+           // Skill.UltimmateSkill();
         }
     }
 

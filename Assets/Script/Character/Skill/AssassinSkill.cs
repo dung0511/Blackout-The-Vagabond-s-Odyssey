@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class AssassinSkill : MonoBehaviour, ISkillController
+public class AssassinSkill : BaseSkill
 {
     public float CoolDownNormalSkill;
     public float CoolDownUltimateSkill;
@@ -29,7 +29,7 @@ public class AssassinSkill : MonoBehaviour, ISkillController
         // animator = GetComponentInChildren<Animator>();
     }
 
-    public void NormalSkill()
+    public override void NormalSkill()
     {
         if (!isDashing && canDash)
         {
@@ -58,7 +58,7 @@ public class AssassinSkill : MonoBehaviour, ISkillController
         }
     }
 
-    public void UltimmateSkill()
+    public override void UltimmateSkill()
     {
         if (!isUltimate && canUltimate)
         {
@@ -164,5 +164,20 @@ public class AssassinSkill : MonoBehaviour, ISkillController
     {
         isDashing = false;
         animator.SetBool("isSkill1", false);
+    }
+
+    public override bool CanUseSkill1()
+    {
+        return canDash;
+    }
+
+    public override bool CanUseSkill2()
+    {
+        return canUltimate;
+    }
+
+    public override bool IsUsingSkill()
+    {
+        return isDashing || isUltimate;
     }
 }

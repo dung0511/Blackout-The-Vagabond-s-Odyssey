@@ -19,6 +19,6 @@ public abstract class ItemSO : ScriptableObject
     [field: SerializeField]
     public Sprite ItemImage { get; set; }
 
-    //[field: SerializeField]
-    //public GameObject DropPrefab { get; set; }
+    [field: SerializeField]
+    public GameObject DropPrefab { get; set; }
 }

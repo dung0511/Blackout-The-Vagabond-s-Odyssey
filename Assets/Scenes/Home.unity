@@ -1287,6 +1287,7 @@ GameObject:
   - component: {fileID: 147419622}
   - component: {fileID: 147419624}
   - component: {fileID: 147419623}
+  - component: {fileID: 147419625}
   m_Layer: 5
   m_Name: Character Info Panel
   m_TagString: Untagged
@@ -1355,6 +1356,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147419621}
   m_CullTransparentMesh: 1
+--- !u!114 &147419625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147419621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c710fc9df72c1864e99b27bf22ae6a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterImage: {fileID: 1709945860}
+  characterNameText: {fileID: 1702197939}
+  maxHealthText: {fileID: 1573517274}
+  maxArmorText: {fileID: 1187779391}
+  moveSpeedText: {fileID: 2095854743}
 --- !u!1001 &165821648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11447,14 +11465,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.2
+  m_fontSize: 28.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 100
   m_fontStyle: 17
-  m_HorizontalAlignment: 8
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -11464,7 +11482,7 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.5
+  m_wordWrappingRatios: 0
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
@@ -12739,14 +12757,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.2
+  m_fontSize: 28.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 100
   m_fontStyle: 17
-  m_HorizontalAlignment: 8
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -12756,7 +12774,7 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.5
+  m_wordWrappingRatios: 0
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
@@ -13548,6 +13566,7 @@ GameObject:
   - component: {fileID: 1092546668}
   - component: {fileID: 1092546670}
   - component: {fileID: 1092546669}
+  - component: {fileID: 1092546671}
   m_Layer: 5
   m_Name: Skill Info Panel
   m_TagString: Untagged
@@ -13617,6 +13636,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092546667}
   m_CullTransparentMesh: 1
+--- !u!114 &1092546671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092546667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f60936bae4dda141a2b7ba116ded02d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillIcon1: {fileID: 607861557}
+  skillDescription1: {fileID: 883089338}
+  skillIcon2: {fileID: 384852255}
+  skillDescription2: {fileID: 996784735}
 --- !u!1001 &1105273892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16764,6 +16799,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5718913345049258520, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
+      propertyPath: characterInfoPanel
+      value: 
+      objectReference: {fileID: 147419621}
+    - target: {fileID: 5718913345049258520, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
+      propertyPath: characterSkillsPanel
+      value: 
+      objectReference: {fileID: 1092546667}
     - target: {fileID: 5990494557785393302, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
       propertyPath: m_Name
       value: Home_Knight
@@ -43674,6 +43717,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7205163195712379484, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
+      propertyPath: characterInfoPanel
+      value: 
+      objectReference: {fileID: 147419621}
+    - target: {fileID: 7205163195712379484, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
+      propertyPath: characterSkillsPanel
+      value: 
+      objectReference: {fileID: 1092546667}
     - target: {fileID: 9188130133351135442, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
       propertyPath: m_Name
       value: Home_Wizard
@@ -43798,6 +43849,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Home_Assassin
       objectReference: {fileID: 0}
+    - target: {fileID: 3572041517497048900, guid: ee08315fac9154349b08c2579d09897e, type: 3}
+      propertyPath: characterInfoPanel
+      value: 
+      objectReference: {fileID: 147419621}
+    - target: {fileID: 3572041517497048900, guid: ee08315fac9154349b08c2579d09897e, type: 3}
+      propertyPath: characterSkillsPanel
+      value: 
+      objectReference: {fileID: 1092546667}
     - target: {fileID: 6367560020681673834, guid: ee08315fac9154349b08c2579d09897e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.29

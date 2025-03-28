@@ -1,4 +1,4 @@
-using Assets.Script.Service.IService;
+﻿using Assets.Script.Service.IService;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -6,7 +6,7 @@ using UnityEngine;
 public class Item : MonoBehaviour, IPickService
 {
     [field: SerializeField]
-    public ItemSO inventoryItem { get; private set; }
+    public ItemSO inventoryItem { get; set; }
 
     [field: SerializeField]
     public int quantity { get; set; } = 1;
@@ -50,7 +50,15 @@ public class Item : MonoBehaviour, IPickService
 
     public void Pick()
     {
-        //pick logic
+        InventoryController inventory = FindObjectOfType<InventoryController>();
+        if (inventory == null) return;
+
+        int remaining = inventory.inventoryData.AddItem(this.inventoryItem, this.quantity);
+
+        if (remaining <= 0)
+        {
+            DestroyItem();
+        }
     }
 
     public void Drop()

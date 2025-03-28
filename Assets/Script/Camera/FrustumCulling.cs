@@ -5,20 +5,22 @@ public class FrustumCulling : MonoBehaviour
     [SerializeField, Range(1,100)] private float cullingOffset = 5.0f; // offset for culling
     [SerializeField] private GameObject[] CullingObjectsParent; 
     private Camera playerCamera;
+    private float cameraHalfWidth;
 
-    void Awake()
+    void OnEnable()
     {
-        playerCamera = GetComponent<Camera>(); 
+        playerCamera = GetComponent<Camera>();
+        cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height);
     }
 
     void FixedUpdate()
     {
-        // Calculate camera bounds with an offset
-        float cameraHalfWidth = playerCamera.orthographicSize * ((float)Screen.width / (float)Screen.height);
-        float cameraRight = playerCamera.transform.position.x + cameraHalfWidth + cullingOffset;
-        float cameraLeft = playerCamera.transform.position.x - cameraHalfWidth - cullingOffset;
-        float cameraTop = playerCamera.transform.position.y + playerCamera.orthographicSize + cullingOffset;
-        float cameraBottom = playerCamera.transform.position.y - playerCamera.orthographicSize - cullingOffset;
+        var cameraPos = playerCamera.transform.position;
+        // Calculate camera bounds with offset
+        float cameraRight = cameraPos.x + cameraHalfWidth + cullingOffset;
+        float cameraLeft = cameraPos.x - cameraHalfWidth - cullingOffset;
+        float cameraTop = cameraPos.y + playerCamera.orthographicSize + cullingOffset;
+        float cameraBottom = cameraPos.y - playerCamera.orthographicSize - cullingOffset;
 
         foreach (GameObject parent in CullingObjectsParent)
         {
@@ -26,8 +28,7 @@ public class FrustumCulling : MonoBehaviour
             
             foreach (Transform child in parent.transform)
             {
-                Renderer objRenderer = child.GetComponent<Renderer>();
-                if (objRenderer != null)
+                if (child.TryGetComponent<Renderer>(out var objRenderer))
                 {
                     Bounds bounds = objRenderer.bounds; // get sprite bounding box
                     float objLeft = bounds.min.x;

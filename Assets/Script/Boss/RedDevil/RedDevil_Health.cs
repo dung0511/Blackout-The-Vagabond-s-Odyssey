@@ -31,7 +31,7 @@ public class RedDevil_Health : MonoBehaviour, IDamageable
             {
                 item.enabled = false;
             }
-            //enemyHealth.roomBelong.OnEnemyDeath();
+            BossManager.Instance.bossKillEvent.Invoke();
         }
         else
         {

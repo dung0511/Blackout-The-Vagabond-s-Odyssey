@@ -1,9 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu]
-public class ItemSO : ScriptableObject
+public abstract class ItemSO : ScriptableObject
 {
-
     [field: SerializeField]
     public bool IsStackable { get; set; }
     public int ID => GetInstanceID();
@@ -20,4 +18,7 @@ public class ItemSO : ScriptableObject
 
     [field: SerializeField]
     public Sprite ItemImage { get; set; }
+
+    //[field: SerializeField]
+    //public GameObject DropPrefab { get; set; }
 }

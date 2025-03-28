@@ -50,6 +50,7 @@ public class UIInventoryItem : MonoBehaviour, IPointerClickHandler, IBeginDragHa
         this.itemImage.gameObject.SetActive(true);
         this.itemImage.sprite = sprite;
         this.quantityTxt.text = quantity + "";
+        this.itemImage.preserveAspect = true;
         empty = false;
     }
 

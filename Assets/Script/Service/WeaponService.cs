@@ -23,6 +23,7 @@ namespace Assets.Script.Service
 
         public abstract void Attack();
         public abstract void RotateWeapon();
-        public abstract void DropWeapon(GameObject game);
+        public abstract void DropWeapon();
+        public abstract void PickWeapon();
     }
 }

@@ -2,8 +2,9 @@ using UnityEngine;
 
 public interface IWeaponService
 {
-        void Attack();
-        void RotateWeapon();
-        void DropWeapon(GameObject game);
-    
+    void Attack();
+    void RotateWeapon();
+    void DropWeapon();
+    void PickWeapon();
+
 }

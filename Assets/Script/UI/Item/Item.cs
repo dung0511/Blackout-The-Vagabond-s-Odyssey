@@ -1,8 +1,9 @@
+using Assets.Script.Service.IService;
 using System;
 using System.Collections;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IPickService
 {
     [field: SerializeField]
     public ItemSO inventoryItem { get; private set; }
@@ -40,5 +41,25 @@ public class Item : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+    }
+
+    public GameObject GetPickGameOject()
+    {
+       return gameObject;
+    }
+
+    public void Pick()
+    {
+        //pick logic
+    }
+
+    public void Drop()
+    {
+        //drop logic
+    }
+    //return false la item, return true la weapon
+    public bool IsPickingItemOrWeapon()
+    {
+        return false;
     }
 }

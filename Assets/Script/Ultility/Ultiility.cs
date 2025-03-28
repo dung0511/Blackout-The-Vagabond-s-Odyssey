@@ -122,13 +122,19 @@ public static class Utility
         return visitedNodes;
     }
 
+    public static Vector2 GetRandomPositionInCircle(Vector2 center, float radius)
+    {
+        var point = UnityEngine.Random.insideUnitCircle * radius;
+        return point;
+    }
+
     public static string GenerateRandomSeed(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
         var result = new char[length];
         for (int i = 0; i < length; i++)
         {
-            result[i] = chars[UnityEngine.Random.Range(0, chars.Length)];
+            result[i] = chars[UnseededRng(0, chars.Length)];
         }
         return new string(result);
     }

@@ -2,11 +2,19 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CircleCollider2D))]
 public class Interactor : MonoBehaviour
 {
     [SerializeField] private float range = 1.5f;
-    [SerializeField] private LayerMask interactableLayer;
-    private Interactable previousInteract;
+    private Interactable currentInteractable;
+
+    void Awake()
+    {
+        var trigger = GetComponent<CircleCollider2D>();
+        trigger.radius = range;
+        trigger.isTrigger = true;
+        trigger.includeLayers = LayerMask.GetMask("Interactable");
+    }
 
     void OnEnable()
     {
@@ -16,51 +24,45 @@ public class Interactor : MonoBehaviour
 
     void OnDisable()
     {
-        InputManager.Instance.playerInput.Ingame.Interact.performed += Interact;
+        InputManager.Instance.playerInput.Ingame.Interact.performed -= Interact;
         InputManager.Instance.playerInput.Ingame.Interact.Disable();
     }
-
-    void Update()
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, range, interactableLayer);
-
-        if (hit == null) //no interactable in range
+        if (collision.TryGetComponent(out Interactable newInteractable))
         {
-            if (previousInteract != null) //turn off previous object when out of range
+            if (currentInteractable != newInteractable)
             {
-                previousInteract.HighLightOff();
-                previousInteract = null;
-            }
-        }
-        else
-        {
-            if (hit.TryGetComponent<Interactable>(out Interactable newTarget))
-            {
-                if (previousInteract != newTarget)
-                {
-                    newTarget.HighLightOn(); //hightlight new found tagert
-                    if (previousInteract != null) previousInteract.HighLightOff(); //turn off previous target
-                    previousInteract = newTarget;
-                }
+                if (currentInteractable != null) currentInteractable.HighLightOff();
+                newInteractable.HighLightOn();
+                currentInteractable = newInteractable;
             }
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.HighLightOff();
+            currentInteractable = null;
+        }
+    }
+
 
     private void Interact(InputAction.CallbackContext context)
     {
-        if (previousInteract != null)
+        if (currentInteractable != null)
         {
-            previousInteract.Interact();
+            currentInteractable.Interact(this);
+
+            currentInteractable.HighLightOff(); //if teleport away from trigger range
+            currentInteractable = null;
         }
         else
         {
             Debug.Log("No interactable in range");
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, range);
     }
 }

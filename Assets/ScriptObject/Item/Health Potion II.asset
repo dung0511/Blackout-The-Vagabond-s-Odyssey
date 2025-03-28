@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d7785d79f39b948b0ac72b65820840, type: 3}
+  m_Name: Health Potion II
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 1
+  <maxStackSize>k__BackingField: 9
+  <Name>k__BackingField: Health Potion II
+  <Description>k__BackingField: Heals
+  <ItemImage>k__BackingField: {fileID: -7118549172432436139, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
+  modifiersData:
+  - statsModifier: {fileID: 11400000, guid: 1a07a550f7e65e04c839b587b8ee128e, type: 2}
+    value: 20

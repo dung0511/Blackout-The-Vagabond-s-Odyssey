@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: LootTable
+  m_EditorClassIdentifier: Assembly-CSharp::LootTableSO
+  table:
+  - loots:
+    - {fileID: 1892861501244000876, guid: bd4d6c70f3e50dd4abd6d1a8bfbca1ee, type: 3}
+    - {fileID: 1367135548067778609, guid: 9bb0b86c0badd8d4488d714713224660, type: 3}
+    tableChance: 60
+  - loots:
+    - {fileID: 3536879428634636031, guid: b5d08cc3cd15d204caa4106183936264, type: 3}
+    - {fileID: 2491373450553078214, guid: cafc77b814f710d418c6a2827f2ee15c, type: 3}
+    tableChance: 40

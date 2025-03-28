@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: meleeDetail
       value: 
       objectReference: {fileID: 11400000, guid: bca2f82e158664f46a74f24ec1242053, type: 2}
+    - target: {fileID: 7533895328017823390, guid: da481c07828ec0d41a1524d282da9934, type: 3}
+      propertyPath: MeleeWeaponSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bca2f82e158664f46a74f24ec1242053, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

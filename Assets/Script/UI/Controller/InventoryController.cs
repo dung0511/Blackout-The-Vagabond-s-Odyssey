@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class InventoryController : MonoBehaviour, IUIScreen
 {
@@ -10,12 +11,15 @@ public class InventoryController : MonoBehaviour, IUIScreen
     [SerializeField]
     private InventorySO inventoryData;
 
+    private PlayerHealthController playerHealth;
+
     public List<InventoryItem> initialItems = new List<InventoryItem>();
 
     private void Start()
     {
         PrepareUI();
         PrepareInventoryData();
+        playerHealth = GetComponent<PlayerHealthController>();
     }
 
     private void PrepareInventoryData()
@@ -50,9 +54,61 @@ public class InventoryController : MonoBehaviour, IUIScreen
         this.inventoryUI.OnItemActionRequested += HandleItemActionRequest;
     }
 
+    public void PerformAction(int itemIndex)
+    {
+        InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+        if (inventoryItem.isEmpty) return;
+
+        IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
+        if (destroyableItem != null)
+        {
+            inventoryData.RemoveItem(itemIndex, 1);
+        }
+
+        IItemAction itemAction = inventoryItem.item as IItemAction;
+        if (itemAction != null)
+        {
+            itemAction.PerformAction(gameObject);
+            if (inventoryData.GetItemAt(itemIndex).isEmpty)
+            {
+                inventoryUI.ResetSelection();
+            }
+        }
+    }
+
     private void HandleItemActionRequest(int itemIndex)
     {
+        InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+        if (inventoryItem.isEmpty) return;
 
+        IItemAction itemAction = inventoryItem.item as IItemAction;
+        if (itemAction != null)
+        {
+            inventoryUI.ShowItemAction(itemIndex);
+            inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
+        }
+
+        IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
+        if (destroyableItem != null)
+        {
+            inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity));
+        }
+    }
+
+    private void DropItem(int itemIndex, int quantity)
+    {
+        //InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+        //if (inventoryItem.isEmpty || inventoryItem.item.DropPrefab == null) return;
+
+        //Vector3 dropPosition = transform.position + new Vector3(1f, 0, 0); 
+
+        //for (int i = 0; i < quantity; i++)
+        //{
+        //    GameObject droppedItem = Instantiate(inventoryItem.item.DropPrefab, dropPosition, Quaternion.identity);
+        //}
+
+        inventoryData.RemoveItem(itemIndex, quantity);
+        inventoryUI.ResetSelection();
     }
 
     private void HandleDragging(int itemIndex)

@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2449696428617353376}
   - component: {fileID: 7533895328017823390}
   - component: {fileID: 3314127579722580301}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Base_MeleeWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,11 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdaac9f74ee58f409046ed2934b6513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeDetail: {fileID: 0}
-  CharacterSR: {fileID: 0}
-  anim: {fileID: 0}
-  dame: 0
-  inHand: 0
+  attackCoolDown: 0
+  MeleeWeaponSO: {fileID: 0}
 --- !u!61 &3314127579722580301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -299,3 +296,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f745d6c511a6294b9be1fd28817d4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damege: 0

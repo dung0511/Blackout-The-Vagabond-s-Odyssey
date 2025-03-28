@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f5576c794c33d41ad19c7ca86d41c1, type: 3}
+  m_Name: RiderOrc_EnemyDetails
+  m_EditorClassIdentifier: 
+  enemyName: RiderOrc
+  enemyPrefab: {fileID: 1510285459609464349, guid: f408b741563be794f8f084a329bee1e3, type: 3}
+  chaseDistance: 9

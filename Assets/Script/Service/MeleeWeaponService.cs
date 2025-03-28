@@ -18,14 +18,37 @@ public class MeleeWeaponService : WeaponService
         _animator = animator;
     }
 
+
+    public float GetAttackCooldown() => _attackCooldown;
+    public void SetAttackCooldown(float value) => _attackCooldown = value;
+
+
+    public int GetDamage() => _damage;
+    public void SetDamage(int value) => _damage = value;
+
+
+    public Animator GetAnimator() => _animator;
+    public void SetAnimator(Animator value) => _animator = value;
+
+
+    public bool IsInHand() => _inHand;
+    public void SetInHand(bool value) => _inHand = value;
+
+
+    public Transform GetTransform() => _transform;
+    public void SetTransform(Transform value) => _transform = value;
+
+
+    //public SpriteRenderer GetCharacterSpriteRenderer() => _characterSR;
+    public SpriteRenderer GetCharacterSR()
+    {
+        return _characterSR;
+    }
+    public void SetCharacterSpriteRenderer(SpriteRenderer value) => _characterSR = value;
+
     public override void Attack()
     {
-        if (Time.time >= _lastAttackTime + _attackCooldown)
-        {
-            _animator.SetBool("isMeleeAttack", true);
-            _lastAttackTime = Time.time;
-
-        }
+        _animator.SetBool("isMeleeAttack", true);
     }
 
     public override void RotateWeapon()
@@ -46,12 +69,21 @@ public class MeleeWeaponService : WeaponService
         _transform.localScale = new Vector3(0.7f, isFlipped ? -0.7f : 0.7f, 1);
     }
 
-    public override void DropWeapon(GameObject game)
+    public override void DropWeapon()
     {
-        game.GetComponent<MeleeWeapon>().meleeWeapon._characterSR = null;
-        game.transform.rotation = Quaternion.identity;
-        game.GetComponent<MeleeWeapon>().meleeWeapon._inHand = false;
-        game.transform.localScale = new Vector3(5, 5, 0);
-        game.GetComponent<BoxCollider2D>().enabled = true;
+        _characterSR = null;
+        _inHand = false;
+        _transform.rotation = Quaternion.identity;
+        _transform.localScale = new Vector3(5, 5, 0);
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    public override void PickWeapon()
+    {
+        _transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        _characterSR = _transform.root.GetComponentInChildren<SpriteRenderer>();
+        _transform.localScale = new Vector3(0.7f, 0.7f, 0);
+        _transform.localPosition = new Vector3(0, -0.03f, 0);
+        _inHand = true;
     }
 }

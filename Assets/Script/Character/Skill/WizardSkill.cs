@@ -18,7 +18,7 @@ public class WizardSkill : BaseSkill
     public GameObject normalBulletPrefab;
     public Transform firePos;
     public float bulletForce = 5f;
-    private float lastFireTime;
+    private float lastFireTime=-10f;
     public float normalSkillCoolDown = 5f;
     public int normalSkillDame;
 

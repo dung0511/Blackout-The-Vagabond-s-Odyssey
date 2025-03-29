@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayableCharacter : Interactable
 {
-    public CharacterVariantSO selectedCharacter; //them ttin nhan vat vao SO
+    public CharacterVariantSO selectedCharacter;
+    public GameObject characterInfoPanel;
+    public GameObject characterSkillsPanel;
 
     protected override void Awake()
     {
@@ -22,10 +24,37 @@ public class PlayableCharacter : Interactable
     {
         base.HighLightOn();
         //them ui panel o day
+        UpdateAndShowPanels(true);
     }
 
     public override void HighLightOff()
     {
         base.HighLightOff();
+        UpdateAndShowPanels(false);
+    }
+    private void UpdateAndShowPanels(bool show)
+    {
+        if (characterInfoPanel != null && characterSkillsPanel != null)
+        {
+            if (show)
+            {
+
+                var infoPanelScript = characterInfoPanel.GetComponent<CharacterInfoPanel>();
+                if (infoPanelScript != null)
+                {
+                    infoPanelScript.UpdateCharacterInfo(selectedCharacter);
+                }
+
+
+                var skillsPanelScript = characterSkillsPanel.GetComponent<CharacterSkillsPanel>();
+                if (skillsPanelScript != null)
+                {
+                    skillsPanelScript.UpdateCharacterSkills(selectedCharacter);
+                }
+            }
+
+            characterInfoPanel.SetActive(show);
+            characterSkillsPanel.SetActive(show);
+        }
     }
 }

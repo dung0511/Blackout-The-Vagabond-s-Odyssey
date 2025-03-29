@@ -5,11 +5,10 @@ using UnityEngine.UIElements;
 
 public class InventoryController : MonoBehaviour, IUIScreen
 {
-    [SerializeField]
-    private UIInventory inventoryUI;
+    private UIInventory inventoryUI => UIInventory.Instance;
 
     [SerializeField]
-    private InventorySO inventoryData;
+    public InventorySO inventoryData;
 
     private PlayerHealthController playerHealth;
 
@@ -31,7 +30,6 @@ public class InventoryController : MonoBehaviour, IUIScreen
             if (item.isEmpty)
                 continue;
             inventoryData.AddItem(item);
-
         }
     }
 
@@ -97,19 +95,25 @@ public class InventoryController : MonoBehaviour, IUIScreen
 
     private void DropItem(int itemIndex, int quantity)
     {
-        //InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
-        //if (inventoryItem.isEmpty || inventoryItem.item.DropPrefab == null) return;
+        InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
+        if (inventoryItem.isEmpty || inventoryItem.item.DropPrefab == null) return;
 
-        //Vector3 dropPosition = transform.position + new Vector3(1f, 0, 0); 
+        int quantityToDrop = inventoryItem.quantity;
 
-        //for (int i = 0; i < quantity; i++)
-        //{
-        //    GameObject droppedItem = Instantiate(inventoryItem.item.DropPrefab, dropPosition, Quaternion.identity);
-        //}
+        Vector3 dropPosition = transform.position + new Vector3(UnityEngine.Random.Range(-1f, 1f), 0.5f, 0);
 
-        inventoryData.RemoveItem(itemIndex, quantity);
+        GameObject droppedItemObject = Instantiate(inventoryItem.item.DropPrefab, dropPosition, Quaternion.identity);
+        Item droppedItem = droppedItemObject.GetComponent<Item>();
+        if (droppedItem != null)
+        {
+            droppedItem.inventoryItem = inventoryItem.item;
+            droppedItem.quantity = quantityToDrop;
+        }
+
+        inventoryData.RemoveItem(itemIndex, quantityToDrop);
         inventoryUI.ResetSelection();
     }
+
 
     private void HandleDragging(int itemIndex)
     {

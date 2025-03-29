@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 6fabd7afa8ec6c845b924f4974ce666c
   home: {fileID: 3309401052809838026, guid: ee08315fac9154349b08c2579d09897e, type: 3}
   dungeon: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
-  characterImage: {fileID: 6269351798954565519, guid: 5ad697aae8b94f04d8b4a7890c0859fc, type: 3}
+  characterImage: {fileID: 5692671443236587484, guid: 18b9225ae99df68409bd44f6313bdf74, type: 3}
   characterName: Cool Assasin or sth idk
   maxHealth: 10
   maxArmor: 10

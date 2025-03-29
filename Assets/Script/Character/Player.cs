@@ -64,7 +64,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && !Skill.IsUsingSkill())
         {
-            weaponController.ChangeWeapon(1);
+            Debug.Log("Can CHange wweapon");
+         //   weaponController.ChangeWeapon(1);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon && !Skill.IsUsingSkill())
@@ -100,20 +101,23 @@ public class Player : MonoBehaviour
         //    }
         //}
 
-        if (!healthController.IsDead && !Skill.IsUsingSkill())
-        {
-            isMove = moveController.MoveControl();
-            anim.SetBool("isMoving", isMove);
-        }
-        else
-        {
-            GetComponent<CapsuleCollider2D>().enabled = false;
-            GameObject.Find("Weapon").gameObject.SetActive(false);
-            armorController.ArmorWhenPlayerDie();
-            rd.linearVelocity = Vector2.zero;
-            Cursor.visible = true;
-            anim.SetBool("isDead", true);
-        }
+        
+            if (!healthController.IsDead)
+            {
+                isMove = moveController.MoveControl();
+                anim.SetBool("isMoving", isMove);
+            }
+            else
+            {
+                GetComponent<CapsuleCollider2D>().enabled = false;
+                weaponController.gameObject.SetActive(false);
+                armorController.ArmorWhenPlayerDie();
+                rd.linearVelocity = Vector2.zero;
+                Cursor.visible = true;
+                anim.SetBool("isDead", true);
+            }
+        
+       
 
         if (healthController.IsHurt && !healthController.IsDead)
             anim.SetBool("isHurt", true);

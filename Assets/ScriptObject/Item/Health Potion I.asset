@@ -17,6 +17,7 @@ MonoBehaviour:
   <Name>k__BackingField: Health Potion I
   <Description>k__BackingField: Heals
   <ItemImage>k__BackingField: {fileID: -8485995304713028149, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
+  <DropPrefab>k__BackingField: {fileID: 942735952168806371, guid: e5a552112aefa644bb945f452340ee4e, type: 3}
   modifiersData:
   - statsModifier: {fileID: 11400000, guid: 1a07a550f7e65e04c839b587b8ee128e, type: 2}
     value: 10

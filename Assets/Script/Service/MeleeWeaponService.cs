@@ -48,7 +48,15 @@ public class MeleeWeaponService : WeaponService
 
     public override void Attack()
     {
-        _animator.SetBool("isMeleeAttack", true);
+
+        if (Time.time >= _lastAttackTime + _attackCooldown)
+        {
+            
+            _lastAttackTime = Time.time;
+            _animator.SetBool("isAttack", true);
+
+        }
+
     }
 
     public override void RotateWeapon()

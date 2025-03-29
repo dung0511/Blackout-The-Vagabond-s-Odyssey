@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
+    public static UIInventory Instance { get; private set; }
+
     [SerializeField]
     private UIInventoryItem itemPrefab;
 
@@ -34,6 +36,15 @@ public class UIInventory : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Hủy GameObject trùng lặp
+            return;
+        }
+
+        Instance = this; // Gán Instance
+        DontDestroyOnLoad(gameObject);
+
         Hide();
         itemDescription.ResetDescription();
         mouseFw.Toggle(false);

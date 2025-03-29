@@ -17,6 +17,7 @@ public class Damageable : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             Break();
+            AstarPath.active.Scan();
         }
     }
 

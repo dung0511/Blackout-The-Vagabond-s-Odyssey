@@ -5,6 +5,8 @@ using UnityEngine.XR;
 
 public class MeleeWeaponService : WeaponService
 {
+    private int attackIndex = 1;
+    private float comboResetTime = 5f;
     private float _attackCooldown;
     private float _lastAttackTime;
     private int _damage;
@@ -47,8 +49,22 @@ public class MeleeWeaponService : WeaponService
     public void SetCharacterSpriteRenderer(SpriteRenderer value) => _characterSR = value;
 
     public override void Attack()
-    {
-        _animator.SetBool("isMeleeAttack", true);
+    {        
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName($"Attack{attackIndex}"))
+            return;
+
+      
+        if (Time.time - _lastAttackTime > comboResetTime)
+            attackIndex = 1;
+
+        _animator.ResetTrigger($"Attack{attackIndex}"); 
+        _animator.SetTrigger($"Attack{attackIndex}");  
+
+        _lastAttackTime = Time.time; 
+
+        attackIndex++; 
+        if (attackIndex > 3) attackIndex = 1; 
+
     }
 
     public override void RotateWeapon()

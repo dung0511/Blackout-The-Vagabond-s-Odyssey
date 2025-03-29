@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour, IPickService
 {
-    private SpriteRenderer characterSR;
-    private Animator animator;
+    public SpriteRenderer characterSR;
+    public Animator animator;
     public MeleeWeaponService meleeWeapon;
-    private float lastAttackTime=0f;
+    public float lastAttackTime=0f;
     public float attackCoolDown;
-    private bool inHand;
-    private int dam;
+    public bool inHand;
+    public int dam;
     public MeleeWeaponSO MeleeWeaponSO;
 
     void Start()
@@ -49,8 +49,10 @@ public class MeleeWeapon : MonoBehaviour, IPickService
     void Update()
     {
         if (!inHand) return;
+
         meleeWeapon.RotateWeapon();
-        if (Input.GetMouseButton(0))
+
+        if (Input.GetMouseButtonDown(0)) 
         {
             if (Time.time >= lastAttackTime + attackCoolDown)
             {
@@ -58,11 +60,8 @@ public class MeleeWeapon : MonoBehaviour, IPickService
                 lastAttackTime = Time.time;
             }
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            animator.SetBool("isMeleeAttack", false);
-        }
     }
+
     //void AttackMelee()
     //{
     //    StartCoroutine(AttackCoroutine());
@@ -70,7 +69,7 @@ public class MeleeWeapon : MonoBehaviour, IPickService
 
     //IEnumerator AttackCoroutine()
     //{
-        
+
 
     //    yield return new WaitForSeconds(0.4f);
     //}

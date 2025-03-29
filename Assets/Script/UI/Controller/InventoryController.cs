@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 
 public class InventoryController : MonoBehaviour, IUIScreen
 {
-    [SerializeField]
-    private UIInventory inventoryUI;
+    private UIInventory inventoryUI => UIInventory.Instance;
 
     [SerializeField]
     public InventorySO inventoryData;
@@ -31,7 +30,6 @@ public class InventoryController : MonoBehaviour, IUIScreen
             if (item.isEmpty)
                 continue;
             inventoryData.AddItem(item);
-
         }
     }
 

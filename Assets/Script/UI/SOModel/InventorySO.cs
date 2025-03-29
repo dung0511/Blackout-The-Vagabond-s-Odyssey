@@ -133,9 +133,6 @@ public class InventorySO : ScriptableObject
         InformAboutChange();
     }
 
-   
-
-
     public void InformAboutChange()
     {
         OnInventoryChanged?.Invoke(GetCurrentState());

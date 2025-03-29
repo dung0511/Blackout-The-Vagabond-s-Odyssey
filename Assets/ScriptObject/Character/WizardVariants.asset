@@ -15,7 +15,7 @@ MonoBehaviour:
   id: db6078d1620772749b605b30b5ffb73e
   home: {fileID: 9188130133351135442, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
   dungeon: {fileID: 1731823609027247997, guid: 567d2f01d4d7de545be419badcf308e8, type: 3}
-  characterImage: {fileID: -1138492104133665759, guid: ba15b4fb0d644bf4885b865ba4acfa33, type: 3}
+  characterImage: {fileID: -5908238798454654921, guid: 657c57f6c8a5167458cd054ac934d4ca, type: 3}
   characterName: (Potential Waifu) Wizard
   maxHealth: 10
   maxArmor: 10

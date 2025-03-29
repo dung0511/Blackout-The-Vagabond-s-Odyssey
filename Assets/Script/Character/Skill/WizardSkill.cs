@@ -178,11 +178,11 @@ public class WizardSkill : BaseSkill
         StartCoroutine(SetFalse());
         StartCoroutine(ResetUltimateSkillCoolDown());
     }
-    public void SetActiveWeapon()
+    public override void SetActiveWeapon()
     {
         weaponController.gameObject.SetActive(true);
     }
-    public void setActiveFalseWeapon()
+    public override void setActiveFalseWeapon()
     {
         weaponController.gameObject.SetActive(false);
     }
@@ -200,4 +200,22 @@ public class WizardSkill : BaseSkill
 
     //    }
     //}
+    public override void SetIsUsingNormalFalse()
+    {
+        isUsingNormal = false;
+    }
+    public override void SetIsUsingUltimateFalse()
+    {
+        isUsingUltimate = false;
+    }
+
+    public override void SetIsUsingUltimate()
+    {
+        isUsingUltimate = true;
+    }
+
+    public override void SetIsUsingNormal()
+    {
+        isUsingNormal = true;
+    }
 }

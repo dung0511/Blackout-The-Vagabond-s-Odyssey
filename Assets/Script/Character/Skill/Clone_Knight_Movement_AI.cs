@@ -7,6 +7,7 @@ public class Clone_Knight_Movement_AI : MonoBehaviour
     [SerializeField] private bool defaultFacingRight = true;
     [SerializeField] private PlayerDetailSO movementDetails;
     private CloneKnight clone;
+    public Animator animator;
 
     [HideInInspector] public Transform target;
     [HideInInspector] public float nextWaypointDistance = 0.5f;
@@ -22,11 +23,12 @@ public class Clone_Knight_Movement_AI : MonoBehaviour
    // private MovementToPosition movementToPosition;
 
     [HideInInspector] public float moveSpeed;
-    public bool chasePlayer = false;
-    public bool isWaitingToResumeChase = false;
+    private bool chasePlayer = false;
+    private bool isWaitingToResumeChase = false;
 
     void Start()
     {
+        animator=GetComponentInChildren<Animator>();
        // movementToPosition = GetComponent<MovementToPosition>();
         clone = GetComponent<CloneKnight>();
         Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -38,6 +40,18 @@ public class Clone_Knight_Movement_AI : MonoBehaviour
 
         InvokeRepeating("UpdatePath", 0f, 0.2f);
     }
+
+    private void OnEnable()
+    {
+       
+        if (isWaitingToResumeChase)
+        {
+            StartCoroutine(ResumeChaseAfterDelay());
+        }
+    }
+
+
+
     void UpdatePath()
     {
         if (chasePlayer && seeker.IsDone())
@@ -111,24 +125,7 @@ public class Clone_Knight_Movement_AI : MonoBehaviour
         }
         isWaitingToResumeChase = false;
     }
-    //public void UpdateEnemyFacingDirection()
-    //{
-    //    if (target == null) return;
-
-        //Vector2 directionToPlayer = target.position - transform.position;
-        //bool shouldFaceRight = directionToPlayer.x > 0;
-
-
-        //float targetScaleX = Mathf.Abs(transform.localScale.x);
-
-
-        //if (shouldFaceRight != defaultFacingRight)
-        //{
-        //    targetScaleX *= -1;
-        //}
-
-        //transform.localScale = new Vector3(targetScaleX, transform.localScale.y, transform.localScale.z);
-   //}
+    
     private void MoveEnemy()
     {
         if (!chasePlayer || path == null || path.vectorPath.Count == 0) return;
@@ -137,13 +134,13 @@ public class Clone_Knight_Movement_AI : MonoBehaviour
         float distanceToWaypoint = Vector2.Distance(rb.position, (Vector2)path.vectorPath[currentWaypointIndex]);
         if (distanceToWaypoint < nextWaypointDistance)
         {
-            clone.animator.SetBool("isMoving", true);
+           animator.SetBool("isMoving", true);
             currentWaypointIndex++;
 
 
             if (currentWaypointIndex >= path.vectorPath.Count)
             {
-                clone.animator.SetBool("isMoving", false);
+                animator.SetBool("isMoving", false);
                 currentWaypointIndex = 0;
                 return;
             }

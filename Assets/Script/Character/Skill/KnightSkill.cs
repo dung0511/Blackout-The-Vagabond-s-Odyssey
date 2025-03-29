@@ -3,22 +3,21 @@ using UnityEngine;
 
 public class KnightSkill : BaseSkill
 {
-   
-   // public int DameNormalSkill = 5;
-    public int DameUltimateSkill;
     public Animator animator;
-
+    public Animator shieldAnimator;
     public GameObject clonePrefab;
-    public float cloneCoolDown=10f;
+    public float cloneCoolDown = 10f;
+    public int NumberSpawn = 3;
 
-    public float ultimateCooldown=10f;
-    public float normalCoolDown=5f;
-    //public LayerMask obstacleMask;
+    public float ultimateCooldown = 10f;
+    public LayerMask obstacleMask;
 
+    public float normalCoolDown = 5f;
+    public float shieldCoolDown = 7f;
+    public int shieldDame = 5;
 
-
-    public bool isNormal = false;
-    public bool isUltimate = false;
+    public bool isUsingNormal = false;
+    public bool isUsingUltimate = false;
     public bool canUseNormal = true;
     public bool canUseUltimate = true;
 
@@ -29,6 +28,7 @@ public class KnightSkill : BaseSkill
     {
         clonePrefab.GetComponent<CloneKnight>().knightSkill = this;
         animator = GetComponent<Animator>();
+
     }
     public override bool CanUseSkill1()
     {
@@ -42,7 +42,7 @@ public class KnightSkill : BaseSkill
 
     public override bool IsUsingSkill()
     {
-        return isNormal || isUltimate;
+        return isUsingNormal || isUsingUltimate;
     }
 
     //public override void NormalSkill()
@@ -63,65 +63,93 @@ public class KnightSkill : BaseSkill
 
     public override void NormalSkill()
     {
+        //isUsingNormal = true; 
+        canUseNormal = false;
         animator.SetBool("isSkill1", false);
-        float radius = 2f; 
-        Vector3 center = transform.position;
-        LayerMask obstacleMask = LayerMask.GetMask("Background"); 
-        int maxAttempts = 10; 
-
-        Vector3 spawnPosition = center;
-        bool validPosition = false;
-
-        for (int i = 0; i < maxAttempts; i++)
-        {
-            float angle = Random.Range(0f, 2f * Mathf.PI);
-            Vector3 tempPosition = center + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
-
-           
-            if (!Physics2D.OverlapCircle(tempPosition, 0.5f, obstacleMask))
-            {
-                spawnPosition = tempPosition;
-                validPosition = true;
-                break;
-            }
-        }
-
-        if (!validPosition)
-        {
-            Debug.LogWarning("position clone invalid!");
-            return;
-        }
-
-        GameObject cloneKnight = PoolManagement.Instance.GetBullet(clonePrefab);
-        cloneKnight.transform.position = spawnPosition;
-        StartCoroutine(ResetNormalSkill());
+        shieldAnimator.SetTrigger("isUsingShield");
+        transform.root.GetComponent<PlayerArmorController>().ShieldSkill();
+        StartCoroutine(ResetShield());
+        
     }
+
 
     IEnumerator ResetNormalSkill()
     {
-        canUseNormal=false;
-        yield return normalCoolDown;
-        canUseNormal=true;
+
+        yield return new WaitForSeconds(normalCoolDown);
+         canUseNormal = true;
+    }
+
+    IEnumerator ResetShield()
+    {
+        Debug.Log("shield cool down: " + shieldCoolDown);
+        yield return new WaitForSeconds(shieldCoolDown);
+        shieldAnimator.SetTrigger("isShieldDone");
+        transform.root.GetComponent<PlayerArmorController>().EndShieldSkill();
+        StartCoroutine(ResetNormalSkill());
     }
 
     IEnumerator ResetUltimateSkill()
     {
-        canUseUltimate=false;
-        yield return ultimateCooldown;
+        yield return new WaitForSeconds(ultimateCooldown);
         canUseUltimate = true;
     }
 
     public override void UltimmateSkill()
     {
-        ResetUltimateSkill();
+       
+        canUseUltimate = false;
+        animator.SetBool("isSkill2", false);
+        float radius = 2f;
+        Vector3 center = transform.position;
+        int maxAttempts = 10;
+
+        Vector3 spawnPosition = center;
+        for (int spawn = 0; spawn < NumberSpawn; spawn++)
+        {
+            for (int i = 0; i < maxAttempts; i++)
+            {
+                float angle = Random.Range(0f, 2f * Mathf.PI);
+                Vector3 tempPosition = center + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
+
+
+                if (!Physics2D.OverlapCircle(tempPosition, 0.5f, obstacleMask))
+                {
+                    spawnPosition = tempPosition;
+
+                    break;
+                }
+            }
+            GameObject cloneKnight = PoolManagement.Instance.GetBullet(clonePrefab);
+            cloneKnight.transform.position = spawnPosition;
+        }
+        StartCoroutine(ResetUltimateSkill());
     }
 
-    public void SetActiveWeapon()
+    public override void SetActiveWeapon()
     {
         weaponController.gameObject.SetActive(true);
     }
-    public void setActiveFalseWeapon()
+    public override void setActiveFalseWeapon()
     {
         weaponController.gameObject.SetActive(false);
+    }
+    public override void SetIsUsingNormalFalse()
+    {
+        isUsingNormal = false;
+    }
+    public override void SetIsUsingUltimateFalse()
+    {
+        isUsingUltimate = false;
+    }
+
+    public override void SetIsUsingUltimate()
+    {
+        isUsingUltimate = true;
+    }
+
+    public override void SetIsUsingNormal()
+    {
+        isUsingNormal = true;
     }
 }

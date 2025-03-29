@@ -16,4 +16,4 @@ MonoBehaviour:
   meleeWeaponPrefab: {fileID: 0}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 3
-  attackCooldown: 1
+  attackCooldown: 0.5

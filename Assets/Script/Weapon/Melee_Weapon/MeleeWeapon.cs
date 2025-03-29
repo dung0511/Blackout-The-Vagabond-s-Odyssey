@@ -54,7 +54,11 @@ public class MeleeWeapon : MonoBehaviour, IPickService
 
         if (Input.GetMouseButtonDown(0)) 
         {
-            meleeWeapon.Attack();
+            if (Time.time >= lastAttackTime + attackCoolDown)
+            {
+                meleeWeapon.Attack();
+                lastAttackTime = Time.time;
+            }
         }
     }
 

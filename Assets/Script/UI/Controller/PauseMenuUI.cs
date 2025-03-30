@@ -14,7 +14,7 @@ public class PauseMenuUI : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPaused)
             {
@@ -42,5 +42,10 @@ public class PauseMenuUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("Home");
     }
 }

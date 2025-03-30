@@ -38,11 +38,11 @@ public class UIInventory : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); // Hủy GameObject trùng lặp
+            Destroy(gameObject); 
             return;
         }
 
-        Instance = this; // Gán Instance
+        Instance = this; 
         DontDestroyOnLoad(gameObject);
 
         Hide();

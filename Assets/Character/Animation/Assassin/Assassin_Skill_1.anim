@@ -642,6 +642,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0
+    functionName: SetIsUsingNormal
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.16666667
     functionName: NormalSkill
     data: 
@@ -650,14 +657,21 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.5
-    functionName: SetActiveWeapon
+    functionName: SetAnimationDash
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
-    functionName: SetAnimationDash
+    functionName: SetIsUsingNormalFalse
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: SetActiveWeapon
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

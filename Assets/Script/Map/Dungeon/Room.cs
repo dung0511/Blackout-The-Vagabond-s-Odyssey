@@ -32,7 +32,7 @@ public class Room
         enemyCount--;
         if (enemyCount == 0)
         {
-            Debug.Log("Room Cleared");
+            Debug.Log("Room Cleared"); //them ui bao room cleared o day.
             DungeonManager.Instance.OpenRoomBarrier(this);
         }
     }

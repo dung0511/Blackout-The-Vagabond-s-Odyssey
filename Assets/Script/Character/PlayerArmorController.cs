@@ -5,13 +5,14 @@ using UnityEngine.UI;
 public class PlayerArmorController : MonoBehaviour
 {
     private int currentArmor;
-    private int maxArmor; 
+    private int maxArmor;
     private float timeHealArmor = 7f;
     private float lastDamageTime;
     private bool isRegenerating = false;
-
+    private int defaultArmor;
     void Start()
     {
+        defaultArmor = maxArmor;
         currentArmor = GetComponent<Player>().armor;
         maxArmor = currentArmor;
         UpdateArmorBar(currentArmor, maxArmor);
@@ -27,7 +28,7 @@ public class PlayerArmorController : MonoBehaviour
 
     public int TakeDamageArmor(int damage)
     {
-        int absorbedDamage = Mathf.Min(damage, currentArmor); 
+        int absorbedDamage = Mathf.Min(damage, currentArmor);
         currentArmor -= absorbedDamage;
 
         if (currentArmor <= 0)
@@ -44,7 +45,7 @@ public class PlayerArmorController : MonoBehaviour
             isRegenerating = false;
         }
 
-        return absorbedDamage; 
+        return absorbedDamage;
     }
 
 
@@ -84,4 +85,23 @@ public class PlayerArmorController : MonoBehaviour
         currentArmor = 0;
         maxArmor = 0;
     }
+
+    public void ShieldSkill()
+    {
+        currentArmor = 99;
+        maxArmor = 99;
+         UpdateArmorBar(currentArmor, maxArmor);
+    }
+
+    public void EndShieldSkill()
+    {
+        if (currentArmor >= defaultArmor)
+        {
+            currentArmor = defaultArmor;
+        }
+
+        maxArmor = defaultArmor;
+        UpdateArmorBar(currentArmor, maxArmor);
+    }
+
 }

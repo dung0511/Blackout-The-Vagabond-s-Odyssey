@@ -9,6 +9,7 @@ public class PauseMenuUI : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()

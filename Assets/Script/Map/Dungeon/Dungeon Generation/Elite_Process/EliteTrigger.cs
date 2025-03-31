@@ -5,6 +5,7 @@ using UnityEngine;
 public class EliteTrigger : MonoBehaviour
 {
     public GameObject spawnAnimation;
+    [SerializeField] private float delaySpawn = 0.5f;
     [HideInInspector] public BoxRoom eliteRoom;
     [HideInInspector] public List<GameObject> barriers;
     private bool isTriggered = false;
@@ -26,9 +27,9 @@ public class EliteTrigger : MonoBehaviour
     private void EnableElite()
     {
         var anim = Instantiate(spawnAnimation, eliteRoom.eliteReference.transform.position, Quaternion.identity);
-        StartCoroutine(WaitSpawnAnimation(0.5f));
-        Destroy(anim, 1f);
-        Destroy(gameObject, 1.5f); //destroy trigger after all
+        StartCoroutine(WaitSpawnAnimation(delaySpawn));
+        Destroy(anim, delaySpawn+0.5f);
+        Destroy(gameObject, delaySpawn+1); //destroy trigger after all
     }
 
     private IEnumerator WaitSpawnAnimation(float delay)

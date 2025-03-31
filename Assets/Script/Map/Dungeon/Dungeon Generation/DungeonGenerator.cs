@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class StageOneDungeonGenerator : StageOne
+public class DungeonGenerator : DungeonController
 {
     [SerializeField] protected Box mediumRoom, smallRoom;
     [SerializeField] private int corridorLength = 10;
@@ -122,7 +122,7 @@ public class StageOneDungeonGenerator : StageOne
 
     private void CreateSpawnRoom(HashSet<Vector2Int> floorPositions)
     {
-        var spawnRoom = RunBoxGen(startPos, smallRoom.minWidth, smallRoom.minHeight);
+        var spawnRoom = ProceduralGeneration.RunBoxGen(startPos, smallRoom.minWidth, smallRoom.minHeight);
         DungeonData.rooms.Add( new BoxRoom
         {
             center = startPos,
@@ -186,7 +186,7 @@ public class StageOneDungeonGenerator : StageOne
             HashSet<Vector2Int> roomBound;
 
             (width, height) = GetRoomDimensions(r.roomType);
-            roomBound = RunBoxGen(r.center, width, height);
+            roomBound = ProceduralGeneration.RunBoxGen(r.center, width, height);
             r.size = new ( width, height );
             r.roomTiles = roomBound;
             roomPositions.UnionWith(roomBound);

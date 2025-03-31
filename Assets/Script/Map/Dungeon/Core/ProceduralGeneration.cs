@@ -6,6 +6,15 @@ using Random = UnityEngine.Random;
 
 public static class ProceduralGeneration
 {
+    public static HashSet<Vector2Int> RunBoxGen(Vector2Int startPos, int width, int height)
+    {
+        var currentPos = startPos;
+        HashSet<Vector2Int> path = new HashSet<Vector2Int> {};
+        var box = BoxGenerator(currentPos, width, height);
+        path.UnionWith(box);
+        return path;
+    }
+
     public static HashSet<Vector2Int> BoxGenerator(Vector2Int startPos, int width, int height)
     {
         HashSet<Vector2Int> path = new HashSet<Vector2Int>();

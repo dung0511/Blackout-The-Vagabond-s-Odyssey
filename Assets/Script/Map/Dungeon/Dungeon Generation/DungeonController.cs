@@ -5,7 +5,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class StageOne : AbstractDungeonGenerator
+public class DungeonController : AbstractDungeonGenerator
 {
     public PropPlacer propPlacer;
     public AgentPlacer agentPlacer;
@@ -65,17 +65,6 @@ public class StageOne : AbstractDungeonGenerator
                     break;
             }
         }
-    }
-
-
-
-    protected HashSet<Vector2Int> RunBoxGen(Vector2Int startPos, int width, int height)
-    {
-        var currentPos = startPos;
-        HashSet<Vector2Int> path = new HashSet<Vector2Int> {};
-        var box = ProceduralGeneration.BoxGenerator(currentPos, width, height);
-        path.UnionWith(box);
-        return path;
     }
 
     protected void Reset()

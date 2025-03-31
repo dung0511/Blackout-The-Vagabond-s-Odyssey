@@ -114,7 +114,6 @@ public class InventoryController : MonoBehaviour, IUIScreen
         inventoryUI.ResetSelection();
     }
 
-
     private void HandleDragging(int itemIndex)
     {
         InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);

@@ -36,7 +36,7 @@ public interface IItemAction
 [Serializable]
 public class ModifierData
 {
-    public CharacterStatsModifierSO statsModifier;
+    public StatsModifierSO statsModifier;
 
     public float value;
 

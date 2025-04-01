@@ -1,4 +1,7 @@
+using UnityEngine;
+
 public interface ITrap
 {
-    public void Trigger();
+    public void Activate(Collider2D collision);
+    public void Reset();
 }

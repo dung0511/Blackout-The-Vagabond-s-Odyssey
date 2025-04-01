@@ -2,14 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthController : MonoBehaviour
+public class PlayerHealthController : Damageable
 {
-    public int health;
     public int maxHealth;
     private bool isHurt;
     private bool isDead;
 
-    //private void Awake()
+    //private void Awake()s
     //{
         
     //    maxHealth = health;
@@ -26,7 +25,7 @@ public class PlayerHealthController : MonoBehaviour
         UpdateHealthBar(maxHealth, maxHealth);
     }
 
-    public void takeDame(int dame)
+    public override void takeDame(int dame)
     {
         if (GetComponent<PlayerArmorController>().TakeDamageArmor(dame) <= 0)
         {

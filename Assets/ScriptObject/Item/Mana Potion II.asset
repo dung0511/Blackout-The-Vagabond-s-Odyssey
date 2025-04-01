@@ -17,6 +17,7 @@ MonoBehaviour:
   <Name>k__BackingField: Mana Potion II
   <Description>k__BackingField: Restores mp by 15
   <ItemImage>k__BackingField: {fileID: 1700114005, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
+  <DropPrefab>k__BackingField: {fileID: 3280896383759603922, guid: 6f6af9a69b7fd754eab7236d48eaf276, type: 3}
   modifiersData:
-  - statsModifier: {fileID: 11400000, guid: 1a07a550f7e65e04c839b587b8ee128e, type: 2}
+  - statsModifier: {fileID: 11400000, guid: 423ba18b5cf4b9e45b7bbbf06a69d76d, type: 2}
     value: 30

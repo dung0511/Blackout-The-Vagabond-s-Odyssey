@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void SetPlayerCharacter(CharacterVariantSO player)
     {
         playerCharacter = player;
-        DataManager.playerData.characterId = player.id;
+        DataManager.gameData.playerData.characterId = player.id;
     }
 
     public void StartDungeon()

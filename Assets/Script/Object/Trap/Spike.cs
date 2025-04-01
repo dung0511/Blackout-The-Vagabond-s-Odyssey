@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spike : MonoBehaviour
+public class Spike : MonoBehaviour, ITrap
 {
     [SerializeField] private int damage = 2;
     private Animator animator;
@@ -12,11 +12,21 @@ public class Spike : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<PlayerHealthController>(out var playerHealthController))
+        Activate(other);
+    }
+
+    public void Activate(Collider2D collision)
+    {
+        if(!collision.CompareTag("Player")) return;
+        if (collision.TryGetComponent<Damageable>(out var damageable))
         {
             animator.SetTrigger(activate);
-            playerHealthController.takeDame(damage);
+            damageable.takeDame(damage);
         }
     }
 
+    public void Reset()
+    {
+        
+    }
 }

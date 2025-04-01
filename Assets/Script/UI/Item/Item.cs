@@ -11,9 +11,6 @@ public class Item : MonoBehaviour, IPickService
     [field: SerializeField]
     public int quantity { get; set; } = 1;
 
-    //[SerializeField]
-    //private AudioSource audioSource;
-
     [SerializeField]
     private float duration = 0.3f;
 

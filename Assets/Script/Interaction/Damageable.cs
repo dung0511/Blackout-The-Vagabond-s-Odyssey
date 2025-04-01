@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Damageable : MonoBehaviour, IDamageable
 {
-    [SerializeField] private int health = 3;
+    public int health = 3;
     private Lootable lootable;
 
     private void Awake()
@@ -11,12 +11,13 @@ public class Damageable : MonoBehaviour, IDamageable
         lootable = GetComponent<Lootable>();
     }
 
-    public void takeDame(int damage)
+    public virtual void takeDame(int damage)
     {
         health -= damage;
         if (health <= 0)
         {
             Break();
+            AstarPath.active.Scan();
         }
     }
 

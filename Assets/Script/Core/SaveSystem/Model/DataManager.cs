@@ -4,16 +4,21 @@ using System.Diagnostics;
 [Serializable]
 public static class DataManager
 {
-    public static PlayerData playerData = new();
+    public static GameData gameData = new();
 
     public static void Save()
     {
-        SaveSystem.SaveLocal("/save.sav",playerData);
+        SaveSystem.SaveLocal("/save.sav",gameData);
     }
 
     public static void Load()
     {
-       playerData =  SaveSystem.LoadLocal<PlayerData>("/save.sav");
+       gameData =  SaveSystem.LoadLocal<GameData>("/save.sav");
     }
 }
 
+public class GameData 
+{
+    public PlayerData playerData = new();
+    //more ?
+}

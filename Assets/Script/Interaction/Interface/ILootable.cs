@@ -10,13 +10,8 @@ public interface ILootable
 [Serializable]
 public class LootTable 
 {
-    public List<GameObject> loots = new List<GameObject>();
+    public List<GameObject> loots;
     public int tableChance = 50;
 }
 
 
-[CreateAssetMenu(fileName = "LootTable", menuName = "Scriptable Objects/Loot/Table")]
-public class LootTableSO : ScriptableObject
-{
-    public List<LootTable> table;
-}

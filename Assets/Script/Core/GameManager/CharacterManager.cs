@@ -15,7 +15,7 @@ public class CharacterManager : MonoBehaviour
         CharacterVariantSO character;
         try
         {
-            charId = DataManager.playerData.characterId;
+            charId = DataManager.gameData.playerData.characterId;
         } catch(Exception e)
         {
             Debug.LogError("Use default char, Load char id failed "+e.Message);

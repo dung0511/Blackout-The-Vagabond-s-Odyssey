@@ -14,10 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LootTableSO
   table:
   - loots:
-    - {fileID: 1892861501244000876, guid: bd4d6c70f3e50dd4abd6d1a8bfbca1ee, type: 3}
-    - {fileID: 1367135548067778609, guid: 9bb0b86c0badd8d4488d714713224660, type: 3}
-    tableChance: 60
+    - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
+    tableChance: 100
   - loots:
-    - {fileID: 3536879428634636031, guid: b5d08cc3cd15d204caa4106183936264, type: 3}
-    - {fileID: 2491373450553078214, guid: cafc77b814f710d418c6a2827f2ee15c, type: 3}
-    tableChance: 40
+    - {fileID: 3771607849913430330, guid: 8c1ec5b45c5a73845864e58375d20698, type: 3}
+    - {fileID: 4602839663264541894, guid: b94c3e39ddb28114da8051780c64374a, type: 3}
+    - {fileID: 144486675629276363, guid: 0be0f15d27b12214787a3df5493f0b44, type: 3}
+    - {fileID: 2839300819153816550, guid: 7e69d908dcc3bbd48a91d0989e6a699c, type: 3}
+    - {fileID: 4397109434097725736, guid: 4dbe42dc33031dc4984718c2c6eb4878, type: 3}
+    - {fileID: 1952707006780246198, guid: 77925849cc89f9648ae2ef282367e112, type: 3}
+    - {fileID: 5388546679718314358, guid: ce98d0b1881e9424888c6fc9e55ad104, type: 3}
+    - {fileID: 2481154605548366764, guid: 7dcf1ce0e52eb3c48bdfb973ba6cdb9d, type: 3}
+    - {fileID: 4503657204465879628, guid: f189f734df2a50c44a8b0cc432a4a3cc, type: 3}
+    - {fileID: 3609918352711593056, guid: 7f17dba051d3a9a40a8c1599084aa6c1, type: 3}
+    - {fileID: 2107581006266149914, guid: a8a6c7f4b1a80d24da57bcfb489039c1, type: 3}
+    - {fileID: 3635782474816713875, guid: f374a8c42e3a4b242bccef654f531dc1, type: 3}
+    - {fileID: 7288438069993136139, guid: afe68af53faa9b046bc3d8b271aa4976, type: 3}
+    - {fileID: 2034621507168708110, guid: 742b228a7471d41468e402b64e2fa3bd, type: 3}
+    - {fileID: 2444577755630006874, guid: 50531edab2da1634593729fe8a0c6866, type: 3}
+    tableChance: 50

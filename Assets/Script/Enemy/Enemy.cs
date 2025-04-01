@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         else ResetAllAttackParameters();
         isHurt = GetComponent<EnemyHealth>().isHurt;
         animator.SetBool("isHurt", isHurt);
-        animator.SetBool("isAttacking", isAttacking);
+        if(!isArcher)animator.SetBool("isAttacking", isAttacking);
     }
 
     void performRangedAttack()

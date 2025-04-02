@@ -12,14 +12,14 @@ public class Player : MonoBehaviour
     public Rigidbody2D rd;
     public SpriteRenderer characterSR;
     private Animator anim;
-    public bool isGamePaused = false;
+   // public bool isGamePaused = false;
     public int health;
     public int armor;
     public float speed;
     public bool isHurt;
     public bool isDead;
-    public bool isMove;
-    public bool isOpenBag = false;
+   // public bool isMove;
+   // public bool isOpenBag = false;
     public PlayerDetailSO playerDetailSO;
 
     public GameObject menu;
@@ -27,20 +27,13 @@ public class Player : MonoBehaviour
     public PlayerHealthController healthController;
     public PlayerArmorController armorController;
     public PlayerMoveController moveController;
-    public WeaponController weaponController;
+    public PlayerWeaponController weaponController;
     public PlayerPickController pickController;
-
-    public BaseSkill Skill { get; private set; }
-
-    //private Inventory inventory;
-
+    public InventoryController inventoryController;
+    public BaseSkill skillController { get; private set; }
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-
-        //menu= GameObject.Find("Menu");
-        //menu.SetActive(false);
-
         health = playerDetailSO.playerHealthAmount;
         armor = playerDetailSO.playerArmorAmount;
         speed = playerDetailSO.playerSpeedAmount;
@@ -50,11 +43,12 @@ public class Player : MonoBehaviour
         healthController = GetComponent<PlayerHealthController>();
         armorController = GetComponent<PlayerArmorController>();
         moveController = GetComponent<PlayerMoveController>();
-        weaponController = GetComponentInChildren<WeaponController>();
+        weaponController = GetComponentInChildren<PlayerWeaponController>();
         pickController = GetComponent<PlayerPickController>();
-        Skill = GetComponentInChildren<BaseSkill>();
+        skillController = GetComponentInChildren<BaseSkill>();
+        inventoryController = GetComponentInChildren<InventoryController>();
 
-        if (Skill == null)
+        if (skillController == null)
         {
             Debug.LogError("Skill Controller is missing on Player!");
         }
@@ -62,50 +56,9 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !Skill.IsUsingSkill())
-        {
-
-            weaponController.ChangeWeapon(1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon && !Skill.IsUsingSkill())
-        {
-            weaponController.ChangeWeapon(2);
-        }
-
-        if (Input.GetKeyDown(KeyCode.F) && pickController.isTouchItem && !Skill.IsUsingSkill())
-        {
-            pickController.PickItemWeapon();
-        }
-
-        //if (Input.GetKeyDown(KeyCode.Tab))
-        //{
-        //    if (!isOpenBag)
-        //    {
-        //        isOpenBag = true;
-        //        foreach (Transform child in transform)
-        //        {
-        //            child.gameObject.SetActive(false);
-        //        }
-        //        menu.SetActive(true);
-        //    }
-        //    else
-        //    {
-        //        isOpenBag = false;
-        //        foreach (Transform child in transform)
-        //        {
-        //            child.gameObject.SetActive(true);
-        //        }
-        //        menu.SetActive(false);
-
-        //    }
-        //}
-
-
         if (!healthController.IsDead)
         {
-            isMove = moveController.MoveControl();
-            anim.SetBool("isMoving", isMove);
+            anim.SetBool("isMoving", moveController.MoveControl());
         }
         else
         {
@@ -117,22 +70,48 @@ public class Player : MonoBehaviour
             anim.SetBool("isDead", true);
         }
 
-
-
         if (healthController.IsHurt && !healthController.IsDead)
             anim.SetBool("isHurt", true);
         else
             anim.SetBool("isHurt", false);
 
-        if (Input.GetKeyDown(KeyCode.E) && Skill.CanUseSkill1())
+        if (!skillController.IsUsingSkill())
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                weaponController.ChangeWeapon(1);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon)
+            {
+                weaponController.ChangeWeapon(2);
+            }
+
+            if (Input.GetKeyDown(KeyCode.F) && pickController.isTouchItem)
+            {
+                pickController.PickItemWeapon();
+            }
+
+            weaponController.RotateWeapon();
+            if (Input.GetMouseButton(0))
+            {
+                weaponController.Attack();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            UIManager.Instance.ToggleScreen(inventoryController);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && skillController.CanUseSkill1())
         {
             anim.SetBool("isSkill1", true);
 
         }
-        if (Input.GetKeyDown(KeyCode.Q) && Skill.CanUseSkill2())
+        if (Input.GetKeyDown(KeyCode.Q) && skillController.CanUseSkill2())
         {
             anim.SetBool("isSkill2", true);
-            // Skill.UltimmateSkill();
         }
     }
 

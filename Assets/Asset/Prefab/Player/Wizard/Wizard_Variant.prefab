@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 66a96f9b3499c7741af6a03a971a5727, type: 2}
     - target: {fileID: 6628058848093765976, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0723
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7690760933829380787, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_PointLightInnerAngle
@@ -201,8 +201,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8408637051143262795, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.18105742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408637051143262795, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Offset.y
-      value: 0.01925679
+      value: 0.08776977
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -80,7 +80,7 @@ MonoBehaviour:
   heuristicScale: 1
   threadCount: 1
   maxFrameTime: 10
-  batchGraphUpdates: 0
+  batchGraphUpdates: 1
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
     mode: 0

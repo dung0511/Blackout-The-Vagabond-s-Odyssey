@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Menu
   - MinimapTilemap
+  - Notification
   layers:
   - Default
   - TransparentFX

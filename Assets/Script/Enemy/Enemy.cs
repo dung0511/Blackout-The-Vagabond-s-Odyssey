@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
         // isAttack1 = false;
         animator = GetComponent<Animator>();
         isHurt = false;
+        ai.CheckChaseCondition();
     }
 
     void Update()

@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Cinemachine.CinemachineTriggerAction.ActionSettings;
 
@@ -13,9 +15,10 @@ public class CloneKnight : MonoBehaviour
 
     [HideInInspector] public Clone_Knight_Movement_AI ai;
     private float timetoDes;
-
+    private PlayerWeaponController playerWeaponController;
     private void Awake()
     {
+        playerWeaponController = gameObject.GetComponentInChildren<PlayerWeaponController>();
         animator = GetComponent<Animator>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         idleEvent = GetComponent<IdleEvent>();
@@ -38,5 +41,47 @@ public class CloneKnight : MonoBehaviour
     {
        
         CancelInvoke(nameof(ResetClone));
+    }
+    private void Update()
+    {
+        playerWeaponController.RotateWeapon();
+        if (Input.GetMouseButton(0))
+        {
+            playerWeaponController.Attack();
+        }
+    }
+    public void SetWeaponForClone(GameObject obj)
+    {
+        List<GameObject> gameObjects = new List<GameObject>();
+
+       
+        GameObject weaponController = gameObject.transform.Find("Weapon").gameObject;
+
+        if (weaponController != null) 
+        {
+            Transform trans = weaponController.transform; 
+
+            if (trans.childCount > 0)
+            {
+
+                foreach (Transform child in trans)
+                {
+                    Destroy(child.gameObject);
+                }
+                GameObject weapon = Instantiate(obj);
+                weapon.transform.SetParent(weaponController.transform, false);
+                weapon.transform.localPosition = new Vector3(0, obj.transform.localPosition.y, 0);
+                playerWeaponController.baseWeapon = weapon.GetComponent<BaseWeapon>();
+            }
+            else
+            {
+                GameObject weapon = Instantiate(obj);
+                weapon.transform.SetParent(weaponController.transform, false);
+                weapon.transform.localPosition = new Vector3(0, obj.transform.localPosition.y, 0);
+                playerWeaponController.baseWeapon=weapon.GetComponent<BaseWeapon>();
+                Debug.LogWarning("PlayerWeaponController ko co con");
+            }
+        }
+       
     }
 }

@@ -122,6 +122,7 @@ public class KnightSkill : BaseSkill
             }
             GameObject cloneKnight = PoolManagement.Instance.GetBullet(clonePrefab);
             cloneKnight.transform.position = spawnPosition;
+            cloneKnight.GetComponent<CloneKnight>().SetWeaponForClone(weaponController.baseWeapon.gameObject);
         }
         StartCoroutine(ResetUltimateSkill());
     }

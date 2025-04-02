@@ -11,7 +11,7 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject Weapon2;
     public List<GameObject> ListObj;
     public bool haveOneWepon;
-    public BaseWeapon baseWeapon { get; private set; }
+    public BaseWeapon baseWeapon { get; set; }
     public void Attack()
     {
         baseWeapon.Attack();

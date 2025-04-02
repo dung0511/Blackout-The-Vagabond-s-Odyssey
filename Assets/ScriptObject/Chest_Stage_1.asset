@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: LootTable
-  m_EditorClassIdentifier: Assembly-CSharp::LootTableSO
+  m_Script: {fileID: 11500000, guid: b3fa845ae78cb6f419a61115bf088f58, type: 3}
+  m_Name: Chest_Stage_1
+  m_EditorClassIdentifier: 
   table:
   - loots:
     - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}

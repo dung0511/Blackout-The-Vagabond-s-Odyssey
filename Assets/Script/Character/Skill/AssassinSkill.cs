@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class AssassinSkill : BaseSkill
 {
@@ -21,6 +22,10 @@ public class AssassinSkill : BaseSkill
     public bool isUsingUltimate = false;
     public bool canDash = true;
     public bool canUltimate = true;
+
+    public Light2D light;
+    public float lightdefault;
+    public float buffed;
 
     public WeaponController weaponController;
     private void Start()
@@ -59,18 +64,19 @@ public class AssassinSkill : BaseSkill
 
     public override void UltimmateSkill()
     {
-
-        DameNormalSkill = 10;
+        light.GetComponent<Light2D>().pointLightOuterRadius = buffed;
+        DameNormalSkill = 50;
         isUsingUltimate = true;
         StartCoroutine(UltimateCoolDown());
-
-
     }
-
+    public void SetLight()
+    {
+        light.GetComponent<Light2D>().pointLightOuterRadius = lightdefault;
+    }
     IEnumerator Dash(Vector3 targetPos)
     {
 
-        
+
         Vector3 startPos = transform.root.position;
         float elapsedTime = 0f;
 

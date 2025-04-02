@@ -200,6 +200,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0693
       objectReference: {fileID: 0}
+    - target: {fileID: 7690760933829380787, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690760933829380787, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 7764027545387343176, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

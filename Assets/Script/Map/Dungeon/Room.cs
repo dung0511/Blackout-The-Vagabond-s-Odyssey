@@ -4,8 +4,6 @@ using UnityEngine;
 public class BoxRoom : Room
 {
     public Vector2Int size = new Vector2Int(); //width, height
-        
-
 }
 
 public class Room

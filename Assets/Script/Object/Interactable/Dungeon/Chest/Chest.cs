@@ -30,11 +30,17 @@ public class Chest : Interactable
 
     public override void HighLightOn()
     {
-        base.HighLightOn();
+        if(!isOpen)
+        {
+            base.HighLightOn();
+        }
     }
 
     public override void HighLightOff()
     {
-        if(outline) base.HighLightOff();
+        if(!isOpen)
+        {
+            base.HighLightOff();  
+        } 
     }
 }

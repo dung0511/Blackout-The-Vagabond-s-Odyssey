@@ -69,7 +69,7 @@ public class KnightSkill : BaseSkill
         shieldAnimator.SetTrigger("isUsingShield");
         transform.root.GetComponent<PlayerArmorController>().ShieldSkill();
         StartCoroutine(ResetShield());
-        
+
     }
 
 
@@ -77,13 +77,13 @@ public class KnightSkill : BaseSkill
     {
 
         yield return new WaitForSeconds(normalCoolDown);
-         canUseNormal = true;
+        canUseNormal = true;
     }
 
     IEnumerator ResetShield()
     {
-        Debug.Log("shield cool down: " + shieldCoolDown);
         yield return new WaitForSeconds(shieldCoolDown);
+        GetComponentInChildren<ShieldHitBox>().shieldDame = transform.root.GetComponent<PlayerArmorController>().DameTakenDuringShieldSkill();
         shieldAnimator.SetTrigger("isShieldDone");
         transform.root.GetComponent<PlayerArmorController>().EndShieldSkill();
         StartCoroutine(ResetNormalSkill());
@@ -97,7 +97,7 @@ public class KnightSkill : BaseSkill
 
     public override void UltimmateSkill()
     {
-       
+
         canUseUltimate = false;
         animator.SetBool("isSkill2", false);
         float radius = 2f;

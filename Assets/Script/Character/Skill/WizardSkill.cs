@@ -18,7 +18,7 @@ public class WizardSkill : BaseSkill
     public GameObject normalBulletPrefab;
     public Transform firePos;
     public float bulletForce = 5f;
-    private float lastFireTime=-10f;
+    private float lastFireTime = -10f;
     public float normalSkillCoolDown = 5f;
     public int normalSkillDame;
 
@@ -147,8 +147,8 @@ public class WizardSkill : BaseSkill
         if (canUseNormal)
         {
             ShootFireBall();
-            canUseTeleport = true;  
-            StartCoroutine(ResetNormalSkillCoolDown()); 
+            canUseTeleport = true;
+            StartCoroutine(ResetNormalSkillCoolDown());
         }
         else if (canUseTeleport)
         {

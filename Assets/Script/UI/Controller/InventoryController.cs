@@ -141,13 +141,13 @@ public class InventoryController : MonoBehaviour, IUIScreen
             item.name, item.Description);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            UIManager.Instance.ToggleScreen(this);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Tab))
+    //    {
+    //        UIManager.Instance.ToggleScreen(this);
+    //    }
+    //}
 
     public void Open()
     {

@@ -299,4 +299,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTables: {fileID: 11400000, guid: 37ac8168a1fe2334fb40ee3aa2443167, type: 2}
-  dropRadius: 2
+  dropRadius: 1

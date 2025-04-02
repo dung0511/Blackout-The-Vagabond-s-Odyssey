@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         idleEvent = GetComponent<IdleEvent>();
         ai = GetComponent<Enemy_Movement_AI>();

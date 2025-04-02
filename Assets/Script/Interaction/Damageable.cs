@@ -17,12 +17,13 @@ public class Damageable : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             Break();
-            AstarPath.active.Scan();
+            
         }
     }
 
     private void Break()
     {
+        AstarPath.active.Scan();
         if (lootable != null)
         {
             lootable.DropLoot();

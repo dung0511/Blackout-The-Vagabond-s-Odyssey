@@ -7,15 +7,18 @@ public class BossTrigger : MonoBehaviour
     [SerializeField] private float delayBoss = 0.2f;
     [SerializeField] private Transform spawnPos;
     [SerializeField] private GameObject spawnEffect;
+    private EdgeCollider2D trigger;
 
     void Awake()
     {
         var seed = DungeonManager.Instance.currentSeed;
         Random.InitState(seed.GetHashCode());
+        trigger = GetComponent<EdgeCollider2D>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        trigger.enabled = false;
         transform.GetChild(0).gameObject.SetActive(true);
         SpawnBoss();
     }

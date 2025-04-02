@@ -125,7 +125,7 @@ public static class Utility
     public static Vector2 GetRandomPositionInCircle(Vector2 center, float radius)
     {
         var point = UnityEngine.Random.insideUnitCircle * radius;
-        return point;
+        return center + point;
     }
 
     public static string GenerateRandomSeed(int length)

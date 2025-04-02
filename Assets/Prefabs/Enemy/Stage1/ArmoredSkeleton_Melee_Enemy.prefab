@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 2957499934609179200, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3096559005044523152, guid: e359711ebc146374b9b93c5ae7d88d3e, type: 3}
       propertyPath: m_Name
       value: ArmoredSkeleton_Melee_Enemy

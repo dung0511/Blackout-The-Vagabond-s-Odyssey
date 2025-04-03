@@ -261,9 +261,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   target: {fileID: 0}
   nextWaypointDistance: 0.3
-  stopChaseDistance: 1
-  resumeChaseDistance: 1
-  resumeChaseDelay: 0.5
+  stopChaseDistance: 2
+  resumeChaseDistance: 2
+  resumeChaseDelay: 1.5
   moveSpeed: 0
 --- !u!114 &4654494591201828300
 MonoBehaviour:

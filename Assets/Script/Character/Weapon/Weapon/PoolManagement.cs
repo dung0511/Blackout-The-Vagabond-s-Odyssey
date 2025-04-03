@@ -27,7 +27,7 @@ public class PoolManagement : MonoBehaviour
         }
     }
 
-    public GameObject GetBullet(GameObject bulletPrefab)
+    public GameObject GetBullet(GameObject bulletPrefab, bool shouldChangeBullet = false)
     {
         if (!bulletPools.ContainsKey(bulletPrefab))
         {
@@ -35,23 +35,53 @@ public class PoolManagement : MonoBehaviour
             return null;
         }
 
+        GameObject bullet;
         if (bulletPools[bulletPrefab].Count > 0)
         {
-            GameObject bullet = bulletPools[bulletPrefab].Dequeue();
+            bullet = bulletPools[bulletPrefab].Dequeue();
             bullet.SetActive(true);
-            return bullet;
         }
         else
         {
-            GameObject newBullet = Instantiate(bulletPrefab);
-            return newBullet;
+            bullet = Instantiate(bulletPrefab);
         }
+
+        if (shouldChangeBullet)
+        {
+           
+            BulletIdentifier identifier = bullet.GetComponent<BulletIdentifier>();
+            if (identifier == null)
+            {
+                identifier = bullet.AddComponent<BulletIdentifier>();
+            }
+            
+            identifier.bulletPrefabReference = bulletPrefab;
+        }
+
+        return bullet;
     }
+
 
     public void ReturnBullet(GameObject bullet, GameObject bulletPrefab)
     {
         bullet.SetActive(false);
-        bulletPools[bulletPrefab].Enqueue(bullet);
-        
+        //bulletPools[bulletPrefab].Enqueue(bullet);
+        if (!bulletPools.ContainsKey(bulletPrefab))
+        {
+            BulletIdentifier identifier = bullet.GetComponent<BulletIdentifier>();
+            if (identifier != null && identifier.bulletPrefabReference != null && bulletPools.ContainsKey(identifier.bulletPrefabReference))
+            {
+                bulletPools[identifier.bulletPrefabReference].Enqueue(bullet);
+            }
+            else
+            {
+                Debug.LogError("dmmmmm");
+            }
+        }
+        else
+        {
+            bulletPools[bulletPrefab].Enqueue(bullet);
+        }
+
     }
 }

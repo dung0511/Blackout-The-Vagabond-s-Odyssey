@@ -108,7 +108,7 @@ public class ThrowableWeaponCurve : BaseWeapon, IPick
     public float throwCooldown;
     public SpriteRenderer characterSR;
     private SpriteRenderer weaponSpriteRenderer;
-
+    public WeaponDetailSO weaponDetailSO;
     //public ThrowableWeaponCurveService weaponCurveService;
 
     private float lastThrowTime = -10f;
@@ -119,50 +119,22 @@ public class ThrowableWeaponCurve : BaseWeapon, IPick
       
         weaponSpriteRenderer = GetComponent<SpriteRenderer>();
         projectilePrefab.GetComponent<ThrowableWeaponCurveProjectile>().curveManager = GetComponent<ThrowableWeaponCurve>();
-        //weaponCurveService = new ThrowableWeaponCurveService(
-        //    new WeaponRepository(),
-        //    true,
-        //    characterSR,
-        //    transform,
-        //    shootTimer,
-        //    weaponSpriteRenderer,
-        //    projectilePrefab,
-        //    projectileMaxMoveSpeed,
-        //    projectileMaxHeight,
-        //    trajectoryAnimationCurve,
-        //    axisCorrectionAnimationCurve,
-        //    projectileSpeedAnimationCurve
-        //); 
+       
         
         if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
         {
             characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
             inHand = true;
-           // weaponCurveService.SetCharacterSpriteRenderer(characterSR);
-            //weaponCurveService.SetInHand(inHand);
+           
         }
         else
         {
 
             inHand = false;
-            //weaponCurveService.SetInHand(inHand);
+           
             DropWeapon();
         }
     }
-
-    //void Update()
-    //{
-    //    if (!inHand) return;
-    //    weaponCurveService.RotateWeapon();
-    //    shootTimer -= Time.deltaTime;
-
-    //    if (Input.GetMouseButton(0) && shootTimer <= 0)
-    //    {
-    //        shootTimer = shootRate;
-    //        weaponCurveService.Attack();
-    //        //  Invoke(nameof(StopFiringAnimation), 0.2f);
-    //    }
-    //}
 
     public void TurnOffSpriteRenderer()
     {
@@ -262,5 +234,10 @@ public class ThrowableWeaponCurve : BaseWeapon, IPick
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 lookDir = (Vector2)(worldMousePos - transform.position);
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+    }
+
+    public override WeaponDetailSO GetWeaponDetailSO()
+    {
+        return weaponDetailSO;
     }
 }

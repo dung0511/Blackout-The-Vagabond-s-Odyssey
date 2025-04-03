@@ -132,7 +132,7 @@ public class RangedWeapon : BaseWeapon, IPick
     public bool inHand;
     private float lastFireTime = -10f;
     public RangedWeaponSO RangedWeaponSO;
-
+    public WeaponDetailSO weaponDetailSO;
 
     public GameObject GetPickGameOject()
     {
@@ -164,24 +164,11 @@ public class RangedWeapon : BaseWeapon, IPick
         bulletForce = RangedWeaponSO.bulletForce;
         dam = RangedWeaponSO.damageRangedWeapon;
 
-        //rangedWeapon = new RangedWeaponService(
-        //           new WeaponRepository(),
-        //           true,
-        //           characterSR,
-        //           transform,
-        //           fireRate,
-        //           bulletPrefab,
-        //           firePos,
-        //           bulletForce,
-        //           dam
-        //       );
-
         if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
         {
             characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
             inHand = true;
-            //rangedWeapon.SetCharacterSpriteRenderer(characterSR);
-            //rangedWeapon.SetInHand(inHand);
+            
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         else
@@ -193,18 +180,6 @@ public class RangedWeapon : BaseWeapon, IPick
         }
     }
 
-    void Update()
-    {
-        //if (!inHand) return;
-        //rangedWeapon.RotateWeapon();
-
-
-        //if (Input.GetMouseButton(0))
-        //{
-        //    rangedWeapon.Attack();
-        //    //  Invoke(nameof(StopFiringAnimation), 0.2f);
-        //}
-    }
 
     public override void Attack()
     {
@@ -269,9 +244,10 @@ public class RangedWeapon : BaseWeapon, IPick
         return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
     }
 
-    //private void StopFiringAnimation()
-    //{
-    //    isFiring = false;
-    //    firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", isFiring);
-    //}
+    public override WeaponDetailSO GetWeaponDetailSO()
+    {
+       return weaponDetailSO;
+    }
+
+ 
 }

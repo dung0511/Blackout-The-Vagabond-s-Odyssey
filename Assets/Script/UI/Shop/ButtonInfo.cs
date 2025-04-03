@@ -17,7 +17,7 @@ public class ButtonInfo : MonoBehaviour
     public void UpdateUI()
     {
         //hien thi gia va so luong da mua
-        priceTxt.text = "Price: $" + ShopManager.Instance.GetPrice(itemID);
+        priceTxt.text = "$" + ShopManager.Instance.GetPrice(itemID);
         quantityTxt.text = ShopManager.Instance.GetQuantity(itemID).ToString();
     }
 }

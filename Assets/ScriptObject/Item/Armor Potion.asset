@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d7785d79f39b948b0ac72b65820840, type: 3}
+  m_Name: Armor Potion
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 1
+  <maxStackSize>k__BackingField: 3
+  <Name>k__BackingField: Armor Potion
+  <Description>k__BackingField: Increases Max Armor by 10% permanently
+  <ItemImage>k__BackingField: {fileID: 1421786714, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
+  <DropPrefab>k__BackingField: {fileID: 2282121856620440604, guid: 46797e74e9988924fba2b4a7fe19a0e8, type: 3}
+  modifiersData:
+  - statsModifier: {fileID: 11400000, guid: 0aa7b9ba9b69b304abdc01af9937029a, type: 2}
+    value: 10

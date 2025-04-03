@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerArmorController : MonoBehaviour
 {
     private int currentArmor;
+    [SerializeField]
     private int maxArmor;
     private float timeHealArmor = 7f;
     private float lastDamageTime;
@@ -110,4 +111,17 @@ public class PlayerArmorController : MonoBehaviour
         return 99 - currentArmor;
     }
 
+    public void IncreaseMaxArmor(int value)
+    {
+        float increase = maxArmor * (value / 100f);
+
+        // lam tron thanh int
+        int increaseAmount = Mathf.RoundToInt(increase);
+
+        maxArmor += increaseAmount;
+        currentArmor += increaseAmount;
+
+        UpdateArmorBar(currentArmor, maxArmor);
+
+    }
 }

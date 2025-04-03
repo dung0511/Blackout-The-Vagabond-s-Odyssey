@@ -55,9 +55,19 @@ public class PlayerHealthController : Damageable
 
     public void RegenHealth (int value)
     {
-        health += value;
+        if (isDead) return;
+
+        health = Mathf.Min(health + value, maxHealth);
+
+        UpdateHealthBar(health, maxHealth);
     }
 
+    public void IncreaseMaxHP(int value)
+    {
+        maxHealth += value;   
+        health += value;      
+        UpdateHealthBar(health, maxHealth);
+    }
 
     public bool IsDead { get { return isDead; } }
     public bool IsHurt { get { return isHurt; } }

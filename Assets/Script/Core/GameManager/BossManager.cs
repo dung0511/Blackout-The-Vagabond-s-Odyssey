@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class BossManager : MonoBehaviour
 {
     public List<GameObject> bossList;
-    public UnityEvent bossKillEvent; 
+    [SerializeField] private GameObject bossKillObject;
+    public UnityEvent bossKillEvent;
 
     #region Singleton
     public static BossManager Instance {get; private set;}
@@ -18,7 +19,12 @@ public class BossManager : MonoBehaviour
             return;
         }
         Instance = this;
+        bossKillEvent.AddListener(OnBossKilled);
     }
     #endregion
 
+    private void OnBossKilled()
+    {
+        bossKillObject.SetActive(true);
+    }
 }

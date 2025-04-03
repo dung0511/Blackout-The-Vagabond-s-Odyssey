@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ButtonInfo : MonoBehaviour
 {
@@ -10,12 +9,15 @@ public class ButtonInfo : MonoBehaviour
 
     public TextMeshProUGUI quantityTxt;
 
-    public GameObject shopManager;
-
-    void Update()
+    void Start()
     {
-        priceTxt.text = "Price: $" 
-            + shopManager.GetComponent<ShopManager>().shopItems[2, itemID].ToString();
-        quantityTxt.text = shopManager.GetComponent<ShopManager>().shopItems[3, itemID].ToString();
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        //hien thi gia va so luong da mua
+        priceTxt.text = "$" + ShopManager.Instance.GetPrice(itemID);
+        quantityTxt.text = ShopManager.Instance.GetQuantity(itemID).ToString();
     }
 }

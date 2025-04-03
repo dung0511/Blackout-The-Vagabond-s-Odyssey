@@ -7,5 +7,6 @@ public abstract class BaseWeapon : MonoBehaviour
     public abstract void PickWeapon();
     public abstract void DropWeapon();
     public abstract float RotateToMousePos();
+    public abstract WeaponDetailSO GetWeaponDetailSO();
    
 }

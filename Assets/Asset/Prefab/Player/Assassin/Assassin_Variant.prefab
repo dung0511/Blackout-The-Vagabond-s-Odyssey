@@ -355,7 +355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoolDownNormalSkill: 0
   CoolDownUltimateSkill: 0
-  DameNormalSkill: 3
+  DameNormalSkill: 10
+  DameUltimateSkill: 50
   animator: {fileID: 3036850352898393763}
   dashDistance: 5
   dashDuration: 0.1

@@ -16,12 +16,17 @@ public class PlayerPickController : MonoBehaviour
     public bool isTouchItem = false;
     public GameObject Item;
     public bool isWeapon;
+    BaseWeapon weapon1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<IPick>(out var weapon))
         {
             Item = weapon.GetPickGameOject();
             isTouchItem = true;
+            // them UI hien thong tin vu khi la cai weapon detail so
+            // 
+            weapon1=Item.GetComponent<BaseWeapon>();
+            weapon1.GetWeaponDetailSO(); 
             if (weapon.IsPickingItemOrWeapon())
             {
                 isWeapon = true;
@@ -40,7 +45,16 @@ public class PlayerPickController : MonoBehaviour
         {
             Item = weapon.GetPickGameOject();
             isTouchItem = true;
+            if (weapon.IsPickingItemOrWeapon())
+            {
+                isWeapon = true;
+            }
+            else
+            {
+                isWeapon = false;
+            }
         }
+
     }
     private void OnTriggerExit2D()
     {

@@ -9,12 +9,14 @@ public class FlickerLight : MonoBehaviour
     public float maxFalloff = 1f;
     public float lerpSpeed = 0.1f;
     public float flickerInterval = 1f; 
-    private float targetIntensity;
+    private float targetFalloff;
+    private float targetInnerRadius;
     private float timer;
-
+    private float defaultInnerRadius;
     void Start()
     {
         l = GetComponent<Light2D>();
+        defaultInnerRadius = l.pointLightInnerRadius;
         SetNewTargets();
     }
 
@@ -23,8 +25,8 @@ public class FlickerLight : MonoBehaviour
         if (l)
         {
             timer += Time.deltaTime;
-            l.falloffIntensity = Mathf.Lerp(l.falloffIntensity, targetIntensity, lerpSpeed * Time.deltaTime);
-
+            l.falloffIntensity = Mathf.Lerp(l.falloffIntensity, targetFalloff, lerpSpeed * Time.deltaTime);
+            l.pointLightInnerRadius = Mathf.Lerp(l.pointLightInnerRadius, targetInnerRadius, lerpSpeed * Time.deltaTime);
             if (timer >= flickerInterval)
             {
                 SetNewTargets();
@@ -35,6 +37,7 @@ public class FlickerLight : MonoBehaviour
 
     void SetNewTargets()
     {
-        targetIntensity = Random.Range(minFalloff, maxFalloff);
+        targetFalloff = Random.Range(minFalloff, maxFalloff);
+        targetInnerRadius = defaultInnerRadius - targetFalloff;
     }
 }

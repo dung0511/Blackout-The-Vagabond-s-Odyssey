@@ -5,7 +5,7 @@ using System;
 public class PlayerData
 {
     public string characterId; 
-    public int gold = 0;
+    public int coin = 0;
     public bool hasUnlockAssassin = true;
     public bool hasUnlockKnight = false;
     public bool hasUnlockWizard = false;

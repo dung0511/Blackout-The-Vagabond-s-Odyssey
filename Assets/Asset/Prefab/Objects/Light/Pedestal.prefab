@@ -221,6 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913892838300748772}
+  - component: {fileID: 3813910512661428161}
   - component: {fileID: 1507258579844461563}
   m_Layer: 0
   m_Name: Light 2D (1)
@@ -244,6 +245,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2860581442893586756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3813910512661428161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700280257693086102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee255f3085b56c7439fdb62124463487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFalloff: 0.5
+  maxFalloff: 0.75
+  lerpSpeed: 2
+  flickerInterval: 1
 --- !u!114 &1507258579844461563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +301,7 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 2
+  m_PointLightInnerRadius: 2.31
   m_PointLightOuterRadius: 5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0

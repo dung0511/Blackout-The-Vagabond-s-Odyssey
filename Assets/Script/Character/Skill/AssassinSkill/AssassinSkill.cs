@@ -7,7 +7,9 @@ public class AssassinSkill : BaseSkill
     public float CoolDownNormalSkill;
     public float CoolDownUltimateSkill;
     public int DameNormalSkill = 5;
-    //  public int DameUltimateSkill;
+    public int DameUltimateSkill;
+    private int damage;
+
     public Animator animator;
 
     public float dashDistance = 5f;
@@ -37,7 +39,7 @@ public class AssassinSkill : BaseSkill
     public override void NormalSkill()
     {
 
-        DameNormalSkill = 3;
+        damage = DameNormalSkill;
         Vector3 mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
@@ -65,7 +67,7 @@ public class AssassinSkill : BaseSkill
     public override void UltimmateSkill()
     {
         light.GetComponent<Light2D>().pointLightOuterRadius = buffed;
-        DameNormalSkill = 50;
+        damage = DameUltimateSkill;
         isUsingUltimate = true;
         StartCoroutine(UltimateCoolDown());
     }
@@ -113,8 +115,8 @@ public class AssassinSkill : BaseSkill
         if (collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
 
-            enemy.takeDame(DameNormalSkill);
-            Debug.Log("Dealth dame nomal:" + DameNormalSkill);
+            enemy.takeDame(damage);
+            Debug.Log("Dealth dame nomal:" + damage);
 
 
 

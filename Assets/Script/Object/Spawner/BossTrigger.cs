@@ -18,9 +18,13 @@ public class BossTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        trigger.enabled = false;
-        transform.GetChild(0).gameObject.SetActive(true);
-        SpawnBoss();
+        if (collision.tag.Equals("Player"))
+        {
+            trigger.enabled = false;
+            transform.GetChild(0).gameObject.SetActive(true);
+            SpawnBoss();
+        }
+        
     }
 
     private void SpawnBoss()

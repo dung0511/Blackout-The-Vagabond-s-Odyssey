@@ -73,7 +73,7 @@ public class Enemy_Movement_AI : MonoBehaviour
         }
     }
 
-    void CheckChaseCondition()
+    public void CheckChaseCondition()
     {
 
         float distanceToPlayer = Vector3.Distance(transform.position, target.position);

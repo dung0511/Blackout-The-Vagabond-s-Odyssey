@@ -24,6 +24,8 @@ public class Room
     public HashSet<Vector2Int> nearRightWall = new();
     public HashSet<Vector2Int> inners = new();
 
+
+    public NotificationController roomNotification;
     public void OnEnemyDeath()
     {
         Debug.Log("Enemy died " + enemyCount);
@@ -31,6 +33,7 @@ public class Room
         if (enemyCount == 0)
         {
             Debug.Log("Room Cleared"); //them ui bao room cleared o day.
+            NotificationController.Instance.ShowNotification("Room Cleared");
             DungeonManager.Instance.OpenRoomBarrier(this);
         }
     }

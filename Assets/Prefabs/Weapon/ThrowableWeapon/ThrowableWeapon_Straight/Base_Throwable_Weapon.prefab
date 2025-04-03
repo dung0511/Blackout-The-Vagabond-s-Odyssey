@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 4895326479464317989}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -205,8 +205,8 @@ MonoBehaviour:
   characterSR: {fileID: 0}
   firePos: {fileID: 3240814153227571968}
   throwablePrefab: {fileID: 0}
-  throwCoolDown: 0.5
-  bulletForce: 0
+  throwCooldown: 0.5
+  throwForce: 20
   dame: 1
   animation: {fileID: 0}
   throwableWeaponSO: {fileID: 0}

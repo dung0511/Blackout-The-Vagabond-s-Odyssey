@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         idleEvent = GetComponent<IdleEvent>();
         ai = GetComponent<Enemy_Movement_AI>();
@@ -35,6 +34,7 @@ public class Enemy : MonoBehaviour
         // isAttack1 = false;
         animator = GetComponent<Animator>();
         isHurt = false;
+        ai.CheckChaseCondition();
     }
 
     void Update()

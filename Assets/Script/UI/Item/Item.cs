@@ -1,9 +1,9 @@
-﻿using Assets.Script.Service.IService;
+﻿//using Assets.Script.Service.IService;
 using System;
 using System.Collections;
 using UnityEngine;
 
-public class Item : MonoBehaviour, IPickService
+public class Item : MonoBehaviour, IPick
 {
     [field: SerializeField]
     public ItemSO inventoryItem { get; set; }

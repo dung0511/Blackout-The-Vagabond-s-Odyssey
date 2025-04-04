@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7362977808248016145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,99 +102,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1330838988822190556, guid: e02b58d398e55724bbb314535b579ca6, type: 3}
-  shootRate: 1
   projectileMaxMoveSpeed: 40
   projectileMaxHeight: 0.3
-  trajectoryAnimationCurve:
+  trajectoryCurve:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.075790405
-      value: 0.0002746582
-      inSlope: 2.9218037
-      outSlope: 2.9218037
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.41672814
-      value: 0.9964278
-      inSlope: 0.616672
-      outSlope: 0.616672
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0.01159668
-      inSlope: -1.6884598
-      outSlope: -1.6884598
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  axisCorrectionAnimationCurve:
+  axisCorrectionCurve:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  projectileSpeedAnimationCurve:
+  speedCurve:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -1.4426885
-      outSlope: -1.4426885
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5526967
-      value: 0.20263082
-      inSlope: 0.16996282
-      outSlope: 0.16996282
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1.7826141
-      outSlope: 1.7826141
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  throwCooldown: 0
   characterSR: {fileID: 0}
   inHand: 0
 --- !u!61 &5937039525606554002
@@ -234,7 +162,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0030410588, y: 0.055429615}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.37980017, y: 0.22159621}
+    pivot: {x: 0.38645718, y: 0.2771786}
     oldSize: {x: 0.09, y: 0.17}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5

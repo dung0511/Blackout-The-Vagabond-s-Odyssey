@@ -78,13 +78,14 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         UpdatePlayerData();
+
+        currentLevel++;
+        Debug.Log("Load Level: " + currentLevel + " Stage: " + currentStage);
         if(currentStage > maxStage)
         {
-            Debug.Log("Final");
             SceneManager.LoadScene("Final_Boss");
             return;
         } 
-        currentLevel++;
         if(currentLevel > levelsPerStage)
         {
             currentLevel = 0;

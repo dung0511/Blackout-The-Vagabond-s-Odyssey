@@ -24,11 +24,11 @@ public class DungeonEntrance : MonoBehaviour
         InputManager.Instance.playerInput.Ingame.Interact.performed -= EnterDungeon;
         var players = GameObject.FindObjectsByType<HomeMovement>(FindObjectsSortMode.None);
         
-        foreach(var found in players)
+        foreach(var player in players)
         {
-            found.enabled = false;
-            Instantiate(animationPrefab, found.transform.position + animationOffset, Quaternion.identity);
-            var sprite = found.transform.root.gameObject;
+            player.enabled = false;
+            Instantiate(animationPrefab, player.transform.position + animationOffset, Quaternion.identity);
+            var sprite = player.transform.root.gameObject;
             StartCoroutine(HidePlayer(sprite));
         }
         StartCoroutine(LoadScene());

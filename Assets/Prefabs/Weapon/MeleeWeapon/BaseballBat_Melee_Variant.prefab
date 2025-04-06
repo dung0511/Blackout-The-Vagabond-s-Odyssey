@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2449696428617353376, guid: da481c07828ec0d41a1524d282da9934, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.2638636
       objectReference: {fileID: 0}
     - target: {fileID: 2449696428617353376, guid: da481c07828ec0d41a1524d282da9934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 4.512096
       objectReference: {fileID: 0}
     - target: {fileID: 2449696428617353376, guid: da481c07828ec0d41a1524d282da9934, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: MeleeWeaponSO
       value: 
       objectReference: {fileID: 11400000, guid: bca2f82e158664f46a74f24ec1242053, type: 2}
+    - target: {fileID: 7533895328017823390, guid: da481c07828ec0d41a1524d282da9934, type: 3}
+      propertyPath: weaponDetailSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 248a4891372cdfd4e9f6634c3ef4feb2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

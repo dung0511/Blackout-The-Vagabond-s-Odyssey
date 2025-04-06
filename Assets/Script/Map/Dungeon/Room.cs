@@ -25,7 +25,7 @@ public class Room
     public HashSet<Vector2Int> inners = new();
 
 
-    public NotificationController roomNotification;
+    //public NotificationController roomNotification;
     public void OnEnemyDeath()
     {
         Debug.Log("Enemy died " + enemyCount);

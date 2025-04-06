@@ -17,6 +17,7 @@ public class PlayerPickController : MonoBehaviour
     public GameObject Item;
     public bool isWeapon;
     BaseWeapon weapon1;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<IPick>(out var weapon))
@@ -24,9 +25,9 @@ public class PlayerPickController : MonoBehaviour
             Item = weapon.GetPickGameOject();
             isTouchItem = true;
             // them UI hien thong tin vu khi la cai weapon detail so
-            // 
             weapon1=Item.GetComponent<BaseWeapon>();
-            weapon1.GetWeaponDetailSO(); 
+            WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
+            ShowUIPanel(weaponDetailSO);
             if (weapon.IsPickingItemOrWeapon())
             {
                 isWeapon = true;
@@ -45,6 +46,9 @@ public class PlayerPickController : MonoBehaviour
         {
             Item = weapon.GetPickGameOject();
             isTouchItem = true;
+            weapon1 = Item.GetComponent<BaseWeapon>();
+            WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
+            ShowUIPanel(weaponDetailSO);
             if (weapon.IsPickingItemOrWeapon())
             {
                 isWeapon = true;
@@ -60,8 +64,23 @@ public class PlayerPickController : MonoBehaviour
     {
         isTouchItem = false;
         Item = null;
-    }
+        HideUIPanel();
 
+    }
+    void ShowUIPanel(WeaponDetailSO weaponDetailSO)
+    {
+        if (weaponDetailSO == null)
+        {
+            Debug.LogWarning("Thieu WeaponDetailSO, de nghi gan vao vu khi gap!!!!");
+            return;
+        }
+        WeaponDetailUI.weaponDetailUI.UpdatePanel(weaponDetailSO);
+        WeaponDetailUI.weaponDetailUI.showPanel();
+    }
+    void HideUIPanel()
+    {
+        WeaponDetailUI.weaponDetailUI.hidePanel();
+    }
     public void PickItemWeapon()
     {
         if (isWeapon)

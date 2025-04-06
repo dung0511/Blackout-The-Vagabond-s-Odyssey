@@ -1,0 +1,13 @@
+using UnityEngine;
+
+public class OrcWarlockSkill1HitBox : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.TryGetComponent<IDamageable>(out var gameobj))
+        {
+            gameobj.takeDame(transform.root.GetComponent<OrcWarlock>().damage);
+            collision.gameObject.SetActive(false);
+        }
+    }
+}

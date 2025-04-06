@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +8,11 @@ public class PlayerHealthController : Damageable
     private bool isHurt;
     private bool isDead;
 
+    public GameOverMenuUI gameOverMenu;
+
     //private void Awake()s
     //{
-        
+
     //    maxHealth = health;
     //    UpdateHealthBar(health,maxHealth);
     //}
@@ -35,6 +37,7 @@ public class PlayerHealthController : Damageable
             {
                 isDead = true;
                 health = 0;
+                Die();
             }
             else isHurt = true;
             StartCoroutine(ResetHurt());
@@ -67,6 +70,11 @@ public class PlayerHealthController : Damageable
         maxHealth += value;   
         health += value;      
         UpdateHealthBar(health, maxHealth);
+    }
+
+    void Die()
+    {
+        gameOverMenu.Show();
     }
 
     public bool IsDead { get { return isDead; } }

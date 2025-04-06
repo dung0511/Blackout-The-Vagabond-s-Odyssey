@@ -7273,7 +7273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458432744}
   - component: {fileID: 458432746}
-  - component: {fileID: 458432745}
+  - component: {fileID: 458432747}
   m_Layer: 5
   m_Name: ShieldBar
   m_TagString: Untagged
@@ -7303,18 +7303,6 @@ RectTransform:
   m_AnchoredPosition: {x: -680, y: 406.6}
   m_SizeDelta: {x: 397.1962, y: 42.6713}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &458432745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458432743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af88e21a0ffaf4c43b9b296396286ffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &458432746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7366,6 +7354,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &458432747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458432743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c7e87f703d3864097b6b02d3781604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &464467843
 GameObject:
   m_ObjectHideFlags: 0

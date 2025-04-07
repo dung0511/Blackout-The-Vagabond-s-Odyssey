@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class BossManager : MonoBehaviour
 {
     public List<GameObject> bossList;
-    [SerializeField] private GameObject bossKillObject;
+    [SerializeField] private GameObject bossKillObject; //stuff spawn after boss kill
     public UnityEvent bossKillEvent;
 
     #region Singleton
@@ -19,6 +19,8 @@ public class BossManager : MonoBehaviour
             return;
         }
         Instance = this;
+        var seed = DungeonManager.Instance.currentSeed;
+        Random.InitState(seed.GetHashCode());
         bossKillEvent.AddListener(OnBossKilled);
     }
     #endregion

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BossTrigger : MonoBehaviour
 {
-    [SerializeField] private float delaySpawn = 0.8f;
+    [SerializeField] private float delaySpawn = 0.5f;
     [SerializeField] private float delayBoss = 0.2f;
     [SerializeField] private Transform spawnPos;
     [SerializeField] private GameObject spawnEffect;
@@ -11,8 +11,6 @@ public class BossTrigger : MonoBehaviour
 
     void Awake()
     {
-        var seed = DungeonManager.Instance.currentSeed;
-        Random.InitState(seed.GetHashCode());
         trigger = GetComponent<EdgeCollider2D>();
     }
 

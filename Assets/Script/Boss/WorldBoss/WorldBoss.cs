@@ -243,6 +243,7 @@ public class WorldBoss : MonoBehaviour, IDamageable
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<CapsuleCollider2D>().enabled=false;
             animator.SetTrigger("isDead");
+            BossManager.Instance.bossKillEvent.Invoke();
         }
     }
 

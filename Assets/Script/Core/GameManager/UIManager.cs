@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
-    public IUIScreen currentScreen;
+    public IUIScreen openedScreen;
     public UnityEvent<float,float> healthBarEvent;
     public UnityEvent<float,float> shieldBarEvent;
 
@@ -28,22 +28,20 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
-
-
     public void ToggleScreen(IUIScreen screen)
     {
         if (screen == null) return;
 
-        if (currentScreen == screen)
+        if (openedScreen == screen)
         {
             screen.Close();
-            currentScreen = null;
+            openedScreen = null;
         }
         else
         {
-            if (currentScreen != null) currentScreen.Close();
+            if (openedScreen != null) openedScreen.Close();
             screen.Open();
-            currentScreen = screen;
+            openedScreen = screen;
         }
     }
 }

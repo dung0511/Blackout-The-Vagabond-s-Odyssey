@@ -45,6 +45,7 @@ public class PlayerHealthController : Damageable
         isHurt = true;
         StartCoroutine(ResetHurt());
     }
+
     private IEnumerator ResetHurt()
     {
         yield return new WaitForSeconds(0.5f);

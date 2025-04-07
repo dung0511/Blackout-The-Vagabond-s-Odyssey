@@ -36,7 +36,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
                 {
                     item.enabled = false;
                 }
-                //stoneGolemHealth.roomBelong.OnEnemyDeath();
+                BossManager.Instance.bossKillEvent.Invoke();
             }
         }
         

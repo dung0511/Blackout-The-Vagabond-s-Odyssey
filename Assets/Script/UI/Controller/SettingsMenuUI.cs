@@ -1,51 +1,66 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SettingsMenuUI : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] private GameObject settingsPanel;
     private bool isPaused = false;
 
-    void Start()
+    private void Start()
     {
-        pauseMenu.SetActive(false);
         DontDestroyOnLoad(gameObject);
     }
 
-    void Update()
+    private void Awake()
+    {
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(false);
+        }
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isPaused)
-            {
-                Pause();
-            }
+            ToggleSettingsMenu();
+        }
+    }
+
+    public void ToggleSettingsMenu()
+    {
+        isPaused = !isPaused;
+
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(isPaused);
         }
 
+        Time.timeScale = isPaused ? 0f : 1f;
     }
 
-    public void Pause()
+    public void ResumeGame()
     {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
-    }
-
-    public void Resume()
-    {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
         isPaused = false;
+
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(false);
+        }
+
+        Time.timeScale = 1f;
     }
 
-    public void Restart()
+    public void RestartGame()
     {
+        settingsPanel.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void Quit()
+    public void QuitGame()
     {
-        SceneManager.LoadScene("Home");
+        Time.timeScale = 1f;  
+        SceneManager.LoadScene("MainMenu");
     }
 }

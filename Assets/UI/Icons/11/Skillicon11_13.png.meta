@@ -116,12 +116,12 @@ TextureImporter:
       name: Skillicon11_13_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 6
-        width: 22
-        height: 20
+        x: 6
+        y: 7
+        width: 20
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fbae9d310dd8b7f4384252ec9569f86c
     internalID: 0
     vertices: []
     indices: 

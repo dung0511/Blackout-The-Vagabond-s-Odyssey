@@ -5,15 +5,17 @@ public class KnightSkill : BaseSkill
 {
     public Animator animator;
     public Animator shieldAnimator;
-    public GameObject clonePrefab;
-    public float cloneCoolDown = 10f;
-    public int NumberSpawn = 3;
 
-    public float ultimateCooldown = 10f;
+    //clone
+    public GameObject clonePrefab;
+    public float cloneCoolDown;
+    public int NumberSpawn;
+    public float ultimateCooldown;
     public LayerMask obstacleMask;
 
-    public float normalCoolDown = 5f;
-    public float shieldCoolDown = 7f;
+    //shield
+    public float normalCoolDown;
+    public float shieldCoolDown;
     public int shieldDame = 5;
 
     public bool isUsingNormal = false;
@@ -22,6 +24,9 @@ public class KnightSkill : BaseSkill
     public bool canUseUltimate = true;
 
     public PlayerWeaponController weaponController;
+
+    public SkillCooldownUI skillE_UI;
+    public SkillCooldownUI skillQ_UI;
 
 
     private void Start()
@@ -68,6 +73,9 @@ public class KnightSkill : BaseSkill
         animator.SetBool("isSkill1", false);
         shieldAnimator.SetTrigger("isUsingShield");
         transform.root.GetComponent<PlayerArmorController>().ShieldSkill();
+        if (skillE_UI != null)
+            skillE_UI.TriggerCooldown(normalCoolDown);
+
         StartCoroutine(ResetShield());
 
     }
@@ -100,6 +108,9 @@ public class KnightSkill : BaseSkill
 
         canUseUltimate = false;
         animator.SetBool("isSkill2", false);
+        if (skillQ_UI != null)
+            skillQ_UI.TriggerCooldown(ultimateCooldown);
+
         float radius = 2f;
         Vector3 center = transform.position;
         int maxAttempts = 10;

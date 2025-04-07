@@ -5,17 +5,10 @@ public class GameOverMenuUI : MonoBehaviour
 {
     [SerializeField] GameObject gameoverMenu;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameoverMenu.SetActive(false);
         DontDestroyOnLoad(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Show()

@@ -17,6 +17,7 @@ public class CharacterBinder : MonoBehaviour
     private void Start()
     {
         selectedCharacter = GameObject.Find(GameManager.Instance.playerCharacter.home.name);
+        GameManager.Instance.SetPlayerCharacter(GameManager.Instance.playerCharacter);
         BindCharacter(selectedCharacter);
     }
 

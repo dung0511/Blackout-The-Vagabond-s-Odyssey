@@ -20,7 +20,7 @@ public class ShopManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            DataManager.Load(); 
+            DataManager.Load(); // ???
             UpdateCoinsUI();
         }
         else
@@ -78,7 +78,7 @@ public class ShopManager : MonoBehaviour
     {
         DataManager.gameData.playerData.coin += amount;
         UpdateCoinsUI();
-        DataManager.Save();
+        DataManager.Save(); //??? save moi lan nhat do
     }
 
     private void SpawnItem(int itemID)

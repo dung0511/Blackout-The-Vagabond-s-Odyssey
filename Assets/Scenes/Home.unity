@@ -25270,19 +25270,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 43.6938
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29.330048
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519688204058687245, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_Pivot.x
@@ -53662,6 +53662,10 @@ PrefabInstance:
       propertyPath: characterSkillsPanel
       value: 
       objectReference: {fileID: 1092546667}
+    - target: {fileID: 8617082415971209967, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
+      propertyPath: stage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9188130133351135442, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
       propertyPath: m_Name
       value: Home_Wizard

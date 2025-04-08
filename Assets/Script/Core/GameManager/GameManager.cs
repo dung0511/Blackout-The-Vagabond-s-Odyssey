@@ -77,24 +77,31 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        UpdatePlayerData();
-
-        currentLevel++;
+        if(currentLevel > levelsPerStage) //next stage
+        {
+            currentLevel = 1;
+            currentStage++;
+            if(currentStage > DataManager.gameData.playerData.furthestStage)
+            {
+                DataManager.gameData.playerData.furthestStage = currentStage;
+            }
+        } else
+        {
+            currentLevel++;
+        } 
         Debug.Log("Load Level: " + currentLevel + " Stage: " + currentStage);
-        if(currentStage > maxStage)
+        if(currentStage > maxStage) //game final boss level
         {
             SceneManager.LoadScene("Final_Boss");
-            return;
-        } 
-        if(currentLevel > levelsPerStage)
-        {
-            currentLevel = 0;
-            SceneManager.LoadScene("Boss_Stage"+ currentStage++);
         } else 
+        if(currentLevel > levelsPerStage) //boss level at end of stage (level = num levels per stage + 1)
+        {
+            SceneManager.LoadScene("Boss_Stage"+ currentStage);
+        } else //normal dungeon level
         {
             SceneManager.LoadScene("Dungeon");
         }
-        //long //behind load scence, never reach
+        //long
         TimePlayed = Time.time-TimePlayed;
         FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(FirebaseDatabaseManager.Instance.GetOrCreatePlayerId(), currentLevel, currentStage, TimePlayed, EnemyKilled);
         //long
@@ -107,7 +114,7 @@ public class GameManager : MonoBehaviour
             rootSeed = Utility.GenerateRandomSeed(10);
         } 
         UnityEngine.Random.InitState(rootSeed.GetHashCode());
-        for(int i = 0; i < maxStage * levelsPerStage + maxStage; i++)
+        for(int i = 0; i < maxStage * levelsPerStage + maxStage +2; i++)  //+2 for safety
         {
             levelSeeds.Enqueue(Utility.GenerateRandomSeed(10));
         }

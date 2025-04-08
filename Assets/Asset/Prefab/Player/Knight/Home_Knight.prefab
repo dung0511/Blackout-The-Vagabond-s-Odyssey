@@ -65,16 +65,41 @@ PrefabInstance:
       value: Home_Knight
       objectReference: {fileID: 0}
     - target: {fileID: 8662795685388912895, guid: 7caa6f23bb2cac64abb6015d69a0d029, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 11400000, guid: a42398099368d6848ad1ebd07363a78c, type: 2}
+    - target: {fileID: 8662795685388912895, guid: 7caa6f23bb2cac64abb6015d69a0d029, type: 3}
       propertyPath: selectedCharacter
       value: 
       objectReference: {fileID: 11400000, guid: a42398099368d6848ad1ebd07363a78c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7225819631929780849, guid: 7caa6f23bb2cac64abb6015d69a0d029, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4562098841044402118}
   m_SourcePrefab: {fileID: 100100000, guid: 7caa6f23bb2cac64abb6015d69a0d029, type: 3}
 --- !u!212 &4560405389758759209 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 588871139189285838, guid: 7caa6f23bb2cac64abb6015d69a0d029, type: 3}
   m_PrefabInstance: {fileID: 3991816153625420519}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5990494557785393302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7225819631929780849, guid: 7caa6f23bb2cac64abb6015d69a0d029, type: 3}
+  m_PrefabInstance: {fileID: 3991816153625420519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4562098841044402118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5990494557785393302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba26c82d500f6e4185365e99071eb9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 1

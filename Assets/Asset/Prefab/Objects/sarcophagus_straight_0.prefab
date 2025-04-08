@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9199495428090018402}
   - component: {fileID: 4686226627952298842}
   - component: {fileID: 4656472519991540074}
+  - component: {fileID: -2302192127844883089}
   m_Layer: 3
   m_Name: sarcophagus_straight_0
   m_TagString: Untagged
@@ -148,3 +149,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &-2302192127844883089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8433609030518777825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fecc4c28d3a644dbcc6d94df4d6934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTables: {fileID: 11400000, guid: 960b580d149153541bb59c894404d445, type: 2}
+  dropRadius: 0.2

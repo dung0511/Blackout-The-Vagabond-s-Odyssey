@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayableCharacter : Interactable
 {
-    public CharacterVariantSO selectedCharacter;
+    public CharacterVariantSO character;
     public GameObject characterInfoPanel;
     public GameObject characterSkillsPanel;
 
@@ -17,7 +17,7 @@ public class PlayableCharacter : Interactable
         var binder = interactPlayer.GetComponent<CharacterBinder>();
         binder.ResetBindedCharacter();
         binder.BindCharacter(transform.parent.gameObject);
-        GameManager.Instance.SetPlayerCharacter(selectedCharacter);
+        GameManager.Instance.SetPlayerCharacter(character);
     }
 
     public override void HighLightOn()
@@ -42,14 +42,14 @@ public class PlayableCharacter : Interactable
                 var infoPanelScript = characterInfoPanel.GetComponent<CharacterInfoPanel>();
                 if (infoPanelScript != null)
                 {
-                    infoPanelScript.UpdateCharacterInfo(selectedCharacter);
+                    infoPanelScript.UpdateCharacterInfo(character);
                 }
 
 
                 var skillsPanelScript = characterSkillsPanel.GetComponent<CharacterSkillsPanel>();
                 if (skillsPanelScript != null)
                 {
-                    skillsPanelScript.UpdateCharacterSkills(selectedCharacter);
+                    skillsPanelScript.UpdateCharacterSkills(character);
                 }
             }
 

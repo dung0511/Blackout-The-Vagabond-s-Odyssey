@@ -11,20 +11,18 @@ public class CharacterManager : MonoBehaviour
 
     void Awake()
     {
-        var charId = GameManager.Instance.playerCharacter.id;
-        CharacterVariantSO character;
+        var defaultChar = GameManager.Instance.playerCharacter;
+        var charId = defaultChar.id;
         try
         {
             charId = DataManager.gameData.playerData.characterId;
+            CharacterVariantSO character = characterList.FirstOrDefault(c => c.id == charId); 
+            if(character == null) throw new Exception("Character not found in list: "+charId);
+            GameManager.Instance.playerCharacter = character;   //load prev played char
         } catch(Exception e)
         {
-            Debug.LogError("Use default char, Load char id failed "+e.Message);
+            GameManager.Instance.playerCharacter = defaultChar; //load default char
+            Debug.LogError("Load char failed: "+e.Message);
         }
-        character = characterList.FirstOrDefault(c => c.id == charId); 
-        if(character)
-        {
-            GameManager.Instance.playerCharacter = character;   //load prev played char
-        }
-            
     }
 }

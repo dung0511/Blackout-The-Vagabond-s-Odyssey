@@ -231,7 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ba235728c2b9345a93eca486d03c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedCharacter: {fileID: 0}
+  character: {fileID: 0}
+  characterInfoPanel: {fileID: 0}
+  characterSkillsPanel: {fileID: 0}
 --- !u!61 &1957703774380523273
 BoxCollider2D:
   m_ObjectHideFlags: 0

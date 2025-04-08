@@ -43,13 +43,13 @@ public class MeleeWeapon : BaseWeapon, IPick
 
     public void Pick()
     {
-        characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
-        inHand = true;
+        PickWeapon();
        
     }
 
     public void Drop()
     {
+        DropWeapon();
         characterSR = null;
         inHand = false;
         

@@ -12,14 +12,14 @@ public class Player : MonoBehaviour
     public Rigidbody2D rd;
     public SpriteRenderer characterSR;
     private Animator anim;
-   // public bool isGamePaused = false;
+    // public bool isGamePaused = false;
     public int health;
     public int armor;
     public float speed;
     public bool isHurt;
     public bool isDead;
-   // public bool isMove;
-   // public bool isOpenBag = false;
+    // public bool isMove;
+    // public bool isOpenBag = false;
     public PlayerDetailSO playerDetailSO;
 
     public GameObject menu;
@@ -56,11 +56,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (!healthController.IsDead)
-        {
-            anim.SetBool("isMoving", moveController.MoveControl());
-        }
-        else
+        if (healthController.IsDead)
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
             weaponController.gameObject.SetActive(false);
@@ -69,50 +65,57 @@ public class Player : MonoBehaviour
             Cursor.visible = true;
             anim.SetBool("isDead", true);
         }
-
-        if (healthController.IsHurt && !healthController.IsDead)
-            anim.SetBool("isHurt", true);
         else
-            anim.SetBool("isHurt", false);
-
-        if (!skillController.IsUsingSkill())
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            anim.SetBool("isMoving", moveController.MoveControl());
+
+            if (healthController.IsHurt && !healthController.IsDead)
+                anim.SetBool("isHurt", true);
+            else
+                anim.SetBool("isHurt", false);
+
+            if (!skillController.IsUsingSkill())
             {
-                weaponController.ChangeWeapon(1);
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    weaponController.ChangeWeapon(1);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon)
+                {
+                    weaponController.ChangeWeapon(2);
+                }
+
+                if (Input.GetKeyDown(KeyCode.F) && pickController.isTouchItem)
+                {
+                    pickController.PickItemWeapon();
+                }
+
+                weaponController.RotateWeapon();
+                if (Input.GetMouseButton(0))
+                {
+                    weaponController.Attack();
+                }
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2) && !weaponController.haveOneWepon)
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
-                weaponController.ChangeWeapon(2);
+                UIManager.Instance.ToggleScreen(inventoryController);
             }
 
-            if (Input.GetKeyDown(KeyCode.F) && pickController.isTouchItem)
+            if (Input.GetKeyDown(KeyCode.E) && skillController.CanUseSkill1())
             {
-                pickController.PickItemWeapon();
-            }
+                anim.SetBool("isSkill1", true);
 
-            weaponController.RotateWeapon();
-            if (Input.GetMouseButton(0))
+            }
+            if (Input.GetKeyDown(KeyCode.Q) && skillController.CanUseSkill2())
             {
-                weaponController.Attack();
+                anim.SetBool("isSkill2", true);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            UIManager.Instance.ToggleScreen(inventoryController);
-        }
 
-        if (Input.GetKeyDown(KeyCode.E) && skillController.CanUseSkill1())
-        {
-            anim.SetBool("isSkill1", true);
 
-        }
-        if (Input.GetKeyDown(KeyCode.Q) && skillController.CanUseSkill2())
-        {
-            anim.SetBool("isSkill2", true);
-        }
     }
 
 

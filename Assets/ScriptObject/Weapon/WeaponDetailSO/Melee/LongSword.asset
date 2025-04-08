@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9859870ae41e31488cc2a6c4236ec0c, type: 3}
-  m_Name: BaseballBat
+  m_Name: LongSword
   m_EditorClassIdentifier: 
-  damageWeapon: 7
-  attackCooldown: 0.65
-  force: 5
+  damageWeapon: 2
+  attackCooldown: 0.5
+  force: 0

@@ -109,29 +109,32 @@ public class ThrowableWeaponCurve : BaseWeapon, IPick
     public SpriteRenderer characterSR;
     private SpriteRenderer weaponSpriteRenderer;
     public WeaponDetailSO weaponDetailSO;
+    public ThrowableWeaponCurveSO weaponCurveSO;
     //public ThrowableWeaponCurveService weaponCurveService;
 
     private float lastThrowTime = -10f;
-
+    public int damage;
     public bool inHand;
     void Start()
     {
-      
+        projectileMaxMoveSpeed = weaponCurveSO.throwableForce;
+        damage = weaponCurveSO.damageThrowableWeapon;
+        throwCooldown = weaponCurveSO.TimeBtwFire;
         weaponSpriteRenderer = GetComponent<SpriteRenderer>();
         projectilePrefab.GetComponent<ThrowableWeaponCurveProjectile>().curveManager = GetComponent<ThrowableWeaponCurve>();
-       
-        
+
+
         if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
         {
             characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
             inHand = true;
-           
+
         }
         else
         {
 
             inHand = false;
-           
+
             DropWeapon();
         }
     }

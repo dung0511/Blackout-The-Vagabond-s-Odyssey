@@ -6,6 +6,11 @@ public class RedZoneHitBox : MonoBehaviour
 {
     private float damageInterval = 0.5f;
     private Coroutine damageCoroutine;
+    public int damage = 0;
+    private void Start()
+    {
+        damage=GameObject.Find("Weapon").GetComponentInChildren<ThrowableWeaponCurve>().damage;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,7 +41,7 @@ public class RedZoneHitBox : MonoBehaviour
     {
         while (true)
         {
-            enemy.takeDame(2);
+            enemy.takeDame(damage);
             yield return new WaitForSeconds(damageInterval);
         }
     }

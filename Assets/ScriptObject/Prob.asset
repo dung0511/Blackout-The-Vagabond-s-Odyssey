@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fa845ae78cb6f419a61115bf088f58, type: 3}
+  m_Name: Prob
+  m_EditorClassIdentifier: 
+  table:
+  - loots:
+    - {fileID: 2282121856620440604, guid: 46797e74e9988924fba2b4a7fe19a0e8, type: 3}
+    - {fileID: 942735952168806371, guid: e5a552112aefa644bb945f452340ee4e, type: 3}
+    - {fileID: 3142589339821458704, guid: c5c0ff1fc8223124a9a6d5e061890ad5, type: 3}
+    - {fileID: 4991719267474809798, guid: bba56b0eb1181a6428e40b1eaf2d6374, type: 3}
+    - {fileID: 2510130182750027063, guid: 84fc3a01fcd391a4e84344940df369aa, type: 3}
+    - {fileID: 4593716113324912101, guid: 19ba4172271b0264bb107d2d04da9cce, type: 3}
+    tableChance: 10
+  - loots:
+    - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
+    tableChance: 30

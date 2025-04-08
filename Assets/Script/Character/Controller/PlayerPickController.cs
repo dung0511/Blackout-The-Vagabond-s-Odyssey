@@ -48,12 +48,12 @@ public class PlayerPickController : MonoBehaviour
         if (collision.gameObject.TryGetComponent<IPick>(out var weapon))
         {
             Item = weapon.GetPickGameOject();
-            isTouchItem = true;
-            weapon1 = Item.GetComponent<BaseWeapon>();
-            WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
-            ShowUIPanel(weaponDetailSO);
+            isTouchItem = true;         
             if (weapon.IsPickingItemOrWeapon())
             {
+                weapon1 = Item.GetComponent<BaseWeapon>();
+                WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
+                ShowUIPanel(weaponDetailSO);
                 isWeapon = true;
             }
             else

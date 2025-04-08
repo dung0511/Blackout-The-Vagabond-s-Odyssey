@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: RangedWeaponSO
       value: 
       objectReference: {fileID: 11400000, guid: 57b0fd6ccac9b6a4fb2b47033ef92950, type: 2}
+    - target: {fileID: 934467681116527374, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: weaponDetailSO
+      value: 
+      objectReference: {fileID: 11400000, guid: fc30609ff43e1704d948e48c717c5b26, type: 2}
     - target: {fileID: 1532190317244686400, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
       propertyPath: m_Sprite
       value: 

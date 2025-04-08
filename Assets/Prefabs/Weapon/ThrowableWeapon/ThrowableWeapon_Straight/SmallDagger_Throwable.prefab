@@ -73,13 +73,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5261443309028266430, guid: 2b67596b96911b641a48d0f5b6958232, type: 3}
     - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: weaponDetailSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f7ff7d5dd655014b9e72b8a7b6da719, type: 2}
+    - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
       propertyPath: throwablePrefab
       value: 
       objectReference: {fileID: 5261443309028266430, guid: 2b67596b96911b641a48d0f5b6958232, type: 3}
     - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
       propertyPath: throwableWeaponSO
       value: 
-      objectReference: {fileID: 11400000, guid: 8327aee148e79694683585bbc069eec4, type: 2}
+      objectReference: {fileID: 11400000, guid: 7f87cd8b237c68941ac2731595717a37, type: 2}
     - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
       propertyPath: throwableWeaponDetail
       value: 

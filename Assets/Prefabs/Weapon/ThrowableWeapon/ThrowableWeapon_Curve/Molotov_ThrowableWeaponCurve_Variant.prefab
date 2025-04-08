@@ -53,6 +53,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4013436442668898190, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
+      propertyPath: weaponCurveSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 832f931d29c14ab4da6c88042b199ade, type: 2}
+    - target: {fileID: 4013436442668898190, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
+      propertyPath: weaponDetailSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 4424fcea0a32a0b47ae8e2c4b14455dc, type: 2}
+    - target: {fileID: 4013436442668898190, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
       propertyPath: projectileMaxMoveSpeed
       value: 20
       objectReference: {fileID: 0}

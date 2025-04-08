@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b79da7afec5b443a6a83b680a130fb, type: 3}
+  m_Name: Molotov
+  m_EditorClassIdentifier: 
+  throwableWeaponName: 
+  throwableWeaponPrefab: {fileID: 0}
+  runtimeAnimatorController: {fileID: 0}
+  damageThrowableWeapon: 2
+  TimeBtwFire: 1
+  throwableForce: 20

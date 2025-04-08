@@ -7,7 +7,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Start()
     {
-       // Damege=GetComponentInParent<MeleeWeapon>().meleeWeapon.GetDamage();
+        Damege=GetComponentInParent<MeleeWeapon>().damage;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

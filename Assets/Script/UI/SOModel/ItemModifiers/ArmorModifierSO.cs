@@ -5,7 +5,7 @@ public class ArmorModifierSO : StatsModifierSO
 {
     public int percentIncrease = 20;
 
-    public override void AffectCharcater(GameObject player, float value)
+    public override void AffectCharacter(GameObject player, float value)
     {
         if (player.TryGetComponent<PlayerArmorController>(out var armor))
         {

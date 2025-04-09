@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ public class ConsumableItemSO : ItemSO, IDestroyableItem, IItemAction
     {
         foreach (ModifierData data in modifiersData)
         {
-            data.statsModifier.AffectCharcater(player, data.value);
+            data.statsModifier.AffectCharacter(player, data.value);
         }
         return true;
     }

@@ -25,10 +25,12 @@ public class CharacterVariantSO : ScriptableObject
     public string characterSkillDescription2;
 
     //skins ?
-
+#if UNITY_EDITOR
     [ContextMenu("Generate ID")]
     void GenerateId()
     {
         id = AssetDatabase.GUIDFromAssetPath(AssetDatabase.GetAssetPath(this)).ToString();
     }
+#endif
+    
 }

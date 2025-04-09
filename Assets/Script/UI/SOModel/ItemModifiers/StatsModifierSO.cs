@@ -2,6 +2,6 @@ using UnityEngine;
 
 public abstract class StatsModifierSO : ScriptableObject
 {
-    public abstract void AffectCharcater(GameObject player, float value);
+    public abstract void AffectCharacter(GameObject player, float value);
 }
 

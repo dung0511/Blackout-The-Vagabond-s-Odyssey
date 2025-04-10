@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public PlayerPickController pickController;
     public InventoryController inventoryController;
     public BaseSkill skillController { get; private set; }
+    public GameObject skillUIPrefab;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

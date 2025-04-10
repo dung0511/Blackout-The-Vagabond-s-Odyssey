@@ -29,6 +29,9 @@ public class AssassinSkill : BaseSkill
     public float lightdefault;
     public float buffed;
 
+    public SkillCooldownUI skillE_UI;
+    public SkillCooldownUI skillQ_UI;
+
     public PlayerWeaponController weaponController;
     private void Start()
     {
@@ -181,4 +184,6 @@ public class AssassinSkill : BaseSkill
     {
         isUsingNormal = true;
     }
+
+    
 }

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,7 @@ public class GameOverMenuUI : MonoBehaviour
     public static GameOverMenuUI Instance { get; private set; }
 
     [SerializeField] GameObject gameoverMenu;
+    [SerializeField] TextMeshProUGUI stageLevelText;
 
     void Awake()
     {
@@ -24,19 +26,15 @@ public class GameOverMenuUI : MonoBehaviour
 
     public void Show()
     {
+        stageLevelText.text = $"You made it to Stage: {GameManager.Instance.currentStage}, Level: {GameManager.Instance.currentLevel}";
         gameoverMenu.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void PlayAgain()
+    public void BackToHome()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Home");
     }
 
-    public void Quit()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
-    }
 }

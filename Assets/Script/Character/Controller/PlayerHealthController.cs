@@ -8,21 +8,12 @@ public class PlayerHealthController : Damageable
     private bool isHurt;
     private bool isDead;
 
-    //private void Awake()s
-    //{
-
-    //    maxHealth = health;
-    //    UpdateHealthBar(health,maxHealth);
-    //}
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         health = GetComponent<Player>().health;
         isHurt = GetComponent<Player>().isHurt;
         isDead = GetComponent<Player>().isDead;
         maxHealth = health;
-
-        // ton rss
         UpdateHealthBar(maxHealth, maxHealth);
     }
 
@@ -36,13 +27,19 @@ public class PlayerHealthController : Damageable
             {
                 isDead = true;
                 health = 0;
-                ShowGameOverMenu();
+                StartCoroutine(ShowGameOverAfterDelay()); 
             }
-            else isHurt = true;
+            else
+            {
+                isHurt = true;
+                StartCoroutine(ResetHurt());
+            }
+        }
+        else
+        {
+            isHurt = true;
             StartCoroutine(ResetHurt());
         }
-        isHurt = true;
-        StartCoroutine(ResetHurt());
     }
 
     private IEnumerator ResetHurt()
@@ -51,30 +48,30 @@ public class PlayerHealthController : Damageable
         isHurt = false;
     }
 
+    private IEnumerator ShowGameOverAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(1f); 
+        GameOverMenuUI.Instance.Show();
+    }
+
     public void UpdateHealthBar(int currentHealth, int maxHealth)
     {
         UIManager.Instance.healthBarEvent.Invoke(currentHealth, maxHealth);
     }
 
-    public void RegenHealth (int value)
+    public void RegenHealth(int value)
     {
         if (isDead) return;
 
         health = Mathf.Min(health + value, maxHealth);
-
         UpdateHealthBar(health, maxHealth);
     }
 
     public void IncreaseMaxHP(int value)
     {
-        maxHealth += value;   
-        health += value;      
+        maxHealth += value;
+        health += value;
         UpdateHealthBar(health, maxHealth);
-    }
-
-    void ShowGameOverMenu()
-    {
-        GameOverMenuUI.Instance.Show();
     }
 
     public bool IsDead { get { return isDead; } }

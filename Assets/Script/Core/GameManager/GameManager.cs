@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         seedList = new List<string>(levelSeeds);
 
         SceneManager.LoadScene("Dungeon");
+        HUD.Instance.Show();
     }
 
     public void NextLevel()

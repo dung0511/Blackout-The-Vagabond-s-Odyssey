@@ -445,7 +445,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -563,12 +563,12 @@ TextureImporter:
       name: HydroSlime_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 940
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -585,12 +585,12 @@ TextureImporter:
       name: HydroSlime_1
       rect:
         serializedVersion: 2
-        x: 137
-        y: 940
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -607,12 +607,12 @@ TextureImporter:
       name: HydroSlime_2
       rect:
         serializedVersion: 2
-        x: 237
-        y: 940
-        width: 26
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -629,12 +629,12 @@ TextureImporter:
       name: HydroSlime_3
       rect:
         serializedVersion: 2
-        x: 337
-        y: 940
-        width: 26
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -651,12 +651,12 @@ TextureImporter:
       name: HydroSlime_4
       rect:
         serializedVersion: 2
-        x: 437
-        y: 940
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -673,12 +673,12 @@ TextureImporter:
       name: HydroSlime_5
       rect:
         serializedVersion: 2
-        x: 537
-        y: 940
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -695,12 +695,12 @@ TextureImporter:
       name: HydroSlime_6
       rect:
         serializedVersion: 2
-        x: 37
-        y: 840
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -717,12 +717,12 @@ TextureImporter:
       name: HydroSlime_7
       rect:
         serializedVersion: 2
-        x: 137
-        y: 840
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -739,12 +739,12 @@ TextureImporter:
       name: HydroSlime_8
       rect:
         serializedVersion: 2
-        x: 237
-        y: 840
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -761,12 +761,12 @@ TextureImporter:
       name: HydroSlime_9
       rect:
         serializedVersion: 2
-        x: 337
-        y: 840
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -783,12 +783,12 @@ TextureImporter:
       name: HydroSlime_10
       rect:
         serializedVersion: 2
-        x: 437
-        y: 840
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -805,12 +805,12 @@ TextureImporter:
       name: HydroSlime_11
       rect:
         serializedVersion: 2
-        x: 537
-        y: 840
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -827,12 +827,12 @@ TextureImporter:
       name: HydroSlime_12
       rect:
         serializedVersion: 2
-        x: 637
-        y: 840
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -849,12 +849,12 @@ TextureImporter:
       name: HydroSlime_13
       rect:
         serializedVersion: 2
-        x: 37
-        y: 740
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -871,12 +871,12 @@ TextureImporter:
       name: HydroSlime_14
       rect:
         serializedVersion: 2
-        x: 137
-        y: 740
-        width: 26
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -893,12 +893,12 @@ TextureImporter:
       name: HydroSlime_15
       rect:
         serializedVersion: 2
-        x: 237
-        y: 740
-        width: 28
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -915,12 +915,12 @@ TextureImporter:
       name: HydroSlime_16
       rect:
         serializedVersion: 2
-        x: 337
-        y: 740
-        width: 28
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -937,12 +937,12 @@ TextureImporter:
       name: HydroSlime_17
       rect:
         serializedVersion: 2
-        x: 437
-        y: 740
-        width: 29
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -959,12 +959,12 @@ TextureImporter:
       name: HydroSlime_18
       rect:
         serializedVersion: 2
-        x: 537
-        y: 740
-        width: 31
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -981,12 +981,12 @@ TextureImporter:
       name: HydroSlime_19
       rect:
         serializedVersion: 2
-        x: 637
-        y: 740
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1003,12 +1003,12 @@ TextureImporter:
       name: HydroSlime_20
       rect:
         serializedVersion: 2
-        x: 726
-        y: 740
-        width: 37
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1025,12 +1025,12 @@ TextureImporter:
       name: HydroSlime_21
       rect:
         serializedVersion: 2
-        x: 806
-        y: 745
-        width: 21
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1047,12 +1047,12 @@ TextureImporter:
       name: HydroSlime_22
       rect:
         serializedVersion: 2
-        x: 826
-        y: 740
-        width: 37
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1069,12 +1069,12 @@ TextureImporter:
       name: HydroSlime_23
       rect:
         serializedVersion: 2
-        x: 906
-        y: 745
-        width: 24
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1091,12 +1091,12 @@ TextureImporter:
       name: HydroSlime_24
       rect:
         serializedVersion: 2
-        x: 933
-        y: 740
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1113,12 +1113,12 @@ TextureImporter:
       name: HydroSlime_25
       rect:
         serializedVersion: 2
-        x: 1006
-        y: 741
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1135,12 +1135,12 @@ TextureImporter:
       name: HydroSlime_26
       rect:
         serializedVersion: 2
-        x: 1033
-        y: 740
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1157,12 +1157,12 @@ TextureImporter:
       name: HydroSlime_27
       rect:
         serializedVersion: 2
-        x: 1107
-        y: 735
-        width: 12
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1179,12 +1179,12 @@ TextureImporter:
       name: HydroSlime_28
       rect:
         serializedVersion: 2
-        x: 1134
-        y: 740
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1201,12 +1201,12 @@ TextureImporter:
       name: HydroSlime_29
       rect:
         serializedVersion: 2
-        x: 1237
-        y: 740
-        width: 27
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1223,12 +1223,12 @@ TextureImporter:
       name: HydroSlime_30
       rect:
         serializedVersion: 2
-        x: 28
-        y: 587
-        width: 44
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1245,12 +1245,12 @@ TextureImporter:
       name: HydroSlime_31
       rect:
         serializedVersion: 2
-        x: 127
-        y: 587
-        width: 47
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1267,12 +1267,12 @@ TextureImporter:
       name: HydroSlime_32
       rect:
         serializedVersion: 2
-        x: 227
-        y: 640
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1289,12 +1289,12 @@ TextureImporter:
       name: HydroSlime_33
       rect:
         serializedVersion: 2
-        x: 324
-        y: 640
-        width: 54
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 700
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1311,12 +1311,12 @@ TextureImporter:
       name: HydroSlime_34
       rect:
         serializedVersion: 2
-        x: 424
-        y: 642
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 800
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1333,12 +1333,12 @@ TextureImporter:
       name: HydroSlime_35
       rect:
         serializedVersion: 2
-        x: 460
-        y: 642
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 900
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1355,12 +1355,12 @@ TextureImporter:
       name: HydroSlime_36
       rect:
         serializedVersion: 2
-        x: 522
-        y: 642
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1377,12 +1377,12 @@ TextureImporter:
       name: HydroSlime_37
       rect:
         serializedVersion: 2
-        x: 560
-        y: 642
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1399,12 +1399,12 @@ TextureImporter:
       name: HydroSlime_38
       rect:
         serializedVersion: 2
-        x: 621
-        y: 640
-        width: 58
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1421,12 +1421,12 @@ TextureImporter:
       name: HydroSlime_39
       rect:
         serializedVersion: 2
-        x: 720
-        y: 640
-        width: 43
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1443,12 +1443,12 @@ TextureImporter:
       name: HydroSlime_40
       rect:
         serializedVersion: 2
-        x: 762
-        y: 642
-        width: 21
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1465,12 +1465,12 @@ TextureImporter:
       name: HydroSlime_41
       rect:
         serializedVersion: 2
-        x: 819
-        y: 640
-        width: 65
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1487,12 +1487,12 @@ TextureImporter:
       name: HydroSlime_42
       rect:
         serializedVersion: 2
-        x: 922
-        y: 642
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1509,12 +1509,12 @@ TextureImporter:
       name: HydroSlime_43
       rect:
         serializedVersion: 2
-        x: 960
-        y: 642
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1531,12 +1531,12 @@ TextureImporter:
       name: HydroSlime_44
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 642
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1553,12 +1553,12 @@ TextureImporter:
       name: HydroSlime_45
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 640
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1575,12 +1575,12 @@ TextureImporter:
       name: HydroSlime_46
       rect:
         serializedVersion: 2
-        x: 1060
-        y: 642
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1597,12 +1597,12 @@ TextureImporter:
       name: HydroSlime_47
       rect:
         serializedVersion: 2
-        x: 1127
-        y: 650
-        width: 10
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1619,12 +1619,12 @@ TextureImporter:
       name: HydroSlime_48
       rect:
         serializedVersion: 2
-        x: 1137
-        y: 640
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 900
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1641,12 +1641,12 @@ TextureImporter:
       name: HydroSlime_49
       rect:
         serializedVersion: 2
-        x: 1162
-        y: 645
-        width: 15
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1663,12 +1663,12 @@ TextureImporter:
       name: HydroSlime_50
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 657
-        width: 8
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1685,12 +1685,12 @@ TextureImporter:
       name: HydroSlime_51
       rect:
         serializedVersion: 2
-        x: 1237
-        y: 640
-        width: 26
-        height: 18
+        x: 0
+        y: 400
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1707,12 +1707,12 @@ TextureImporter:
       name: HydroSlime_52
       rect:
         serializedVersion: 2
-        x: 1265
-        y: 656
-        width: 9
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1729,12 +1729,12 @@ TextureImporter:
       name: HydroSlime_53
       rect:
         serializedVersion: 2
-        x: 437
-        y: 640
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1751,12 +1751,12 @@ TextureImporter:
       name: HydroSlime_54
       rect:
         serializedVersion: 2
-        x: 537
-        y: 640
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1773,12 +1773,12 @@ TextureImporter:
       name: HydroSlime_55
       rect:
         serializedVersion: 2
-        x: 937
-        y: 640
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1795,12 +1795,12 @@ TextureImporter:
       name: HydroSlime_56
       rect:
         serializedVersion: 2
-        x: 224
-        y: 542
-        width: 116
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1817,12 +1817,12 @@ TextureImporter:
       name: HydroSlime_57
       rect:
         serializedVersion: 2
-        x: 360
-        y: 542
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1839,12 +1839,12 @@ TextureImporter:
       name: HydroSlime_58
       rect:
         serializedVersion: 2
-        x: 422
-        y: 542
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1861,12 +1861,12 @@ TextureImporter:
       name: HydroSlime_59
       rect:
         serializedVersion: 2
-        x: 460
-        y: 542
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1883,12 +1883,12 @@ TextureImporter:
       name: HydroSlime_60
       rect:
         serializedVersion: 2
-        x: 521
-        y: 542
-        width: 18
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1905,12 +1905,12 @@ TextureImporter:
       name: HydroSlime_61
       rect:
         serializedVersion: 2
-        x: 560
-        y: 542
-        width: 19
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1927,12 +1927,12 @@ TextureImporter:
       name: HydroSlime_62
       rect:
         serializedVersion: 2
-        x: 620
-        y: 542
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1949,12 +1949,12 @@ TextureImporter:
       name: HydroSlime_63
       rect:
         serializedVersion: 2
-        x: 662
-        y: 542
-        width: 21
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1971,12 +1971,12 @@ TextureImporter:
       name: HydroSlime_64
       rect:
         serializedVersion: 2
-        x: 719
-        y: 542
-        width: 22
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1993,12 +1993,12 @@ TextureImporter:
       name: HydroSlime_65
       rect:
         serializedVersion: 2
-        x: 761
-        y: 542
-        width: 23
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2015,12 +2015,12 @@ TextureImporter:
       name: HydroSlime_66
       rect:
         serializedVersion: 2
-        x: 822
-        y: 542
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2037,12 +2037,12 @@ TextureImporter:
       name: HydroSlime_67
       rect:
         serializedVersion: 2
-        x: 860
-        y: 542
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2059,12 +2059,12 @@ TextureImporter:
       name: HydroSlime_68
       rect:
         serializedVersion: 2
-        x: 924
-        y: 542
-        width: 16
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2081,12 +2081,12 @@ TextureImporter:
       name: HydroSlime_69
       rect:
         serializedVersion: 2
-        x: 960
-        y: 542
-        width: 18
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2103,12 +2103,12 @@ TextureImporter:
       name: HydroSlime_70
       rect:
         serializedVersion: 2
-        x: 1027
-        y: 550
-        width: 10
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2125,12 +2125,12 @@ TextureImporter:
       name: HydroSlime_71
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 545
-        width: 15
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2147,12 +2147,12 @@ TextureImporter:
       name: HydroSlime_72
       rect:
         serializedVersion: 2
-        x: 1128
-        y: 557
-        width: 8
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2169,12 +2169,12 @@ TextureImporter:
       name: HydroSlime_73
       rect:
         serializedVersion: 2
-        x: 1165
-        y: 556
-        width: 9
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2191,12 +2191,12 @@ TextureImporter:
       name: HydroSlime_74
       rect:
         serializedVersion: 2
-        x: 39
-        y: 445
-        width: 26
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2213,12 +2213,12 @@ TextureImporter:
       name: HydroSlime_75
       rect:
         serializedVersion: 2
-        x: 139
-        y: 445
-        width: 24
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2235,12 +2235,12 @@ TextureImporter:
       name: HydroSlime_76
       rect:
         serializedVersion: 2
-        x: 239
-        y: 441
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2257,12 +2257,12 @@ TextureImporter:
       name: HydroSlime_77
       rect:
         serializedVersion: 2
-        x: 340
-        y: 435
-        width: 12
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2279,12 +2279,12 @@ TextureImporter:
       name: HydroSlime_78
       rect:
         serializedVersion: 2
-        x: 37
-        y: 340
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1000
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2301,12 +2301,12 @@ TextureImporter:
       name: HydroSlime_79
       rect:
         serializedVersion: 2
-        x: 137
-        y: 340
-        width: 26
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2323,12 +2323,12 @@ TextureImporter:
       name: HydroSlime_80
       rect:
         serializedVersion: 2
-        x: 237
-        y: 340
-        width: 28
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2345,12 +2345,12 @@ TextureImporter:
       name: HydroSlime_81
       rect:
         serializedVersion: 2
-        x: 337
-        y: 340
-        width: 28
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2367,12 +2367,12 @@ TextureImporter:
       name: HydroSlime_82
       rect:
         serializedVersion: 2
-        x: 437
-        y: 340
-        width: 29
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2389,12 +2389,12 @@ TextureImporter:
       name: HydroSlime_83
       rect:
         serializedVersion: 2
-        x: 537
-        y: 340
-        width: 31
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2411,12 +2411,12 @@ TextureImporter:
       name: HydroSlime_84
       rect:
         serializedVersion: 2
-        x: 637
-        y: 340
-        width: 31
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2433,12 +2433,12 @@ TextureImporter:
       name: HydroSlime_85
       rect:
         serializedVersion: 2
-        x: 726
-        y: 340
-        width: 37
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2455,12 +2455,12 @@ TextureImporter:
       name: HydroSlime_86
       rect:
         serializedVersion: 2
-        x: 832
-        y: 340
-        width: 31
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2477,12 +2477,12 @@ TextureImporter:
       name: HydroSlime_87
       rect:
         serializedVersion: 2
-        x: 933
-        y: 340
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2499,12 +2499,12 @@ TextureImporter:
       name: HydroSlime_88
       rect:
         serializedVersion: 2
-        x: 1033
-        y: 340
-        width: 30
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2521,12 +2521,12 @@ TextureImporter:
       name: HydroSlime_89
       rect:
         serializedVersion: 2
-        x: 1134
-        y: 340
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2543,12 +2543,12 @@ TextureImporter:
       name: HydroSlime_90
       rect:
         serializedVersion: 2
-        x: 1237
-        y: 340
-        width: 27
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2565,12 +2565,12 @@ TextureImporter:
       name: HydroSlime_91
       rect:
         serializedVersion: 2
-        x: 37
-        y: 240
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2587,12 +2587,12 @@ TextureImporter:
       name: HydroSlime_92
       rect:
         serializedVersion: 2
-        x: 137
-        y: 240
-        width: 26
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2609,12 +2609,12 @@ TextureImporter:
       name: HydroSlime_93
       rect:
         serializedVersion: 2
-        x: 237
-        y: 240
-        width: 26
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2631,12 +2631,12 @@ TextureImporter:
       name: HydroSlime_94
       rect:
         serializedVersion: 2
-        x: 337
-        y: 240
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 900
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2649,935 +2649,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: HydroSlime_95
-      rect:
-        serializedVersion: 2
-        x: 437
-        y: 240
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7b7f7947ebe00a40800000000000000
-      internalID: 5332521337409731455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_96
-      rect:
-        serializedVersion: 2
-        x: 537
-        y: 240
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5918560ed0c1b34a0800000000000000
-      internalID: -6612660781938540139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_97
-      rect:
-        serializedVersion: 2
-        x: 637
-        y: 240
-        width: 26
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4cd0bb55f8d9d69a0800000000000000
-      internalID: -6238156669894062652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_98
-      rect:
-        serializedVersion: 2
-        x: 737
-        y: 240
-        width: 26
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d146f96e5969a7300800000000000000
-      internalID: 250678299835982877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_99
-      rect:
-        serializedVersion: 2
-        x: 837
-        y: 240
-        width: 26
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cde901214cc86990800000000000000
-      internalID: -7392434208229429816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_100
-      rect:
-        serializedVersion: 2
-        x: 937
-        y: 240
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46d80fdce77187e40800000000000000
-      internalID: 5654295165552069988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_101
-      rect:
-        serializedVersion: 2
-        x: 1037
-        y: 240
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b1398aaefc622bc0800000000000000
-      internalID: -3809362493763407434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_102
-      rect:
-        serializedVersion: 2
-        x: 1137
-        y: 240
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72a22c43e13d51f40800000000000000
-      internalID: 5698693030194850343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_103
-      rect:
-        serializedVersion: 2
-        x: 1237
-        y: 240
-        width: 26
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a77984a3c20b6140800000000000000
-      internalID: 4713864474275706791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_104
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 140
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9c6fc31af31b80a0800000000000000
-      internalID: -6878382041083188069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_105
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 140
-        width: 27
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12c84dd93253e2d50800000000000000
-      internalID: 6714362521544068129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_106
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 140
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: deccc2858e7a2d910800000000000000
-      internalID: 1860734212411018477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_107
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 140
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b9074e53f6e37250800000000000000
-      internalID: 5941346266364971444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_108
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 40
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8a5718b926634570800000000000000
-      internalID: 8449709655245413003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_109
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 40
-        width: 31
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44ced4bd8d022deb0800000000000000
-      internalID: -4696655345629664188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_110
-      rect:
-        serializedVersion: 2
-        x: 423
-        y: 30
-        width: 52
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1e0c958e0dc5eba0800000000000000
-      internalID: -6060212261302301153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_111
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 60
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fb6937571c0f94d0800000000000000
-      internalID: -3125766321984672775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_112
-      rect:
-        serializedVersion: 2
-        x: 523
-        y: 61
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50d407038340edfa0800000000000000
-      internalID: -5774173032865051387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_113
-      rect:
-        serializedVersion: 2
-        x: 527
-        y: 52
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e08b437d1b895f50800000000000000
-      internalID: 6870675665135042784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_114
-      rect:
-        serializedVersion: 2
-        x: 561
-        y: 54
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 715360683030ba690800000000000000
-      internalID: -7589969433334500073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_115
-      rect:
-        serializedVersion: 2
-        x: 619
-        y: 52
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a16a58cd7f75b970800000000000000
-      internalID: 8770056027582914982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_116
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 45
-        width: 24
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e13751049f211d8a0800000000000000
-      internalID: -6282219143473827042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_117
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 55
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9dac2061ee3eeb690800000000000000
-      internalID: -7584374110734333223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_118
-      rect:
-        serializedVersion: 2
-        x: 719
-        y: 37
-        width: 70
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1197b290dc7afd60800000000000000
-      internalID: 7924783729568354590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_119
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 40
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed13db8517964d4c0800000000000000
-      internalID: -4263667011672002082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_120
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 40
-        width: 26
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e6104441f9fd15630800000000000000
-      internalID: 3914155425494466926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_121
-      rect:
-        serializedVersion: 2
-        x: 471
-        y: 53
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fbf1fa0014883b00800000000000000
-      internalID: 808541337550978041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_122
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 37
-        width: 52
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5713cda813517d20800000000000000
-      internalID: 3274489769534625627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_123
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 49
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fcbd0b112d07c49d0800000000000000
-      internalID: -2788730021706933297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_124
-      rect:
-        serializedVersion: 2
-        x: 625
-        y: 37
-        width: 52
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1910b9a62e44433c0800000000000000
-      internalID: -4380800798282808943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_125
-      rect:
-        serializedVersion: 2
-        x: 820
-        y: 37
-        width: 64
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a51573e01e6e83e00800000000000000
-      internalID: 1024822769507324250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_126
-      rect:
-        serializedVersion: 2
-        x: 541
-        y: 36
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3749a6ba2b72f08c0800000000000000
-      internalID: -4030959493139753869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_127
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 37
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c0a8304054cd3c60800000000000000
-      internalID: 7799605978629447877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_128
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 36
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49d68555ec108a0b0800000000000000
-      internalID: -5717317741240095340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_129
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 37
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b647c89b428680880800000000000000
-      internalID: -8644544977796565909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_130
-      rect:
-        serializedVersion: 2
-        x: 741
-        y: 36
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b62627e2ae1cd680800000000000000
-      internalID: -8729068292739291465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_131
-      rect:
-        serializedVersion: 2
-        x: 760
-        y: 37
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca850c1906da00930800000000000000
-      internalID: 4107473490435659948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_132
-      rect:
-        serializedVersion: 2
-        x: 841
-        y: 36
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19b417efa75fe43f0800000000000000
-      internalID: -914523765705978991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_133
-      rect:
-        serializedVersion: 2
-        x: 860
-        y: 37
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6728db2606d6f7330800000000000000
-      internalID: 3710804878717452918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_134
-      rect:
-        serializedVersion: 2
-        x: 920
-        y: 37
-        width: 57
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd84556fac0991fe0800000000000000
-      internalID: -1217783022836430629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_135
-      rect:
-        serializedVersion: 2
-        x: 941
-        y: 36
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1da0c0e97299fec20800000000000000
-      internalID: 3237975052537039569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HydroSlime_136
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 37
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82aeb7ef214d18c60800000000000000
-      internalID: 7818763606135925288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7e8dade67bcb8604ea5004ce4fa79a1c
     internalID: 0
     vertices: []
     indices: 
@@ -3586,7 +2662,102 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HydroSlime_0: -7675911983373152160
+      HydroSlime_1: -6834131516664486337
+      HydroSlime_10: -3891159318214704042
+      HydroSlime_11: -6068220897991122232
+      HydroSlime_12: 2752540595442683995
+      HydroSlime_13: -1031427280505274230
+      HydroSlime_14: -8510368093795068228
+      HydroSlime_15: 2247107888395353986
+      HydroSlime_16: 2591316403465206878
+      HydroSlime_17: 2650708855972954643
+      HydroSlime_18: 5755636591181045528
+      HydroSlime_19: -6098681318457708917
+      HydroSlime_2: -1709972674979873811
+      HydroSlime_20: -3951967891204223305
+      HydroSlime_21: -7972294850021925395
+      HydroSlime_22: 931374638882059384
+      HydroSlime_23: 3250385943723819760
+      HydroSlime_24: 5121807045599223673
+      HydroSlime_25: -8897025616645246605
+      HydroSlime_26: -5092972376926285892
+      HydroSlime_27: -4034449567305754268
+      HydroSlime_28: -923980554447056633
+      HydroSlime_29: 3612361345408141389
+      HydroSlime_3: 5845995474845924947
+      HydroSlime_30: -1578213611482733242
+      HydroSlime_31: 2142853151141778049
+      HydroSlime_32: 6299343983175691845
+      HydroSlime_33: 4813246164842611538
+      HydroSlime_34: 4052344983065362510
+      HydroSlime_35: -7976642334971342817
+      HydroSlime_36: -928174387369413660
+      HydroSlime_37: 2523161391147421059
+      HydroSlime_38: 6869977221447515095
+      HydroSlime_39: -3933982926410586660
+      HydroSlime_4: -7040287240280346244
+      HydroSlime_40: -3706187100169926816
+      HydroSlime_41: 1380357539510534688
+      HydroSlime_42: 5984446147462272288
+      HydroSlime_43: -7298630495169017539
+      HydroSlime_44: -1314837509428922081
+      HydroSlime_45: 7610773913438034846
+      HydroSlime_46: 1170686450340332402
+      HydroSlime_47: 6370634727995741828
+      HydroSlime_48: -8766379710192104874
+      HydroSlime_49: -6450050411912543133
+      HydroSlime_5: 6945060088120320166
+      HydroSlime_50: -1288328290332187095
+      HydroSlime_51: -980750600543545277
+      HydroSlime_52: -1195008876463074251
+      HydroSlime_53: 1120996226422460415
+      HydroSlime_54: 6008279598156905713
+      HydroSlime_55: 3210825640700090529
+      HydroSlime_56: -3466701305827833000
+      HydroSlime_57: 6494119817908602021
+      HydroSlime_58: -2713453891013317480
+      HydroSlime_59: 4477779594423291055
+      HydroSlime_6: 7826355083320294550
+      HydroSlime_60: 9124787046098536909
+      HydroSlime_61: -6808880449351194583
+      HydroSlime_62: -3746349565456845543
+      HydroSlime_63: -4921277689649903349
+      HydroSlime_64: 4844163331543057800
+      HydroSlime_65: 1194253262409004446
+      HydroSlime_66: 3832454529812787173
+      HydroSlime_67: -2260947396982419261
+      HydroSlime_68: 1115547857043654391
+      HydroSlime_69: -175400701723469511
+      HydroSlime_7: -6765337439570042484
+      HydroSlime_70: 2913849007312760006
+      HydroSlime_71: 4842366783143956290
+      HydroSlime_72: 1208556646549810585
+      HydroSlime_73: 8778627369193573694
+      HydroSlime_74: 7687065884302724968
+      HydroSlime_75: 7534652056210762640
+      HydroSlime_76: 9222946354132300014
+      HydroSlime_77: 8531967295343992425
+      HydroSlime_78: -6655517889610347
+      HydroSlime_79: -8682549830157173548
+      HydroSlime_8: 7873884013624877227
+      HydroSlime_80: -4072627906580280480
+      HydroSlime_81: -6072662395386166272
+      HydroSlime_82: 5791528905580720277
+      HydroSlime_83: -7682799395868815975
+      HydroSlime_84: -5261500880620031962
+      HydroSlime_85: 8337660535052139024
+      HydroSlime_86: -5841719331350411674
+      HydroSlime_87: 1471201207718409257
+      HydroSlime_88: -9209063970098679640
+      HydroSlime_89: -272406232391638620
+      HydroSlime_9: -8748402108724187864
+      HydroSlime_90: 7484722758084067183
+      HydroSlime_91: -7004091148587946437
+      HydroSlime_92: 4925968624107997562
+      HydroSlime_93: 266662222873951486
+      HydroSlime_94: 1374233974211449797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

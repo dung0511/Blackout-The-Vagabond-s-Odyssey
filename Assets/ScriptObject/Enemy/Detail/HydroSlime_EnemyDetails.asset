@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2f5576c794c33d41ad19c7ca86d41c1, type: 3}
-  m_Name: SkeletonArcher_EnemyDetails
+  m_Name: HydroSlime_EnemyDetails
   m_EditorClassIdentifier: 
-  enemyName: SkeletonArcher
-  enemyPrefab: {fileID: 8196791052117880460, guid: 1a6ede4743a567c4d93acb23053c19a4, type: 3}
-  chaseDistance: 15
+  enemyName: Hydro Slime
+  enemyPrefab: {fileID: 5990822393120515668, guid: 681ff96cf9f5a4049afb13cf97678c55, type: 3}
+  chaseDistance: 12

@@ -9,7 +9,7 @@ public class ShopManager : MonoBehaviour
     public TextMeshProUGUI coinsTxt;
 
     // price va so luong da mua
-    private int[] prices = { 10, 15, 30, 300, 320, 50};
+    private int[] prices = { 10, 15, 30, 300, 320, 120 };
     private int[] quantities = new int[10];
 
     public GameObject[] itemPrefabs;

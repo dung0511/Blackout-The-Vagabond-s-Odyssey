@@ -3,12 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenuUI : MonoBehaviour
 {
+    public static GameOverMenuUI Instance { get; private set; }
+
     [SerializeField] GameObject gameoverMenu;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(gameObject);
+    }
 
     void Start()
     {
         gameoverMenu.SetActive(false);
-        DontDestroyOnLoad(gameObject);
     }
 
     public void Show()

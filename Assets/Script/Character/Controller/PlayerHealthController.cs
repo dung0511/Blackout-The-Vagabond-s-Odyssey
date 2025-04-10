@@ -8,8 +8,6 @@ public class PlayerHealthController : Damageable
     private bool isHurt;
     private bool isDead;
 
-    public GameOverMenuUI gameOverMenu;
-
     //private void Awake()s
     //{
 
@@ -23,6 +21,7 @@ public class PlayerHealthController : Damageable
         isHurt = GetComponent<Player>().isHurt;
         isDead = GetComponent<Player>().isDead;
         maxHealth = health;
+
         // ton rss
         UpdateHealthBar(maxHealth, maxHealth);
     }
@@ -37,7 +36,7 @@ public class PlayerHealthController : Damageable
             {
                 isDead = true;
                 health = 0;
-                Die();
+                ShowGameOverMenu();
             }
             else isHurt = true;
             StartCoroutine(ResetHurt());
@@ -73,9 +72,9 @@ public class PlayerHealthController : Damageable
         UpdateHealthBar(health, maxHealth);
     }
 
-    void Die()
+    void ShowGameOverMenu()
     {
-        gameOverMenu.Show();
+        GameOverMenuUI.Instance.Show();
     }
 
     public bool IsDead { get { return isDead; } }

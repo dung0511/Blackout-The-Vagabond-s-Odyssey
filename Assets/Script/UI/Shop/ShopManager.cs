@@ -9,10 +9,11 @@ public class ShopManager : MonoBehaviour
     public TextMeshProUGUI coinsTxt;
 
     // price va so luong da mua
-    private int[] prices = { 10, 15, 30, 300, 320, 120 };
+    private int[] prices = { 30, 45, 50, 300, 320, 120 };
     private int[] quantities = new int[10];
 
     public GameObject[] itemPrefabs;
+
 
     void Awake()
     {
@@ -20,7 +21,7 @@ public class ShopManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            DataManager.Load(); // ???
+            //DataManager.Load(); // ???
             UpdateCoinsUI();
         }
         else
@@ -78,7 +79,7 @@ public class ShopManager : MonoBehaviour
     {
         DataManager.gameData.playerData.coin += amount;
         UpdateCoinsUI();
-        DataManager.Save(); //??? save moi lan nhat do
+        //DataManager.Save(); //??? save moi lan nhat do
     }
 
     private void SpawnItem(int itemID)

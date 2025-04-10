@@ -194,6 +194,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: skillUIPrefab
+      value: 
+      objectReference: {fileID: 7734719859815889031, guid: 4d34fad53ecddfc4ba36644d073072e4, type: 3}
+    - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: playerDetailSO
       value: 
       objectReference: {fileID: 11400000, guid: fdad02e2bb135e14f93c6cb540489538, type: 2}
@@ -317,6 +321,8 @@ MonoBehaviour:
   canUseNormal: 1
   canUseUltimate: 1
   weaponController: {fileID: 2569203343006468597}
+  skillE_UI: {fileID: 0}
+  skillQ_UI: {fileID: 0}
 --- !u!4 &8941873652043134051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6628058848093765976, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}

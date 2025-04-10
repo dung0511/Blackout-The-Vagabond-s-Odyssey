@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HydroSlime_Arrow_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3563033212951055887, guid: 5f7359f5821084a49a0ecc507b1c2f3f, type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 7414361488316147735, guid: 681ff96cf9f5a4049afb13cf97678c55, type: 3}
     - target: {fileID: 6018677076608163844, guid: 5f7359f5821084a49a0ecc507b1c2f3f, type: 3}
       propertyPath: m_LocalScale.x
       value: -5

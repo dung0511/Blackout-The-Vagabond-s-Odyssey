@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f5576c794c33d41ad19c7ca86d41c1, type: 3}
-  m_Name: SkeletonArcher_EnemyDetails
+  m_Script: {fileID: 11500000, guid: 341525b4191bb9d44b17145a8cbf3a0f, type: 3}
+  m_Name: HydroSlime_MovementDetails
   m_EditorClassIdentifier: 
-  enemyName: SkeletonArcher
-  enemyPrefab: {fileID: 8196791052117880460, guid: 1a6ede4743a567c4d93acb23053c19a4, type: 3}
-  chaseDistance: 15
+  minMoveSpeed: 2
+  maxMoveSpeed: 2

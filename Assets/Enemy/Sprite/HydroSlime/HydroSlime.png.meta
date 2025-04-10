@@ -1,0 +1,2765 @@
+fileFormatVersion: 2
+guid: 445eb3cc2a7f2c847a136c141b32f7c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7675911983373152160
+    second: HydroSlime_0
+  - first:
+      213: -6834131516664486337
+    second: HydroSlime_1
+  - first:
+      213: -1709972674979873811
+    second: HydroSlime_2
+  - first:
+      213: 5845995474845924947
+    second: HydroSlime_3
+  - first:
+      213: -7040287240280346244
+    second: HydroSlime_4
+  - first:
+      213: 6945060088120320166
+    second: HydroSlime_5
+  - first:
+      213: 7826355083320294550
+    second: HydroSlime_6
+  - first:
+      213: -6765337439570042484
+    second: HydroSlime_7
+  - first:
+      213: 7873884013624877227
+    second: HydroSlime_8
+  - first:
+      213: -8748402108724187864
+    second: HydroSlime_9
+  - first:
+      213: -3891159318214704042
+    second: HydroSlime_10
+  - first:
+      213: -6068220897991122232
+    second: HydroSlime_11
+  - first:
+      213: 2752540595442683995
+    second: HydroSlime_12
+  - first:
+      213: -1031427280505274230
+    second: HydroSlime_13
+  - first:
+      213: -8510368093795068228
+    second: HydroSlime_14
+  - first:
+      213: 2247107888395353986
+    second: HydroSlime_15
+  - first:
+      213: 2591316403465206878
+    second: HydroSlime_16
+  - first:
+      213: 2650708855972954643
+    second: HydroSlime_17
+  - first:
+      213: 5755636591181045528
+    second: HydroSlime_18
+  - first:
+      213: -6098681318457708917
+    second: HydroSlime_19
+  - first:
+      213: -3951967891204223305
+    second: HydroSlime_20
+  - first:
+      213: -7972294850021925395
+    second: HydroSlime_21
+  - first:
+      213: 931374638882059384
+    second: HydroSlime_22
+  - first:
+      213: 3250385943723819760
+    second: HydroSlime_23
+  - first:
+      213: 5121807045599223673
+    second: HydroSlime_24
+  - first:
+      213: -8897025616645246605
+    second: HydroSlime_25
+  - first:
+      213: -5092972376926285892
+    second: HydroSlime_26
+  - first:
+      213: -4034449567305754268
+    second: HydroSlime_27
+  - first:
+      213: -923980554447056633
+    second: HydroSlime_28
+  - first:
+      213: 3612361345408141389
+    second: HydroSlime_29
+  - first:
+      213: -1578213611482733242
+    second: HydroSlime_30
+  - first:
+      213: 2142853151141778049
+    second: HydroSlime_31
+  - first:
+      213: 6299343983175691845
+    second: HydroSlime_32
+  - first:
+      213: 4813246164842611538
+    second: HydroSlime_33
+  - first:
+      213: 4052344983065362510
+    second: HydroSlime_34
+  - first:
+      213: -7976642334971342817
+    second: HydroSlime_35
+  - first:
+      213: -928174387369413660
+    second: HydroSlime_36
+  - first:
+      213: 2523161391147421059
+    second: HydroSlime_37
+  - first:
+      213: 6869977221447515095
+    second: HydroSlime_38
+  - first:
+      213: -3933982926410586660
+    second: HydroSlime_39
+  - first:
+      213: -3706187100169926816
+    second: HydroSlime_40
+  - first:
+      213: 1380357539510534688
+    second: HydroSlime_41
+  - first:
+      213: 5984446147462272288
+    second: HydroSlime_42
+  - first:
+      213: -7298630495169017539
+    second: HydroSlime_43
+  - first:
+      213: -1314837509428922081
+    second: HydroSlime_44
+  - first:
+      213: 7610773913438034846
+    second: HydroSlime_45
+  - first:
+      213: 1170686450340332402
+    second: HydroSlime_46
+  - first:
+      213: 6370634727995741828
+    second: HydroSlime_47
+  - first:
+      213: -8766379710192104874
+    second: HydroSlime_48
+  - first:
+      213: -6450050411912543133
+    second: HydroSlime_49
+  - first:
+      213: -1288328290332187095
+    second: HydroSlime_50
+  - first:
+      213: -980750600543545277
+    second: HydroSlime_51
+  - first:
+      213: -1195008876463074251
+    second: HydroSlime_52
+  - first:
+      213: 1120996226422460415
+    second: HydroSlime_53
+  - first:
+      213: 6008279598156905713
+    second: HydroSlime_54
+  - first:
+      213: 3210825640700090529
+    second: HydroSlime_55
+  - first:
+      213: -3466701305827833000
+    second: HydroSlime_56
+  - first:
+      213: 6494119817908602021
+    second: HydroSlime_57
+  - first:
+      213: -2713453891013317480
+    second: HydroSlime_58
+  - first:
+      213: 4477779594423291055
+    second: HydroSlime_59
+  - first:
+      213: 9124787046098536909
+    second: HydroSlime_60
+  - first:
+      213: -6808880449351194583
+    second: HydroSlime_61
+  - first:
+      213: -3746349565456845543
+    second: HydroSlime_62
+  - first:
+      213: -4921277689649903349
+    second: HydroSlime_63
+  - first:
+      213: 4844163331543057800
+    second: HydroSlime_64
+  - first:
+      213: 1194253262409004446
+    second: HydroSlime_65
+  - first:
+      213: 3832454529812787173
+    second: HydroSlime_66
+  - first:
+      213: -2260947396982419261
+    second: HydroSlime_67
+  - first:
+      213: 1115547857043654391
+    second: HydroSlime_68
+  - first:
+      213: -175400701723469511
+    second: HydroSlime_69
+  - first:
+      213: 2913849007312760006
+    second: HydroSlime_70
+  - first:
+      213: 4842366783143956290
+    second: HydroSlime_71
+  - first:
+      213: 1208556646549810585
+    second: HydroSlime_72
+  - first:
+      213: 8778627369193573694
+    second: HydroSlime_73
+  - first:
+      213: 7687065884302724968
+    second: HydroSlime_74
+  - first:
+      213: 7534652056210762640
+    second: HydroSlime_75
+  - first:
+      213: 9222946354132300014
+    second: HydroSlime_76
+  - first:
+      213: 8531967295343992425
+    second: HydroSlime_77
+  - first:
+      213: -6655517889610347
+    second: HydroSlime_78
+  - first:
+      213: -8682549830157173548
+    second: HydroSlime_79
+  - first:
+      213: -4072627906580280480
+    second: HydroSlime_80
+  - first:
+      213: -6072662395386166272
+    second: HydroSlime_81
+  - first:
+      213: 5791528905580720277
+    second: HydroSlime_82
+  - first:
+      213: -7682799395868815975
+    second: HydroSlime_83
+  - first:
+      213: -5261500880620031962
+    second: HydroSlime_84
+  - first:
+      213: 8337660535052139024
+    second: HydroSlime_85
+  - first:
+      213: -5841719331350411674
+    second: HydroSlime_86
+  - first:
+      213: 1471201207718409257
+    second: HydroSlime_87
+  - first:
+      213: -9209063970098679640
+    second: HydroSlime_88
+  - first:
+      213: -272406232391638620
+    second: HydroSlime_89
+  - first:
+      213: 7484722758084067183
+    second: HydroSlime_90
+  - first:
+      213: -7004091148587946437
+    second: HydroSlime_91
+  - first:
+      213: 4925968624107997562
+    second: HydroSlime_92
+  - first:
+      213: 266662222873951486
+    second: HydroSlime_93
+  - first:
+      213: 1374233974211449797
+    second: HydroSlime_94
+  - first:
+      213: 5332521337409731455
+    second: HydroSlime_95
+  - first:
+      213: -6612660781938540139
+    second: HydroSlime_96
+  - first:
+      213: -6238156669894062652
+    second: HydroSlime_97
+  - first:
+      213: 250678299835982877
+    second: HydroSlime_98
+  - first:
+      213: -7392434208229429816
+    second: HydroSlime_99
+  - first:
+      213: 5654295165552069988
+    second: HydroSlime_100
+  - first:
+      213: -3809362493763407434
+    second: HydroSlime_101
+  - first:
+      213: 5698693030194850343
+    second: HydroSlime_102
+  - first:
+      213: 4713864474275706791
+    second: HydroSlime_103
+  - first:
+      213: -6878382041083188069
+    second: HydroSlime_104
+  - first:
+      213: 6714362521544068129
+    second: HydroSlime_105
+  - first:
+      213: 1860734212411018477
+    second: HydroSlime_106
+  - first:
+      213: 5941346266364971444
+    second: HydroSlime_107
+  - first:
+      213: 8449709655245413003
+    second: HydroSlime_108
+  - first:
+      213: -4696655345629664188
+    second: HydroSlime_109
+  - first:
+      213: -6060212261302301153
+    second: HydroSlime_110
+  - first:
+      213: -3125766321984672775
+    second: HydroSlime_111
+  - first:
+      213: -5774173032865051387
+    second: HydroSlime_112
+  - first:
+      213: 6870675665135042784
+    second: HydroSlime_113
+  - first:
+      213: -7589969433334500073
+    second: HydroSlime_114
+  - first:
+      213: 8770056027582914982
+    second: HydroSlime_115
+  - first:
+      213: -6282219143473827042
+    second: HydroSlime_116
+  - first:
+      213: -7584374110734333223
+    second: HydroSlime_117
+  - first:
+      213: 7924783729568354590
+    second: HydroSlime_118
+  - first:
+      213: -4263667011672002082
+    second: HydroSlime_119
+  - first:
+      213: 3914155425494466926
+    second: HydroSlime_120
+  - first:
+      213: 808541337550978041
+    second: HydroSlime_121
+  - first:
+      213: 3274489769534625627
+    second: HydroSlime_122
+  - first:
+      213: -2788730021706933297
+    second: HydroSlime_123
+  - first:
+      213: -4380800798282808943
+    second: HydroSlime_124
+  - first:
+      213: 1024822769507324250
+    second: HydroSlime_125
+  - first:
+      213: -4030959493139753869
+    second: HydroSlime_126
+  - first:
+      213: 7799605978629447877
+    second: HydroSlime_127
+  - first:
+      213: -5717317741240095340
+    second: HydroSlime_128
+  - first:
+      213: -8644544977796565909
+    second: HydroSlime_129
+  - first:
+      213: -8729068292739291465
+    second: HydroSlime_130
+  - first:
+      213: 4107473490435659948
+    second: HydroSlime_131
+  - first:
+      213: -914523765705978991
+    second: HydroSlime_132
+  - first:
+      213: 3710804878717452918
+    second: HydroSlime_133
+  - first:
+      213: -1217783022836430629
+    second: HydroSlime_134
+  - first:
+      213: 3237975052537039569
+    second: HydroSlime_135
+  - first:
+      213: 7818763606135925288
+    second: HydroSlime_136
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HydroSlime_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06011e748bea97590800000000000000
+      internalID: -7675911983373152160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3669e828994821a0800000000000000
+      internalID: -6834131516664486337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb333479e4f448e0800000000000000
+      internalID: -1709972674979873811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e7bb439e5212150800000000000000
+      internalID: 5845995474845924947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71ff565e00eb4e90800000000000000
+      internalID: -7040287240280346244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0a7288a5fc16060800000000000000
+      internalID: 6945060088120320166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cf0638b7ccc9c60800000000000000
+      internalID: 7826355083320294550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81e6c86171bc12a0800000000000000
+      internalID: -6765337439570042484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0ecb2fac7a54d60800000000000000
+      internalID: 7873884013624877227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d673512ae679680800000000000000
+      internalID: -8748402108724187864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6548c516733dff9c0800000000000000
+      internalID: -3891159318214704042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c223ac7e3959cba0800000000000000
+      internalID: -6068220897991122232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b501435861df23620800000000000000
+      internalID: 2752540595442683995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8006d56a52afa1f0800000000000000
+      internalID: -1031427280505274230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6d68dfe4915e980800000000000000
+      internalID: -8510368093795068228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f78c308b45f2f10800000000000000
+      internalID: 2247107888395353986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cbf212a8436f320800000000000000
+      internalID: 2591316403465206878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312004319a539c420800000000000000
+      internalID: 2650708855972954643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_18
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f16992cf020ef40800000000000000
+      internalID: 5755636591181045528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e640f27a12d5ba0800000000000000
+      internalID: -6098681318457708917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_20
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bec501342ac729c0800000000000000
+      internalID: -3951967891204223305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_21
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded54cba218bc5190800000000000000
+      internalID: -7972294850021925395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_22
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8747f57ac48ecec00800000000000000
+      internalID: 931374638882059384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2c4966bc0bb1d20800000000000000
+      internalID: 3250385943723819760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_24
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97fd8091f50541740800000000000000
+      internalID: 5121807045599223673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_25
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 700
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3713f42175a678480800000000000000
+      internalID: -8897025616645246605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf8e6e5b902259b0800000000000000
+      internalID: -5092972376926285892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46913847e71c208c0800000000000000
+      internalID: -4034449567305754268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_28
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70190d8c49c5d23f0800000000000000
+      internalID: -923980554447056633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_29
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d488769218fa12230800000000000000
+      internalID: 3612361345408141389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_30
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645a2e3051f091ae0800000000000000
+      internalID: -1578213611482733242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_31
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182d1af6691fcbd10800000000000000
+      internalID: 2142853151141778049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_32
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e6e233af3cb6750800000000000000
+      internalID: 6299343983175691845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_33
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25384ff92e51cc240800000000000000
+      internalID: 4813246164842611538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_34
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4082f6ba42dc3830800000000000000
+      internalID: 4052344983065362510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_35
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10d0b3fe064d4190800000000000000
+      internalID: -7976642334971342817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_36
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3fa37ff467e13f0800000000000000
+      internalID: -928174387369413660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_37
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d825ebae1140320800000000000000
+      internalID: 2523161391147421059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_38
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db776b52ef075f50800000000000000
+      internalID: 6869977221447515095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd568de1f5fa769c0800000000000000
+      internalID: -3933982926410586660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_40
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0678c37f77af09cc0800000000000000
+      internalID: -3706187100169926816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_41
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022ce856ed3082310800000000000000
+      internalID: 1380357539510534688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_42
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02591fc60160d0350800000000000000
+      internalID: 5984446147462272288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_43
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d390e940c3e06ba90800000000000000
+      internalID: -7298630495169017539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_44
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1931216042c0cde0800000000000000
+      internalID: -1314837509428922081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_45
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b9848fc86ee9960800000000000000
+      internalID: 7610773913438034846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_46
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27306efbf1d1f3010800000000000000
+      internalID: 1170686450340332402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_47
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48614f3388a096850800000000000000
+      internalID: 6370634727995741828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_48
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65acecf8910975680800000000000000
+      internalID: -8766379710192104874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_49
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364479ef251dc76a0800000000000000
+      internalID: -6450050411912543133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_50
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 500
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926e9acee30fe1ee0800000000000000
+      internalID: -1288328290332187095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348d959668ca362f0800000000000000
+      internalID: -980750600543545277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_52
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534dafe12c97a6fe0800000000000000
+      internalID: -1195008876463074251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_53
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fffc67ee0249e8f00800000000000000
+      internalID: 1120996226422460415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_54
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc7e571672b16350800000000000000
+      internalID: 6008279598156905713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a815a598e42f8c20800000000000000
+      internalID: 3210825640700090529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_56
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85bcfbb978dc3efc0800000000000000
+      internalID: -3466701305827833000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_57
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4444b219fbf1a50800000000000000
+      internalID: 6494119817908602021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_58
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89cefb70010e75ad0800000000000000
+      internalID: -2713453891013317480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_59
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: facc71c11d4442e30800000000000000
+      internalID: 4477779594423291055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_60
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc90ac52971c1ae70800000000000000
+      internalID: 9124787046098536909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_61
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928e15a6e4ff181a0800000000000000
+      internalID: -6808880449351194583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_62
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91571825bea420cc0800000000000000
+      internalID: -3746349565456845543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_63
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09cc5be30c14bbb0800000000000000
+      internalID: -4921277689649903349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_64
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 885c89272ece93340800000000000000
+      internalID: 4844163331543057800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_65
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e957db5c307d29010800000000000000
+      internalID: 1194253262409004446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_66
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efe353f61d9f2530800000000000000
+      internalID: 3832454529812787173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_67
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0d40b42508f90e0800000000000000
+      internalID: -2260947396982419261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f609059dd83b7f00800000000000000
+      internalID: 1115547857043654391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_69
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9391b68bdf9d09df0800000000000000
+      internalID: -175400701723469511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_70
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc6002eb32107820800000000000000
+      internalID: 2913849007312760006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_71
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f427deeea833340800000000000000
+      internalID: 4842366783143956290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_72
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99de988edd7a5c010800000000000000
+      internalID: 1208556646549810585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_73
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d0e44c413f3d970800000000000000
+      internalID: 8778627369193573694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_74
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f43e6a1b1fdaa60800000000000000
+      internalID: 7687065884302724968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_75
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09beb94ff16709860800000000000000
+      internalID: 7534652056210762640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_76
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee03a8408dc7eff70800000000000000
+      internalID: 9222946354132300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_77
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e9a320d03a76670800000000000000
+      internalID: 8531967295343992425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_78
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59db46c77da58eff0800000000000000
+      internalID: -6655517889610347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_79
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc7adc7ee2618780800000000000000
+      internalID: -8682549830157173548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_80
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b80f52f7e1b77c0800000000000000
+      internalID: -4072627906580280480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004822ac9b199bba0800000000000000
+      internalID: -6072662395386166272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_82
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590bb83dad4af5050800000000000000
+      internalID: 5791528905580720277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_83
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d47a897a6316590800000000000000
+      internalID: -7682799395868815975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_84
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620fc3163d46bf6b0800000000000000
+      internalID: -5261500880620031962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a7391f41255b370800000000000000
+      internalID: 8337660535052139024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_86
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6668359083b0eeea0800000000000000
+      internalID: -5841719331350411674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_87
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9247e2324b1ca6410800000000000000
+      internalID: 1471201207718409257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_88
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a07b646c15d23080800000000000000
+      internalID: -9209063970098679640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1a1b399f7383cf0800000000000000
+      internalID: -272406232391638620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_90
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ff1e551b31fd760800000000000000
+      internalID: 7484722758084067183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_91
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e25f9a5387cce90800000000000000
+      internalID: -7004091148587946437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_92
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a794dae5d5e8c5440800000000000000
+      internalID: 4925968624107997562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_93
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcfa6df0ef53b300800000000000000
+      internalID: 266662222873951486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HydroSlime_94
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3952fb482421310800000000000000
+      internalID: 1374233974211449797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7e8dade67bcb8604ea5004ce4fa79a1c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HydroSlime_0: -7675911983373152160
+      HydroSlime_1: -6834131516664486337
+      HydroSlime_10: -3891159318214704042
+      HydroSlime_11: -6068220897991122232
+      HydroSlime_12: 2752540595442683995
+      HydroSlime_13: -1031427280505274230
+      HydroSlime_14: -8510368093795068228
+      HydroSlime_15: 2247107888395353986
+      HydroSlime_16: 2591316403465206878
+      HydroSlime_17: 2650708855972954643
+      HydroSlime_18: 5755636591181045528
+      HydroSlime_19: -6098681318457708917
+      HydroSlime_2: -1709972674979873811
+      HydroSlime_20: -3951967891204223305
+      HydroSlime_21: -7972294850021925395
+      HydroSlime_22: 931374638882059384
+      HydroSlime_23: 3250385943723819760
+      HydroSlime_24: 5121807045599223673
+      HydroSlime_25: -8897025616645246605
+      HydroSlime_26: -5092972376926285892
+      HydroSlime_27: -4034449567305754268
+      HydroSlime_28: -923980554447056633
+      HydroSlime_29: 3612361345408141389
+      HydroSlime_3: 5845995474845924947
+      HydroSlime_30: -1578213611482733242
+      HydroSlime_31: 2142853151141778049
+      HydroSlime_32: 6299343983175691845
+      HydroSlime_33: 4813246164842611538
+      HydroSlime_34: 4052344983065362510
+      HydroSlime_35: -7976642334971342817
+      HydroSlime_36: -928174387369413660
+      HydroSlime_37: 2523161391147421059
+      HydroSlime_38: 6869977221447515095
+      HydroSlime_39: -3933982926410586660
+      HydroSlime_4: -7040287240280346244
+      HydroSlime_40: -3706187100169926816
+      HydroSlime_41: 1380357539510534688
+      HydroSlime_42: 5984446147462272288
+      HydroSlime_43: -7298630495169017539
+      HydroSlime_44: -1314837509428922081
+      HydroSlime_45: 7610773913438034846
+      HydroSlime_46: 1170686450340332402
+      HydroSlime_47: 6370634727995741828
+      HydroSlime_48: -8766379710192104874
+      HydroSlime_49: -6450050411912543133
+      HydroSlime_5: 6945060088120320166
+      HydroSlime_50: -1288328290332187095
+      HydroSlime_51: -980750600543545277
+      HydroSlime_52: -1195008876463074251
+      HydroSlime_53: 1120996226422460415
+      HydroSlime_54: 6008279598156905713
+      HydroSlime_55: 3210825640700090529
+      HydroSlime_56: -3466701305827833000
+      HydroSlime_57: 6494119817908602021
+      HydroSlime_58: -2713453891013317480
+      HydroSlime_59: 4477779594423291055
+      HydroSlime_6: 7826355083320294550
+      HydroSlime_60: 9124787046098536909
+      HydroSlime_61: -6808880449351194583
+      HydroSlime_62: -3746349565456845543
+      HydroSlime_63: -4921277689649903349
+      HydroSlime_64: 4844163331543057800
+      HydroSlime_65: 1194253262409004446
+      HydroSlime_66: 3832454529812787173
+      HydroSlime_67: -2260947396982419261
+      HydroSlime_68: 1115547857043654391
+      HydroSlime_69: -175400701723469511
+      HydroSlime_7: -6765337439570042484
+      HydroSlime_70: 2913849007312760006
+      HydroSlime_71: 4842366783143956290
+      HydroSlime_72: 1208556646549810585
+      HydroSlime_73: 8778627369193573694
+      HydroSlime_74: 7687065884302724968
+      HydroSlime_75: 7534652056210762640
+      HydroSlime_76: 9222946354132300014
+      HydroSlime_77: 8531967295343992425
+      HydroSlime_78: -6655517889610347
+      HydroSlime_79: -8682549830157173548
+      HydroSlime_8: 7873884013624877227
+      HydroSlime_80: -4072627906580280480
+      HydroSlime_81: -6072662395386166272
+      HydroSlime_82: 5791528905580720277
+      HydroSlime_83: -7682799395868815975
+      HydroSlime_84: -5261500880620031962
+      HydroSlime_85: 8337660535052139024
+      HydroSlime_86: -5841719331350411674
+      HydroSlime_87: 1471201207718409257
+      HydroSlime_88: -9209063970098679640
+      HydroSlime_89: -272406232391638620
+      HydroSlime_9: -8748402108724187864
+      HydroSlime_90: 7484722758084067183
+      HydroSlime_91: -7004091148587946437
+      HydroSlime_92: 4925968624107997562
+      HydroSlime_93: 266662222873951486
+      HydroSlime_94: 1374233974211449797
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

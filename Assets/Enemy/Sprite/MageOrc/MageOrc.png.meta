@@ -1,0 +1,2691 @@
+fileFormatVersion: 2
+guid: 0dc35bfadcda1614c9d1667c4302279c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8962023282652552389
+    second: MageOrc_0
+  - first:
+      213: -4743514169505069056
+    second: MageOrc_1
+  - first:
+      213: -6694495750578438430
+    second: MageOrc_2
+  - first:
+      213: 5623866492079630437
+    second: MageOrc_3
+  - first:
+      213: 8022584085037039627
+    second: MageOrc_4
+  - first:
+      213: 654596018061487921
+    second: MageOrc_5
+  - first:
+      213: 118322585823143016
+    second: MageOrc_6
+  - first:
+      213: 3295319382936491532
+    second: MageOrc_7
+  - first:
+      213: -293116685467116390
+    second: MageOrc_8
+  - first:
+      213: 7691169599967615367
+    second: MageOrc_9
+  - first:
+      213: -2965650333065790936
+    second: MageOrc_10
+  - first:
+      213: 5225004535735996794
+    second: MageOrc_11
+  - first:
+      213: -5225496440445563234
+    second: MageOrc_12
+  - first:
+      213: -8026352621221343854
+    second: MageOrc_13
+  - first:
+      213: 3359911187085464843
+    second: MageOrc_14
+  - first:
+      213: -6581472604408077690
+    second: MageOrc_15
+  - first:
+      213: 4082843105331571464
+    second: MageOrc_16
+  - first:
+      213: -1111653427085778932
+    second: MageOrc_17
+  - first:
+      213: 4760822467135983671
+    second: MageOrc_18
+  - first:
+      213: -508833938758778249
+    second: MageOrc_19
+  - first:
+      213: -6490847424484319842
+    second: MageOrc_20
+  - first:
+      213: -4770390220034128227
+    second: MageOrc_21
+  - first:
+      213: 3508799041278865699
+    second: MageOrc_22
+  - first:
+      213: 2576198878939901960
+    second: MageOrc_23
+  - first:
+      213: -3039577180412093075
+    second: MageOrc_24
+  - first:
+      213: 2463590201570398141
+    second: MageOrc_25
+  - first:
+      213: -611579060450556026
+    second: MageOrc_26
+  - first:
+      213: -1398008295210918703
+    second: MageOrc_27
+  - first:
+      213: -5494754592691462346
+    second: MageOrc_28
+  - first:
+      213: -2309758584792983985
+    second: MageOrc_29
+  - first:
+      213: -4578357935639218850
+    second: MageOrc_30
+  - first:
+      213: -6985317334641058548
+    second: MageOrc_31
+  - first:
+      213: 4001615350207855053
+    second: MageOrc_32
+  - first:
+      213: -2747204602528398512
+    second: MageOrc_33
+  - first:
+      213: 7043235139893474262
+    second: MageOrc_34
+  - first:
+      213: -5459144544190453863
+    second: MageOrc_35
+  - first:
+      213: -2179042870971021162
+    second: MageOrc_36
+  - first:
+      213: -4918642156235544494
+    second: MageOrc_37
+  - first:
+      213: 528396163170796484
+    second: MageOrc_38
+  - first:
+      213: 2846414565892452870
+    second: MageOrc_39
+  - first:
+      213: -1841041891334906292
+    second: MageOrc_40
+  - first:
+      213: 5455556089833395714
+    second: MageOrc_41
+  - first:
+      213: 9043872987693447117
+    second: MageOrc_42
+  - first:
+      213: 2081452224778128567
+    second: MageOrc_43
+  - first:
+      213: -6564621246565828972
+    second: MageOrc_44
+  - first:
+      213: -6457189114303553391
+    second: MageOrc_45
+  - first:
+      213: -4040886944414985606
+    second: MageOrc_46
+  - first:
+      213: -1958612614603252653
+    second: MageOrc_47
+  - first:
+      213: -2407252871216738237
+    second: MageOrc_48
+  - first:
+      213: 3909596063838290024
+    second: MageOrc_49
+  - first:
+      213: 4859031913677258788
+    second: MageOrc_50
+  - first:
+      213: 570196679626798954
+    second: MageOrc_51
+  - first:
+      213: 3476287482621186992
+    second: MageOrc_52
+  - first:
+      213: 7604136208949318517
+    second: MageOrc_53
+  - first:
+      213: -6697082547843717325
+    second: MageOrc_54
+  - first:
+      213: -7497080839877372182
+    second: MageOrc_55
+  - first:
+      213: 7595657948699478886
+    second: MageOrc_56
+  - first:
+      213: -736215832071283171
+    second: MageOrc_57
+  - first:
+      213: 7942617684979207602
+    second: MageOrc_58
+  - first:
+      213: -1683121179984847118
+    second: MageOrc_59
+  - first:
+      213: 2058526087225927901
+    second: MageOrc_60
+  - first:
+      213: -4300261057665961191
+    second: MageOrc_61
+  - first:
+      213: -4202209972803019400
+    second: MageOrc_62
+  - first:
+      213: -5328159793419979677
+    second: MageOrc_63
+  - first:
+      213: 1435025346087839951
+    second: MageOrc_64
+  - first:
+      213: 7602832899741826087
+    second: MageOrc_65
+  - first:
+      213: 1018080807710239464
+    second: MageOrc_66
+  - first:
+      213: -8087262573168743702
+    second: MageOrc_67
+  - first:
+      213: 78642881466742582
+    second: MageOrc_68
+  - first:
+      213: -6464773495656098271
+    second: MageOrc_69
+  - first:
+      213: -8679792507359693489
+    second: MageOrc_70
+  - first:
+      213: -3112050734953123804
+    second: MageOrc_71
+  - first:
+      213: 1635550270063259389
+    second: MageOrc_72
+  - first:
+      213: -7168477737526954067
+    second: MageOrc_73
+  - first:
+      213: -8801596953978277360
+    second: MageOrc_74
+  - first:
+      213: -4905130807023250516
+    second: MageOrc_75
+  - first:
+      213: 3253927551190571350
+    second: MageOrc_76
+  - first:
+      213: 5167795645031345105
+    second: MageOrc_77
+  - first:
+      213: 325595442115892090
+    second: MageOrc_78
+  - first:
+      213: 5037961442250683406
+    second: MageOrc_79
+  - first:
+      213: -2166649189699605398
+    second: MageOrc_80
+  - first:
+      213: 3697666877043897747
+    second: MageOrc_81
+  - first:
+      213: 5148330162326486907
+    second: MageOrc_82
+  - first:
+      213: -2000641504679514700
+    second: MageOrc_83
+  - first:
+      213: 4559273716882993434
+    second: MageOrc_84
+  - first:
+      213: 3203332640085584013
+    second: MageOrc_85
+  - first:
+      213: -7919278133086333237
+    second: MageOrc_86
+  - first:
+      213: 101802512044753308
+    second: MageOrc_87
+  - first:
+      213: -1673199357406750999
+    second: MageOrc_88
+  - first:
+      213: -5998774089250992139
+    second: MageOrc_89
+  - first:
+      213: -4055558336945658936
+    second: MageOrc_90
+  - first:
+      213: -365066294279182721
+    second: MageOrc_91
+  - first:
+      213: -2101725064028173489
+    second: MageOrc_92
+  - first:
+      213: 686316666970278163
+    second: MageOrc_93
+  - first:
+      213: 1162045781732149445
+    second: MageOrc_94
+  - first:
+      213: 567966800421605052
+    second: MageOrc_95
+  - first:
+      213: -6783271866906053882
+    second: MageOrc_96
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MageOrc_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 925
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33e6b8ae4f70a380800000000000000
+      internalID: -8962023282652552389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0084e9bbef6ab2eb0800000000000000
+      internalID: -4743514169505069056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eef864759f5813a0800000000000000
+      internalID: -6694495750578438430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_3
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 925
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568e0ac27ccfb0e40800000000000000
+      internalID: 5623866492079630437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_4
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 925
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00c55948b1f55f60800000000000000
+      internalID: 8022584085037039627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_5
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 948
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fa0f73c97951900800000000000000
+      internalID: 654596018061487921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_6
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864e4e0d3cd54a100800000000000000
+      internalID: 118322585823143016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_7
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 948
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c069369f4835bbd20800000000000000
+      internalID: 3295319382936491532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_8
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c1ef47de3aeebf0800000000000000
+      internalID: -293116685467116390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_9
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 945
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7895a5960068cba60800000000000000
+      internalID: 7691169599967615367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_10
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a38991cb4e7d6d0800000000000000
+      internalID: -2965650333065790936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_11
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 939
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71595621f1f28840800000000000000
+      internalID: 5225004535735996794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_12
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e8c2c5cae4b77b0800000000000000
+      internalID: -5225496440445563234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_13
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 927
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d831201daac9090800000000000000
+      internalID: -8026352621221343854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_14
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05171f4c6dc0ae20800000000000000
+      internalID: 3359911187085464843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_15
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 926
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682aa435989e9a4a0800000000000000
+      internalID: -6581472604408077690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_16
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 925
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80be0f62c2c29a830800000000000000
+      internalID: 4082843105331571464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_17
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 927
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00e43d091d9290f0800000000000000
+      internalID: -1111653427085778932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_18
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730d6585fc6d11240800000000000000
+      internalID: 4760822467135983671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772ce968a3240f8f0800000000000000
+      internalID: -508833938758778249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_20
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d5a5c48a0ebe5a0800000000000000
+      internalID: -6490847424484319842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d964ed69e5b2ccdb0800000000000000
+      internalID: -4770390220034128227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_22
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32178ab3322c1b030800000000000000
+      internalID: 3508799041278865699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_23
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800f8f92b3f70c320800000000000000
+      internalID: 2576198878939901960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_24
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d5726a8a041d5d0800000000000000
+      internalID: -3039577180412093075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_25
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf8cb45c3e603220800000000000000
+      internalID: 2463590201570398141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_26
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 825
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68707c5b51c3387f0800000000000000
+      internalID: -611579060450556026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_27
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 725
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc57eaccd6499ce0800000000000000
+      internalID: -1398008295210918703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_28
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 725
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63fdda67fc5beb3b0800000000000000
+      internalID: -5494754592691462346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_29
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 725
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4651840ec612ffd0800000000000000
+      internalID: -2309758584792983985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_30
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 725
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5532a7f6b76670c0800000000000000
+      internalID: -4578357935639218850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_31
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 725
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d5759d4ea2f0f90800000000000000
+      internalID: -6985317334641058548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_32
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 725
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9b3e4a5f7988730800000000000000
+      internalID: 4001615350207855053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_33
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 625
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0530af428f7ffd9d0800000000000000
+      internalID: -2747204602528398512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_34
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 625
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d336e60b099eb160800000000000000
+      internalID: 7043235139893474262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_35
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 625
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997240af5f83d34b0800000000000000
+      internalID: -5459144544190453863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_36
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 625
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698cc6dcd0c72c1e0800000000000000
+      internalID: -2179042870971021162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_37
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 625
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258a15cd4097dbbb0800000000000000
+      internalID: -4918642156235544494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_38
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 625
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c38976c28d355700800000000000000
+      internalID: 528396163170796484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_39
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 625
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602748b77fe708720800000000000000
+      internalID: 2846414565892452870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_40
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 627
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e9e52772e4376e0800000000000000
+      internalID: -1841041891334906292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_41
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 625
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2061db2eb5706bb40800000000000000
+      internalID: 5455556089833395714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_42
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 627
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7f739d09a428d70800000000000000
+      internalID: 9043872987693447117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_43
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 625
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcc8da35cdc2ec10800000000000000
+      internalID: 2081452224778128567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_44
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 629
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4963671d1c7c5e4a0800000000000000
+      internalID: -6564621246565828972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_45
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 625
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190ea6256b47366a0800000000000000
+      internalID: -6457189114303553391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_46
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 630
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7291accbb2ebe7c0800000000000000
+      internalID: -4040886944414985606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_47
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 625
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c59f5443c91d4e0800000000000000
+      internalID: -1958612614603252653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_48
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 628
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340569e8448b79ed0800000000000000
+      internalID: -2407252871216738237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_49
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 625
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860c858f7eca14630800000000000000
+      internalID: 3909596063838290024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_50
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 626
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420050ff7cfbe6340800000000000000
+      internalID: 4859031913677258788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_51
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 521
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67334debdeb9e700800000000000000
+      internalID: 570196679626798954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_52
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 521
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3d5ca1c014e3030800000000000000
+      internalID: 3476287482621186992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_53
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 520
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5731c16f791578960800000000000000
+      internalID: 7604136208949318517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_54
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 520
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337ae48c7ee2f03a0800000000000000
+      internalID: -6697082547843717325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_55
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 521
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6d8b682b405f790800000000000000
+      internalID: -7497080839877372182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_56
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 518
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bca9b29a2396960800000000000000
+      internalID: 7595657948699478886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_57
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 516
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e5f53f99f68c5f0800000000000000
+      internalID: -736215832071283171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_58
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 427
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdcbe3e3b8d93e60800000000000000
+      internalID: 7942617684979207602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_59
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 426
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe1111543a54a8e0800000000000000
+      internalID: -1683121179984847118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_60
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 426
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8e9fdd19a519c10800000000000000
+      internalID: 2058526087225927901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_61
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 426
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913ff501a576254c0800000000000000
+      internalID: -4300261057665961191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_62
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 426
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87dd8734b40cea5c0800000000000000
+      internalID: -4202209972803019400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_63
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 426
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364feaec5e29e06b0800000000000000
+      internalID: -5328159793419979677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_64
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 325
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc86f3df2fb3ae310800000000000000
+      internalID: 1435025346087839951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_65
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72cb3c3ad30b28960800000000000000
+      internalID: 7602832899741826087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_66
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea2630c913f02e00800000000000000
+      internalID: 1018080807710239464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_67
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 325
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea27f0b98544cf80800000000000000
+      internalID: -8087262573168743702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_68
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 325
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63730f5b845671100800000000000000
+      internalID: 78642881466742582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_69
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 348
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126de0ee1c28846a0800000000000000
+      internalID: -6464773495656098271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_70
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f457abab3be2b8780800000000000000
+      internalID: -8679792507359693489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_71
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420302c4856cfc4d0800000000000000
+      internalID: -3112050734953123804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_72
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe2a6b1e44a2b610800000000000000
+      internalID: 1635550270063259389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_73
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7f86a5a73748c90800000000000000
+      internalID: -7168477737526954067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_74
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012f6f504327ad580800000000000000
+      internalID: -8801596953978277360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_75
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 325
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3dd8ef4897debb0800000000000000
+      internalID: -4905130807023250516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_76
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 225
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65912952ed5482d20800000000000000
+      internalID: 3253927551190571350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_77
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 225
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db67ed42c2b7b740800000000000000
+      internalID: 5167795645031345105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_78
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 225
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73ddcb545fb48400800000000000000
+      internalID: 325595442115892090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_79
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 225
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04777d4d3f6ae540800000000000000
+      internalID: 5037961442250683406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_80
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 225
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c21179a048ee1e0800000000000000
+      internalID: -2166649189699605398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_81
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 225
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395fdeffe60c05330800000000000000
+      internalID: 3697666877043897747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_82
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 225
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f36ef610b827740800000000000000
+      internalID: 5148330162326486907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_83
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 225
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdacaeb62b4c34e0800000000000000
+      internalID: -2000641504679514700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_84
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 225
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11f5981a4bc54f30800000000000000
+      internalID: 4559273716882993434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_85
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 225
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8827bd6016847c20800000000000000
+      internalID: 3203332640085584013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_86
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 225
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6dedffe72191290800000000000000
+      internalID: -7919278133086333237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_87
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 225
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c918ba768dca96100800000000000000
+      internalID: 101802512044753308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_88
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 125
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6db57ac0a97c8e0800000000000000
+      internalID: -1673199357406750999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_89
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 125
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff806aafb210cca0800000000000000
+      internalID: -5998774089250992139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_90
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 125
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3ea780e23c7b7c0800000000000000
+      internalID: -4055558336945658936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_91
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 125
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76650ab3260feaf0800000000000000
+      internalID: -365066294279182721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_92
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 25
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bc01f803c25d2e0800000000000000
+      internalID: -2101725064028173489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_93
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 23
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31981325f59468900800000000000000
+      internalID: 686316666970278163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_94
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 25
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8c2e05b7a602010800000000000000
+      internalID: 1162045781732149445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_95
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 25
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe4857bbc2d1e700800000000000000
+      internalID: 567966800421605052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MageOrc_96
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 25
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603f9262d2afcd1a0800000000000000
+      internalID: -6783271866906053882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MageOrc_0: -8962023282652552389
+      MageOrc_1: -4743514169505069056
+      MageOrc_10: -2965650333065790936
+      MageOrc_11: 5225004535735996794
+      MageOrc_12: -5225496440445563234
+      MageOrc_13: -8026352621221343854
+      MageOrc_14: 3359911187085464843
+      MageOrc_15: -6581472604408077690
+      MageOrc_16: 4082843105331571464
+      MageOrc_17: -1111653427085778932
+      MageOrc_18: 4760822467135983671
+      MageOrc_19: -508833938758778249
+      MageOrc_2: -6694495750578438430
+      MageOrc_20: -6490847424484319842
+      MageOrc_21: -4770390220034128227
+      MageOrc_22: 3508799041278865699
+      MageOrc_23: 2576198878939901960
+      MageOrc_24: -3039577180412093075
+      MageOrc_25: 2463590201570398141
+      MageOrc_26: -611579060450556026
+      MageOrc_27: -1398008295210918703
+      MageOrc_28: -5494754592691462346
+      MageOrc_29: -2309758584792983985
+      MageOrc_3: 5623866492079630437
+      MageOrc_30: -4578357935639218850
+      MageOrc_31: -6985317334641058548
+      MageOrc_32: 4001615350207855053
+      MageOrc_33: -2747204602528398512
+      MageOrc_34: 7043235139893474262
+      MageOrc_35: -5459144544190453863
+      MageOrc_36: -2179042870971021162
+      MageOrc_37: -4918642156235544494
+      MageOrc_38: 528396163170796484
+      MageOrc_39: 2846414565892452870
+      MageOrc_4: 8022584085037039627
+      MageOrc_40: -1841041891334906292
+      MageOrc_41: 5455556089833395714
+      MageOrc_42: 9043872987693447117
+      MageOrc_43: 2081452224778128567
+      MageOrc_44: -6564621246565828972
+      MageOrc_45: -6457189114303553391
+      MageOrc_46: -4040886944414985606
+      MageOrc_47: -1958612614603252653
+      MageOrc_48: -2407252871216738237
+      MageOrc_49: 3909596063838290024
+      MageOrc_5: 654596018061487921
+      MageOrc_50: 4859031913677258788
+      MageOrc_51: 570196679626798954
+      MageOrc_52: 3476287482621186992
+      MageOrc_53: 7604136208949318517
+      MageOrc_54: -6697082547843717325
+      MageOrc_55: -7497080839877372182
+      MageOrc_56: 7595657948699478886
+      MageOrc_57: -736215832071283171
+      MageOrc_58: 7942617684979207602
+      MageOrc_59: -1683121179984847118
+      MageOrc_6: 118322585823143016
+      MageOrc_60: 2058526087225927901
+      MageOrc_61: -4300261057665961191
+      MageOrc_62: -4202209972803019400
+      MageOrc_63: -5328159793419979677
+      MageOrc_64: 1435025346087839951
+      MageOrc_65: 7602832899741826087
+      MageOrc_66: 1018080807710239464
+      MageOrc_67: -8087262573168743702
+      MageOrc_68: 78642881466742582
+      MageOrc_69: -6464773495656098271
+      MageOrc_7: 3295319382936491532
+      MageOrc_70: -8679792507359693489
+      MageOrc_71: -3112050734953123804
+      MageOrc_72: 1635550270063259389
+      MageOrc_73: -7168477737526954067
+      MageOrc_74: -8801596953978277360
+      MageOrc_75: -4905130807023250516
+      MageOrc_76: 3253927551190571350
+      MageOrc_77: 5167795645031345105
+      MageOrc_78: 325595442115892090
+      MageOrc_79: 5037961442250683406
+      MageOrc_8: -293116685467116390
+      MageOrc_80: -2166649189699605398
+      MageOrc_81: 3697666877043897747
+      MageOrc_82: 5148330162326486907
+      MageOrc_83: -2000641504679514700
+      MageOrc_84: 4559273716882993434
+      MageOrc_85: 3203332640085584013
+      MageOrc_86: -7919278133086333237
+      MageOrc_87: 101802512044753308
+      MageOrc_88: -1673199357406750999
+      MageOrc_89: -5998774089250992139
+      MageOrc_9: 7691169599967615367
+      MageOrc_90: -4055558336945658936
+      MageOrc_91: -365066294279182721
+      MageOrc_92: -2101725064028173489
+      MageOrc_93: 686316666970278163
+      MageOrc_94: 1162045781732149445
+      MageOrc_95: 567966800421605052
+      MageOrc_96: -6783271866906053882
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

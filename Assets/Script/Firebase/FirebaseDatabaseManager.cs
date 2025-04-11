@@ -26,25 +26,24 @@ public class FirebaseDatabaseManager : MonoBehaviour
         reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
-    private const string PlayerIdKey = "";
-
-    
+    private const string PlayerIdKey = "playerId";
 
     public string GetOrCreatePlayerId()
     {
+        string id = string.Empty;
         if (PlayerPrefs.HasKey(PlayerIdKey))
         {
-            Debug.Log("Player ID: " + PlayerIdKey);
-            return PlayerPrefs.GetString(PlayerIdKey);
+            id = PlayerPrefs.GetString(PlayerIdKey);
         }
         else
         {
-            string newId = System.Guid.NewGuid().ToString();
-            PlayerPrefs.SetString(PlayerIdKey, newId);
+            id = System.Guid.NewGuid().ToString();
+            PlayerPrefs.SetString(PlayerIdKey, id);
             PlayerPrefs.Save();
-            Debug.Log("Player ID: " + newId);
-            return newId;
         }
+        DataManager.gameData.playerData.playerId = id;
+        Debug.Log("Player ID: " + id);
+        return id;
     }
 
     public void WriteDatabase(string id, int floor, int stage, float playTime, int enemiesKilled)

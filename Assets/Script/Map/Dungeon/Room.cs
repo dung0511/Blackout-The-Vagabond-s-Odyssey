@@ -28,8 +28,8 @@ public class Room
     //public NotificationController roomNotification;
     public void OnEnemyDeath()
     {
-        Debug.Log("Enemy died " + enemyCount);
         enemyCount--;
+        Debug.Log("Enemy died " + enemyCount);
         if (enemyCount == 0)
         {
             Debug.Log("Room Cleared"); //them ui bao room cleared o day.

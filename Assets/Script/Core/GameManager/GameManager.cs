@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
     }
     // long
 
-
     #region Singleton
     public static GameManager Instance {get; private set;}
     private void Awake()
@@ -54,8 +53,6 @@ public class GameManager : MonoBehaviour
         DataManager.Load();
     }
     #endregion
-
-    
 
     public void SetPlayerCharacter(CharacterVariantSO player)
     {

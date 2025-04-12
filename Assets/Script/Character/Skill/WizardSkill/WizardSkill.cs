@@ -143,7 +143,7 @@ public class WizardSkill : BaseSkill
     public override void NormalSkill()
     {
         animator.SetBool("isSkill1", false);
-
+        GameManager.Instance.UpdateNormalSkillUsed();
         if (canUseNormal)
         {
             ShootFireBall();
@@ -174,6 +174,7 @@ public class WizardSkill : BaseSkill
     public override void UltimmateSkill()
     {
         animator.SetBool("isSkill2", false);
+        GameManager.Instance.UpdateUltimateSkillUsed();
         StartCoroutine(AutoFire());
         StartCoroutine(SetFalse());
         StartCoroutine(ResetUltimateSkillCoolDown());

@@ -7,6 +7,14 @@ public class WeaponDetailSO : ScriptableObject
     [Space(10)]
     [Header("WEAPON DETAILS")]
     #endregion
+    #region Header Name
+    [Space(10)]
+    [Header("NAME")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Name of weapon")]
+    #endregion
+    public string weaponName;
 
     #region Header Damage
     [Space(10)]

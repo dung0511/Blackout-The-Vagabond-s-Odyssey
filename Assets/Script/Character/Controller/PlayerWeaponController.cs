@@ -62,6 +62,7 @@ public class PlayerWeaponController : MonoBehaviour
                     Weapon1.SetActive(true);
                     Weapon2.SetActive(false);
                     baseWeapon = GetComponentInChildren<BaseWeapon>();
+                    GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
                 }
                 break;
 
@@ -69,6 +70,7 @@ public class PlayerWeaponController : MonoBehaviour
                 Weapon1.SetActive(false);
                 Weapon2.SetActive(true);
                 baseWeapon = GetComponentInChildren<BaseWeapon>();
+                GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
                 break;
         }
     }
@@ -104,6 +106,7 @@ public class PlayerWeaponController : MonoBehaviour
         Weapon2.SetActive(true);
         haveOneWepon = false;
         baseWeapon = GetComponentInChildren<BaseWeapon>();
+        GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
     }
 
     private void ChangeWeapon(GameObject newWeapon)
@@ -124,6 +127,7 @@ public class PlayerWeaponController : MonoBehaviour
             Weapon1.SetActive(true);
             Weapon2.SetActive(false);
             baseWeapon = GetComponentInChildren<BaseWeapon>();
+            GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
         }
         else if (Weapon2.activeInHierarchy)
         {
@@ -137,6 +141,7 @@ public class PlayerWeaponController : MonoBehaviour
             Weapon1.SetActive(false);
             Weapon2.SetActive(true);
             baseWeapon = GetComponentInChildren<BaseWeapon>();
+            GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
         }
     }
 }

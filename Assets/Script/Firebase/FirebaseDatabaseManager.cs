@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System;
 using Microsoft.Win32;
 using Zenject.SpaceFighter;
+using UnityEngine.InputSystem;
+using System.Collections;
 
 public class FirebaseDatabaseManager : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
 
         FirebaseApp app = FirebaseApp.DefaultInstance;
         reference = FirebaseDatabase.DefaultInstance.RootReference;
+        // WriteDatabase(GetOrCreatePlayerId(),"1", 0, 0, 0, 0,0,false);
     }
 
     private const string PlayerIdKey = "playerId";
@@ -46,31 +49,145 @@ public class FirebaseDatabaseManager : MonoBehaviour
         return id;
     }
 
-    public void WriteDatabase(string id, int floor, int stage, float playTime, int enemiesKilled)
+    public void WriteDatabase(string playerId, string gameId, string characterPlayed, int floor, int stage, float playTime, int enemiesKilled, int bossesKilled, bool win, Dictionary<string, int> normalSkill, Dictionary<string, int> ultimateSkill, Dictionary<string,int> weapons)
     {
         string today = DateTime.UtcNow.ToString("dd-MM-yyyy");
+        var gamePath = reference.Child("PlayerData").Child(playerId).Child(today).Child(gameId);
 
+        
         Dictionary<string, object> userData = new Dictionary<string, object>
     {
+        { "characterPlayed", characterPlayed },
         { "floor", floor },
         { "stage", stage },
         { "playTime", playTime },
-        { "enemiesKilled", enemiesKilled }
+        { "totalEnemiesKilled", enemiesKilled },
+        { "bossesKilled", bossesKilled },
+        { "win", win },
+        //{ "normalSkillUsed", NormalSkillUsed },
+       // { "ultimateSkillUsed", UltimateSkillUsed }
+      
     };
-
-        reference.Child("PlayerData").Child(id).Child(today).SetValueAsync(userData).ContinueWithOnMainThread(task =>
+        // update weapon
+        gamePath.SetValueAsync(userData).ContinueWithOnMainThread(task =>
         {
             if (task.IsCompleted)
             {
-                Debug.Log("Ghi du lieu thanh cong");
+                Debug.Log("Write data sucess");
+
+                
+                foreach (var kvp in weapons)
+                {
+                    
+                    string weaponName = kvp.Key;
+                    int kills = kvp.Value;
+
+                    gamePath.Child("weaponsUsed").Child(weaponName).SetValueAsync(kills).ContinueWithOnMainThread(subTask =>
+                    {
+                        if (subTask.IsCompleted)
+                        {
+                            Debug.Log($"Write weapon {weaponName} = {kills} done");
+                        }
+                        else
+                        {
+                            Debug.LogError($"Write weapon {weaponName} false: {subTask.Exception?.Flatten().Message}");
+                        }
+                    });
+                }
             }
             else
             {
-                Debug.Log("Ghi du lieu that bai: " + task.Exception);
+                Debug.LogError("Ghi data sucess");
+                if (task.Exception != null)
+                {
+                    foreach (var ex in task.Exception.Flatten().InnerExceptions)
+                    {
+                        Debug.LogError("Firebase exception: " + ex.Message);
+                    }
+                }
+            }
+        });
+
+        //update skill normal
+        gamePath.SetValueAsync(userData).ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCompleted)
+            {
+                Debug.Log("Write data sucess");
+
+
+                foreach (var kvp in normalSkill)
+                {
+
+                    string key = kvp.Key;
+                    int value = kvp.Value;
+
+                    gamePath.Child("normalSkill").Child(key).SetValueAsync(value).ContinueWithOnMainThread(subTask =>
+                    {
+                        if (subTask.IsCompleted)
+                        {
+                            Debug.Log($"Write normalSkill {key} = {value} done");
+                        }
+                        else
+                        {
+                            Debug.LogError($"Write normalSkill {key} false: {subTask.Exception?.Flatten().Message}");
+                        }
+                    });
+                }
+            }
+            else
+            {
+                Debug.LogError("Ghi data sucess");
+                if (task.Exception != null)
+                {
+                    foreach (var ex in task.Exception.Flatten().InnerExceptions)
+                    {
+                        Debug.LogError("Firebase exception: " + ex.Message);
+                    }
+                }
+            }
+        });
+
+        //update skill ultimate
+        gamePath.SetValueAsync(userData).ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCompleted)
+            {
+                Debug.Log("Write data sucess");
+
+
+                foreach (var kvp in ultimateSkill)
+                {
+
+                    string key = kvp.Key;
+                    int value = kvp.Value;
+
+                    gamePath.Child("ultimateSkill").Child(key).SetValueAsync(value).ContinueWithOnMainThread(subTask =>
+                    {
+                        if (subTask.IsCompleted)
+                        {
+                            Debug.Log($"Write ultimateSkill {key} = {value} done");
+                        }
+                        else
+                        {
+                            Debug.LogError($"Write ultimateSkill {key} false: {subTask.Exception?.Flatten().Message}");
+                        }
+                    });
+                }
+            }
+            else
+            {
+                Debug.LogError("Ghi data sucess");
+                if (task.Exception != null)
+                {
+                    foreach (var ex in task.Exception.Flatten().InnerExceptions)
+                    {
+                        Debug.LogError("Firebase exception: " + ex.Message);
+                    }
+                }
             }
         });
     }
-
     public void ReadDatabase(string id)
     {
         string today = DateTime.UtcNow.ToString("dd-MM-yyyy");
@@ -198,41 +315,148 @@ public class FirebaseDatabaseManager : MonoBehaviour
         });
     }
 
-    public void UpdatePlayTimeAndEnemiesKilled(string id, int floor, int stage, float playTime, int enemiesKilled)
+    public void UpdatePlayTimeAndEnemiesKilled(string id, string gameId, string characterPlayed, int floor, int stage, float playTime, int enemiesKilled, int bossKilled, bool win, Dictionary<string, int> normalSkill, Dictionary<string, int> ultimateSkill, Dictionary<string, int> weapons)
     {
         string today = DateTime.UtcNow.ToString("dd-MM-yyyy");
+        var basePath = reference.Child("PlayerData").Child(id).Child(today).Child(gameId);
 
-        reference.Child("PlayerData").Child(id).Child(today).GetValueAsync().ContinueWithOnMainThread(task =>
+        reference.Child("PlayerData").Child(id).Child(today).Child(gameId).GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsCompleted && task.Result.Exists)
             {
                 DataSnapshot snapshot = task.Result;
 
                 float oldPlayTime = float.Parse(snapshot.Child("playTime").Value.ToString());
-                int oldEnemiesKilled = int.Parse(snapshot.Child("enemiesKilled").Value.ToString());
-                int oldFloor = int.Parse(snapshot.Child("floor").Value.ToString());
-                int oldStage = int.Parse(snapshot.Child("stage").Value.ToString());
-
-               
-                int updatedFloor = Mathf.Max(oldFloor, floor);
-                int updatedStage = Mathf.Max(oldStage, stage);
+                
 
                 Dictionary<string, object> updatedData = new Dictionary<string, object>
             {
-                { "floor", updatedFloor },
-                { "stage", updatedStage },
+                { "characterPlayed", characterPlayed },
+                { "floor", floor },
+                { "stage", stage },
                 { "playTime", oldPlayTime + playTime },
-                { "enemiesKilled", oldEnemiesKilled + enemiesKilled }
+                { "win", win },
+                
             };
 
-                reference.Child("PlayerData").Child(id).Child(today).SetValueAsync(updatedData);
+                
+                basePath.UpdateChildrenAsync(updatedData).ContinueWithOnMainThread(updateTask =>
+                {
+                    if (updateTask.IsCompleted)
+                    {
+                        Debug.Log("update main data sucess");
+
+                        
+                        foreach (var kvp in weapons)
+                        {
+                            string weaponName = kvp.Key;
+                            int kills = kvp.Value;
+
+                            basePath.Child("weaponsUsed").Child(weaponName).SetValueAsync(kills).ContinueWithOnMainThread(weaponTask =>
+                            {
+                                if (weaponTask.IsCompleted)
+                                {
+                                    Debug.Log($"Updated {weaponName} = {kills}");
+                                }
+                                else
+                                {
+                                    Debug.LogError($"Error write weapon {weaponName}: {weaponTask.Exception?.Flatten().Message}");
+                                }
+                            });
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("error update data");
+                    }
+                });
+
+                //update skill normal
+                basePath.SetValueAsync(updatedData).ContinueWithOnMainThread(task =>
+                {
+                    if (task.IsCompleted)
+                    {
+                        Debug.Log("Write data sucess");
+
+
+                        foreach (var kvp in normalSkill)
+                        {
+
+                            string key = kvp.Key;
+                            int value = kvp.Value;
+
+                            basePath.Child("normalSkill").Child(key).SetValueAsync(value).ContinueWithOnMainThread(subTask =>
+                            {
+                                if (subTask.IsCompleted)
+                                {
+                                    Debug.Log($"Write normalSkill {key} = {value} done");
+                                }
+                                else
+                                {
+                                    Debug.LogError($"Write normalSkill {key} false: {subTask.Exception?.Flatten().Message}");
+                                }
+                            });
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("Ghi data sucess");
+                        if (task.Exception != null)
+                        {
+                            foreach (var ex in task.Exception.Flatten().InnerExceptions)
+                            {
+                                Debug.LogError("Firebase exception: " + ex.Message);
+                            }
+                        }
+                    }
+                });
+
+                //update skill ultimate
+                basePath.SetValueAsync(updatedData).ContinueWithOnMainThread(task =>
+                {
+                    if (task.IsCompleted)
+                    {
+                        Debug.Log("Write data sucess");
+
+
+                        foreach (var kvp in ultimateSkill)
+                        {
+
+                            string key = kvp.Key;
+                            int value = kvp.Value;
+
+                            basePath.Child("ultimateSkill").Child(key).SetValueAsync(value).ContinueWithOnMainThread(subTask =>
+                            {
+                                if (subTask.IsCompleted)
+                                {
+                                    Debug.Log($"Write ultimateSkill {key} = {value} done");
+                                }
+                                else
+                                {
+                                    Debug.LogError($"Write ultimateSkill {key} false: {subTask.Exception?.Flatten().Message}");
+                                }
+                            });
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("Ghi data sucess");
+                        if (task.Exception != null)
+                        {
+                            foreach (var ex in task.Exception.Flatten().InnerExceptions)
+                            {
+                                Debug.LogError("Firebase exception: " + ex.Message);
+                            }
+                        }
+                    }
+                });
             }
             else
             {
-               
-                WriteDatabase(id, floor, stage, playTime, enemiesKilled);
+                
+                WriteDatabase(id, gameId, characterPlayed, floor, stage, playTime, enemiesKilled, bossKilled, win, normalSkill, ultimateSkill, weapons);
             }
         });
     }
 
-}
+    }

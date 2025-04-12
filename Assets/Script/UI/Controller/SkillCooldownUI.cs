@@ -1,50 +1,95 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class SkillCooldownUI : MonoBehaviour
 {
-    public Image cooldownMask;
-    public TextMeshProUGUI cooldownText;
+    public static SkillCooldownUI Instance;
 
-    private float cooldownTime;
-    private float currentTime;
-    private bool isCoolingDown;
+    public Image cooldownMask_E;
+    public TextMeshProUGUI cooldownText_E;
+    private float cooldownTime_E;
+    private float currentTime_E;
+    private bool isCoolingDown_E;
+
+    public Image cooldownMask_Q;
+    public TextMeshProUGUI cooldownText_Q;
+    private float cooldownTime_Q;
+    private float currentTime_Q;
+    private bool isCoolingDown_Q;
 
     private void Awake()
     {
-        cooldownText.gameObject.SetActive(false); 
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        cooldownText_E.gameObject.SetActive(false);
+        cooldownText_Q.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (isCoolingDown)
+        if (isCoolingDown_E)
         {
-            currentTime -= Time.deltaTime;
-
-            if (currentTime <= 0)
+            currentTime_E -= Time.deltaTime;
+            if (currentTime_E <= 0)
             {
-                cooldownMask.fillAmount = 0;
-                cooldownText.text = "";
-                cooldownText.gameObject.SetActive(false);
-                isCoolingDown = false;
+                cooldownMask_E.fillAmount = 0;
+                cooldownText_E.text = "";
+                cooldownText_E.gameObject.SetActive(false);
+                isCoolingDown_E = false;
             }
             else
             {
-                cooldownMask.fillAmount = currentTime / cooldownTime;
-                cooldownText.text = Mathf.Ceil(currentTime).ToString();
+                cooldownMask_E.fillAmount = currentTime_E / cooldownTime_E;
+                cooldownText_E.text = Mathf.Ceil(currentTime_E).ToString();
+            }
+        }
+
+        if (isCoolingDown_Q)
+        {
+            currentTime_Q -= Time.deltaTime;
+            if (currentTime_Q <= 0)
+            {
+                cooldownMask_Q.fillAmount = 0;
+                cooldownText_Q.text = "";
+                cooldownText_Q.gameObject.SetActive(false);
+                isCoolingDown_Q = false;
+            }
+            else
+            {
+                cooldownMask_Q.fillAmount = currentTime_Q / cooldownTime_Q;
+                cooldownText_Q.text = Mathf.Ceil(currentTime_Q).ToString();
             }
         }
     }
 
-    public void TriggerCooldown(float time)
+    public void TriggerCooldown_E(float time)
     {
-        cooldownTime = time;
-        currentTime = time;
-        isCoolingDown = true;
+        cooldownTime_E = time;
+        currentTime_E = time;
+        isCoolingDown_E = true;
 
-        cooldownMask.fillAmount = 1f;
-        cooldownText.text = Mathf.Ceil(time).ToString();
-        cooldownText.gameObject.SetActive(true);
+        cooldownMask_E.fillAmount = 1f;
+        cooldownText_E.text = Mathf.Ceil(time).ToString();
+        cooldownText_E.gameObject.SetActive(true);
+    }
+
+    public void TriggerCooldown_Q(float time)
+    {
+        cooldownTime_Q = time;
+        currentTime_Q = time;
+        isCoolingDown_Q = true;
+
+        cooldownMask_Q.fillAmount = 1f;
+        cooldownText_Q.text = Mathf.Ceil(time).ToString();
+        cooldownText_Q.gameObject.SetActive(true);
     }
 }

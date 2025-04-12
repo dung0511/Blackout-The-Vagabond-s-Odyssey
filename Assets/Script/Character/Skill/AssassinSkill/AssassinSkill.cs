@@ -29,8 +29,6 @@ public class AssassinSkill : BaseSkill
     public float lightdefault;
     public float buffed;
 
-    public SkillCooldownUI skillE_UI;
-    public SkillCooldownUI skillQ_UI;
 
     public PlayerWeaponController weaponController;
     private void Start()
@@ -65,6 +63,8 @@ public class AssassinSkill : BaseSkill
         StartCoroutine(Dash(targetPos));
         StartCoroutine(DashCooldown());
 
+        //bat dau cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_E(CoolDownNormalSkill);
     }
 
     public override void UltimmateSkill()
@@ -73,11 +73,16 @@ public class AssassinSkill : BaseSkill
         damage = DameUltimateSkill;
         isUsingUltimate = true;
         StartCoroutine(UltimateCoolDown());
+
+        //bat dau cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_Q(CoolDownUltimateSkill);
     }
+
     public void SetLight()
     {
         light.GetComponent<Light2D>().pointLightOuterRadius = lightdefault;
     }
+
     IEnumerator Dash(Vector3 targetPos)
     {
 
@@ -185,5 +190,5 @@ public class AssassinSkill : BaseSkill
         isUsingNormal = true;
     }
 
-    
+
 }

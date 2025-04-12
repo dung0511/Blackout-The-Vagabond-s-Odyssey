@@ -372,7 +372,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
                 });
 
                 //update skill normal
-                basePath.SetValueAsync(updatedData).ContinueWithOnMainThread(task =>
+                basePath.UpdateChildrenAsync(updatedData).ContinueWithOnMainThread(task =>
                 {
                     if (task.IsCompleted)
                     {
@@ -412,7 +412,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
                 });
 
                 //update skill ultimate
-                basePath.SetValueAsync(updatedData).ContinueWithOnMainThread(task =>
+                basePath.UpdateChildrenAsync(updatedData).ContinueWithOnMainThread(task =>
                 {
                     if (task.IsCompleted)
                     {

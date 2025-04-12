@@ -3,7 +3,8 @@ using UnityEngine;
 public enum AttackType
 {
     Weapon,
-    Skill
+    NormalSkill,
+    UltimateSkill
 }
 
 public static class AttackContext

@@ -14,6 +14,7 @@ public class FireBall : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
+            AttackContext.CurrentAttackType = AttackType.NormalSkill;
             enemy.takeDame(wizardSkill.normalSkillDame);
            
         }

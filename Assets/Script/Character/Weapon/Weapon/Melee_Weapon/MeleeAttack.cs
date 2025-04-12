@@ -13,6 +13,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<IDamageable>(out var prob))
         {
+            AttackContext.CurrentAttackType = AttackType.Weapon;
             prob.takeDame(Damege);
             Debug.Log("Dealt: " + Damege);
         }

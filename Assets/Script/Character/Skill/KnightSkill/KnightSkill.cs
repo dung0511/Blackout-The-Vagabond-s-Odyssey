@@ -64,6 +64,7 @@ public class KnightSkill : BaseSkill
 
     public override void NormalSkill()
     {
+        GameManager.Instance.UpdateNormalSkillUsed();
         //isUsingNormal = true; 
         canUseNormal = false;
         animator.SetBool("isSkill1", false);
@@ -101,7 +102,7 @@ public class KnightSkill : BaseSkill
 
     public override void UltimmateSkill()
     {
-
+        GameManager.Instance.UpdateUltimateSkillUsed();
         canUseUltimate = false;
         animator.SetBool("isSkill2", false);
         //bat dau cooldown

@@ -12,6 +12,7 @@ public class Lightning : MonoBehaviour
         {
             if (collision.gameObject == target.gameObject)
             {
+                AttackContext.CurrentAttackType = AttackType.UltimateSkill;
                 enemy.takeDame(50);
                // PoolManagement.Instance.
             }

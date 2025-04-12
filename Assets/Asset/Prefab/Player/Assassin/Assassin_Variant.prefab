@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ed3e3032903954e86d430e0e0f5c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownNormalSkill: 0
-  CoolDownUltimateSkill: 0
+  CoolDownNormalSkill: 10
+  CoolDownUltimateSkill: 40
   DameNormalSkill: 10
   DameUltimateSkill: 50
   animator: {fileID: 3036850352898393763}

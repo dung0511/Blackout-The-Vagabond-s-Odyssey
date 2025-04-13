@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -13,9 +13,9 @@ public class AssassinSkill : BaseSkill
 
     public float dashDistance = 5f;
     public float dashDuration = 0.1f;
-    public float dashCooldownTime = 5f;
+    public float dashCooldownTime = 5f; //đoạn này thừa hay sao ý
 
-    public float ultimateCooldownTime;
+    public float ultimateCooldownTime; //đây nữa
 
     public LayerMask obstacleMask;
 

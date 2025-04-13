@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SkillCooldownUI : MonoBehaviour
@@ -18,6 +19,10 @@ public class SkillCooldownUI : MonoBehaviour
     private float currentTime_Q;
     private bool isCoolingDown_Q;
 
+    //for Wizard only
+    private bool isReactivating_E = false;
+    public Image glowEffect_E;
+
     private void Awake()
     {
         if (Instance == null)
@@ -32,6 +37,7 @@ public class SkillCooldownUI : MonoBehaviour
 
         cooldownText_E.gameObject.SetActive(false);
         cooldownText_Q.gameObject.SetActive(false);
+        //glowEffect_E.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -91,5 +97,55 @@ public class SkillCooldownUI : MonoBehaviour
         cooldownMask_Q.fillAmount = 1f;
         cooldownText_Q.text = Mathf.Ceil(time).ToString();
         cooldownText_Q.gameObject.SetActive(true);
+    }
+
+    //lan1
+    public void StartWizardESkill()
+    {
+        if (isCoolingDown_E) return;
+
+        isReactivating_E = true;
+        glowEffect_E.enabled = true;
+    }
+
+    //lan 2
+    public void ActivateWizardESkill(float cooldownTime)
+    {
+        if (!isReactivating_E) return;
+
+        cooldownTime_E = cooldownTime;
+        currentTime_E = cooldownTime;
+        isCoolingDown_E = true;
+        isReactivating_E = false;
+
+        cooldownMask_E.fillAmount = 1f;
+        cooldownText_E.text = Mathf.Ceil(cooldownTime).ToString();
+        cooldownText_E.gameObject.SetActive(true);
+        glowEffect_E.enabled = false;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //reset all
+        cooldownMask_E.fillAmount = 0;
+        cooldownText_E.gameObject.SetActive(false);
+        glowEffect_E.enabled = false;
+
+        cooldownMask_Q.fillAmount = 0;
+        cooldownText_Q.gameObject.SetActive(false);
+
+        isCoolingDown_E = false;
+        isCoolingDown_Q = false;
+        isReactivating_E = false;
     }
 }

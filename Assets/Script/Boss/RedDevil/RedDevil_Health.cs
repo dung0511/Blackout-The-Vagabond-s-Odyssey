@@ -31,6 +31,7 @@ public class RedDevil_Health : MonoBehaviour, IDamageable
             {
                 item.enabled = false;
             }
+            GameManager.Instance.UpdateBossKill();
             BossManager.Instance.bossKillEvent.Invoke();
         }
         else

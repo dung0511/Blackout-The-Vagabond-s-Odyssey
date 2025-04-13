@@ -34,7 +34,8 @@ public class OrcWarlockHealth : MonoBehaviour, IDamageable
                 {
                     item.enabled = false;
                 }
-                orcWarlockHealth.roomBelong.OnEnemyDeath();
+                GameManager.Instance.UpdateBossKill();
+                BossManager.Instance.bossKillEvent.Invoke();
             }
         }
 

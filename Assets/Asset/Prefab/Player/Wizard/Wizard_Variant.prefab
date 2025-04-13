@@ -141,6 +141,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: skillUIPrefab
+      value: 
+      objectReference: {fileID: 1223853568643201454, guid: c32b64cb81531f741950e71e588f7667, type: 3}
+    - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: playerDetailSO
       value: 
       objectReference: {fileID: 11400000, guid: e8fa52eaae2a09443b917c9e89f2a2f4, type: 2}
@@ -260,12 +264,12 @@ MonoBehaviour:
   animator: {fileID: 0}
   ultimateBulletPrefab: {fileID: 7524327996312274045, guid: 53e9b2d69f706a941a8b1beec6bc5e20, type: 3}
   fireRate: 0.2
-  ultimateCoolDown: 10
+  ultimateCoolDown: 40
   ultimateDame: 50
   normalBulletPrefab: {fileID: 6177990407234782374, guid: 1f115c6800c67b6409444d3b19931876, type: 3}
   firePos: {fileID: 6021034056957006260}
   bulletForce: 5
-  normalSkillCoolDown: 5
+  normalSkillCoolDown: 10
   normalSkillDame: 5
   isUsingNormal: 0
   isUsingUltimate: 0

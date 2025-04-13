@@ -11,9 +11,9 @@ public class Shop : Interactable
         isUIOpen = !isUIOpen;
 
         if (isUIOpen)
-            ShopUI.instance.Show();
+            ShopUI.Instance.Show();
         else
-            ShopUI.instance.Hide();
+            ShopUI.Instance.Hide();
     }
 
     public override void HighLightOn()

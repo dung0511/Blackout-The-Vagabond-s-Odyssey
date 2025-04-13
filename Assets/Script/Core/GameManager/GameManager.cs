@@ -84,12 +84,17 @@ public class GameManager : MonoBehaviour
     {
         ultimateSkill["enemiesKilled"]++;
     }
-
+    public void UpdateBossKill()
+    {
+        BossKilled++;
+    }
     private void OnApplicationQuit()
     {
         DataManager.Save();
         TimePlayed = Time.time - TimePlayed;
-        FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(
+        if (!gameId.IsEmpty())
+        {
+            FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(
             playerId,
             gameId,
             characterPlayed,
@@ -103,6 +108,8 @@ public class GameManager : MonoBehaviour
             ultimateSkill,
             weaponuUsed
         );
+        }
+        
     }
     // long
 

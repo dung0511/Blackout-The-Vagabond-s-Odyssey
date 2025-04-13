@@ -193,6 +193,10 @@ public class RangedWeapon : BaseWeapon, IPick
 
             if (bulletTmp == null) return;
 
+
+            WeaponSoundEffect();
+
+
             bulletTmp.transform.position = firePos.position;
             bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
@@ -201,7 +205,6 @@ public class RangedWeapon : BaseWeapon, IPick
             rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
 
 
-            WeaponSoundEffect();
         }
     }
     public override void RotateWeapon()

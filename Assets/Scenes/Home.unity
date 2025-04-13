@@ -12065,6 +12065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699113923}
   - component: {fileID: 699113924}
+  - component: {fileID: 699113925}
   m_Layer: 0
   m_Name: SoundEffectManager
   m_TagString: Untagged
@@ -12100,6 +12101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundFXObject: {fileID: 426352110291267152, guid: 9e72ff3ae18df1144903f494ce69776b, type: 3}
+  soundEffectPool: {fileID: 699113925}
+--- !u!114 &699113925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699113922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e857899e31a7bea4c8e24a93d03383c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffectPrefab: {fileID: 426352110291267152, guid: 9e72ff3ae18df1144903f494ce69776b, type: 3}
+  initialPoolSize: 15
 --- !u!1001 &699442908
 PrefabInstance:
   m_ObjectHideFlags: 0

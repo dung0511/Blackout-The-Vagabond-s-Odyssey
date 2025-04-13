@@ -16,6 +16,7 @@ public class SoundEffect : MonoBehaviour
         {
             audioSource.Play();
         }
+
     }
 
     private void OnDisable()

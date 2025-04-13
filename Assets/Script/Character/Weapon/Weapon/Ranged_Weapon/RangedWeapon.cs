@@ -199,6 +199,9 @@ public class RangedWeapon : BaseWeapon, IPick
 
             rb.linearVelocity = Vector2.zero;
             rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
+
+
+            WeaponSoundEffect();
         }
     }
     public override void RotateWeapon()
@@ -249,5 +252,13 @@ public class RangedWeapon : BaseWeapon, IPick
        return weaponDetailSO;
     }
 
- 
+    private void WeaponSoundEffect()
+    {
+        if (this.GetWeaponDetailSO().weaponFiringSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(this.GetWeaponDetailSO().weaponFiringSoundEffect);
+        }
+        else Debug.Log("Sth wrong with weaponSoundSO");
+    }
+
 }

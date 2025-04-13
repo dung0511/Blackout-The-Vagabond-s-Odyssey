@@ -25,6 +25,7 @@ public class SoundEffectManager : MonoBehaviour
     {
         // Play sound using a sound gameobject and component from the object pool
         SoundEffect sound = Instantiate(soundFXObject, Vector3.zero, Quaternion.identity);
+        sound.gameObject.SetActive(false);
         sound.SetSound(soundEffect);
         sound.gameObject.SetActive(true);
 
@@ -41,6 +42,7 @@ public class SoundEffectManager : MonoBehaviour
     {
         yield return new WaitForSeconds(soundDuration);
         sound.gameObject.SetActive(false);
+        Destroy(sound.gameObject);
     }
 
 

@@ -1009,8 +1009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ac399d45acaa7448b1a3ef4dc745b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownMask: {fileID: 68986835}
-  cooldownText: {fileID: 934254968}
+  cooldownMask_E: {fileID: 0}
+  cooldownText_E: {fileID: 0}
+  cooldownMask_Q: {fileID: 0}
+  cooldownText_Q: {fileID: 0}
+  glowEffect_E: {fileID: 0}
 --- !u!1 &68986833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6406,8 +6409,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464467844}
+  - component: {fileID: 464467845}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: --------Sound--------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6425,9 +6429,22 @@ Transform:
   m_LocalPosition: {x: 2.1718392, y: 1.3749341, z: -0.046826866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 699113923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464467845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464467843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecaeb421a4fbb634c9c660881e5d4155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &478297099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8062,6 +8079,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8848819282490232040, guid: 1dc4948f20ddc324f84c815af63aa6a9, type: 3}
   m_PrefabInstance: {fileID: 654486785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &664627478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664627480}
+  - component: {fileID: 664627479}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &664627479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664627478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d8025f4548aea4697a079e1e1b330f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &664627480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664627478}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4563081, y: 3.6738155, z: 2.6771984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680782464
 GameObject:
   m_ObjectHideFlags: 0
@@ -11994,6 +12055,67 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!1 &699113922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699113923}
+  - component: {fileID: 699113924}
+  - component: {fileID: 699113925}
+  m_Layer: 0
+  m_Name: SoundEffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699113923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699113922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 464467844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699113924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699113922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62be075d09c8054086ddfd918052569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 426352110291267152, guid: 9e72ff3ae18df1144903f494ce69776b, type: 3}
+  soundEffectPool: {fileID: 699113925}
+--- !u!114 &699113925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699113922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e857899e31a7bea4c8e24a93d03383c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffectPrefab: {fileID: 426352110291267152, guid: 9e72ff3ae18df1144903f494ce69776b, type: 3}
+  initialPoolSize: 15
 --- !u!1001 &699442908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13051,8 +13173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ac399d45acaa7448b1a3ef4dc745b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownMask: {fileID: 586175646}
-  cooldownText: {fileID: 1608900500}
+  cooldownMask_E: {fileID: 0}
+  cooldownText_E: {fileID: 0}
+  cooldownMask_Q: {fileID: 0}
+  cooldownText_Q: {fileID: 0}
+  glowEffect_E: {fileID: 0}
 --- !u!1 &798528585
 GameObject:
   m_ObjectHideFlags: 0
@@ -22617,10 +22742,16 @@ MonoBehaviour:
   currentLevel: 1
   maxStage: 3
   levelsPerStage: 3
+  gameId: 
   rootSeed: 
   seedList: []
+  playerId: 
+  characterPlayed: 
   EnemyKilled: 0
+  BossKilled: 0
   TimePlayed: 0
+  win: 0
+  weaponUsing: 
 --- !u!4 &1477570295
 Transform:
   m_ObjectHideFlags: 0
@@ -36440,19 +36571,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 43.6938
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29.330048
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519688204058687245, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_Pivot.x
@@ -65094,3 +65225,4 @@ SceneRoots:
   - {fileID: 1683933949}
   - {fileID: 976492047}
   - {fileID: 1512594858}
+  - {fileID: 664627480}

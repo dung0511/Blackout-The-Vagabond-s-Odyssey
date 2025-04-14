@@ -41,6 +41,11 @@ public class WeaponDetailSO : ScriptableObject
     #endregion
     public float force;
 
+    #region Tooltip
+    [Tooltip("The firing sound effect SO for the weapon")]
+    #endregion Tooltip
+    public SoundEffectSO weaponFiringSoundEffect;
+
     #region Validation
 #if UNITY_EDITOR
     /// <summary>

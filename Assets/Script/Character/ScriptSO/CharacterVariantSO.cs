@@ -24,6 +24,7 @@ public class CharacterVariantSO : ScriptableObject
     public Sprite characterSkillIcon2;
     public string characterSkillDescription2;
 
+
     //skins ?
 #if UNITY_EDITOR
     [ContextMenu("Generate ID")]

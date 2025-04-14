@@ -8,6 +8,7 @@ public class HUD : MonoBehaviour
     public Slider healthBar;
     public Slider armorBar;
     public TextMeshProUGUI coins;
+    public GameObject skillsUI;
 
     private void Awake()
     {
@@ -26,5 +27,6 @@ public class HUD : MonoBehaviour
         healthBar.gameObject.SetActive(true);
         armorBar.gameObject.SetActive(true);
         coins.gameObject.SetActive(true);
+        skillsUI.gameObject.SetActive(true);
     }
 }

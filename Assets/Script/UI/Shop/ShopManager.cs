@@ -37,7 +37,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCoinsUI()
     {
-        coinsTxt.text = "Coins: " + DataManager.gameData.playerData.coin;
+        HUD.Instance.coins.text = "Coins: " + DataManager.gameData.playerData.coin;
     }
 
     public int GetPrice(int itemID) => prices[itemID - 1];

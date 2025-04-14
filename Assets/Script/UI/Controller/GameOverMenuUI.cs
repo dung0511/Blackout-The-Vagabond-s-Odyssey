@@ -35,6 +35,7 @@ public class GameOverMenuUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Home");
+        gameObject.SetActive(false);
     }
 
 }

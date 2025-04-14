@@ -210,20 +210,31 @@ public class FirebaseDatabaseManager : MonoBehaviour
     {
         { "PlayerId", playerId }
     };
-        reference.Child("Players").SetValueAsync(playerData)
-            .ContinueWithOnMainThread(task =>
+        reference.Child("Players").Child(playerId).GetValueAsync().ContinueWithOnMainThread(playerDataTask =>
+        {
+            if (!playerDataTask.Result.Exists)
             {
-                if (task.IsCompleted)
-                {
-                    Debug.Log("Players data written successfully.");
-                }
-                else
-                {
-                    Debug.LogError("Failed to write Players data: " + task.Exception?.Flatten().Message);
-                }
-            });
+               
+                reference.Child("Players").Child(playerId).SetValueAsync(playerData)
+                    .ContinueWithOnMainThread(task =>
+                    {
+                        if (task.IsCompleted)
+                        {
+                            Debug.Log("Player data written successfully.");
+                        }
+                        else
+                        {
+                            Debug.LogError("Failed to write player data: " + task.Exception?.Flatten().Message);
+                        }
+                    });
+            }
+            else
+            {
+                Debug.Log("Player data already exists. Skipping write.");
+            }
+        });
 
-        
+
         var gameData = new Dictionary<string, object>
     {
         { "PlayerId", playerId },

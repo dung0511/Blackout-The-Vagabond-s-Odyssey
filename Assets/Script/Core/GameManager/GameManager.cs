@@ -158,6 +158,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene("Dungeon");
         HUD.Instance.Show();
+        SkillCooldownUI.Instance.InitializeSkillIcons();
     }
 
     public void NextLevel()

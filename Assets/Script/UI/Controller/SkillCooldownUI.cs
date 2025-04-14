@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,17 +8,19 @@ public class SkillCooldownUI : MonoBehaviour
 {
     public static SkillCooldownUI Instance;
 
+    // UI Elements
+    public Image skillIcon_E;
     public Image cooldownMask_E;
     public TextMeshProUGUI cooldownText_E;
-    private float cooldownTime_E;
-    private float currentTime_E;
-    private bool isCoolingDown_E;
 
+    public Image skillIcon_Q;
     public Image cooldownMask_Q;
     public TextMeshProUGUI cooldownText_Q;
-    private float cooldownTime_Q;
-    private float currentTime_Q;
-    private bool isCoolingDown_Q;
+
+    // Cooldown Tracking
+    private float cooldownTime_E, currentTime_E;
+    private float cooldownTime_Q, currentTime_Q;
+    private bool isCoolingDown_E, isCoolingDown_Q;
 
     //for Wizard only
     private bool isReactivating_E = false;
@@ -29,6 +32,7 @@ public class SkillCooldownUI : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeSkillIcons();
         }
         else
         {
@@ -38,6 +42,36 @@ public class SkillCooldownUI : MonoBehaviour
         cooldownText_E.gameObject.SetActive(false);
         cooldownText_Q.gameObject.SetActive(false);
         //glowEffect_E.gameObject.SetActive(false);
+    }
+
+    public void InitializeSkillIcons()
+    {
+        if (GameManager.Instance.playerCharacter.characterName == "(Potential Waifu) Wizard")
+        {
+            //E
+            skillIcon_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
+            skillIcon_E.enabled = true;
+            cooldownMask_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
+
+            //Q
+            skillIcon_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
+            skillIcon_Q.enabled = true;
+            cooldownMask_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
+        }
+
+        else
+        {
+            //E
+            skillIcon_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
+            skillIcon_E.enabled = true;
+            cooldownMask_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
+
+            //Q
+            skillIcon_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
+            skillIcon_Q.enabled = true;
+            cooldownMask_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
+        }
+
     }
 
     private void Update()

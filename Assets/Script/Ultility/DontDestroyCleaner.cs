@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroyCleaner : MonoBehaviour
 {
-    public static void DestroyAllDontDestroyOnLoadObjects()
+    public static void ClearDDOL()
     {
         GameObject temp = new GameObject("Temp_DDOL");
         DontDestroyOnLoad(temp);

@@ -193,12 +193,18 @@ public class RangedWeapon : BaseWeapon, IPick
 
             if (bulletTmp == null) return;
 
+
+            WeaponSoundEffect();
+
+
             bulletTmp.transform.position = firePos.position;
             bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
 
             rb.linearVelocity = Vector2.zero;
             rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
+
+
         }
     }
     public override void RotateWeapon()
@@ -249,5 +255,13 @@ public class RangedWeapon : BaseWeapon, IPick
        return weaponDetailSO;
     }
 
- 
+    private void WeaponSoundEffect()
+    {
+        if (this.GetWeaponDetailSO().weaponFiringSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(this.GetWeaponDetailSO().weaponFiringSoundEffect);
+        }
+        else Debug.Log("Sth wrong with weaponSoundSO");
+    }
+
 }

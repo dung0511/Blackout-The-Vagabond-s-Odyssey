@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ShopUI : MonoBehaviour
 {
-    public static ShopUI instance { get; private set; }
+    public static ShopUI Instance { get; private set; }
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             gameObject.SetActive(false);
         }
         else

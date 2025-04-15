@@ -36,6 +36,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
                 {
                     item.enabled = false;
                 }
+                GameManager.Instance.UpdateBossKill();
                 BossManager.Instance.bossKillEvent.Invoke();
             }
         }

@@ -20,7 +20,7 @@ MonoBehaviour:
   maxHealth: 10
   maxArmor: 10
   moveSpeed: 5
-  characterSkillIcon1: {fileID: 21300000, guid: 3dff87e9d5fd1964490460927c4ae9bd, type: 3}
+  characterSkillIcon1: {fileID: 21300000, guid: 8ccc18881f77d7846aa0d3e9a278d7de, type: 3}
   characterSkillDescription1: Cool wizard skill #1
-  characterSkillIcon2: {fileID: 21300000, guid: 95d3e69c056944441abf22df1d44a7de, type: 3}
+  characterSkillIcon2: {fileID: 21300000, guid: 19f33ff73f62ac640924bd6364529bd0, type: 3}
   characterSkillDescription2: Cool wizard skill #2

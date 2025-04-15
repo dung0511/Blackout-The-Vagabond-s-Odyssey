@@ -7,6 +7,14 @@ public class WeaponDetailSO : ScriptableObject
     [Space(10)]
     [Header("WEAPON DETAILS")]
     #endregion
+    #region Header Name
+    [Space(10)]
+    [Header("NAME")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Name of weapon")]
+    #endregion
+    public string weaponName;
 
     #region Header Damage
     [Space(10)]
@@ -32,6 +40,11 @@ public class WeaponDetailSO : ScriptableObject
     [Tooltip("Force applied")]
     #endregion
     public float force;
+
+    #region Tooltip
+    [Tooltip("The firing sound effect SO for the weapon")]
+    #endregion Tooltip
+    public SoundEffectSO weaponFiringSoundEffect;
 
     #region Validation
 #if UNITY_EDITOR

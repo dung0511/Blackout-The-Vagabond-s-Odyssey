@@ -105,7 +105,14 @@ public class WizardSkill : BaseSkill
             Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
 
             rb.linearVelocity = direction * bulletForce;
+
+            //cooldown lan 1
+            SkillCooldownUI.Instance.StartWizardESkill();
+
             StartCoroutine(TrackBulletPosition(bulletTmp));
+            canUseTeleport = true;
+            canUseNormal = false;
+
         }
 
     }
@@ -117,12 +124,17 @@ public class WizardSkill : BaseSkill
             lastBulletPosition = bullet.transform.position;
             yield return null;
         }
+        canUseTeleport = false;
+        SkillCooldownUI.Instance.TriggerCooldown_E(normalSkillCoolDown);
+        SkillCooldownUI.Instance.glowEffect_E.enabled = false;
     }
 
     public void Teleport()
     {
         transform.root.position = lastBulletPosition;
         canUseTeleport = false;
+        SkillCooldownUI.Instance.ActivateWizardESkill(normalSkillCoolDown);
+        SkillCooldownUI.Instance.glowEffect_E.enabled = false;
     }
 
     public override bool CanUseSkill1()
@@ -143,7 +155,7 @@ public class WizardSkill : BaseSkill
     public override void NormalSkill()
     {
         animator.SetBool("isSkill1", false);
-
+        GameManager.Instance.UpdateNormalSkillUsed();
         if (canUseNormal)
         {
             ShootFireBall();
@@ -174,9 +186,13 @@ public class WizardSkill : BaseSkill
     public override void UltimmateSkill()
     {
         animator.SetBool("isSkill2", false);
+        GameManager.Instance.UpdateUltimateSkillUsed();
         StartCoroutine(AutoFire());
         StartCoroutine(SetFalse());
         StartCoroutine(ResetUltimateSkillCoolDown());
+
+        //cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_Q(ultimateCoolDown);
     }
     public override void SetActiveWeapon()
     {

@@ -25,10 +25,6 @@ public class KnightSkill : BaseSkill
 
     public PlayerWeaponController weaponController;
 
-    public SkillCooldownUI skillE_UI;
-    public SkillCooldownUI skillQ_UI;
-
-
     private void Start()
     {
         clonePrefab.GetComponent<CloneKnight>().knightSkill = this;
@@ -68,13 +64,14 @@ public class KnightSkill : BaseSkill
 
     public override void NormalSkill()
     {
+        GameManager.Instance.UpdateNormalSkillUsed();
         //isUsingNormal = true; 
         canUseNormal = false;
         animator.SetBool("isSkill1", false);
         shieldAnimator.SetTrigger("isUsingShield");
         transform.root.GetComponent<PlayerArmorController>().ShieldSkill();
-        if (skillE_UI != null)
-            skillE_UI.TriggerCooldown(normalCoolDown);
+        //bat dau cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_E(normalCoolDown);
 
         StartCoroutine(ResetShield());
 
@@ -105,11 +102,11 @@ public class KnightSkill : BaseSkill
 
     public override void UltimmateSkill()
     {
-
+        GameManager.Instance.UpdateUltimateSkillUsed();
         canUseUltimate = false;
         animator.SetBool("isSkill2", false);
-        if (skillQ_UI != null)
-            skillQ_UI.TriggerCooldown(ultimateCooldown);
+        //bat dau cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_Q(ultimateCooldown);
 
         float radius = 2f;
         Vector3 center = transform.position;

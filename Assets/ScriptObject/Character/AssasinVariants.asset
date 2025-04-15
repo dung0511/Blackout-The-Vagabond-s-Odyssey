@@ -20,7 +20,7 @@ MonoBehaviour:
   maxHealth: 10
   maxArmor: 10
   moveSpeed: 5
-  characterSkillIcon1: {fileID: 21300000, guid: 8eed508ac516b1e4fab083d6ebed19eb, type: 3}
+  characterSkillIcon1: {fileID: 21300000, guid: a7a3909a35e24f44e9183359cfb7f6b2, type: 3}
   characterSkillDescription1: Cool assasin skill #1
-  characterSkillIcon2: {fileID: 21300000, guid: 38c5706dd4e5f36489e0a0bf11da95ac, type: 3}
+  characterSkillIcon2: {fileID: 21300000, guid: 98ceec9f429ced945bb803c39b135bd7, type: 3}
   characterSkillDescription2: Cool assasin skill #2

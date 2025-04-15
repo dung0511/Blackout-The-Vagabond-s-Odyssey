@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -8,15 +8,14 @@ public class AssassinSkill : BaseSkill
     public float CoolDownUltimateSkill;
     public int DameNormalSkill = 5;
     public int DameUltimateSkill;
-    private int damage;
 
     public Animator animator;
 
     public float dashDistance = 5f;
     public float dashDuration = 0.1f;
-    public float dashCooldownTime = 5f;
+    public float dashCooldownTime = 5f; //đoạn này thừa hay sao ý
 
-    public float ultimateCooldownTime;
+    public float ultimateCooldownTime; //đây nữa
 
     public LayerMask obstacleMask;
 
@@ -29,8 +28,6 @@ public class AssassinSkill : BaseSkill
     public float lightdefault;
     public float buffed;
 
-    public SkillCooldownUI skillE_UI;
-    public SkillCooldownUI skillQ_UI;
 
     public PlayerWeaponController weaponController;
     private void Start()
@@ -41,8 +38,7 @@ public class AssassinSkill : BaseSkill
 
     public override void NormalSkill()
     {
-
-        damage = DameNormalSkill;
+        
         Vector3 mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
@@ -64,20 +60,26 @@ public class AssassinSkill : BaseSkill
 
         StartCoroutine(Dash(targetPos));
         StartCoroutine(DashCooldown());
-
+        GameManager.Instance.UpdateNormalSkillUsed();
+        //bat dau cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_E(CoolDownNormalSkill);
     }
 
     public override void UltimmateSkill()
     {
         light.GetComponent<Light2D>().pointLightOuterRadius = buffed;
-        damage = DameUltimateSkill;
         isUsingUltimate = true;
         StartCoroutine(UltimateCoolDown());
+        GameManager.Instance.UpdateUltimateSkillUsed();
+        //bat dau cooldown
+        SkillCooldownUI.Instance.TriggerCooldown_Q(CoolDownUltimateSkill);
     }
+
     public void SetLight()
     {
         light.GetComponent<Light2D>().pointLightOuterRadius = lightdefault;
     }
+
     IEnumerator Dash(Vector3 targetPos)
     {
 
@@ -111,19 +113,6 @@ public class AssassinSkill : BaseSkill
         canUltimate = false;
         yield return new WaitForSeconds(ultimateCooldownTime);
         canUltimate = true;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
-        {
-
-            enemy.takeDame(damage);
-            Debug.Log("Dealth dame nomal:" + damage);
-
-
-
-        }
     }
 
     public override void SetActiveWeapon()
@@ -185,5 +174,5 @@ public class AssassinSkill : BaseSkill
         isUsingNormal = true;
     }
 
-    
+
 }

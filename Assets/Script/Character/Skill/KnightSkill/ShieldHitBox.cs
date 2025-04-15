@@ -8,6 +8,7 @@ public class ShieldHitBox : MonoBehaviour
         
         if (collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
+            AttackContext.CurrentAttackType = AttackType.NormalSkill;
             enemy.takeDame(shieldDame);
             Debug.Log("Dealt: "+ shieldDame);
         }

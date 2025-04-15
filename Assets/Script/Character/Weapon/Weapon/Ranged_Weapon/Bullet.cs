@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
         // if (enemy != null)
         if(collision.gameObject.TryGetComponent<IDamageable>(out var enemy))
         {
-            
+            AttackContext.CurrentAttackType = AttackType.Weapon;
             enemy.takeDame(weapon.dam);
           
             PoolManagement.Instance.ReturnBullet(gameObject, weapon.bulletPrefab);

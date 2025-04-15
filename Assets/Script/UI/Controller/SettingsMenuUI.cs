@@ -92,6 +92,7 @@ public class SettingsMenuUI : MonoBehaviour
     public void QuitGame()
     {
         Time.timeScale = 1f;
+        DontDestroyCleaner.ClearDDOL();
         SceneManager.LoadScene("MainMenu");
     }
 

@@ -30,14 +30,19 @@ public class PlayerPickController : MonoBehaviour
             //ShowUIPanel(weaponDetailSO);
             if (weapon.IsPickingItemOrWeapon())
             {
+                WeaponDetailSO currentWeaponDetail = GetComponentInChildren<BaseWeapon>().GetWeaponDetailSO();
                 weapon1 = Item.GetComponent<BaseWeapon>();
                 WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
                 ShowUIPanel(weaponDetailSO);
+                string s1 = $"{currentWeaponDetail.damageWeapon},{currentWeaponDetail.attackCooldown},{currentWeaponDetail.force}";
+                string s2 = $"{weaponDetailSO.damageWeapon},{weaponDetailSO.attackCooldown},{weaponDetailSO.force}";
+                NomicAI.INSTANCE.CompareItems(s1, s2,currentWeaponDetail.weaponName, weaponDetailSO.weaponName);
                 isWeapon = true;
             }
             else
             {
                 isWeapon = false;
+                Talking.INSTANCE.Talk(Item.GetComponent<Item>().inventoryItem.name);
             }
         }
     }

@@ -21,12 +21,12 @@ public class NomicAI : MonoBehaviour
     {
         INSTANCE = this;
     }
-    public void CompareItems(string itemADescription, string itemBDescription)
+    public void CompareItems(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
     {
-        StartCoroutine(SendToNomicAndCompare(itemADescription, itemBDescription));
+        StartCoroutine(SendToNomicAndCompare(itemADescription, itemBDescription, weapon1Name, weapon2Name));
     }
 
-    IEnumerator SendToNomicAndCompare(string descA, string descB)
+    IEnumerator SendToNomicAndCompare(string descA, string descB, string weapon1Name, string weapon2Name)
     {
         string apiUrl = "https://api-atlas.nomic.ai/v1/embedding/text";
 
@@ -61,12 +61,12 @@ public class NomicAI : MonoBehaviour
 
                 float similarity = CosineSimilarity(vecA, vecB);
                 string suggestion = similarity > 0.98f ?
-    "They're almost the same! Either would work perfectly." :
+    $"{weapon1Name} and {weapon2Name} are almost the same! Either would work perfectly." :
     similarity < 0.85f ?
-    "These are quite different. Pick the one you like best!" :
-    "Not too similar, but still good options. Choose whichever feels right!";
+    $"{weapon1Name} and {weapon2Name} are quite different. Pick the one you like best!" :
+    $"{weapon2Name} is not too similar to {weapon1Name}, but still good options. Choose whichever feels right!";
 
-                //resultText.text = $"Cosine similarity: {similarity:F4}\nRecommend: {suggestion}";
+                Talking.INSTANCE.Talk(suggestion);
                 Debug.Log($"Cosine similarity: {similarity:F4}\nRecommend: {suggestion}");
             }
             else

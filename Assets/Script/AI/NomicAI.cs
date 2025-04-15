@@ -6,10 +6,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
+using System.IO;
+
+[System.Serializable]
+public class ApiKeyData
+{
+    public string apiKey;
+}
 
 public class NomicAI : MonoBehaviour
 {
-    private string nomicApiKey = "nk-Myc2J1T6ZcJL6Xur71F7X4ID9LEdbxPHjcyyp_VcQAU";
     public static NomicAI INSTANCE;
     private void Awake()
     {
@@ -40,7 +46,7 @@ public class NomicAI : MonoBehaviour
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
-            request.SetRequestHeader("Authorization", "Bearer " + nomicApiKey);
+            request.SetRequestHeader("Authorization", "Bearer " + LoadApiKey());
 
             yield return request.SendWebRequest();
 
@@ -104,5 +110,20 @@ public class NomicAI : MonoBehaviour
         public float[] values;
     }
 
-    
+    public static string LoadApiKey()
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, "apikey.json");
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            ApiKeyData data = JsonUtility.FromJson<ApiKeyData>(json);
+            return data.apiKey;
+        }
+        else
+        {
+            Debug.LogError("API Key file not found!");
+            return null;
+        }
+    }
 }

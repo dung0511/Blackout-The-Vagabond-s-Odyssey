@@ -13,18 +13,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-
-        
-        if (PlayerPrefs.GetInt("HasWatchedCutscene", 0) == 0)
-        {
-            
-            SceneManager.LoadScene("CutsceneNew");
-        }
-        else
-        {
-            
-            SceneManager.LoadScene("Home");
-        }
+        SceneManager.LoadScene("Home"); 
     }
 
     public void Exit()

@@ -13,7 +13,11 @@ public static class DataManager
 
     public static void Load()
     {
-       gameData =  SaveSystem.LoadLocal<GameData>("/save.sav");
+        gameData =  SaveSystem.LoadLocal<GameData>("/save.sav");
+        if (gameData == null)
+        {
+            gameData = new();
+        }
     }
 }
 

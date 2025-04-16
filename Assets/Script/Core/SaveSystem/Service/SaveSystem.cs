@@ -37,13 +37,13 @@ public static class SaveSystem
     public static T LoadLocal<T>(string loadPath)
     {
         var relativePath = Application.persistentDataPath + loadPath;
-        if(!File.Exists(relativePath))
-        {
-            throw new FileNotFoundException($"Load failed: No save file at {relativePath}");
-        }
-
         try
         {
+            if(!File.Exists(relativePath))
+            {
+                throw new FileNotFoundException($"No save file at {relativePath}");
+            }
+
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(relativePath));
             if(data == null) throw new NullReferenceException("data null");
             Debug.Log("Load success");
@@ -52,7 +52,7 @@ public static class SaveSystem
         catch (Exception e)
         {
             Debug.LogError($"Load failed: {e.Message}\n{e.StackTrace}");
-            throw e;
+            return default;
         }
     }
 

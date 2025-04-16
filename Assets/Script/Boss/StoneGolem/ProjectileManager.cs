@@ -24,8 +24,8 @@ public class ProjecttileManager : MonoBehaviour
     {
         stoneGolem = GetComponent<StoneGolem>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        projectileForce = rangedDetail.bulletForce;
-        projectileDame = rangedDetail.damageRangedWeapon;
+       // projectileForce = rangedDetail.bulletForce;
+      //  projectileDame = rangedDetail.damageRangedWeapon;
     }
 
 

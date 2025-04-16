@@ -1,3 +1,4 @@
+using ModestTree;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -20,7 +21,11 @@ public class Talking : MonoBehaviour
     }
     public void Talk(string text)
     {
-        StartCoroutine(TypeText(text));
+        if (!text.IsEmpty())
+        {
+            StartCoroutine(TypeText(text));
+        }
+        return;
     }
 
     IEnumerator TypeText(string text)

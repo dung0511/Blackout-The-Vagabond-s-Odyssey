@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class WorldBoss : MonoBehaviour, IDamageable
 {
@@ -247,7 +248,9 @@ public class WorldBoss : MonoBehaviour, IDamageable
             GetComponent<CapsuleCollider2D>().enabled=false;
             animator.SetTrigger("isDead");
             GameManager.Instance.UpdateBossKill();
-            BossManager.Instance.bossKillEvent.Invoke();
+            DontDestroyCleaner.ClearDDOL();
+            //BossManager.Instance.bossKillEvent.Invoke();
+            SceneManager.LoadScene("CutsceneEndGame");
         }
     }
 

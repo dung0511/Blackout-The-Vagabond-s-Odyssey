@@ -4,10 +4,11 @@ public class OrcWarlockBulletHitBox : MonoBehaviour
 {
     private int damage;
     public BulletIdentifier BulletIdentifier;
+    public OrcWarlock OrcWarlock;
     private void Start()
     {
-        GameObject obj = GameObject.Find("OrcWarlock(Clone)").GetComponent<OrcWarlock>().gameObject;
-        damage = obj.GetComponent<OrcWarlock>().damage;
+       // GameObject obj = GameObject.Find("OrcWarlock(Clone)").GetComponent<OrcWarlock>().gameObject;
+        damage = OrcWarlock.damage;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

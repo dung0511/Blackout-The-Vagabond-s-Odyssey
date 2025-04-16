@@ -21,6 +21,10 @@ public class NomicAI : MonoBehaviour
     {
         INSTANCE = this;
     }
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public void CompareItems(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
     {
         StartCoroutine(SendToNomicAndCompare(itemADescription, itemBDescription, weapon1Name, weapon2Name));

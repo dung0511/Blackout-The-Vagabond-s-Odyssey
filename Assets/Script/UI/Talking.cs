@@ -5,8 +5,8 @@ using UnityEngine;
 public class Talking : MonoBehaviour
 {
     public TextMeshProUGUI textMesh;
-    public float delay = 0.01f;
-    public float delayEndTalk = 1.5f;
+    public float delay;
+    public float delayEndTalk;
     public static Talking INSTANCE;
     private void Awake()
     {
@@ -15,6 +15,7 @@ public class Talking : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         textMesh = GetComponent<TextMeshProUGUI>();
     }
     public void Talk(string text)

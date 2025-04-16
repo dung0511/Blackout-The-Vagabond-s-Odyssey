@@ -7,14 +7,13 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        DataManager.Load();
         //settingsMenu.SetActive(false); 
         tutorialPanel.SetActive(false);
     }
 
     public void PlayGame()
     {
-
-        
         if (PlayerPrefs.GetInt("HasWatchedCutscene", 0) == 0)
         {
             
@@ -22,7 +21,6 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            
             SceneManager.LoadScene("Home");
         }
     }

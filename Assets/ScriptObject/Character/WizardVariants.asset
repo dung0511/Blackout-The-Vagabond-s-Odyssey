@@ -16,11 +16,11 @@ MonoBehaviour:
   home: {fileID: 9188130133351135442, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
   dungeon: {fileID: 1731823609027247997, guid: 567d2f01d4d7de545be419badcf308e8, type: 3}
   characterImage: {fileID: -5908238798454654921, guid: 657c57f6c8a5167458cd054ac934d4ca, type: 3}
-  characterName: (Potential Waifu) Wizard
+  characterName: Wizard
   maxHealth: 10
   maxArmor: 10
   moveSpeed: 5
   characterSkillIcon1: {fileID: 21300000, guid: 8ccc18881f77d7846aa0d3e9a278d7de, type: 3}
-  characterSkillDescription1: Cool wizard skill #1
+  characterSkillDescription1: Ignis Rift
   characterSkillIcon2: {fileID: 21300000, guid: 19f33ff73f62ac640924bd6364529bd0, type: 3}
-  characterSkillDescription2: Cool wizard skill #2
+  characterSkillDescription2: Judgment Bolt

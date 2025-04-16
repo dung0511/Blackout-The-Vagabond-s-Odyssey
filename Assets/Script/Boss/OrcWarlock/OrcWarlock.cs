@@ -95,7 +95,7 @@ public class OrcWarlock : MonoBehaviour
     private void Skill1()
     {
 
-        if (!canAttacking && !bulletPrefab1.activeInHierarchy)
+        if (!canAttacking)
         {
             StartCoroutine(RotateBullet());
         }
@@ -106,7 +106,13 @@ public class OrcWarlock : MonoBehaviour
     {
         isRotate = true;
         isUsingSkill1 = true;
-        bulletPrefab1.SetActive(true);
+        foreach (Transform child in bulletPrefab1.transform)
+        {
+            if (!child.gameObject.activeSelf)
+            {
+                child.gameObject.SetActive(true); 
+            }
+        }
 
         StartCoroutine(Reset());
 
@@ -117,7 +123,14 @@ public class OrcWarlock : MonoBehaviour
         }
 
         isUsingSkill1 = false;
-        bulletPrefab1.SetActive(false);
+        foreach (Transform child in bulletPrefab1.transform)
+        {
+            if (!child.gameObject.activeSelf)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
+        // bulletPrefab1.SetActive(false);
     }
 
     private IEnumerator Reset()
@@ -147,7 +160,7 @@ public class OrcWarlock : MonoBehaviour
                 float angle = startAngle + angleStep * i;
                 Vector2 shootDirection = Quaternion.Euler(0, 0, angle) * baseDirection;
 
-                GameObject bullet = PoolManagement.Instance.GetBullet(bulletPrefab2);
+                GameObject bullet = PoolManagement.Instance.GetBullet(bulletPrefab2,true);
                 bullet.transform.position = firePoint.position;
                 bullet.transform.rotation = Quaternion.identity;
 
@@ -189,6 +202,7 @@ public class OrcWarlock : MonoBehaviour
 
             // GameObject bullet = Instantiate(bulletPrefab, boss.position, Quaternion.identity);
             GameObject bullet = PoolManagement.Instance.GetBullet(bulletPrefab, true);
+            bullet.GetComponent<OrcWarlockBulletHitBox>().OrcWarlock = this;
             bullet.transform.position = new Vector3(boss.position.x, boss.position.y + 1f, boss.position.z);
             bullet.transform.rotation = Quaternion.identity;
 

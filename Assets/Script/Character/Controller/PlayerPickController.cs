@@ -70,10 +70,14 @@ public class PlayerPickController : MonoBehaviour
     }
     private void OnTriggerExit2D()
     {
-        isTouchItem = false;
-        Item = null;
-        HideUIPanel();
-
+        if (Item != null)
+        {
+            isTouchItem = false;
+            Item = null;
+            HideUIPanel();
+            Talking.INSTANCE.Talk("");
+        }
+        
     }
     void ShowUIPanel(WeaponDetailSO weaponDetailSO)
     {

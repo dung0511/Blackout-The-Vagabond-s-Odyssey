@@ -13,9 +13,9 @@ public class AssassinSkill : BaseSkill
 
     public float dashDistance = 5f;
     public float dashDuration = 0.1f;
-    public float dashCooldownTime = 5f; //đoạn này thừa hay sao ý
+  //  public float dashCooldownTime = 5f; //đoạn này thừa hay sao ý
 
-    public float ultimateCooldownTime; //đây nữa
+   // public float ultimateCooldownTime; //đây nữa
 
     public LayerMask obstacleMask;
 
@@ -51,7 +51,7 @@ public class AssassinSkill : BaseSkill
         Vector3 targetPos;
         if (hit.collider != null)
         {
-            targetPos = hit.point - (Vector2)dashDirection * 0.1f;
+            targetPos = hit.point - (Vector2)dashDirection * 0.3f;
         }
         else
         {
@@ -102,7 +102,7 @@ public class AssassinSkill : BaseSkill
     IEnumerator DashCooldown()
     {
         canDash = false;
-        yield return new WaitForSeconds(dashCooldownTime);
+        yield return new WaitForSeconds(CoolDownNormalSkill);
         canDash = true;
     }
 
@@ -111,7 +111,7 @@ public class AssassinSkill : BaseSkill
     IEnumerator UltimateCoolDown()
     {
         canUltimate = false;
-        yield return new WaitForSeconds(ultimateCooldownTime);
+        yield return new WaitForSeconds(CoolDownUltimateSkill);
         canUltimate = true;
     }
 

@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
     // price và số lượng đã mua
     private int[] prices = { 30, 45, 50, 300, 320, 120 };
     private int[] quantities = new int[10];
-    private int playerCoins = 1000; 
+    private int playerCoins = 0; 
 
     public GameObject[] itemPrefabs;
 

@@ -22480,7 +22480,7 @@ GameObject:
   - component: {fileID: 1680974054}
   - component: {fileID: 1680974055}
   - component: {fileID: 1680974056}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Boss Trigger
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}

@@ -5,18 +5,20 @@ public class RedDevil_Health : MonoBehaviour, IDamageable
 {
     [HideInInspector] public RedDevil enemyHealth;
     public bool isHurt;
-
+    private bool isDead;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        isDead = false;
         isHurt = false;
         enemyHealth = GetComponent<RedDevil>();
     }
     public void takeDame(int damage)
     {
         enemyHealth.health -= damage;
-        if (enemyHealth.health <= 0)
+        if (enemyHealth.health <= 0 && !isDead)
         {
+            isDead = true;
             enemyHealth.health = 0;
             enemyHealth.GetComponent<RedDevil>().animator.SetBool("isDead", true);
             enemyHealth.GetComponent<CapsuleCollider2D>().enabled = false;

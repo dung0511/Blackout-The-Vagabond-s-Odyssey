@@ -421,7 +421,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1380389680139813465}
@@ -589,7 +589,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   ResetLightCoolDown: 3
-  pullStrength: 70
+  pullStrength: 50
   pullDuration: 5
   hitBox: {fileID: 0}
   Skill3Damage: 1

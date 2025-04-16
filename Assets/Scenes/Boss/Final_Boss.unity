@@ -7248,7 +7248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossList:
-  - {fileID: 1669468715911591175, guid: cb317cb3bc75e9f448447b6ceb5716c7, type: 3}
+  - {fileID: 5440902346547805697, guid: 838f08a80dc983643915aeb0cd212a39, type: 3}
   bossKillObject: {fileID: 1551277221}
   bossKillEvent:
     m_PersistentCalls:
@@ -22480,7 +22480,7 @@ GameObject:
   - component: {fileID: 1680974054}
   - component: {fileID: 1680974055}
   - component: {fileID: 1680974056}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Boss Trigger
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -23683,6 +23683,63 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.758054, y: 0.45663485}
   m_EdgeRadius: 0
+--- !u!1001 &1974806215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762096506997990148, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
+      propertyPath: m_Name
+      value: Assassin_Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
 --- !u!1 &1985875817
 GameObject:
   m_ObjectHideFlags: 0
@@ -24565,3 +24622,4 @@ SceneRoots:
   - {fileID: 1898467241}
   - {fileID: 800433377}
   - {fileID: 1551277223}
+  - {fileID: 1974806215}

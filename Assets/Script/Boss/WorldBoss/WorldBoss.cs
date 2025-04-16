@@ -13,6 +13,7 @@ public class WorldBoss : MonoBehaviour, IDamageable
     private Animator animator;
     public bool isPerformAtatck = false;
     public bool isPlayerStandingClose = false;
+    private bool isDead=false;
 
     //skill1
     public List<GameObject> ListSpawnNormal;
@@ -44,6 +45,7 @@ public class WorldBoss : MonoBehaviour, IDamageable
     public float bulletSpeed;
     void Start()
     {
+        isDead = false;
         hitBox = transform.Find("Skill3HitBox").gameObject;
         isPerformAtatck = false;
         animator = GetComponent<Animator>();
@@ -237,8 +239,9 @@ public class WorldBoss : MonoBehaviour, IDamageable
     public void takeDame(int damage)
     {
         health-=damage;
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
+            isDead = true;
             health = 0;
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<CapsuleCollider2D>().enabled=false;

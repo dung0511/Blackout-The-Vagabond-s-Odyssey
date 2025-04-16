@@ -46,32 +46,15 @@ public class SkillCooldownUI : MonoBehaviour
 
     public void InitializeSkillIcons()
     {
-        if (GameManager.Instance.playerCharacter.characterName == "(Potential Waifu) Wizard")
-        {
-            //E
-            skillIcon_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
-            skillIcon_E.enabled = true;
-            cooldownMask_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
+        //E
+        skillIcon_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
+        skillIcon_E.enabled = true;
+        cooldownMask_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
 
-            //Q
-            skillIcon_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
-            skillIcon_Q.enabled = true;
-            cooldownMask_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
-        }
-
-        else
-        {
-            //E
-            skillIcon_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
-            skillIcon_E.enabled = true;
-            cooldownMask_E.sprite = GameManager.Instance.playerCharacter.characterSkillIcon1;
-
-            //Q
-            skillIcon_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
-            skillIcon_Q.enabled = true;
-            cooldownMask_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
-        }
-
+        //Q
+        skillIcon_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
+        skillIcon_Q.enabled = true;
+        cooldownMask_Q.sprite = GameManager.Instance.playerCharacter.characterSkillIcon2;
     }
 
     private void Update()

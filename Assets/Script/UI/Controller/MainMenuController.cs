@@ -13,8 +13,6 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-
-        
         if (PlayerPrefs.GetInt("HasWatchedCutscene", 0) == 0)
         {
             
@@ -22,7 +20,7 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            
+            DataManager.Load();
             SceneManager.LoadScene("Home");
         }
     }

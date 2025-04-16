@@ -3,17 +3,16 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    //singleton
     public static ShopManager Instance;
 
     public TextMeshProUGUI coinsTxt;
 
-    // price va so luong da mua
+    // price và số lượng đã mua
     private int[] prices = { 30, 45, 50, 300, 320, 120 };
     private int[] quantities = new int[10];
+    private int playerCoins = 1000; 
 
     public GameObject[] itemPrefabs;
-
 
     void Awake()
     {
@@ -21,7 +20,6 @@ public class ShopManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            //DataManager.Load(); // ???
             UpdateCoinsUI();
         }
         else
@@ -30,14 +28,9 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    private void LoadCoinData()
-    {
-        UpdateCoinsUI();
-    }
-
     public void UpdateCoinsUI()
     {
-        HUD.Instance.coins.text = "Coins: " + DataManager.gameData.playerData.coin;
+        coinsTxt.text = "Coins: " + playerCoins;
     }
 
     public int GetPrice(int itemID) => prices[itemID - 1];
@@ -45,22 +38,19 @@ public class ShopManager : MonoBehaviour
 
     public void BuyItem(int itemID)
     {
-        if (DataManager.gameData.playerData.coin >= prices[itemID - 1])
+        if (playerCoins >= prices[itemID - 1])
         {
-            //-coin +quantity
-            DataManager.gameData.playerData.coin -= prices[itemID - 1];
+            // - coin + quantity
+            playerCoins -= prices[itemID - 1];
             quantities[itemID - 1]++;
 
-            DataManager.Save();
-
             UpdateCoinsUI();
-            UpdateButtonQuantity(itemID); 
-
+            UpdateButtonQuantity(itemID);
             SpawnItem(itemID);
         }
     }
 
-    //update ui cho button trong shop
+    // update UI 
     public void UpdateButtonQuantity(int itemID)
     {
         ButtonInfo[] allButtons = FindObjectsOfType<ButtonInfo>();
@@ -69,17 +59,15 @@ public class ShopManager : MonoBehaviour
             if (button.itemID == itemID)
             {
                 button.UpdateUI();
-                break; 
+                break;
             }
         }
     }
 
-    //save coins vao data
     public void AddCoins(int amount)
     {
-        DataManager.gameData.playerData.coin += amount;
+        playerCoins += amount;
         UpdateCoinsUI();
-        //DataManager.Save(); //??? save moi lan nhat do
     }
 
     private void SpawnItem(int itemID)
@@ -87,13 +75,17 @@ public class ShopManager : MonoBehaviour
         if (itemID < 1 || itemID > itemPrefabs.Length) return;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null) Debug.Log("cant find player");
+        if (player == null)
+        {
+            Debug.Log("Không tìm thấy player");
+            return;
+        }
 
-        //spawn item
-        Vector3 spawnPos = player.transform.position +
-                  player.transform.forward * 0.3f; 
+        // Spawn item
+        Vector3 spawnPos = player.transform.position + player.transform.forward * 0.3f;
         Instantiate(itemPrefabs[itemID - 1], spawnPos, Quaternion.identity);
 
-        Debug.Log($"spawn item {itemID}");
+        Debug.Log($"Đã spawn item {itemID}");
     }
+
 }

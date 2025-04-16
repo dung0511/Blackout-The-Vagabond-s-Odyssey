@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
 
     public Rigidbody2D rd;
     public SpriteRenderer characterSR;
@@ -19,7 +20,9 @@ public class Player : MonoBehaviour
     public bool isHurt;
     public bool isDead;
     // public bool isMove;
-    // public bool isOpenBag = false;
+
+    public bool isOpenBag = false;
+
     public PlayerDetailSO playerDetailSO;
 
     public GameObject menu;
@@ -31,9 +34,10 @@ public class Player : MonoBehaviour
     public PlayerPickController pickController;
     public InventoryController inventoryController;
     public BaseSkill skillController { get; private set; }
-    public GameObject skillUIPrefab;
+
     private void Awake()
     {
+        Instance = this;
         DontDestroyOnLoad(gameObject);
         health = playerDetailSO.playerHealthAmount;
         armor = playerDetailSO.playerArmorAmount;
@@ -55,6 +59,7 @@ public class Player : MonoBehaviour
         }
         //inventory = new Inventory();
     }
+
     private void Update()
     {
         if (healthController.IsDead)
@@ -101,7 +106,18 @@ public class Player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Tab))
             {
+                isOpenBag = !isOpenBag; 
                 UIManager.Instance.ToggleScreen(inventoryController);
+
+                if (isOpenBag)
+                {
+                    AimPoint.Instance.DisableAim();
+                    Cursor.visible = true; 
+                }
+                else
+                {
+                    AimPoint.Instance.EnableAim();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.E) && skillController.CanUseSkill1())

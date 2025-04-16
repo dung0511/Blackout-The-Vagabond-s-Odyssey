@@ -92,13 +92,13 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerHealthController playerHealthController = collision.GetComponent<PlayerHealthController>();
-        if (playerHealthController != null)
+        //PlayerHealthController playerHealthController = collision.GetComponent<PlayerHealthController>();
+        if (collision.TryGetComponent<IDamageable>(out var player))
         {
             damageTimer += Time.deltaTime;
             if (damageTimer >= damageInterval)
             {
-                playerHealthController.takeDame(stoneGolem.damage);
+                player.takeDame(stoneGolem.damage);
                 damageTimer = 0f;
             }
         }
@@ -107,13 +107,13 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        PlayerHealthController playerHealthController = collision.GetComponent<PlayerHealthController>();
-        if (playerHealthController != null)
+       // PlayerHealthController playerHealthController = collision.GetComponent<PlayerHealthController>();
+        if (collision.TryGetComponent<IDamageable>(out var player))
         {
             damageTimer += Time.deltaTime;
             if (damageTimer >= damageInterval)
             {
-                playerHealthController.takeDame(stoneGolem.damage);
+                player.takeDame(stoneGolem.damage);
                 damageTimer = 0f;
             }
         }
@@ -121,8 +121,8 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        PlayerHealthController playerHealthController = collision.GetComponent<PlayerHealthController>();
-        if (playerHealthController != null)
+       // PlayerHealthController playerHealthController = collision.GetComponent<PlayerHealthController>();
+        if (collision.TryGetComponent<IDamageable>(out var player))
         {
 
             damageTimer = 0f;

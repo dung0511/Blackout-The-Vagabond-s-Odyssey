@@ -93,7 +93,7 @@ public class SettingsMenuUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         DontDestroyCleaner.ClearDDOL();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     //public void OnMusicVolumeChanged(float value)

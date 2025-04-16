@@ -16,11 +16,11 @@ MonoBehaviour:
   home: {fileID: 3309401052809838026, guid: ee08315fac9154349b08c2579d09897e, type: 3}
   dungeon: {fileID: 6254051911090353691, guid: 499b1435a15b847438206fc83c03bd7f, type: 3}
   characterImage: {fileID: 5692671443236587484, guid: 18b9225ae99df68409bd44f6313bdf74, type: 3}
-  characterName: Cool Assasin or sth idk
+  characterName: Assassin
   maxHealth: 10
   maxArmor: 10
   moveSpeed: 5
   characterSkillIcon1: {fileID: 21300000, guid: a7a3909a35e24f44e9183359cfb7f6b2, type: 3}
-  characterSkillDescription1: Cool assasin skill #1
+  characterSkillDescription1: Stormpiercer
   characterSkillIcon2: {fileID: 21300000, guid: 98ceec9f429ced945bb803c39b135bd7, type: 3}
-  characterSkillDescription2: Cool assasin skill #2
+  characterSkillDescription2: Whirlwind Slash

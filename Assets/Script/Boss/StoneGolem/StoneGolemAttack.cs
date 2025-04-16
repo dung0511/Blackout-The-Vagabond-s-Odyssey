@@ -5,10 +5,10 @@ public class StoneGolemAttack : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player player = collision.GetComponent<Player>();
-        if (player != null)
+       // Player player = collision.GetComponent<Player>();
+        if (collision.TryGetComponent<IDamageable>(out var player))
         {
-            player.healthController.takeDame(GetComponentInParent<StoneGolem>().damage);
+            player.takeDame(GetComponentInParent<StoneGolem>().damage);
 
         }
     }

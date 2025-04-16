@@ -6,8 +6,8 @@ public class Projectile : MonoBehaviour
     public ProjecttileManager projecttileManager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerHealthController player = collision.GetComponent<PlayerHealthController>();
-        if (player!=null)
+       // PlayerHealthController player = collision.GetComponent<PlayerHealthController>();
+        if (collision.TryGetComponent<IDamageable>(out var player))
         {
 
             player.takeDame(projecttileManager.projectileDame);

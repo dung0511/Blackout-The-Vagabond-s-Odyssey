@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        DataManager.Load();
         //settingsMenu.SetActive(false); 
         tutorialPanel.SetActive(false);
     }
@@ -20,7 +21,6 @@ public class MainMenuController : MonoBehaviour
         }
         else
         {
-            DataManager.Load();
             SceneManager.LoadScene("Home");
         }
     }

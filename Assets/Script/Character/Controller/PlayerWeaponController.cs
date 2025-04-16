@@ -14,6 +14,9 @@ public class PlayerWeaponController : MonoBehaviour
     public BaseWeapon baseWeapon { get; set; }
     public void Attack()
     {
+        if (Player.Instance.isOpenBag || ShopUI.Instance.isOpenShop)
+            return;
+
         baseWeapon.Attack();
     }
 

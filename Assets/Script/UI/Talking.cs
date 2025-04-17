@@ -23,9 +23,11 @@ public class Talking : MonoBehaviour
     {
         if (!text.IsEmpty())
         {
+            StopAllCoroutines();
             StartCoroutine(TypeText(text));
         }
-        return;
+        
+        
     }
 
     IEnumerator TypeText(string text)

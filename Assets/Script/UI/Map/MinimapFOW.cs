@@ -9,18 +9,20 @@ public class MinimapFOW : MonoBehaviour
 {
     [SerializeField] private int visionRange = 5;
     public Tilemap minimap;
-    private Vector2Int lastPlayerPos;
+    private Vector2Int lastPlayerPos = new Vector2Int(69, 420); // Initialize to an invalid position
 
     void OnEnable()
     {
+        Invoke("Binding", 1f);
         Binding();
     }
     private void Binding()
     {
         minimap = GameObject.FindGameObjectWithTag("MinimapTilemap").GetComponent<Tilemap>();
+        InvokeRepeating("UpdateMinimap", 0.1f, 0.5f);
     }
 
-    void Update()
+    void UpdateMinimap()
     {
         Vector2Int playerPos = Vector2Int.FloorToInt(transform.position);
 

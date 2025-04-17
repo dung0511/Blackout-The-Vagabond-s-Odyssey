@@ -5,7 +5,7 @@ using System.Linq;
 using ModestTree;
 using UnityEngine;
 
-public class UnlockAfterStage : MonoBehaviour
+public class LockAfterStage : MonoBehaviour
 {
     [SerializeField] private int stage = 1;
 
@@ -13,6 +13,6 @@ public class UnlockAfterStage : MonoBehaviour
     {
         var data = DataManager.gameData.playerData;
         bool unlocked = data.furthestStage > stage;
-        gameObject.SetActive(unlocked);
+        gameObject.SetActive(!unlocked);
     }
 }

@@ -30,7 +30,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCoinsUI()
     {
-        coinsTxt.text = "Coins: " + playerCoins;
+        coinsTxt.text = "" + playerCoins;
     }
 
     public int GetPrice(int itemID) => prices[itemID - 1];
@@ -88,4 +88,9 @@ public class ShopManager : MonoBehaviour
         Debug.Log($"Đã spawn item {itemID}");
     }
 
+    public void ResetCoins()
+    {
+        playerCoins = 0;
+        UpdateCoinsUI();
+    }
 }

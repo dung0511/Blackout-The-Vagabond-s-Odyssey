@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Dungeon");
         HUD.Instance.Show();
         SkillCooldownUI.Instance.InitializeSkillIcons();
+        //ShopManager.Instance.ResetCoins();
     }
 
     public void NextLevel()
@@ -213,4 +214,18 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ShopManager.Instance.ResetCoins();
+    }
 }

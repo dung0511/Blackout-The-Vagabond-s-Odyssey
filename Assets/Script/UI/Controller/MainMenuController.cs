@@ -4,10 +4,15 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] GameObject tutorialPanel;
+    private static bool isGameStarted = false;
 
     void Start()
     {
-        DataManager.Load();
+        if(!isGameStarted)
+        {
+            isGameStarted = true;
+            DataManager.Load();
+        }
         //settingsMenu.SetActive(false); 
         tutorialPanel.SetActive(false);
     }

@@ -86,6 +86,7 @@ public class SettingsMenuUI : MonoBehaviour
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f;
+        //ShopManager.Instance.ResetCoins();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -94,7 +95,7 @@ public class SettingsMenuUI : MonoBehaviour
         DataManager.Save();
         Time.timeScale = 1f;
         DontDestroyCleaner.ClearDDOL();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     //public void OnMusicVolumeChanged(float value)

@@ -16,11 +16,11 @@ MonoBehaviour:
   home: {fileID: 5990494557785393302, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
   dungeon: {fileID: 211050452092517740, guid: 99f2256aa7bf1744a895a2474e7ccf5c, type: 3}
   characterImage: {fileID: -2875184811977189179, guid: b52fc11fd862f5c49ab84511f5faaeee, type: 3}
-  characterName: Knight with an unused shield
-  maxHealth: 10
-  maxArmor: 10
+  characterName: Luciel, the Mirror Sentinel
+  maxHealth: 15
+  maxArmor: 12
   moveSpeed: 5
-  characterSkillIcon1: {fileID: -205163738152335974, guid: 2a044b3df679e064da6e9c30c30ce4e9, type: 3}
-  characterSkillDescription1: Cool knight skill #1
+  characterSkillIcon1: {fileID: 21300000, guid: e9e1af440b8a64d4e893def87e714670, type: 3}
+  characterSkillDescription1: Aegis of the Radiant
   characterSkillIcon2: {fileID: 21300000, guid: 825bc47a2f5c74d469442ebd63abb765, type: 3}
-  characterSkillDescription2: Cool knight skill #2
+  characterSkillDescription2: Echo of the Valiant

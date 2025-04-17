@@ -1,10 +1,12 @@
 using UnityEngine;
+using Zenject.Asteroids;
 
 public class ShopUI : MonoBehaviour
 {
     public static ShopUI Instance { get; private set; }
 
     public bool isOpenShop {  get; private set; }
+
 
     private void Awake()
     {
@@ -32,4 +34,5 @@ public class ShopUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    
 }

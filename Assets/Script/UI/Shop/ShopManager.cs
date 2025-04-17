@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
     // price và số lượng đã mua
     private int[] prices = { 30, 45, 50, 300, 320, 120 };
     private int[] quantities = new int[10];
-    private int playerCoins = 1000; 
+    private int playerCoins = 0; 
 
     public GameObject[] itemPrefabs;
 
@@ -30,7 +30,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCoinsUI()
     {
-        coinsTxt.text = "Coins: " + playerCoins;
+        coinsTxt.text = "" + playerCoins;
     }
 
     public int GetPrice(int itemID) => prices[itemID - 1];
@@ -88,4 +88,9 @@ public class ShopManager : MonoBehaviour
         Debug.Log($"Đã spawn item {itemID}");
     }
 
+    public void ResetCoins()
+    {
+        playerCoins = 0;
+        UpdateCoinsUI();
+    }
 }

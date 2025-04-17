@@ -82,8 +82,8 @@ public class InventoryController : MonoBehaviour, IUIScreen
         IItemAction itemAction = inventoryItem.item as IItemAction;
         if (itemAction != null)
         {
-            inventoryUI.ShowItemAction(itemIndex);
-            inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
+            UIInventory.Instance.ShowItemAction(itemIndex);
+            UIInventory.Instance.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
         }
 
         IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;

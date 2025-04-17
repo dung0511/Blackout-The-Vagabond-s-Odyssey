@@ -27,7 +27,7 @@ public class BossManager : MonoBehaviour
 
     private void OnBossKilled()
     {
-        DataManager.gameData.playerData.furthestStage = GameManager.Instance.currentStage + 1;
         bossKillObject.SetActive(true);
+        DataManager.gameData.playerData.furthestStage = GameManager.Instance.currentStage + 1;
     }
 }

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae29cd60549dc6942bd0117e79442881, type: 3}
   m_Name: MusicLibrarySO
   m_EditorClassIdentifier: 
-  mainMenuMusics: []
-  homeMusics: []
-  stageMusics: []
-  finalBossMusics: []
+  mainMenuMusics: {fileID: 8300000, guid: 3cea07fb58fbb60418c4453acbe2ec65, type: 3}
+  homeMusics: {fileID: 8300000, guid: ae19813ce570d084b916e9a9e2e134c0, type: 3}
+  stageMusics:
+  - {fileID: 11400000, guid: 54cc729d696a1be449a06745b756e67f, type: 2}
+  - {fileID: 11400000, guid: af489eabf6358054b996efeb0291d372, type: 2}
+  - {fileID: 11400000, guid: e9ad9e8d5803b61499cb25dbd3bb40d2, type: 2}
+  finalBossMusic: {fileID: 8300000, guid: 87c25e707f955cc408f4e69fafcb1120, type: 3}

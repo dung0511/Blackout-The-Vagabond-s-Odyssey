@@ -261,8 +261,8 @@ MonoBehaviour:
   movementDetails: {fileID: 11400000, guid: 1f50b796d508eb847baca9a441cb990c, type: 2}
   target: {fileID: 0}
   nextWaypointDistance: 0.3
-  stopChaseDistance: 1.5
-  resumeChaseDistance: 2
+  stopChaseDistance: 2
+  resumeChaseDistance: 3
   resumeChaseDelay: 2
   moveSpeed: 0
 --- !u!114 &2862176286737016478

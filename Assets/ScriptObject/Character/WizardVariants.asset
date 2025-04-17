@@ -19,8 +19,8 @@ MonoBehaviour:
   characterName: Vaelthorin, the Arcane Storm
   maxHealth: 12
   maxArmor: 7
-  moveSpeed: 7
+  moveSpeed: 6
   characterSkillIcon1: {fileID: 21300000, guid: 8ccc18881f77d7846aa0d3e9a278d7de, type: 3}
   characterSkillDescription1: Blazing Rift
   characterSkillIcon2: {fileID: 21300000, guid: 19f33ff73f62ac640924bd6364529bd0, type: 3}
-  characterSkillDescription2: Judgment of the Stormborn
+  characterSkillDescription2: Judgment Bolt

@@ -35,6 +35,8 @@ public class Room
             Debug.Log("Room Cleared"); //them ui bao room cleared o day.
             NotificationController.Instance.ShowNotification("Room Cleared");
             DungeonManager.Instance.OpenRoomBarrier(this);
+
+            GameManager.Instance.PlayCurrentStageDungeonMusic();
         }
     }
 }

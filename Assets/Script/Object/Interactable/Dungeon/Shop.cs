@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Shop : Interactable
 {
     private bool isUIOpen = false;
-
+    private bool canOpenShop = true; 
 
     public override void Interact(Interactor interactPlayer)
     {
+        if (!canOpenShop) return; 
+
         base.Interact(interactPlayer);
 
         isUIOpen = !isUIOpen;
@@ -14,11 +17,15 @@ public class Shop : Interactable
         if (isUIOpen)
             ShopUI.Instance.Show();
         else
+        {
             ShopUI.Instance.Hide();
+            StartCoroutine(InteractionCooldown());
+        }
     }
 
     public override void HighLightOn()
     {
+        if (!canOpenShop) return;
         base.HighLightOn();
     }
 
@@ -33,6 +40,14 @@ public class Shop : Interactable
         {
             isUIOpen = false;
             ShopUI.Instance.Hide();
+            StartCoroutine(InteractionCooldown());
         }
+    }
+
+    private IEnumerator InteractionCooldown()
+    {
+        canOpenShop = false; 
+        yield return new WaitForSeconds(7f); 
+        canOpenShop = true; 
     }
 }

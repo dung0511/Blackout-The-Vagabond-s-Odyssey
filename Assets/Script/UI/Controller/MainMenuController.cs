@@ -32,8 +32,12 @@ public class MainMenuController : MonoBehaviour
 
     public void Exit()
     {
-        DataManager.Save();
         Application.Quit();
     }
-    
+
+    void OnApplicationQuit()
+    {
+        DataManager.Save();
+    }
+
 }

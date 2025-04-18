@@ -21,6 +21,8 @@ public class BossTrigger : MonoBehaviour
             trigger.enabled = false;
             transform.GetChild(0).gameObject.SetActive(true);
             SpawnBoss();
+
+            GameManager.Instance.PlayCurrentStageBossMusic();
         }
         
     }

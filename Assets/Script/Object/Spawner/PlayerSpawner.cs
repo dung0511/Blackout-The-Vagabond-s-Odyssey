@@ -26,6 +26,8 @@ public class PlayerSpawner : MonoBehaviour
         var anime = Instantiate(spawnEffect, this.transform.position + new Vector3(0,-0.25f,0), Quaternion.identity);
         Destroy(anime, 5);
         StartCoroutine(DelayPlayer());
+
+        GameManager.Instance.PlayCurrentStageDungeonMusic();
     }
 
     private IEnumerator DelayPlayer()

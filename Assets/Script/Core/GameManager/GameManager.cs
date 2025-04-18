@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using ModestTree;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -40,6 +37,12 @@ public class GameManager : MonoBehaviour
         {"enemiesKilled",0 }
     };
     public string weaponUsing;
+
+
+    [SerializeField] private MusicLibrarySO musicLibrary;
+    public MusicLibrarySO MusicLibrary => musicLibrary;
+
+
     private void Start()
     {
         playerId = FirebaseDatabaseManager.Instance.GetOrCreatePlayerId();
@@ -216,6 +219,86 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    #region Music
+    public void PlayCurrentStageDungeonMusic()
+    {
+        try
+        {
+            if (currentStage > maxStage) // Final boss scene
+            {
+                var finalBossstageMusic = musicLibrary.GetStageMusic(currentStage - 2);  // lay nhac stage 3 tam 
+                if (finalBossstageMusic != null)
+                {
+                    var clip = finalBossstageMusic.GetRandomDungeonMusic();
+                    if (clip != null)
+                        MusicManager.Instance?.PlayMusic(clip, 1f);
+                }
+                return;
+            }
+
+            var stageMusic = musicLibrary.GetStageMusic(currentStage - 1);
+            if (stageMusic != null)
+            {
+                var clip = stageMusic.GetRandomDungeonMusic();
+                if (clip != null)
+                    MusicManager.Instance?.PlayMusic(clip, 1f);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"PlayCurrentStageDungeonMusic failed: {e.Message}");
+        }
+    }
+
+    public void PlayCurrentStageEliteMusic()
+    {
+        try
+        {
+            if (currentStage > maxStage + 1) return;
+
+            var stageMusic = musicLibrary.GetStageMusic(currentStage - 1);
+            if (stageMusic != null)
+            {
+                var clip = stageMusic.GetRandomEliteMusic();
+                if (clip != null)
+                    MusicManager.Instance?.PlayMusic(clip);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"PlayCurrentStageEliteMusic failed: {e.Message}");
+        }
+    }
+
+    public void PlayCurrentStageBossMusic()
+    {
+        try
+        {
+            if (currentStage > maxStage)
+            {
+                var clip = musicLibrary.finalBossMusic;
+                if (clip != null)
+                    MusicManager.Instance?.PlayMusic(clip);
+            }
+            else
+            {
+                var stageMusic = musicLibrary.GetStageMusic(currentStage - 1);
+                if (stageMusic != null)
+                {
+                    var clip = stageMusic.GetRandomBossMusic();
+                    if (clip != null)
+                        MusicManager.Instance?.PlayMusic(clip);
+                }
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"PlayCurrentStageBossMusic failed: {e.Message}");
+        }
+    }
+
+    #endregion
+
 
     private void OnEnable()
     {

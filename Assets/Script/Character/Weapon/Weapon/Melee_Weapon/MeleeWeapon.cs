@@ -72,7 +72,7 @@ public class MeleeWeapon : BaseWeapon, IPick
 
         animator.ResetTrigger($"Attack{attackIndex}");
         animator.SetTrigger($"Attack{attackIndex}");
-
+        WeaponSoundEffect();
         lastAttackTime = Time.time;
 
         attackIndex++;
@@ -124,5 +124,13 @@ public class MeleeWeapon : BaseWeapon, IPick
     public override WeaponDetailSO GetWeaponDetailSO()
     {
         return weaponDetailSO;
+    }
+    private void WeaponSoundEffect()
+    {
+        if (this.GetWeaponDetailSO().weaponFiringSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(this.GetWeaponDetailSO().weaponFiringSoundEffect);
+        }
+        else Debug.Log("Sth wrong with weaponSoundSO");
     }
 }

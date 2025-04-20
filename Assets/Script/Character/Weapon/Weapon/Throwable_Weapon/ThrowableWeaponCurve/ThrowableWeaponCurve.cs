@@ -194,6 +194,7 @@ public class ThrowableWeaponCurve : BaseWeapon, IPick
 
             projectile.InitializeProjectile(worldMousePos, projectileMaxMoveSpeed, projectileMaxHeight);
             projectile.InitializeAnimationCurves(trajectoryCurve, axisCorrectionCurve, speedCurve);
+            WeaponSoundEffect();
         }
     }
 
@@ -242,5 +243,13 @@ public class ThrowableWeaponCurve : BaseWeapon, IPick
     public override WeaponDetailSO GetWeaponDetailSO()
     {
         return weaponDetailSO;
+    }
+    private void WeaponSoundEffect()
+    {
+        if (this.GetWeaponDetailSO().weaponFiringSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(this.GetWeaponDetailSO().weaponFiringSoundEffect);
+        }
+        else Debug.Log("Sth wrong with weaponSoundSO");
     }
 }

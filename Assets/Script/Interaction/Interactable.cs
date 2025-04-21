@@ -14,16 +14,15 @@ public class Interactable : MonoBehaviour, IInteractable
     {
         this.interactPlayer = interactPlayer;
         Debug.Log("Interacted");
-
     }
 
     public virtual void HighLightOn()
     {
-        outline.SetActive(true);
+        if(outline) outline.SetActive(true);
     }
 
     public virtual void HighLightOff()
     {
-        outline.SetActive(false);
+        if(outline) outline.SetActive(false);
     }
 }

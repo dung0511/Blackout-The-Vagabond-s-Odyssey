@@ -15,7 +15,7 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <maxStackSize>k__BackingField: 3
   <Name>k__BackingField: Health Potion IV
-  <Description>k__BackingField: Increases Max HP by 10 permanently
+  <Description>k__BackingField: Increases Max HP by 10% permanently
   <ItemImage>k__BackingField: {fileID: -871714805, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
   <DropPrefab>k__BackingField: {fileID: 2510130182750027063, guid: 84fc3a01fcd391a4e84344940df369aa, type: 3}
   modifiersData:

@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a48e11a1e4f947340acf358eca6670f1, type: 2}
     - target: {fileID: 1695414445330997733, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: projectileDame
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1695414445330997733, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: projectileForce
@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727275413552002270, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: damage
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7727275413552002270, guid: 046e514c3cc127f4db7e9b09eeb2167d, type: 3}
       propertyPath: health

@@ -20,6 +20,9 @@ public class EliteTrigger : MonoBehaviour
                 //animation 
                 barrier.SetActive(true);
             }
+
+            GameManager.Instance.PlayCurrentStageEliteMusic();
+
             EnableElite(); //appear animation then re enable elite
         }
     }

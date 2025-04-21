@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b97a799a61c7641a94132ab05ce3b6, type: 3}
+  m_Name: Stage1MusicSO
+  m_EditorClassIdentifier: 
+  dungeonMusics:
+  - {fileID: 8300000, guid: 991d0612bce081e479a660e9caf7d095, type: 3}
+  eliteMusics:
+  - {fileID: 8300000, guid: b6a3442515c3ce847b1ee3235cdf4117, type: 3}
+  bossMusics:
+  - {fileID: 8300000, guid: 87c25e707f955cc408f4e69fafcb1120, type: 3}

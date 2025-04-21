@@ -86,6 +86,8 @@ namespace Assets.Script.Weapon.Throwable_Weapon
 
                 rb.linearVelocity = Vector2.zero;
                 rb.AddForce(transform.right * throwForce, ForceMode2D.Impulse);
+
+                WeaponSoundEffect();
             }
         }
 
@@ -133,6 +135,14 @@ namespace Assets.Script.Weapon.Throwable_Weapon
         public override WeaponDetailSO GetWeaponDetailSO()
         {
             return weaponDetailSO;
+        }
+        private void WeaponSoundEffect()
+        {
+            if (this.GetWeaponDetailSO().weaponFiringSoundEffect != null)
+            {
+                SoundEffectManager.Instance.PlaySoundEffect(this.GetWeaponDetailSO().weaponFiringSoundEffect);
+            }
+            else Debug.Log("Sth wrong with weaponSoundSO");
         }
     }
 

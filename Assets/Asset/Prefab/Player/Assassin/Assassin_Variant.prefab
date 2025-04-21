@@ -375,14 +375,26 @@ PrefabInstance:
     - target: {fileID: 8272109283687327007, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: initialItems.Array.data[0].item
       value: 
+      objectReference: {fileID: 11400000, guid: 646da61713962d1449746eb08074c879, type: 2}
+    - target: {fileID: 8272109283687327007, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: initialItems.Array.data[1].item
+      value: 
       objectReference: {fileID: 11400000, guid: e6d889ca307ec0a43b0684525545f37b, type: 2}
     - target: {fileID: 8272109283687327007, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: initialItems.Array.data[2].item
       value: 
       objectReference: {fileID: 11400000, guid: dc574cb660400094d9f5f3ffe84b0fd3, type: 2}
     - target: {fileID: 8272109283687327007, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: initialItems.Array.data[0].quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272109283687327007, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: initialItems.Array.data[1].quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272109283687327007, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: initialItems.Array.data[2].quantity
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8408637051143262795, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Size.x
@@ -462,8 +474,6 @@ MonoBehaviour:
   animator: {fileID: 3036850352898393763}
   dashDistance: 5
   dashDuration: 0.1
-  dashCooldownTime: 3
-  ultimateCooldownTime: 3
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8200

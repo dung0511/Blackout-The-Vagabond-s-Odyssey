@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour
         TimePlayed = Time.time - TimePlayed;
         FirebaseDatabaseManager.Instance.WriteDatabase(playerId, gameId, characterPlayed, currentLevel, currentStage, TimePlayed, EnemyKilled, BossKilled, win, normalSkill, ultimateSkill, weaponuUsed);
 
-        SceneManager.LoadScene("Dungeon");
+        SceneManager.LoadScene("Stage1");
         HUD.Instance.ShowHUD();
         SkillCooldownUI.Instance.InitializeSkillIcons();
         //ShopManager.Instance.ResetCoins();
@@ -197,7 +197,9 @@ public class GameManager : MonoBehaviour
         }
         else //normal dungeon level
         {
-            SceneManager.LoadScene("Dungeon");
+            if(currentStage > 2) SceneManager.LoadScene("Stage1");
+            else SceneManager.LoadScene("Stage" + currentStage);
+            
         }
 
     }
@@ -206,19 +208,15 @@ public class GameManager : MonoBehaviour
     {
         if (String.IsNullOrWhiteSpace(rootSeed))
         {
-            rootSeed = Utility.GenerateRandomSeed(10);
+            rootSeed = Utility.GenerateRandomString(10);
         }
         UnityEngine.Random.InitState(rootSeed.GetHashCode());
         for (int i = 0; i < maxStage * levelsPerStage + maxStage + 2; i++)  //+2 for safety
         {
-            levelSeeds.Enqueue(Utility.GenerateRandomSeed(10));
+            levelSeeds.Enqueue(Utility.GenerateRandomString(10));
         }
     }
 
-    public void UpdatePlayerData()
-    {
-
-    }
     #region Music
     public void PlayCurrentStageDungeonMusic()
     {

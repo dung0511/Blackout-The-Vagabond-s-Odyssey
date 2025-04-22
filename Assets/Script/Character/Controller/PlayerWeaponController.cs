@@ -77,6 +77,7 @@ public class PlayerWeaponController : MonoBehaviour
                 break;
         }
     }
+
     List<GameObject> GetAllChild()
     {
         List<GameObject> list = new List<GameObject>();

@@ -128,7 +128,7 @@ public static class Utility
         return center + point;
     }
 
-    public static string GenerateRandomSeed(int length)
+    public static string GenerateRandomString(int length)
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
         var result = new char[length];

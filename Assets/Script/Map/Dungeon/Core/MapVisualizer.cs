@@ -6,23 +6,66 @@ using UnityEngine.Tilemaps;
 
 public class MapVisualizer : MonoBehaviour
 {
+    [SerializeField] private int floorOffsetRadius = 0;
     [SerializeField] private int wallHeight = 1;
-    [SerializeField] private Tilemap floorTilemap, wallTilemap, minimap;
-    [SerializeField] private TileBase floorTile, wallTile;
+    [SerializeField] private Tilemap foregroundTilemap, floorTilemap, wallTilemap, minimap;
+    [SerializeField] private TileBase foregroundTile, floorTile, wallTile;
     [SerializeField] private TileBase minimapFloor, minimapWall;
 
+    [SerializeField] private bool usePerlinNoise = false;
+    [SerializeField] private float scale = 7f; // Scale for Perlin noise
+    private int noiseOffset = 0; // Offset for Perlin noise
+    
     public void VisualizeLayout(HashSet<Vector2Int> floor)
     {
-        PlaceTiles(floorTilemap, floorTile, floor);
+        var floorMap = offsetFloor(floor);
+        if(foregroundTilemap != null)
+        {
+            PlaceTiles(foregroundTilemap, foregroundTile, floorMap, false);
+        }
+        PlaceTiles(floorTilemap, floorTile, floorMap, usePerlinNoise);
         DrawMinimap(floor, minimapFloor);
         HashSet<Vector2Int> wall = GetAroundFloor(floor, wallHeight);
-        PlaceTiles(wallTilemap, wallTile, wall);
+        PlaceTiles(wallTilemap, wallTile, wall, false);
         wall = ConvertWallToMinimap(floor);
         DrawMinimap(wall, minimapWall);
     }
 
-    private void PlaceTiles(Tilemap tilemap, TileBase tile, HashSet<Vector2Int> positions)
+    private HashSet<Vector2Int> offsetFloor(HashSet<Vector2Int> floorPositions)
     {
+        if(floorOffsetRadius < 1) return floorPositions;
+        HashSet<Vector2Int> offsetedFloor = new HashSet<Vector2Int>(floorPositions);
+        foreach (var pos in floorPositions)
+        {
+            foreach (var direction in Direction2D.Directions)
+            {
+                for (int i = 0; i < floorOffsetRadius; i++)
+                {
+                    if (!floorPositions.Contains(pos + direction * i))
+                    {
+                        offsetedFloor.Add(pos + direction * i);
+                    }
+                }
+            }
+        }
+        return offsetedFloor;
+    }
+
+    private void PlaceTiles(Tilemap tilemap, TileBase tile, HashSet<Vector2Int> positions, bool usePerlinNoise = false)
+    {
+        if(usePerlinNoise)
+        {
+            noiseOffset = Utility.UnseededRng(0,10000);
+            foreach (var pos in positions)
+            {
+                float perlinValue = Mathf.PerlinNoise((pos.x + noiseOffset) / scale, (pos.y + noiseOffset) / scale);
+                if (perlinValue > 0.5f)
+                {
+                    PlaceTile(tilemap, tile, pos);
+                }
+            }
+            return;
+        }
         foreach (var pos in positions)
         {
             PlaceTile(tilemap, tile, pos);
@@ -55,11 +98,11 @@ public class MapVisualizer : MonoBehaviour
         HashSet<Vector2Int> offsetBottomFloor = new HashSet<Vector2Int>();
         foreach (var pos in floorPositions)
         {
-            for(int i = 0; i < bottomHeight; i++)
+            for(int i = 1; i < bottomHeight; i++)
             {
-                if (floorPositions.Contains(pos + Vector2Int.up*(i+1))) //move entire floor up 
+                if (floorPositions.Contains(pos + Vector2Int.up*i)) //move entire floor up 
                 {
-                    offsetBottomFloor.Add(pos + Vector2Int.up*(i+1));
+                    offsetBottomFloor.Add(pos + Vector2Int.up*i);
                 }
             }
 

@@ -10,6 +10,7 @@ public class PlayerHealthController : Damageable
 
     void Start()
     {
+        isDead = false;
         health = GetComponent<Player>().health;
         isHurt = GetComponent<Player>().isHurt;
         isDead = GetComponent<Player>().isDead;
@@ -23,10 +24,11 @@ public class PlayerHealthController : Damageable
         {
             health -= dame;
             UpdateHealthBar(health, maxHealth);
-            if (health <= 0)
+            if (health <= 0 && !isDead)
             {
                 isDead = true;
                 health = 0;
+                GameManager.Instance.SaveWhenDead();
                 StartCoroutine(ShowGameOverAfterDelay()); 
             }
             else

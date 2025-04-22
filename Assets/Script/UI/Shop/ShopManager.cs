@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
@@ -7,12 +8,17 @@ public class ShopManager : MonoBehaviour
 
     public TextMeshProUGUI coinsTxt;
 
-    // price và số lượng đã mua
-    private int[] prices = { 30, 45, 50, 300, 320, 120 };
-    private int[] quantities = new int[10];
-    private int playerCoins = 0; 
+    public GameObject[] weaponPrefabs;
+    public GameObject[] potionPrefabs;
 
-    public GameObject[] itemPrefabs;
+    public ButtonInfo[] buttonSlots; // 8 slots: 0–3 weapons, 4–7 potions
+
+    private int[] prices = new int[8];
+    private int[] quantities = new int[8];
+    private int playerCoins = 2000; // test
+
+    private GameObject[] itemPrefabs = new GameObject[8];
+
 
     void Awake()
     {
@@ -20,7 +26,6 @@ public class ShopManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            UpdateCoinsUI();
         }
         else
         {
@@ -28,9 +33,60 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        InitShopItems();
+        UpdateCoinsUI();
+    }
+
+    public void InitShopItems()
+    {
+        var selectedWeapons = GetRandomPrefabs(weaponPrefabs, 4);
+        var selectedPotions = GetRandomPrefabs(potionPrefabs, 4);
+
+        for (int i = 0; i < prices.Length; i++)
+        {
+            prices[i] = Random.Range(10, 301); 
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            int itemID = i + 1;
+            buttonSlots[i].SetupSlot(selectedWeapons[i], itemID, prices[itemID - 1]);
+            itemPrefabs[itemID - 1] = selectedWeapons[i];
+            Debug.Log($"Weapon Slot {i}: {selectedWeapons[i].name}");
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            int itemID = i + 5;
+            buttonSlots[i + 4].SetupSlot(selectedPotions[i], itemID, prices[itemID - 1]);
+            itemPrefabs[itemID - 1] = selectedPotions[i];
+            Debug.Log($"Potion Slot {i + 4}: {selectedPotions[i].name}");
+        }
+    }
+
+    private GameObject[] GetRandomPrefabs(GameObject[] sourcePrefabs, int count)
+    {
+        List<GameObject> sourceList = new List<GameObject>(sourcePrefabs);
+        List<GameObject> selected = new List<GameObject>();
+
+        for (int i = 0; i < count; i++)
+        {
+            if (sourceList.Count == 0) break;
+
+            int randIndex = Random.Range(0, sourceList.Count);
+            selected.Add(sourceList[randIndex]);
+            sourceList.RemoveAt(randIndex); 
+        }
+
+        return selected.ToArray();
+    }
+
+
     public void UpdateCoinsUI()
     {
-        coinsTxt.text = "" + playerCoins;
+        coinsTxt.text = playerCoins.ToString();
     }
 
     public int GetPrice(int itemID) => prices[itemID - 1];
@@ -40,21 +96,17 @@ public class ShopManager : MonoBehaviour
     {
         if (playerCoins >= prices[itemID - 1])
         {
-            // - coin + quantity
             playerCoins -= prices[itemID - 1];
             quantities[itemID - 1]++;
-
             UpdateCoinsUI();
             UpdateButtonQuantity(itemID);
             SpawnItem(itemID);
         }
     }
 
-    // update UI 
     public void UpdateButtonQuantity(int itemID)
     {
-        ButtonInfo[] allButtons = FindObjectsOfType<ButtonInfo>();
-        foreach (var button in allButtons)
+        foreach (var button in buttonSlots)
         {
             if (button.itemID == itemID)
             {
@@ -64,33 +116,28 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void AddCoins(int amount)
+    public void SpawnItem(int itemID)
     {
-        playerCoins += amount;
-        UpdateCoinsUI();
-    }
-
-    private void SpawnItem(int itemID)
-    {
-        if (itemID < 1 || itemID > itemPrefabs.Length) return;
-
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
-            Debug.Log("Không tìm thấy player");
+            Debug.Log("Không tìm thấy Player");
             return;
         }
 
-        // Spawn item
-        Vector3 spawnPos = player.transform.position + player.transform.forward * 0.3f;
+        Vector3 spawnPos = player.transform.position + player.transform.forward * 0.5f;
         Instantiate(itemPrefabs[itemID - 1], spawnPos, Quaternion.identity);
-
-        Debug.Log($"Đã spawn item {itemID}");
     }
 
     public void ResetCoins()
     {
         playerCoins = 0;
+        UpdateCoinsUI();
+    }
+
+    public void AddCoins(int randomValue)
+    {
+        playerCoins += randomValue;
         UpdateCoinsUI();
     }
 }

@@ -16,7 +16,14 @@ public class Item : MonoBehaviour, IPick
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = inventoryItem.ItemImage;
+        if (inventoryItem != null)
+        {
+            var renderer = GetComponent<SpriteRenderer>();
+            if (renderer != null)
+            {
+                renderer.sprite = inventoryItem.ItemImage;
+            }
+        }
     }
 
     public void DestroyItem()

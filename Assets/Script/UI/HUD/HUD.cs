@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public static HUD Instance { get; private set; }
+
     public Slider healthBar;
     public Slider armorBar;
     public TextMeshProUGUI coins;
     public GameObject skillsUI;
+    public GameObject weaponStatus;
 
     private void Awake()
     {
@@ -22,11 +24,12 @@ public class HUD : MonoBehaviour
         }
     }
 
-    public void Show()
+    public void ShowHUD()
     {
         healthBar.gameObject.SetActive(true);
         armorBar.gameObject.SetActive(true);
         coins.gameObject.SetActive(true);
         skillsUI.gameObject.SetActive(true);
+        weaponStatus.gameObject.SetActive(true);
     }
 }

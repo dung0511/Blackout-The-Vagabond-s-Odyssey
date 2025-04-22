@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
         FirebaseDatabaseManager.Instance.WriteDatabase(playerId, gameId, characterPlayed, currentLevel, currentStage, TimePlayed, EnemyKilled, BossKilled, win, normalSkill, ultimateSkill, weaponuUsed);
 
         SceneManager.LoadScene("Dungeon");
-        HUD.Instance.Show();
+        HUD.Instance.ShowHUD();
         SkillCooldownUI.Instance.InitializeSkillIcons();
         //ShopManager.Instance.ResetCoins();
     }

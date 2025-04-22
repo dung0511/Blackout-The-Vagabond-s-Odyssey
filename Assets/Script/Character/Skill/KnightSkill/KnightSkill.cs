@@ -87,11 +87,12 @@ public class KnightSkill : BaseSkill
 
     IEnumerator ResetShield()
     {
+        StartCoroutine(ResetNormalSkill());
         yield return new WaitForSeconds(shieldCoolDown);
         GetComponentInChildren<ShieldHitBox>().shieldDame = transform.root.GetComponent<PlayerArmorController>().DameTakenDuringShieldSkill();
         shieldAnimator.SetTrigger("isShieldDone");
         transform.root.GetComponent<PlayerArmorController>().EndShieldSkill();
-        StartCoroutine(ResetNormalSkill());
+        
     }
 
     IEnumerator ResetUltimateSkill()

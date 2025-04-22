@@ -136,13 +136,12 @@ public class RecommendAI : MonoBehaviour
 
     public void ThinkAboutTwoWeapon(string item1Description, string item2Description, string weapon1Name, string weapon2Name)
     {
-        StartCoroutine(CallGeminiAPI(item1Description,item2Description,weapon1Name,weapon2Name));
+        StartCoroutine(CallGeminiAPI($"calculate how many dame 2 weapon can deal per sec with given attribute, and only give me the SHORTEST conclusion (no more than 15 words) is which weapon seem better to which due to what, and ansswer sound more like a human thinking like Hmmm... which is better : {weapon2Name}, {item2Description} and {weapon1Name}, {item1Description}"));
     }
 
-    IEnumerator CallGeminiAPI(string item1Description, string item2Description, string weapon1Name, string weapon2Name)
+    IEnumerator CallGeminiAPI(string text)
     {
         string apiURL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=";
-        string text = $"calculate how many dame 2 weapon can deal per sec with given attribute, and only give me the SHORTEST conclusion (no more than 15 words) is which weapon seem better to which due to what, and ansswer sound more like a human thinking like Hmmm... which is better : {weapon2Name}, {item2Description} and {weapon1Name}, {item1Description}";
         string jsonPayload = $"{{\"contents\": [{{\"parts\":[{{\"text\": \"{text}\"}}]}}]}}";
         ApiKeyData keys = LoadApiKeys();
 
@@ -162,10 +161,7 @@ public class RecommendAI : MonoBehaviour
             string cleanedText = resultText?.Replace("\n", "");
             Talking.INSTANCE.Talk(cleanedText);
         }
-        else
-        {
-            Talking.INSTANCE.Talk(weapon2Name);
-        }
+        
     }
     public class Part
     {

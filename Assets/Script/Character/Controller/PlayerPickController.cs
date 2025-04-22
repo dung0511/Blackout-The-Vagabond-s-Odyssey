@@ -34,10 +34,11 @@ public class PlayerPickController : MonoBehaviour
                 weapon1 = Item.GetComponent<BaseWeapon>();
                 WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
                 ShowUIPanel(weaponDetailSO);
-                string s1 = $"{currentWeaponDetail.damageWeapon},{currentWeaponDetail.attackCooldown},{currentWeaponDetail.force}";
-                string s2 = $"{weaponDetailSO.damageWeapon},{weaponDetailSO.attackCooldown},{weaponDetailSO.force}";
-                NomicAI.INSTANCE.CompareItems(s1, s2,currentWeaponDetail.weaponName, weaponDetailSO.weaponName);
+                string s1 = $"Damage {currentWeaponDetail.damageWeapon}, Time between attack {currentWeaponDetail.attackCooldown}, Force {currentWeaponDetail.force}";
+                string s2 = $"Damage {weaponDetailSO.damageWeapon}, Time between attack {weaponDetailSO.attackCooldown}, Force {weaponDetailSO.force}";
+                RecommendAI.INSTANCE.CompareItems(s1, s2,currentWeaponDetail.weaponName, weaponDetailSO.weaponName);
                 isWeapon = true;
+                StartCoroutine(Think(s1, s2, currentWeaponDetail.weaponName, weaponDetailSO.weaponName));
             }
             else
             {
@@ -45,6 +46,12 @@ public class PlayerPickController : MonoBehaviour
                 Talking.INSTANCE.Talk(Item.GetComponent<Item>().inventoryItem.name);
             }
         }
+    }
+
+    IEnumerator Think(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
+    {
+        yield return new WaitForSeconds(7f);
+        RecommendAI.INSTANCE.ThinkAboutTwoWeapon(itemADescription, itemBDescription, weapon1Name, weapon2Name);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -72,6 +79,7 @@ public class PlayerPickController : MonoBehaviour
     {
         if (Item != null)
         {
+            StopAllCoroutines();
             isTouchItem = false;
             Item = null;
             HideUIPanel();

@@ -7,22 +7,25 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 using System.IO;
+using Newtonsoft.Json.Linq;
 
 [System.Serializable]
 public class ApiKeyData
 {
-    public string apiKey;
+    public string apiKeyNomicAI;
+    public string apiKeyGoogle;
 }
 
-public class NomicAI : MonoBehaviour
+public class RecommendAI : MonoBehaviour
 {
-    public static NomicAI INSTANCE;
+    public static RecommendAI INSTANCE;
     private void Awake()
     {
         INSTANCE = this;
     }
     private void Start()
     {
+
         DontDestroyOnLoad(gameObject);
     }
     public void CompareItems(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
@@ -42,7 +45,7 @@ public class NomicAI : MonoBehaviour
             texts = new string[] { descA, descB }
         };
         string jsonBody = JsonUtility.ToJson(payload);
-
+        ApiKeyData keys = LoadApiKeys();
         // UnityWebRequest setup
         using (UnityWebRequest request = new UnityWebRequest(apiUrl, "POST"))
         {
@@ -50,7 +53,7 @@ public class NomicAI : MonoBehaviour
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
-            request.SetRequestHeader("Authorization", "Bearer " + LoadApiKey());
+            request.SetRequestHeader("Authorization", "Bearer " + keys.apiKeyNomicAI);
 
             yield return request.SendWebRequest();
 
@@ -75,7 +78,7 @@ public class NomicAI : MonoBehaviour
             }
             else
             {
-                Debug.Log("Error: " + request.error + "\n" + request.downloadHandler.text);
+                Talking.INSTANCE.Talk(weapon2Name);
             }
         }
     }
@@ -114,7 +117,7 @@ public class NomicAI : MonoBehaviour
         public float[] values;
     }
 
-    public static string LoadApiKey()
+    public static ApiKeyData LoadApiKeys()
     {
         string path = Path.Combine(Application.streamingAssetsPath, "apikey.json");
 
@@ -122,7 +125,7 @@ public class NomicAI : MonoBehaviour
         {
             string json = File.ReadAllText(path);
             ApiKeyData data = JsonUtility.FromJson<ApiKeyData>(json);
-            return data.apiKey;
+            return data;
         }
         else
         {
@@ -130,4 +133,70 @@ public class NomicAI : MonoBehaviour
             return null;
         }
     }
+
+    public void ThinkAboutTwoWeapon(string item1Description, string item2Description, string weapon1Name, string weapon2Name)
+    {
+        StartCoroutine(CallGeminiAPI(item1Description,item2Description,weapon1Name,weapon2Name));
+    }
+
+    IEnumerator CallGeminiAPI(string item1Description, string item2Description, string weapon1Name, string weapon2Name)
+    {
+        string apiURL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=";
+        string text = $"calculate how many dame 2 weapon can deal per sec with given attribute, and only give me the SHORTEST conclusion (no more than 15 words) is which weapon seem better to which due to what, and ansswer sound more like a human thinking like Hmmm... which is better : {weapon2Name}, {item2Description} and {weapon1Name}, {item1Description}";
+        string jsonPayload = $"{{\"contents\": [{{\"parts\":[{{\"text\": \"{text}\"}}]}}]}}";
+        ApiKeyData keys = LoadApiKeys();
+
+        UnityWebRequest request = new UnityWebRequest(apiURL + keys.apiKeyGoogle, "POST");
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonPayload);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            GeminiResponse geminiResponse = JsonConvert.DeserializeObject<GeminiResponse>(request.downloadHandler.text);
+            string resultText = geminiResponse?.candidates?[0]?.content?.parts?[0]?.text;
+            string cleanedText = resultText?.Replace("\n", "");
+            Talking.INSTANCE.Talk(cleanedText);
+        }
+        else
+        {
+            Talking.INSTANCE.Talk(weapon2Name);
+        }
+    }
+    public class Part
+    {
+        public string text { get; set; }
+    }
+
+    public class Content
+    {
+        public List<Part> parts { get; set; }
+        public string role { get; set; }
+    }
+
+    public class Candidate
+    {
+        public Content content { get; set; }
+        public string finishReason { get; set; }
+        public double avgLogprobs { get; set; }
+    }
+
+    public class UsageMetadata
+    {
+        public int promptTokenCount { get; set; }
+        public int candidatesTokenCount { get; set; }
+        public int totalTokenCount { get; set; }
+    }
+
+    public class GeminiResponse
+    {
+        public List<Candidate> candidates { get; set; }
+        public UsageMetadata usageMetadata { get; set; }
+        public string modelVersion { get; set; }
+    }
+
 }

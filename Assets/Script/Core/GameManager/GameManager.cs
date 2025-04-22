@@ -63,6 +63,26 @@ public class GameManager : MonoBehaviour
     {
         weaponUsing = weapon;
     }
+    public void SaveWhenDead()
+    {
+        if (!gameId.IsEmpty())
+        {
+            FirebaseDatabaseManager.Instance.UpdatePlayTimeAndEnemiesKilled(
+            playerId,
+            gameId,
+            characterPlayed,
+            currentLevel,
+            currentStage,
+            TimePlayed,
+            EnemyKilled,
+            BossKilled,
+            win,
+            normalSkill,
+            ultimateSkill,
+            weaponuUsed
+        );
+        }
+    }
 
     public void UpdateEnemyKilled()
     {

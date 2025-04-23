@@ -6,16 +6,20 @@ public class RedDevil_Health : MonoBehaviour, IDamageable
     [HideInInspector] public RedDevil enemyHealth;
     public bool isHurt;
     private bool isDead;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         isDead = false;
         isHurt = false;
         enemyHealth = GetComponent<RedDevil>();
+        BossHealthBarController.Instance.UpdateSlider(enemyHealth.health, enemyHealth.maxHealth);
     }
+
     public void takeDame(int damage)
     {
         enemyHealth.health -= damage;
+        BossHealthBarController.Instance.UpdateSlider(enemyHealth.health, enemyHealth.maxHealth);
         if (enemyHealth.health <= 0 && !isDead)
         {
             isDead = true;

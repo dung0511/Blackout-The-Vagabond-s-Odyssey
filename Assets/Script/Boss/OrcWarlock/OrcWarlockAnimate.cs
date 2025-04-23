@@ -48,19 +48,19 @@ public class OrcWarlockAnimate : MonoBehaviour
     {
 
        // enemy.animator.SetBool(AnimationParameters.isIdle, false);
-        enemy.animator.SetBool(AnimationParameters.isWalk, true);
+        //enemy.animator.SetBool(OrcWarlockAnimationParameters.isMoving, true);
     }
     private void SetIdleAnimationParameters()
     {
 
-        enemy.animator.SetBool(AnimationParameters.isWalk, false);
+       // enemy.animator.SetBool(OrcWarlockAnimationParameters.isMoving, false);
        // enemy.animator.SetBool(AnimationParameters.isIdle, true);
     }
 }
 public static class OrcWarlockAnimationParameters
 {
     public static int isIdle = Animator.StringToHash("isIdle");
-    public static int isWalk = Animator.StringToHash("isMoving");
+    public static int isMoving = Animator.StringToHash("isMoving");
     public static int isAttack = Animator.StringToHash("isAtatck");
     public static int isDead = Animator.StringToHash("isDead");
 

@@ -7,15 +7,12 @@ public class MeleeWeapon : BaseWeapon, IPick
 {
     public SpriteRenderer characterSR;
     public Animator animator;
-    public float lastAttackTime=0f;
+    private float lastAttackTime=0f;
     public float attackCoolDown;
     public bool inHand;
     public int damage;
     public MeleeWeaponSO MeleeWeaponSO;
     public WeaponDetailSO weaponDetailSO;
-
-    private int attackIndex = 1;
-    private float comboResetTime = 5f;
 
     void Start()
     {
@@ -63,20 +60,27 @@ public class MeleeWeapon : BaseWeapon, IPick
     public override void Attack()
     {
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName($"Attack{attackIndex}"))
-            return;
+        //if (animator.GetCurrentAnimatorStateInfo(0).IsName($"Attack{attackIndex}"))
+        //    return;
 
 
-        if (Time.time - lastAttackTime > comboResetTime)
-            attackIndex = 1;
+        //if (Time.time - lastAttackTime > comboResetTime)
+        //    attackIndex = 1;
 
-        animator.ResetTrigger($"Attack{attackIndex}");
-        animator.SetTrigger($"Attack{attackIndex}");
-        WeaponSoundEffect();
-        lastAttackTime = Time.time;
+        //animator.ResetTrigger($"Attack{attackIndex}");
+        //animator.SetTrigger($"Attack{attackIndex}");
+        //WeaponSoundEffect();
+        //lastAttackTime = Time.time;
 
-        attackIndex++;
-        if (attackIndex > 3) attackIndex = 1;
+        //attackIndex++;
+        //if (attackIndex > 3) attackIndex = 1;
+        if (Time.time - lastAttackTime > attackCoolDown)
+        {
+            animator.SetTrigger("isMeleeAttack");
+            lastAttackTime = Time.time;
+        }
+            
+
     }
 
     public override void RotateWeapon()

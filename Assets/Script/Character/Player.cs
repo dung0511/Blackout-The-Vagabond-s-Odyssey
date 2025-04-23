@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
         health = (int)characterSO.maxHealth;
         armor = (int)characterSO.maxArmor;
         speed = characterSO.moveSpeed;
-        ImageDisplay.INSTANCE.SetImage(characterSO.characterImage);
         rd = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         healthController = GetComponent<PlayerHealthController>();
@@ -56,6 +55,11 @@ public class Player : MonoBehaviour
         if (skillController == null)
         {
             Debug.LogError("Skill Controller is missing on Player!");
+        }
+
+        if (ImageDisplay.INSTANCE != null)
+        {
+            ImageDisplay.INSTANCE.SetImage(characterSO.characterImage);
         }
         //inventory = new Inventory();
     }

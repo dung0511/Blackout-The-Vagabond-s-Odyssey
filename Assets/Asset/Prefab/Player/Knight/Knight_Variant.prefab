@@ -194,13 +194,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: characterSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a42398099368d6848ad1ebd07363a78c, type: 2}
+    - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: skillUIPrefab
       value: 
       objectReference: {fileID: 7734719859815889031, guid: 4d34fad53ecddfc4ba36644d073072e4, type: 3}
     - target: {fileID: 5613841785121754680, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: playerDetailSO
       value: 
-      objectReference: {fileID: 11400000, guid: fdad02e2bb135e14f93c6cb540489538, type: 2}
+      objectReference: {fileID: 11400000, guid: a42398099368d6848ad1ebd07363a78c, type: 2}
     - target: {fileID: 6480235433492756719, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Controller
       value: 

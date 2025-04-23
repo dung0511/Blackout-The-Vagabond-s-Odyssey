@@ -125,7 +125,7 @@ public class OrcWarlock : MonoBehaviour
         isUsingSkill1 = false;
         foreach (Transform child in bulletPrefab1.transform)
         {
-            if (!child.gameObject.activeSelf)
+            if (child.gameObject.activeInHierarchy)
             {
                 child.gameObject.SetActive(false);
             }
@@ -161,6 +161,7 @@ public class OrcWarlock : MonoBehaviour
                 Vector2 shootDirection = Quaternion.Euler(0, 0, angle) * baseDirection;
 
                 GameObject bullet = PoolManagement.Instance.GetBullet(bulletPrefab2,true);
+                bullet.GetComponent<OrcWarlockBulletHitBox>().OrcWarlock = this;
                 bullet.transform.position = firePoint.position;
                 bullet.transform.rotation = Quaternion.identity;
 

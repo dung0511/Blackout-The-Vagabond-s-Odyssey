@@ -8,14 +8,14 @@ public class OrcWarlockBulletHitBox : MonoBehaviour
     private void Start()
     {
        // GameObject obj = GameObject.Find("OrcWarlock(Clone)").GetComponent<OrcWarlock>().gameObject;
-        damage = OrcWarlock.damage;
+        
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<IDamageable>(out var player))
         {
-            player.takeDame(damage);
+            player.takeDame(OrcWarlock.damage);
             PoolManagement.Instance.ReturnBullet(gameObject, BulletIdentifier.bulletPrefabReference);
         }
         PoolManagement.Instance.ReturnBullet(gameObject, BulletIdentifier.bulletPrefabReference);

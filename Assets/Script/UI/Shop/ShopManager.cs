@@ -16,7 +16,7 @@ public class ShopManager : MonoBehaviour
 
     private int[] prices = new int[8];
     private int[] quantities = new int[8];
-    private int playerCoins = 2000; // test
+    private int playerCoins = 1000; // test
 
     private GameObject[] itemPrefabs = new GameObject[8];
 

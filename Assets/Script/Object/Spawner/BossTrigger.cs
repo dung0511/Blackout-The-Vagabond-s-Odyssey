@@ -22,6 +22,7 @@ public class BossTrigger : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             SpawnBoss();
 
+            BossHealthBarController.Instance.Show();
             GameManager.Instance.PlayCurrentStageBossMusic();
         }
         

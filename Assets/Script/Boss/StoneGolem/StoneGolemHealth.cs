@@ -11,6 +11,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
     {
         isHurt = false;
         stoneGolemHealth = GetComponent<StoneGolem>();
+        BossHealthBarController.Instance.UpdateSlider(stoneGolemHealth.health, stoneGolemHealth.maxHealth);
     }
 
     public void takeDame(int damage)
@@ -18,6 +19,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
         if(!stoneGolemHealth.isDead && !stoneGolemHealth.isImmune)
         {
             stoneGolemHealth.health -= damage;
+            BossHealthBarController.Instance.UpdateSlider(stoneGolemHealth.health, stoneGolemHealth.maxHealth);
             if (stoneGolemHealth.health <= 0)
             {
                 stoneGolemHealth.health = 0;
@@ -63,7 +65,7 @@ public class StoneGolemHealth : MonoBehaviour, IDamageable
             int healThisFrame = Mathf.Min(healPerFrame, totalHeal - healedAmount);
             stoneGolemHealth.health = Mathf.Min(stoneGolemHealth.health + healThisFrame, stoneGolemHealth.maxHealth);
             healedAmount += healThisFrame;
-
+            BossHealthBarController.Instance.UpdateSlider(stoneGolemHealth.health, stoneGolemHealth.maxHealth);
             yield return null; 
         }
     }

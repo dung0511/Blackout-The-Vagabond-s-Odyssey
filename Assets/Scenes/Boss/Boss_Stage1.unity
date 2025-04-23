@@ -1651,17 +1651,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1914124792}
     m_Modifications:
-    - target: {fileID: 5983921758987310156, guid: 1cd01853931608b4eb0948708a020c55, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 500113688}
-    - target: {fileID: 6386044067811413563, guid: 1cd01853931608b4eb0948708a020c55, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6386044067811413563, guid: 1cd01853931608b4eb0948708a020c55, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 6602622459150390722, guid: 1cd01853931608b4eb0948708a020c55, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7100137517498381347, guid: 1cd01853931608b4eb0948708a020c55, type: 3}
       propertyPath: m_Pivot.x

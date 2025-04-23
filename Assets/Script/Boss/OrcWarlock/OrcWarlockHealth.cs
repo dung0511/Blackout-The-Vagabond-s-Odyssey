@@ -10,6 +10,7 @@ public class OrcWarlockHealth : MonoBehaviour, IDamageable
     {
         
         orcWarlockHealth = GetComponent<OrcWarlock>();
+        BossHealthBarController.Instance.UpdateSlider(orcWarlockHealth.health, orcWarlockHealth.maxHealth);
     }
 
     public void takeDame(int damage)
@@ -17,6 +18,7 @@ public class OrcWarlockHealth : MonoBehaviour, IDamageable
         if (!orcWarlockHealth.isDead)
         {
             orcWarlockHealth.health -= damage;
+            BossHealthBarController.Instance.UpdateSlider(orcWarlockHealth.health, orcWarlockHealth.maxHealth);
             if (orcWarlockHealth.health <= 0)
             {
                 orcWarlockHealth.health = 0;

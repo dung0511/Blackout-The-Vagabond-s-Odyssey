@@ -240,6 +240,7 @@ public class WorldBoss : MonoBehaviour, IDamageable
     public void takeDame(int damage)
     {
         health-=damage;
+        BossHealthBarController.Instance.UpdateSlider(health, maxHealth);
         if (health <= 0 && !isDead)
         {
             isDead = true;

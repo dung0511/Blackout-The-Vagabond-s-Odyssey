@@ -1,10 +1,34 @@
 fileFormatVersion: 2
-guid: 5dfff0e64c09ff04692f604cbf0054c7
+guid: bfc74db40d7ec1b48a23f4a72d187e1b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7780067467616174067
-    second: Dungeon2_0
+      213: 5912996917179365793
+    second: Inventory-fix-fill_0
+  - first:
+      213: -1876591893934103951
+    second: Inventory-fix-fill_1
+  - first:
+      213: 414609406819657277
+    second: Inventory-fix-fill_2
+  - first:
+      213: -630697715415381815
+    second: Inventory-fix-fill_3
+  - first:
+      213: -1663747980250126167
+    second: Inventory-fix-fill_4
+  - first:
+      213: 970867960091191663
+    second: Inventory-fix-fill_5
+  - first:
+      213: -4781461757177067403
+    second: Inventory-fix-fill_6
+  - first:
+      213: -5181225246351100930
+    second: Inventory-fix-fill_7
+  - first:
+      213: -539926532932941893
+    second: Inventory-fix-fill_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +99,33 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,265 +176,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dungeon2_0
+      name: Inventory-fix-fill_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 21
+        y: 174
+        width: 42
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d004a28dbd5a70490800000000000000
-      internalID: -7780067467616174067
+      spriteID: 1a9b4762e5f2f0250800000000000000
+      internalID: 5912996917179365793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_top
+      name: Inventory-fix-fill_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbec23f8374c2c145a82b563f102735d
-      internalID: -878811199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_outerCorner_top
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0c95a81b487dad42b01227f28730459
-      internalID: 1258460458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall_innerCorner_top
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1279e63c57106464da40dc62262edc0e
-      internalID: -1524957389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Floor_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 84
+        y: 132
+        width: 56
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0b9cc07a7464f8d47889998e47bd2e43
-      internalID: -1426170712
+      spriteID: 1722ea57d9105f5e0800000000000000
+      internalID: -1876591893934103951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_0
+      name: Inventory-fix-fill_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 21
+        y: 159
+        width: 42
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 53ca45ee4a8e04c41983d8798deb3086
-      internalID: 1215148376
+      spriteID: d36650e0f0df0c500800000000000000
+      internalID: 414609406819657277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_2
+      name: Inventory-fix-fill_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 15
+        y: 95
+        width: 50
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 45084c56988ee9848a3f945cf61f0b66
-      internalID: 647139746
+      spriteID: 9c80408f4cf4f37f0800000000000000
+      internalID: -630697715415381815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_innerCorner_bottom
+      name: Inventory-fix-fill_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 84
+        y: 100
+        width: 56
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cfb7f37b54c30a545baf9f97f6b1d1f0
-      internalID: -2125247569
+      spriteID: 9a8ea61e60e29e8e0800000000000000
+      internalID: -1663747980250126167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_outerCorner_bottom
+      name: Inventory-fix-fill_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4
+        y: 20
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a38a4b184f860454f89cc37249098d14
-      internalID: 1382311641
+      spriteID: f692b0d0447397d00800000000000000
+      internalID: 970867960091191663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_bottom
+      name: Inventory-fix-fill_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 79
+        y: 31
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 56f10d5c8aa9b6f48a2c11183f6066c0
-      internalID: 951147210
+      spriteID: 57888587dd5d4adb0800000000000000
+      internalID: -4781461757177067403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_left
+      name: Inventory-fix-fill_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 85
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 540900944e8c83045a2411f32d722070
-      internalID: 1408648038
+      spriteID: ef3f4f9f6179818b0800000000000000
+      internalID: -5181225246351100930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall_right
+      name: Inventory-fix-fill_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 117
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 32994fd1c944e914ba197bad70e1556b
-      internalID: 2068997539
+      spriteID: bb749bfcdabc188f0800000000000000
+      internalID: -539926532932941893
       vertices: []
       indices: 
       edges: []
@@ -393,7 +377,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a2c197a223937e744bb3fe1589061471
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -403,34 +387,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dungeon2_0: -7780067467616174067
-      Dungeon2_13: 1888771631
-      Dungeon2_14: 228864524
-      Dungeon2_15: -1892456561
-      Dungeon2_19: 1306759844
-      Dungeon2_2: -954592617
-      Dungeon2_22: 161862366
-      Dungeon2_23: 1398303793
-      Dungeon2_24: 2126433267
-      Dungeon2_25: 1691764773
-      Dungeon2_28: -1893050083
-      Dungeon2_29: 109597060
-      Dungeon2_3: 1749100909
-      Dungeon2_4: -355417479
-      Dungeon2_5: -1113355514
-      Dungeon2_8: 623021658
-      Dungeon2_9: -780042276
-      Floor_0: 1215148376
-      Floor_1: -1426170712
-      Floor_2: 647139746
-      Wall_bottom: 951147210
-      Wall_innerCorner_bottom: -2125247569
-      Wall_innerCorner_top: -1524957389
-      Wall_left: 1408648038
-      Wall_outerCorner_bottom: 1382311641
-      Wall_outerCorner_top: 1258460458
-      Wall_right: 2068997539
-      Wall_top: -878811199
+      Inventory-fix-fill_0: 5912996917179365793
+      Inventory-fix-fill_1: -1876591893934103951
+      Inventory-fix-fill_2: 414609406819657277
+      Inventory-fix-fill_3: -630697715415381815
+      Inventory-fix-fill_4: -1663747980250126167
+      Inventory-fix-fill_5: 970867960091191663
+      Inventory-fix-fill_6: -4781461757177067403
+      Inventory-fix-fill_7: -5181225246351100930
+      Inventory-fix-fill_8: -539926532932941893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

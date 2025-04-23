@@ -11,7 +11,7 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI coins;
     public GameObject skillsUI;
     public GameObject weaponStatus;
-
+    public GameObject Image;
     private void Awake()
     {
         if (Instance == null)
@@ -26,6 +26,7 @@ public class HUD : MonoBehaviour
 
     public void ShowHUD()
     {
+        Image.SetActive(true);
         healthBar.gameObject.SetActive(true);
         armorBar.gameObject.SetActive(true);
         coins.gameObject.SetActive(true);

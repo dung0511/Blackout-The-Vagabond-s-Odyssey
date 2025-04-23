@@ -17,7 +17,7 @@ namespace Assets.Script.Weapon.Throwable_Weapon
         public float throwCooldown = 0.5f;
         public float throwForce = 20f;
         public int dame = 1;
-        public Animation animation;
+        public Animator animation;
         private float lastThrowTime = -10f;
 
         public ThrowableWeaponStraightSO throwableWeaponSO;
@@ -57,37 +57,43 @@ namespace Assets.Script.Weapon.Throwable_Weapon
             {
                 characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
                 inHand = true;
-               
+
             }
             else
             {
 
                 inHand = false;
-               
+
                 DropWeapon();
             }
         }
 
-        public override void Attack()
+        public void AttackEvent()
         {
             float angle = RotateToMousePos();
+            GameObject bulletTmp = PoolManagement.Instance.GetBullet(throwablePrefab);
+
+            if (bulletTmp == null) return;
+            bulletTmp.GetComponent<ThrowableWeaponHitBox>().weapon = this;
+            bulletTmp.transform.position = firePos.position;
+            bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle);
+            Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+
+            rb.linearVelocity = Vector2.zero;
+            rb.AddForce(transform.right * throwForce, ForceMode2D.Impulse);
+
+            WeaponSoundEffect();
+
+        }
+
+        public override void Attack()
+        {
             float elapsedTime = Time.time - lastThrowTime;
 
             if (elapsedTime >= throwCooldown)
             {
                 lastThrowTime = Time.time;
-                GameObject bulletTmp = PoolManagement.Instance.GetBullet(throwablePrefab);
-
-                if (bulletTmp == null) return;
-
-                bulletTmp.transform.position = firePos.position;
-                bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle);
-                Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
-
-                rb.linearVelocity = Vector2.zero;
-                rb.AddForce(transform.right * throwForce, ForceMode2D.Impulse);
-
-                WeaponSoundEffect();
+                animation.SetTrigger("isAttack");
             }
         }
 

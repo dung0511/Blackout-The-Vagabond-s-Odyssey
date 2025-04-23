@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &985285946117216400
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2203416375770899183, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203416375770899183, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3ea406b88c203f9459c3fd8911741b45, type: 2}
+    - target: {fileID: 2396695768671882260, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Size.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396695768671882260, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Size.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396695768671882260, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4039527258408786561, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
+    - target: {fileID: 2396695768671882260, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3240814153227571968, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895326479464317989, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Name
+      value: RedLazerSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941537073664199556, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124870356856834160, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.11545515
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124870356856834160, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.4323883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124870356856834160, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124870356856834160, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124870356856834160, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124870356856834160, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: animation
+      value: 
+      objectReference: {fileID: 1409387580186060692}
+    - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: weaponDetailSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e4a82b6cc0fd2a45b91424920e41654, type: 2}
+    - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: throwablePrefab
+      value: 
+      objectReference: {fileID: 6384805661112185774, guid: 597585b05a9c1d6478417fd1a70cc397, type: 3}
+    - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: throwableWeaponSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a978b5b8eedbf94a87d02a75ef30fe2, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 753492763bf880640a1054c618084015, type: 3}
+--- !u!95 &1409387580186060692 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2171674898678038276, guid: 753492763bf880640a1054c618084015, type: 3}
+  m_PrefabInstance: {fileID: 985285946117216400}
+  m_PrefabAsset: {fileID: 0}

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2171674898678038276, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2b61d53fbc02aee4ab12d76e72325501, type: 2}
+    - target: {fileID: 2203416375770899183, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2b61d53fbc02aee4ab12d76e72325501, type: 2}
     - target: {fileID: 4895326479464317989, guid: 753492763bf880640a1054c618084015, type: 3}
       propertyPath: m_Name
       value: SmallDagger_Throwable
@@ -68,10 +76,18 @@ PrefabInstance:
       propertyPath: throwableWeaponDetail
       value: 
       objectReference: {fileID: 11400000, guid: 8327aee148e79694683585bbc069eec4, type: 2}
+    - target: {fileID: 7262942241341071615, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8722967648577535633, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
     - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 5261443309028266430, guid: 2b67596b96911b641a48d0f5b6958232, type: 3}
+    - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
+      propertyPath: animation
+      value: 
+      objectReference: {fileID: 8944154542828358011}
     - target: {fileID: 7421989065815555888, guid: 753492763bf880640a1054c618084015, type: 3}
       propertyPath: weaponDetailSO
       value: 
@@ -96,5 +112,10 @@ PrefabInstance:
 --- !u!4 &5691138938020636031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3240814153227571968, guid: 753492763bf880640a1054c618084015, type: 3}
+  m_PrefabInstance: {fileID: 7062580979527661183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8944154542828358011 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2171674898678038276, guid: 753492763bf880640a1054c618084015, type: 3}
   m_PrefabInstance: {fileID: 7062580979527661183}
   m_PrefabAsset: {fileID: 0}

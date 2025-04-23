@@ -181,7 +181,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Stage1");
         HUD.Instance.ShowHUD();
         SkillCooldownUI.Instance.InitializeSkillIcons();
-        //ShopManager.Instance.ResetCoins();
+        
     }
 
     public void NextLevel()
@@ -330,6 +330,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        ShopManager.Instance.ResetCoins();
+        //ShopManager.Instance.ResetCoins();
     }
 }

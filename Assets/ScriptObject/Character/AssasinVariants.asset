@@ -19,7 +19,7 @@ MonoBehaviour:
   characterName: Veyl, the Phantom Reaper
   maxHealth: 10
   maxArmor: 7
-  moveSpeed: 8
+  moveSpeed: 7
   characterSkillIcon1: {fileID: 21300000, guid: a7a3909a35e24f44e9183359cfb7f6b2, type: 3}
   characterSkillDescription1: Phantom Slash
   characterSkillIcon2: {fileID: 21300000, guid: 98ceec9f429ced945bb803c39b135bd7, type: 3}

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
@@ -25,12 +26,23 @@ public class ShopManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); 
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ResetShop(); 
     }
 
     void Start()
@@ -46,7 +58,7 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < prices.Length; i++)
         {
-            prices[i] = Random.Range(10, 301); 
+            prices[i] = Random.Range(10, 201); 
         }
 
         for (int i = 0; i < 4; i++)
@@ -135,9 +147,27 @@ public class ShopManager : MonoBehaviour
         UpdateCoinsUI();
     }
 
+    public void ResetShop()
+    {
+        InitShopItems();
+        quantities = new int[8];
+        UpdateAllButtonQuantities();
+    }
+
     public void AddCoins(int randomValue)
     {
         playerCoins += randomValue;
         UpdateCoinsUI();
     }
+    public void UpdateAllButtonQuantities()
+    {
+        foreach (var button in buttonSlots)
+        {
+            if (button != null)
+            {
+                button.UpdateUI(); 
+            }
+        }
+    }
+
 }

@@ -1658,7 +1658,6 @@ MonoBehaviour:
   armorBar: {fileID: 750037972}
   coins: {fileID: 1784969936}
   skillsUI: {fileID: 309465504}
-  weaponStatus: {fileID: 0}
 --- !u!1 &147419621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,7 +1863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169219722
@@ -30854,6 +30853,14 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9069576102996324909, guid: b23bd452443d6264a88143a0129d6535, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069576102996324909, guid: b23bd452443d6264a88143a0129d6535, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -36822,7 +36829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -154, y: 0.60559}
+  m_AnchoredPosition: {x: -140.3, y: 0.60559}
   m_SizeDelta: {x: 53.7871, y: 51.2112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936437558
@@ -38750,7 +38757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106355107

@@ -604,9 +604,9 @@ TextureImporter:
       name: health_potion_i
       rect:
         serializedVersion: 2
-        x: 51
+        x: 52
         y: 0
-        width: 10
+        width: 8
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -667,72 +667,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mana_potion_ii
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 32
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc1339bb1e2280544b1846e6f2dc610f
-      internalID: 1700114005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mana_potion_i
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 805f2a70ed40dc447b9e0aed2434bff1
-      internalID: 6285645462315052536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strength_potion
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 208
-        width: 10
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36e7a1cad9538f1458182acb28139dab
-      internalID: 345279977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: speed_potion
       rect:
         serializedVersion: 2
@@ -785,7 +719,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

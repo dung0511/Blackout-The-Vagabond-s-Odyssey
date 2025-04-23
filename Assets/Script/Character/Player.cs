@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     public bool isOpenBag = false;
 
-    public PlayerDetailSO playerDetailSO;
+    public CharacterVariantSO characterSO;
 
     public GameObject menu;
 
@@ -39,10 +39,10 @@ public class Player : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        health = playerDetailSO.playerHealthAmount;
-        armor = playerDetailSO.playerArmorAmount;
-        speed = playerDetailSO.playerSpeedAmount;
-
+        health = (int)characterSO.maxHealth;
+        armor = (int)characterSO.maxArmor;
+        speed = characterSO.moveSpeed;
+        ImageDisplay.INSTANCE.SetImage(characterSO.characterImage);
         rd = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         healthController = GetComponent<PlayerHealthController>();

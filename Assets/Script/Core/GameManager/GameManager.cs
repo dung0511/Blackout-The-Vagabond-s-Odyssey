@@ -217,9 +217,8 @@ public class GameManager : MonoBehaviour
         }
         else //normal dungeon level
         {
-            if(currentStage > 2) SceneManager.LoadScene("Stage1");
+            if(currentStage > maxStage) SceneManager.LoadScene("Stage1");
             else SceneManager.LoadScene("Stage" + currentStage);
-            
         }
 
     }

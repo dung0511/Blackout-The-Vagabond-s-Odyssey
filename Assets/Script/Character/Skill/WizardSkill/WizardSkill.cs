@@ -125,6 +125,7 @@ public class WizardSkill : BaseSkill
             yield return null;
         }
         canUseTeleport = false;
+        StartCoroutine(ResetNormalSkillCoolDown());
         SkillCooldownUI.Instance.TriggerCooldown_E(normalSkillCoolDown);
         SkillCooldownUI.Instance.glowEffect_E.enabled = false;
     }
@@ -160,7 +161,7 @@ public class WizardSkill : BaseSkill
         {
             ShootFireBall();
             canUseTeleport = true;
-            StartCoroutine(ResetNormalSkillCoolDown());
+            
         }
         else if (canUseTeleport)
         {

@@ -70,7 +70,11 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             {
                 item.enabled = false;
             }
-            enemyHealth.roomBelong.OnEnemyDeath();
+            if (enemyHealth.roomBelong != null)
+            {
+                enemyHealth.roomBelong.OnEnemyDeath();
+            }
+            
             if (attackType == AttackType.NormalSkill)
             {
                 GameManager.Instance.UpdateEnemyKilledByNormalSkill();

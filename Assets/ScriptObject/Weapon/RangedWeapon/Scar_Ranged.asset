@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: Scar
   rangedWeaponPrefab: {fileID: 1952707006780246198, guid: 77925849cc89f9648ae2ef282367e112, type: 3}
   runtimeAnimatorController: {fileID: 0}
+  type: 0
   damageRangedWeapon: 2
-  TimeBtwFire: 0.75
+  TimeBtwFire: 0.6
   bulletForce: 20
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 0
+  spreadAngle: 0

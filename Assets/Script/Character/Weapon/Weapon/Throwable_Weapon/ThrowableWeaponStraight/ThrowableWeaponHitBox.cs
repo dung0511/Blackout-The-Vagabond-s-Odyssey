@@ -5,11 +5,11 @@ using UnityEngine.Tilemaps;
 
 public class ThrowableWeaponHitBox : MonoBehaviour
 {
-    private ThrowableWeaponStraight weapon;
+    public ThrowableWeaponStraight weapon;
 
     private void Awake()
     {
-        weapon = GameObject.Find("Weapon").GetComponentInChildren<ThrowableWeaponStraight>();
+        //weapon = GameObject.Find("Weapon").GetComponentInChildren<ThrowableWeaponStraight>();
 
     }
 

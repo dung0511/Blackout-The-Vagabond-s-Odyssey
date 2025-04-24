@@ -1,126 +1,11 @@
 
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
 public class RangedWeapon : BaseWeapon, IPick
 {
-    //public GameObject bullet;
-    //public Transform firePos;
-    //public float TimeBtwFire = 0.2f;
-    //public float bulletForce;
-    //public int BulletDame;
-    //// private float timeBtwFire = 0;
-    //private float lastFireTime = 0;
-    //private bool isFiring = false;
-    //public bool inHand;
-    //public SpriteRenderer currentCharacterSR;
-    //public RangedWeaponSO rangedDetail;
-
-    //void Start()
-    //{
-    //    TimeBtwFire = rangedDetail.TimeBtwFire;
-    //    bulletForce = rangedDetail.bulletForce;
-    //    BulletDame = rangedDetail.damageRangedWeapon;
-    //    if (GetComponentInParent<WeaponController>() != null )
-    //    {
-    //        Transform player = transform.parent.parent;
-    //        currentCharacterSR = player.GetComponentInChildren<SpriteRenderer>();
-    //        inHand = true;
-    //        GetComponent<BoxCollider2D>().enabled = false;
-
-    //    }
-    //    else
-    //    {
-    //        inHand = false;
-    //        InGround(gameObject);
-    //    }
-
-    //}
-
-    //void Update()
-    //{
-    //    if (inHand)
-    //    {
-    //        GetComponent<BoxCollider2D>().enabled = false;
-    //        RotateGun();
-    //        if (Input.GetMouseButton(0))
-    //        {
-    //            Fire();
-    //        }
-
-    //    }
-
-    //}
-
-    //void RotateGun()
-    //{
-    //    float angle = RotateToMousePos();
-
-    //    transform.rotation = Quaternion.Euler(0, 0, angle);
-
-    //    bool isFlipped = angle > 90 || angle < -90;
-
-    //    currentCharacterSR.gameObject.transform.localScale = new Vector3(isFlipped ? -1 : 1,
-    //        currentCharacterSR.gameObject.transform.localScale.y, 1);
-
-    //    transform.localScale = new Vector3(0.6f, isFlipped ? -0.6f : 0.6f, 1);
-    //}
-
-    //public void Fire()
-    //{
-    //    float angle = RotateToMousePos();
-    //    float elapsedTime = Time.time - lastFireTime;
-
-    //    if (elapsedTime >= TimeBtwFire)
-    //    {
-    //        lastFireTime = Time.time;
-    //        GameObject bulletTmp = PoolManagement.Instance.GetBullet(bullet);
-
-    //        if (bulletTmp == null) return; 
-
-    //        bulletTmp.transform.position = firePos.position;
-    //        bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
-    //        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
-
-    //        rb.linearVelocity = Vector2.zero;
-    //        rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
-
-
-    //        if (!isFiring)
-    //        {
-    //            isFiring = true;
-    //            firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", true);
-    //            Invoke(nameof(StopFiringAnimation), 0.2f);
-    //        }
-    //    }
-    //}
-
-
-    //private float RotateToMousePos()
-    //{
-    //    Vector3 mousePos = Input.mousePosition;
-    //    mousePos.z = Camera.main.nearClipPlane;
-
-    //    Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
-    //    Vector2 lookDir = (Vector2)(worldMousePos - transform.position);
-    //    return Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-    //}
-    //private void StopFiringAnimation()
-    //{
-    //    isFiring = false;
-    //    firePos.gameObject.GetComponent<Animator>().SetBool("isFiring", false);
-    //}
-
-    //public void InGround(GameObject game)
-    //{
-    //    game.GetComponent<RangedWeapon>().currentCharacterSR = null;
-    //    game.transform.rotation = Quaternion.identity;
-    //    game.GetComponent<RangedWeapon>().inHand = false;
-    //    game.transform.localScale = new Vector3(5,5,0);
-    //    game.GetComponent<BoxCollider2D>().enabled = true;
-    //}
-
     public SpriteRenderer characterSR;
     public Transform firePos;
     public GameObject bulletPrefab;
@@ -134,6 +19,9 @@ public class RangedWeapon : BaseWeapon, IPick
     public RangedWeaponSO RangedWeaponSO;
     public WeaponDetailSO weaponDetailSO;
 
+    private int burstShotCount = 0;
+    private float lastBurstShotTime;
+    private bool isBursting = false;
     public GameObject GetPickGameOject()
     {
         return gameObject;
@@ -181,32 +69,104 @@ public class RangedWeapon : BaseWeapon, IPick
     }
 
 
+    //public override void Attack()
+    //{
+    //    float angle = RotateToMousePos();
+    //    float elapsedTime = Time.time - lastFireTime;
+
+    //    if (elapsedTime >= fireRate)
+    //    {
+    //        lastFireTime = Time.time;
+    //        GameObject bulletTmp = PoolManagement.Instance.GetBullet(bulletPrefab);
+
+    //        if (bulletTmp == null) return;
+
+
+    //        WeaponSoundEffect();
+
+
+    //        bulletTmp.transform.position = firePos.position;
+    //        bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+    //        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+
+    //        rb.linearVelocity = Vector2.zero;
+    //        rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
+
+
+    //    }
+    //}
+
     public override void Attack()
     {
+        float currentTime = Time.time;
         float angle = RotateToMousePos();
-        float elapsedTime = Time.time - lastFireTime;
 
-        if (elapsedTime >= fireRate)
+        switch (RangedWeaponSO.type)
         {
-            lastFireTime = Time.time;
-            GameObject bulletTmp = PoolManagement.Instance.GetBullet(bulletPrefab);
+            case RangedWeaponFireType.SingleShot:
+                if (currentTime - lastFireTime >= RangedWeaponSO.TimeBtwFire)
+                {
+                    FireBullet(angle);
+                    lastFireTime = currentTime;
+                }
+                break;
 
-            if (bulletTmp == null) return;
+            case RangedWeaponFireType.BurstShot:
+                if (!isBursting && currentTime - lastFireTime >= RangedWeaponSO.TimeBtwFire)
+                {
+                    StartCoroutine(BurstFireRoutine(angle));
+                    lastFireTime = currentTime;
+                }
+                break;
 
+            case RangedWeaponFireType.MultiShot:
+                if (currentTime - lastFireTime >= RangedWeaponSO.TimeBtwFire)
+                {
+                    int bulletCount = Mathf.RoundToInt(RangedWeaponSO.bulletMultiShot);
+                    float totalSpread = RangedWeaponSO.spreadAngle * (bulletCount - 1);
+                    float startAngle = angle - totalSpread / 2f;
 
-            WeaponSoundEffect();
+                    for (int i = 0; i < bulletCount; i++)
+                    {
+                        float bulletAngle = startAngle + i * RangedWeaponSO.spreadAngle;
+                        FireBullet(bulletAngle); 
+                    }
 
-
-            bulletTmp.transform.position = firePos.position;
-            bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
-            Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
-
-            rb.linearVelocity = Vector2.zero;
-            rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
-
-
+                    lastFireTime = currentTime;
+                }
+                break;
         }
     }
+
+    private void FireBullet(float angle)
+    {
+        GameObject bulletTmp = PoolManagement.Instance.GetBullet(bulletPrefab);
+        if (bulletTmp == null) return;
+
+        WeaponSoundEffect();
+
+        bulletTmp.transform.position = firePos.position;
+        bulletTmp.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+        bulletTmp.GetComponent<Bullet>().weapon = this;
+        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(Quaternion.Euler(0, 0, angle) * Vector2.right * RangedWeaponSO.bulletForce, ForceMode2D.Impulse);
+    }
+
+    private IEnumerator BurstFireRoutine(float angle)
+    {
+        isBursting = true;
+
+        int bulletCount = Mathf.RoundToInt(RangedWeaponSO.bulletSequentialShot);
+        for (int i = 0; i < bulletCount; i++)
+        {
+            FireBullet(angle);
+            yield return new WaitForSeconds(RangedWeaponSO.timeBtwEachBullet);
+        }
+
+        isBursting = false;
+    }
+
     public override void RotateWeapon()
     {
         if (!inHand) return;

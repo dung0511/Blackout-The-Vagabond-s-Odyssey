@@ -20,7 +20,7 @@ MonoBehaviour:
     - {fileID: 4991719267474809798, guid: bba56b0eb1181a6428e40b1eaf2d6374, type: 3}
     - {fileID: 2510130182750027063, guid: 84fc3a01fcd391a4e84344940df369aa, type: 3}
     - {fileID: 4593716113324912101, guid: 19ba4172271b0264bb107d2d04da9cce, type: 3}
-    tableChance: 10
+    tableChance: 5
   - loots:
     - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
     tableChance: 30

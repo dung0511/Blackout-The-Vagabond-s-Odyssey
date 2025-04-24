@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: Shotgun
   rangedWeaponPrefab: {fileID: 0}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 0
-  TimeBtwFire: 0
-  bulletForce: 0
+  type: 2
+  damageRangedWeapon: 4
+  TimeBtwFire: 0.7
+  bulletForce: 20
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 4
+  spreadAngle: 10

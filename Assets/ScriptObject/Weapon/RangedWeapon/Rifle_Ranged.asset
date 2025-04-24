@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: Rifle
   rangedWeaponPrefab: {fileID: 4397109434097725736, guid: 4dbe42dc33031dc4984718c2c6eb4878, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 4
-  TimeBtwFire: 0.6
-  bulletForce: 20
+  type: 0
+  damageRangedWeapon: 12
+  TimeBtwFire: 1.5
+  bulletForce: 15
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 0
+  spreadAngle: 0

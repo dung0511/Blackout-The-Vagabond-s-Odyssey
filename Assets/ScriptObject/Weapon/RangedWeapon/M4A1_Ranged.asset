@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: M4A1
   rangedWeaponPrefab: {fileID: 4602839663264541894, guid: b94c3e39ddb28114da8051780c64374a, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 3
-  TimeBtwFire: 0.5
+  type: 1
+  damageRangedWeapon: 2
+  TimeBtwFire: 0.6
   bulletForce: 20
+  bulletSequentialShot: 3
+  timeBtwEachBullet: 0.1
+  bulletMultiShot: 0
+  spreadAngle: 0

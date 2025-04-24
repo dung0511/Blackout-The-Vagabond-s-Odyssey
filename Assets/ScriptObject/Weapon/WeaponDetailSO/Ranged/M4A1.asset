@@ -16,3 +16,4 @@ MonoBehaviour:
   damageWeapon: 3
   attackCooldown: 0.5
   force: 20
+  weaponFiringSoundEffect: {fileID: 11400000, guid: 0d38c34c26bc8e94fad9b13cd072d577, type: 2}

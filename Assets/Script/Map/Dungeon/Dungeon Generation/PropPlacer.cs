@@ -553,12 +553,12 @@ public class PropPlacer : MonoBehaviour
     public void PlaceSpawnRoomProps(BoxRoom room)
     {
 
-        PlacePropCenterAt(room, Vector2.zero, groundPortal);
+        if(groundPortal) PlacePropCenterAt(room, Vector2.zero, groundPortal);
     }
 
     public void PlaceShopRoomProps(BoxRoom room)
     {
-        PlacePropCenterAt(room, room.center, shop);
+        if(shop) PlacePropCenterAt(room, room.center, shop);
     }
 
     public void PlaceExitPortal(BoxRoom room)

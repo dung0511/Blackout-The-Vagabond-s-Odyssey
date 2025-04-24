@@ -3702,7 +3702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: weaponPrefabs.Array.size
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: 'buttonSlots.Array.data[0]'
@@ -3855,7 +3855,15 @@ PrefabInstance:
     - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: 'weaponPrefabs.Array.data[10]'
       value: 
-      objectReference: {fileID: 2481154605548366764, guid: 7dcf1ce0e52eb3c48bdfb973ba6cdb9d, type: 3}
+      objectReference: {fileID: 4503657204465879628, guid: f189f734df2a50c44a8b0cc432a4a3cc, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[11]'
+      value: 
+      objectReference: {fileID: 144486675629276363, guid: 0be0f15d27b12214787a3df5493f0b44, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[12]'
+      value: 
+      objectReference: {fileID: 2444577755630006874, guid: 50531edab2da1634593729fe8a0c6866, type: 3}
     - target: {fileID: 4105271135995199096, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -17767,19 +17775,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 43.6938
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -29.330048
       objectReference: {fileID: 0}
     - target: {fileID: 8519688204058687245, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_Pivot.x

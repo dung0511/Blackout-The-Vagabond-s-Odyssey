@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0622293
       objectReference: {fileID: 0}
+    - target: {fileID: 4778370825942337647, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 9217
+      objectReference: {fileID: 0}
     - target: {fileID: 6944673337687591586, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_Controller
       value: 
@@ -170,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 5128
+      value: 5129
       objectReference: {fileID: 0}
     - target: {fileID: 7781654480190332279, guid: a6d9791a624180547bf4fae64c49b785, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -241,7 +245,7 @@ MonoBehaviour:
   movementToPositionEvent: {fileID: 0}
   idleEvent: {fileID: 0}
   animator: {fileID: 0}
-  damage: 0
+  damage: 1
   health: 200
   maxHealth: 200
   isHurt: 0

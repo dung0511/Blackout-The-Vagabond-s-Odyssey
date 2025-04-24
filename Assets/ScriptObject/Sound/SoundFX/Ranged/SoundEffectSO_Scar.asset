@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5952c6e1fe9c1a44e9afcb302979e9f8, type: 3}
+  m_Name: SoundEffectSO_Scar
+  m_EditorClassIdentifier: 
+  soundEffectName: Scar SFX
+  soundPrefab: {fileID: 6655491090261152015, guid: 9e72ff3ae18df1144903f494ce69776b, type: 3}
+  soundEffectClip: {fileID: 8300000, guid: 4f87fda9302c1fd47ac84d00c00164b8, type: 3}
+  soundEffectPitchRandomVariationMin: 0.8
+  soundEffectPitchRandomVariationMax: 1.2
+  soundEffectVolume: 0.8

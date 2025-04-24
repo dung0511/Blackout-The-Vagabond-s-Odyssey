@@ -14,6 +14,7 @@ public class HUD : MonoBehaviour
     public GameObject Image;
     public GameObject Bag;
     public GameObject Setting;
+    public GameObject Weapon;
 
     private void Awake()
     {
@@ -36,6 +37,8 @@ public class HUD : MonoBehaviour
         skillsUI.gameObject.SetActive(true);
         Bag.SetActive(true);
         Setting.SetActive(true);
+        Weapon.GetComponent<WeaponUI>().Weapon1.SetActive(true);
+       // Weapon.GetComponent<WeaponUI>().Weapon2.SetActive(true);
         //weaponStatus.gameObject.SetActive(true);
     }
 }

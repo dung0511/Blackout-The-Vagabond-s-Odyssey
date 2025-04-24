@@ -943,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1073201710317919012, guid: e0e60a74085226540968fbc53a2e8289, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7373,7 +7373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossList:
-  - {fileID: 1222806960371969017, guid: 6061f46a5867e82488e42df3d2d71ec6, type: 3}
+  - {fileID: 1669468715911591175, guid: cb317cb3bc75e9f448447b6ceb5716c7, type: 3}
   bossKillObject: {fileID: 1551277221}
   bossKillEvent:
     m_PersistentCalls:
@@ -21748,6 +21748,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 1376
     m_Data: {fileID: 11400000, guid: e37328d9e00d48c4ab7007de9161a6d7, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -21775,6 +21777,36 @@ Tilemap:
     m_Data: {fileID: 1768240194, guid: 25ca386e2fb46a745b4af31831024dc3, type: 3}
   - m_RefCount: 42
     m_Data: {fileID: 2096098344, guid: 25ca386e2fb46a745b4af31831024dc3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 209
     m_Data:
@@ -21872,8 +21904,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -25, y: -39, z: 0}
-  m_Size: {x: 50, y: 46, z: 1}
+  m_Origin: {x: -35, y: -39, z: 0}
+  m_Size: {x: 60, y: 46, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:

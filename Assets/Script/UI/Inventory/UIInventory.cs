@@ -69,7 +69,7 @@ public class UIInventory : MonoBehaviour
             uiItem.OnItemBeginDrag += HandleBeginDrag;
             uiItem.OnItemDroppedOn += HandleSwap;
             uiItem.OnItemEndDrag += HandleEndDrag;
-            uiItem.OnRightMouseBtnClick += HandleShowItemsActions;
+            uiItem.OnItemClicked += HandleShowItemsActions;
         }
     }
 

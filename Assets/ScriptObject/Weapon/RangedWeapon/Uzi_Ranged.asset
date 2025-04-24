@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: Uzi
   rangedWeaponPrefab: {fileID: 2107581006266149914, guid: a8a6c7f4b1a80d24da57bcfb489039c1, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 2
-  TimeBtwFire: 0.5
+  type: 0
+  damageRangedWeapon: 1
+  TimeBtwFire: 0.15
   bulletForce: 20
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 0
+  spreadAngle: 0

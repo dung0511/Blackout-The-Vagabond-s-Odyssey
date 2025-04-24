@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: SPAS12
   rangedWeaponPrefab: {fileID: 2481154605548366764, guid: 7dcf1ce0e52eb3c48bdfb973ba6cdb9d, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 2
+  type: 2
+  damageRangedWeapon: 4
   TimeBtwFire: 1
   bulletForce: 22
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 5
+  spreadAngle: 15

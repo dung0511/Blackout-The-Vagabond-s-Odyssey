@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: MB5
   rangedWeaponPrefab: {fileID: 144486675629276363, guid: 0be0f15d27b12214787a3df5493f0b44, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 2
+  type: 0
+  damageRangedWeapon: 3
   TimeBtwFire: 0.4
   bulletForce: 20
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 0
+  spreadAngle: 0

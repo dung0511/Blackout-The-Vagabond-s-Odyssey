@@ -4,13 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class Bullet : MonoBehaviour
 {
-    private RangedWeapon weapon;
-    
-    private void Awake()
-    {
-         weapon = GameObject.Find("Weapon").GetComponentInChildren<RangedWeapon>();
-
-    }
+    public RangedWeapon weapon;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {        

@@ -17,7 +17,7 @@ MonoBehaviour:
   runtimeAnimatorController: {fileID: 0}
   type: 0
   damageRangedWeapon: 8
-  TimeBtwFire: 0.7
+  TimeBtwFire: 1
   bulletForce: 25
   bulletSequentialShot: 0
   timeBtwEachBullet: 0

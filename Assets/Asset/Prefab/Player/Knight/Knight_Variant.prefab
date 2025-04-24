@@ -335,13 +335,13 @@ MonoBehaviour:
   animator: {fileID: 0}
   shieldAnimator: {fileID: 7213241058299375676}
   clonePrefab: {fileID: 1679201450219212099, guid: 74666e98b7994584e80b14aa8edddc9d, type: 3}
-  cloneCoolDown: 8
-  NumberSpawn: 2
-  ultimateCooldown: 30
+  cloneCoolDown: 6
+  NumberSpawn: 3
+  ultimateCooldown: 40
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
-  normalCoolDown: 10
+  normalCoolDown: 15
   shieldCoolDown: 4
   shieldDame: 5
   isUsingNormal: 0

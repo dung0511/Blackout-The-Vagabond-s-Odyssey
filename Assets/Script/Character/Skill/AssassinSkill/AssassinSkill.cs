@@ -38,25 +38,36 @@ public class AssassinSkill : BaseSkill
 
     public override void NormalSkill()
     {
-        
+
         Vector3 mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
 
         Vector3 dashDirection = (mouseWorldPos - transform.root.position).normalized;
 
-        Vector2 startPos = transform.root.position;
-        RaycastHit2D hit = Physics2D.Raycast(startPos, dashDirection, dashDistance, obstacleMask);
+        Rigidbody2D rb = transform.root.GetComponent<Rigidbody2D>();
+        if (rb == null) return;
+
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(obstacleMask);  
+        filter.useTriggers = false;
+
+        RaycastHit2D[] hits = new RaycastHit2D[1];
+        int hitCount = rb.Cast(dashDirection, filter, hits, dashDistance);
 
         Vector3 targetPos;
-        if (hit.collider != null)
+
+        if (hitCount > 0)
         {
-            targetPos = hit.point - (Vector2)dashDirection * 0.3f;
+            float safeDistance = Mathf.Max(hits[0].distance - 0.05f, 0f);
+            targetPos = (Vector3)rb.position + dashDirection * safeDistance;
         }
         else
         {
-            targetPos = transform.root.position + dashDirection * dashDistance;
+            targetPos = (Vector3)rb.position + dashDirection * dashDistance;
         }
+
+
 
         StartCoroutine(Dash(targetPos));
         StartCoroutine(DashCooldown());

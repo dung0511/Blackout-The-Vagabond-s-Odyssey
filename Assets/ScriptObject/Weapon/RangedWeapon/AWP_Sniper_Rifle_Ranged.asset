@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: AWP
   rangedWeaponPrefab: {fileID: 7288438069993136139, guid: afe68af53faa9b046bc3d8b271aa4976, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 8
+  type: 0
+  damageRangedWeapon: 10
   TimeBtwFire: 1
   bulletForce: 25
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 0
+  spreadAngle: 0

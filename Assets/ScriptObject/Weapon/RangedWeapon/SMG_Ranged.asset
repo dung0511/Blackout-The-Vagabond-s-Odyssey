@@ -15,6 +15,11 @@ MonoBehaviour:
   rangedWeaponName: SMG
   rangedWeaponPrefab: {fileID: 5388546679718314358, guid: ce98d0b1881e9424888c6fc9e55ad104, type: 3}
   runtimeAnimatorController: {fileID: 0}
-  damageRangedWeapon: 2
-  TimeBtwFire: 0.4
+  type: 0
+  damageRangedWeapon: 1
+  TimeBtwFire: 0.3
   bulletForce: 20
+  bulletSequentialShot: 0
+  timeBtwEachBullet: 0
+  bulletMultiShot: 0
+  spreadAngle: 0

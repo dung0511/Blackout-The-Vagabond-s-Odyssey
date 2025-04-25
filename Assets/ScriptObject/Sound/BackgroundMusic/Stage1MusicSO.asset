@@ -17,4 +17,4 @@ MonoBehaviour:
   eliteMusics:
   - {fileID: 8300000, guid: b6a3442515c3ce847b1ee3235cdf4117, type: 3}
   bossMusics:
-  - {fileID: 8300000, guid: 87c25e707f955cc408f4e69fafcb1120, type: 3}
+  - {fileID: 8300000, guid: fe45e99739182ac44a0539ee8d5cbfa6, type: 3}

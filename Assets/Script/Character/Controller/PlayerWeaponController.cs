@@ -14,8 +14,11 @@ public class PlayerWeaponController : MonoBehaviour
     public BaseWeapon baseWeapon { get; set; }
     public void Attack()
     {
-        if (Player.Instance.isOpenBag || ShopUI.Instance.isOpenShop)
-            return;
+        //if (ShopUI.Instance != null)
+        //{
+            if (transform.root.GetComponent<InventoryController>().isOpenInventory || ShopUI.Instance.isOpenShop)
+                return;
+       // }
 
         baseWeapon.Attack();
     }
@@ -30,7 +33,7 @@ public class PlayerWeaponController : MonoBehaviour
     {
         baseWeapon = GetComponentInChildren<BaseWeapon>();
         ListObj = GetAllChild();
-        foreach (GameObject obj in GetAllChild())
+        foreach (GameObject obj in ListObj)
         {
             obj.SetActive(false);
         }

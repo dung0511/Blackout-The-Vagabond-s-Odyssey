@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance;
+    //   public static Player Instance;
 
     public Rigidbody2D rd;
     public SpriteRenderer characterSR;
@@ -21,11 +21,9 @@ public class Player : MonoBehaviour
     public bool isDead;
     // public bool isMove;
 
-    public bool isOpenBag = false;
+    // public bool isOpenBag = false;
 
     public CharacterVariantSO characterSO;
-
-    public GameObject menu;
 
     public PlayerHealthController healthController;
     public PlayerArmorController armorController;
@@ -37,7 +35,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        // Instance = this;
         DontDestroyOnLoad(gameObject);
         health = (int)characterSO.maxHealth;
         armor = (int)characterSO.maxArmor;
@@ -108,18 +106,18 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKeyDown(KeyCode.Tab) && !SettingsMenuUI.Instance.isOpenSettingMenu && !ShopUI.Instance.isOpenShop)
             {
-                isOpenBag = !isOpenBag; 
-                UIManager.Instance.ToggleScreen(inventoryController);
-
-                if (isOpenBag)
+                if (!inventoryController.isOpenInventory)
                 {
+                    UIManager.Instance.ToggleScreen(inventoryController);
                     AimPoint.Instance.DisableAim();
-                    Cursor.visible = true; 
+                    Cursor.visible = true;
                 }
                 else
                 {
+
+                    UIManager.Instance.ToggleScreen(inventoryController);
                     AimPoint.Instance.EnableAim();
                 }
             }

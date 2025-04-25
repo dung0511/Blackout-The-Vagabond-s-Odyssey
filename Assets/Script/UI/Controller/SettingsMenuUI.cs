@@ -11,7 +11,7 @@ public class SettingsMenuUI : MonoBehaviour
     //[SerializeField] private Slider vfxSlider;
 
     private bool isPaused = false;
-
+    public bool isOpenSettingMenu = false;
     private void Start()
     {
         settingsPanel.SetActive(false);
@@ -60,11 +60,12 @@ public class SettingsMenuUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ToggleSettingsMenu();
-        }
+    }
     }
 
     public void ToggleSettingsMenu()
     {
+        isOpenSettingMenu = !isOpenSettingMenu;
         isPaused = !isPaused;
         settingsPanel?.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
@@ -73,7 +74,7 @@ public class SettingsMenuUI : MonoBehaviour
     public void ResumeGame()
     {
         isPaused = false;
-
+        isOpenSettingMenu = false;
         if (settingsPanel != null)
         {
             settingsPanel.SetActive(false);
@@ -92,6 +93,7 @@ public class SettingsMenuUI : MonoBehaviour
 
     public void QuitGame()
     {
+        isOpenSettingMenu = false;
         Time.timeScale = 1f;
         DontDestroyCleaner.ClearDDOL();
         SceneManager.LoadScene("Main Menu");

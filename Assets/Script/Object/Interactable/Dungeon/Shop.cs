@@ -15,7 +15,11 @@ public class Shop : Interactable
         isUIOpen = !isUIOpen;
 
         if (isUIOpen)
+        {
+            InventoryController inventoryController = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>();
+            if (inventoryController.isOpenInventory) inventoryController.Close();
             ShopUI.Instance.Show();
+        } 
         else
         {
             ShopUI.Instance.Hide();

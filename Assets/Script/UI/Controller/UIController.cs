@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
         {
             if (SettingsMenuUI.Instance != null)
             {
-                SettingsMenuUI.Instance.ToggleSettingsMenu();
+                SettingsMenuUI.Instance.Show();
             }
         }
     }

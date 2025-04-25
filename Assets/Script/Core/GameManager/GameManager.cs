@@ -179,7 +179,7 @@ public class GameManager : MonoBehaviour
         TimePlayed = Time.time - TimePlayed;
         FirebaseDatabaseManager.Instance.WriteDatabase(playerId, gameId, characterPlayed, currentLevel, currentStage, TimePlayed, EnemyKilled, BossKilled, win, normalSkill, ultimateSkill, weaponuUsed);
 
-        SceneManager.LoadScene("Final_Boss");
+        SceneManager.LoadScene("Stage1");
         HUD.Instance.ShowHUD();
         SkillCooldownUI.Instance.InitializeSkillIcons();
         

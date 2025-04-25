@@ -41,7 +41,7 @@ public class SkillCooldownUI : MonoBehaviour
 
         cooldownText_E.gameObject.SetActive(false);
         cooldownText_Q.gameObject.SetActive(false);
-        //glowEffect_E.gameObject.SetActive(false);
+        glowEffect_E.gameObject.SetActive(false);
     }
 
     public void InitializeSkillIcons()

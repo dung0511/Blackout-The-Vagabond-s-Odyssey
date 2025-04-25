@@ -15,9 +15,9 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <maxStackSize>k__BackingField: 3
   <Name>k__BackingField: Speed Potion
-  <Description>k__BackingField: Increases SPD by 50% for 30s
+  <Description>k__BackingField: Increases SPD by 30% for 30s
   <ItemImage>k__BackingField: {fileID: 1847507124, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
   <DropPrefab>k__BackingField: {fileID: 4593716113324912101, guid: 19ba4172271b0264bb107d2d04da9cce, type: 3}
   modifiersData:
   - statsModifier: {fileID: 11400000, guid: 285591b893eb6ac4696b0792c53ded28, type: 2}
-    value: 50
+    value: 30

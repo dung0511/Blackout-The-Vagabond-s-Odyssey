@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class InventoryController : MonoBehaviour, IUIScreen
 {
+    public static InventoryController Instance { get; private set; }
+
     private UIInventory inventoryUI => UIInventory.Instance;
 
     [SerializeField]
@@ -15,11 +17,22 @@ public class InventoryController : MonoBehaviour, IUIScreen
     public List<InventoryItem> initialItems = new List<InventoryItem>();
 
     public bool isOpenInventory = false;
+
     private void Start()
     {
         PrepareUI();
         PrepareInventoryData();
         playerHealth = GetComponent<PlayerHealthController>();
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
 
     private void PrepareInventoryData()
@@ -155,7 +168,7 @@ public class InventoryController : MonoBehaviour, IUIScreen
         if (Mathf.Approximately(Time.timeScale, 0f))
             return;
 
-        inventoryUI.Show();
+        UIInventory.Instance.Show();
         isOpenInventory = true;
         foreach (var item in inventoryData.GetCurrentState())
         {
@@ -167,7 +180,7 @@ public class InventoryController : MonoBehaviour, IUIScreen
 
     public void Close()
     {
-        inventoryUI.Hide();
+        UIInventory.Instance.Hide();
         isOpenInventory = false;
     }
 }

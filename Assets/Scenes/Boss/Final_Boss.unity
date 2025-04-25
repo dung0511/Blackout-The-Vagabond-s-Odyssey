@@ -10431,7 +10431,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1551806267}
   - component: {fileID: 1551806268}
-  - component: {fileID: 1551806269}
   m_Layer: 9
   m_Name: Center
   m_TagString: Untagged
@@ -10500,22 +10499,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5599786, y: 0.33658352}
   m_EdgeRadius: 0
---- !u!114 &1551806269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551806266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2161f3039cb6f9747b00c4534167af4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationPrefab: {fileID: 94982736995522470, guid: 392b8a40417826143a751fc6e56a52cf, type: 3}
-  delayStart: 1
-  delayHide: 0.2
-  animationOffset: {x: 0, y: -0.25, z: 0}
 --- !u!1001 &1590420312
 PrefabInstance:
   m_ObjectHideFlags: 0

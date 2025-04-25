@@ -14,6 +14,7 @@ public class InventoryController : MonoBehaviour, IUIScreen
 
     public List<InventoryItem> initialItems = new List<InventoryItem>();
 
+    public bool isOpenInventory = false;
     private void Start()
     {
         PrepareUI();
@@ -151,7 +152,11 @@ public class InventoryController : MonoBehaviour, IUIScreen
 
     public void Open()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+            return;
+
         inventoryUI.Show();
+        isOpenInventory = true;
         foreach (var item in inventoryData.GetCurrentState())
         {
             inventoryUI.UpdateData(item.Key,
@@ -163,5 +168,6 @@ public class InventoryController : MonoBehaviour, IUIScreen
     public void Close()
     {
         inventoryUI.Hide();
+        isOpenInventory = false;
     }
 }

@@ -77,6 +77,7 @@ public class MeleeWeapon : BaseWeapon, IPick
         if (Time.time - lastAttackTime > attackCoolDown)
         {
             animator.SetTrigger("isMeleeAttack");
+            WeaponSoundEffect();
             lastAttackTime = Time.time;
         }
             

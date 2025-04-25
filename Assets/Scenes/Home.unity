@@ -2855,6 +2855,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 412784266534307055, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
     - target: {fileID: 596368268165124541, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
       propertyPath: icon
       value: 
@@ -2899,6 +2903,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2041410602366199609, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
     - target: {fileID: 2652736945920186311, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
       propertyPath: m_Name
       value: WeaponSlot 4
@@ -2963,6 +2971,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 950699242}
+    - target: {fileID: 6923256473093924550, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
     - target: {fileID: 7522543519109156839, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3095,6 +3107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8151935222007337202, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
     - target: {fileID: 8192920347089697377, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3123,6 +3139,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1938278314}
+    - target: {fileID: 8547388132443656599, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
     - target: {fileID: 8567985072636866172, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3147,6 +3167,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8836702504237101633, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
     - target: {fileID: 8924357856658824303, guid: afc693db0cf354a4c9b61c228d3166bf, type: 3}
       propertyPath: icon
       value: 
@@ -5589,7 +5613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2431729899919504591, guid: bcc18027cba7b064b81d24084b955f32, type: 3}
+  m_Sprite: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17775,19 +17799,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 43.6938
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29.330048
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519688204058687245, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_Pivot.x
@@ -22364,6 +22388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1459974188}
+  musicSlider: {fileID: 1434984718}
+  sfxSlider: {fileID: 1621148059}
 --- !u!114 &1459974191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36839,7 +36865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2431729899919504591, guid: bcc18027cba7b064b81d24084b955f32, type: 3}
+  m_Sprite: {fileID: -4910467378755017893, guid: 5e02550bccaca644fa3950329be2cd39, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -151,6 +151,9 @@ public class InventoryController : MonoBehaviour, IUIScreen
 
     public void Open()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+            return;
+
         inventoryUI.Show();
         foreach (var item in inventoryData.GetCurrentState())
         {

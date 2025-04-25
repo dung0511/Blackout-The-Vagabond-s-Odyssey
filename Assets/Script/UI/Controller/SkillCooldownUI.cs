@@ -141,28 +141,5 @@ public class SkillCooldownUI : MonoBehaviour
         glowEffect_E.enabled = false;
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //reset all
-        cooldownMask_E.fillAmount = 0;
-        cooldownText_E.gameObject.SetActive(false);
-        glowEffect_E.enabled = false;
-
-        cooldownMask_Q.fillAmount = 0;
-        cooldownText_Q.gameObject.SetActive(false);
-
-        isCoolingDown_E = false;
-        isCoolingDown_Q = false;
-        isReactivating_E = false;
-    }
+    
 }

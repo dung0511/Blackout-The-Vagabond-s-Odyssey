@@ -7,6 +7,16 @@ public class WeaponDetailSO : ScriptableObject
     [Space(10)]
     [Header("WEAPON DETAILS")]
     #endregion
+
+    #region Header Image
+    [Space(10)]
+    [Header("IMAGE")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Image of weapon")]
+    #endregion
+    public Sprite weaponImage;
+
     #region Header Name
     [Space(10)]
     [Header("NAME")]

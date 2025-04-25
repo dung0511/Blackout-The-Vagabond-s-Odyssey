@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using ModestTree;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -162,7 +163,7 @@ public class GameManager : MonoBehaviour
     {
         currentLevel = 1;
         currentStage = 1;
-
+        NotificationController.Instance.ShowNotification($"Stage {currentStage} - Floor {currentLevel}");
         string timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmssfff");
 
         gameId = $"{timestamp}_{Guid.NewGuid().ToString()}";
@@ -178,7 +179,7 @@ public class GameManager : MonoBehaviour
         TimePlayed = Time.time - TimePlayed;
         FirebaseDatabaseManager.Instance.WriteDatabase(playerId, gameId, characterPlayed, currentLevel, currentStage, TimePlayed, EnemyKilled, BossKilled, win, normalSkill, ultimateSkill, weaponuUsed);
 
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Final_Boss");
         HUD.Instance.ShowHUD();
         SkillCooldownUI.Instance.InitializeSkillIcons();
         
@@ -208,17 +209,27 @@ public class GameManager : MonoBehaviour
 
         if (currentStage > maxStage) //game final boss level
         {
+            NotificationController.Instance.ShowNotification("Final_Boss");
             SceneManager.LoadScene("Final_Boss");
         }
         else
         if (currentLevel > levelsPerStage) //boss level at end of stage (level = num levels per stage + 1)
         {
+            NotificationController.Instance.ShowNotification($"Boss_Stage {currentStage}");
             SceneManager.LoadScene("Boss_Stage" + currentStage);
         }
         else //normal dungeon level
         {
-            if(currentStage > maxStage) SceneManager.LoadScene("Stage1");
-            else SceneManager.LoadScene("Stage" + currentStage);
+            if (currentStage > maxStage)
+            {
+                NotificationController.Instance.ShowNotification($"Stage {currentStage} - Floor {currentLevel}");
+                SceneManager.LoadScene("Stage1");
+            }
+            else
+            {
+                NotificationController.Instance.ShowNotification($"Stage {currentStage} - Floor {currentLevel}");
+                SceneManager.LoadScene("Stage" + currentStage);
+            }
         }
 
     }

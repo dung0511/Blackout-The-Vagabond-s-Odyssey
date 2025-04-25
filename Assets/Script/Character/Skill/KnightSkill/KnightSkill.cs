@@ -118,7 +118,7 @@ public class KnightSkill : BaseSkill
         {
             for (int i = 0; i < maxAttempts; i++)
             {
-                float angle = Random.Range(0f, 2f * Mathf.PI);
+                float angle = Random.Range(0f, 1f * Mathf.PI);
                 Vector3 tempPosition = center + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
 
 

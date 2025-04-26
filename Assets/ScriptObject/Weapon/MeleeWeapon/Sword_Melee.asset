@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73e13f1bc3c79441a1e658db5413cef, type: 3}
   m_Name: Sword_Melee
   m_EditorClassIdentifier: 
-  meleeWeaponName: 
-  meleeWeaponPrefab: {fileID: 0}
+  meleeWeaponName: Sword
+  meleeWeaponPrefab: {fileID: 3536879428634636031, guid: b5d08cc3cd15d204caa4106183936264, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 2
   attackCooldown: 0.75

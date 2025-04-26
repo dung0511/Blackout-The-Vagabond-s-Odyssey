@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CombatKnife_Melee
   m_EditorClassIdentifier: 
   meleeWeaponName: Combat Knife
-  meleeWeaponPrefab: {fileID: 0}
+  meleeWeaponPrefab: {fileID: 7550559990989193233, guid: 52660150366591d49874a17963ed4b2f, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 2
   attackCooldown: 0.5

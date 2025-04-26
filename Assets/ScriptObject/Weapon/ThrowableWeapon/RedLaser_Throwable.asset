@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RedLaser_Throwable
   m_EditorClassIdentifier: 
   throwableWeaponName: RedLaser
-  throwableWeaponPrefab: {fileID: 0}
+  throwableWeaponPrefab: {fileID: 5639563527762517173, guid: 7725d44b403759543bd01fd4a175d38c, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageThrowableWeapon: 3
   TimeBtwFire: 0.8
-  throwableForce: 25
+  throwableForce: 15

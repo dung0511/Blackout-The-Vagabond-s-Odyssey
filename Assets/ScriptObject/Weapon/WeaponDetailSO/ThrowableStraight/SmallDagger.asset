@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponImage: {fileID: -8722967648577535633, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: Small Dagger
-  damageWeapon: 1
+  damageWeapon: 3
   attackCooldown: 1
   force: 20
   weaponFiringSoundEffect: {fileID: 11400000, guid: d4f039c7504b82c4d85d31dd4a440781, type: 2}

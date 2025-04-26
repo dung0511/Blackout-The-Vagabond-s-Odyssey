@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73e13f1bc3c79441a1e658db5413cef, type: 3}
   m_Name: Shovel_Melee
   m_EditorClassIdentifier: 
-  meleeWeaponName: 
-  meleeWeaponPrefab: {fileID: 0}
+  meleeWeaponName: Shovel
+  meleeWeaponPrefab: {fileID: 2578377734470710455, guid: 71756d62585f241459c59f4f8c3d412b, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 5
   attackCooldown: 1

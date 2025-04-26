@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponImage: {fileID: 2477708518685008648, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: M4A1
-  damageWeapon: 3
-  attackCooldown: 0.5
+  damageWeapon: 2
+  attackCooldown: 0.6
   force: 20
   weaponFiringSoundEffect: {fileID: 11400000, guid: 0d38c34c26bc8e94fad9b13cd072d577, type: 2}

@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpeedModifierSO : StatsModifierSO
 {
     public float duration = 30f;
-    public float percentBoost = 50f;
+    public float percentBoost;
 
     public override void AffectCharacter(GameObject player, float value)
     {

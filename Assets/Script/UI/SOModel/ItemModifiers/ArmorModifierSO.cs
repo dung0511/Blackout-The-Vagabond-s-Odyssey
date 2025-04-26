@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ArmorModifierSO : StatsModifierSO
 {
-    public int percentIncrease = 20;
+    public int percentIncrease;
 
     public override void AffectCharacter(GameObject player, float value)
     {

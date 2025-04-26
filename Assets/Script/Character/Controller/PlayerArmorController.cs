@@ -111,17 +111,14 @@ public class PlayerArmorController : MonoBehaviour
         return 99 - currentArmor;
     }
 
-    public void IncreaseMaxArmor(int value)
+    public void IncreaseMaxArmor(int percentIncrease)
     {
-        float increase = maxArmor * (value / 100f);
+        if (percentIncrease == 0) return;
 
-        // lam tron thanh int
-        int increaseAmount = Mathf.RoundToInt(increase);
+        float multiplier = percentIncrease / 100f;
+        int increaseAmount = Mathf.RoundToInt(maxArmor * multiplier);
 
         maxArmor += increaseAmount;
-        currentArmor += increaseAmount;
-
         UpdateArmorBar(currentArmor, maxArmor);
-
     }
 }

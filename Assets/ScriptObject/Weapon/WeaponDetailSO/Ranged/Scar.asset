@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponImage: {fileID: 8600191773454914637, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: Scar
   damageWeapon: 2
-  attackCooldown: 0.75
+  attackCooldown: 0.6
   force: 20
   weaponFiringSoundEffect: {fileID: 11400000, guid: 27301a9dada32eb479e5ad1a1f9f3d84, type: 2}

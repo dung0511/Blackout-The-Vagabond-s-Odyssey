@@ -15,6 +15,6 @@ MonoBehaviour:
   throwableWeaponName: 
   throwableWeaponPrefab: {fileID: 0}
   runtimeAnimatorController: {fileID: 0}
-  damageThrowableWeapon: 1
+  damageThrowableWeapon: 3
   TimeBtwFire: 1
   throwableForce: 20

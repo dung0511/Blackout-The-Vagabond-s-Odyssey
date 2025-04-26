@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponImage: {fileID: 339051261737948287, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: SVD
-  damageWeapon: 7
-  attackCooldown: 1
+  damageWeapon: 8
+  attackCooldown: 1.25
   force: 25
   weaponFiringSoundEffect: {fileID: 11400000, guid: 657035d2c643cb241ab2af543295b63b, type: 2}

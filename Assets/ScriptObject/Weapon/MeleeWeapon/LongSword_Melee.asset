@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LongSword_Melee
   m_EditorClassIdentifier: 
   meleeWeaponName: 
-  meleeWeaponPrefab: {fileID: 0}
+  meleeWeaponPrefab: {fileID: 1367135548067778609, guid: 9bb0b86c0badd8d4488d714713224660, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 2
   attackCooldown: 0.5

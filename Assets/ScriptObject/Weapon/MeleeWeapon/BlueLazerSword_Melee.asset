@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73e13f1bc3c79441a1e658db5413cef, type: 3}
   m_Name: BlueLazerSword_Melee
   m_EditorClassIdentifier: 
-  meleeWeaponName: 
-  meleeWeaponPrefab: {fileID: 0}
+  meleeWeaponName: Blue Lazer Sword
+  meleeWeaponPrefab: {fileID: 1892861501244000876, guid: bd4d6c70f3e50dd4abd6d1a8bfbca1ee, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 3
   attackCooldown: 0.5

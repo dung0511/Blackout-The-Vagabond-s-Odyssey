@@ -272,6 +272,22 @@ PrefabInstance:
       propertyPath: axisCorrectionCurve.m_Curve.Array.data[1].tangentMode
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 5937039525606554002, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14428085
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937039525606554002, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19699314
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937039525606554002, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0073045194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937039525606554002, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.04074438
+      objectReference: {fileID: 0}
     - target: {fileID: 7362977808248016145, guid: 783b63cf5b5683f4f8828c2ba62aa749, type: 3}
       propertyPath: m_Name
       value: Molotov_ThrowableWeaponCurve_Variant

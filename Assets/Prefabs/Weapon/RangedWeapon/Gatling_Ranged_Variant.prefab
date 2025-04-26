@@ -40,6 +40,22 @@ PrefabInstance:
       propertyPath: weaponDetailSO
       value: 
       objectReference: {fileID: 11400000, guid: 2d6af94cf7a9bc141af009a2cef0280e, type: 2}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Size.x
+      value: 0.49868268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Size.y
+      value: 0.22071978
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.13035724
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989095968074540068, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.010134235
+      objectReference: {fileID: 0}
     - target: {fileID: 7382873815902496720, guid: 873a6e4fe41b54040a2963c6e643ae06, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6

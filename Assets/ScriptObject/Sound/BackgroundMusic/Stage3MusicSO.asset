@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage3MusicSO
   m_EditorClassIdentifier: 
   dungeonMusics:
-  - {fileID: 8300000, guid: 991d0612bce081e479a660e9caf7d095, type: 3}
+  - {fileID: 8300000, guid: 63c3d7aeacb0f58419c02f0056d81fc9, type: 3}
   eliteMusics:
-  - {fileID: 8300000, guid: b6a3442515c3ce847b1ee3235cdf4117, type: 3}
+  - {fileID: 8300000, guid: 0fac2373edf3e7b4083538e9f0d82e6f, type: 3}
   bossMusics:
-  - {fileID: 8300000, guid: 87c25e707f955cc408f4e69fafcb1120, type: 3}
+  - {fileID: 8300000, guid: d2b20d3ed71940e40a69e9707c3bd03e, type: 3}

@@ -254,7 +254,7 @@ public class GameManager : MonoBehaviour
         {
             if (currentStage > maxStage) // Final boss scene
             {
-                var finalBossstageMusic = musicLibrary.GetStageMusic(currentStage - 2);  // lay nhac stage 3 tam 
+                var finalBossstageMusic = musicLibrary.GetStageMusic(currentStage - 1);  
                 if (finalBossstageMusic != null)
                 {
                     var clip = finalBossstageMusic.GetRandomDungeonMusic();

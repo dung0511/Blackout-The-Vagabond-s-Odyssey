@@ -51,8 +51,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     private void HandleDamage(int damage, AttackType attackType)
     {
+        if (isDead) return;
         enemyHealth.health -= damage;
-        if (enemyHealth.health <= 0 && !isDead)
+        if (enemyHealth.health <= 0 )
         {
             isDead = true;
             GameManager.Instance.UpdateEnemyKilled();
@@ -97,7 +98,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         {
             isHurt = true;
             
-           
+
             enemyHealth.GetComponent<Enemy_Movement_AI>().StartChase();
             StartCoroutine(ResetHurt());
         }

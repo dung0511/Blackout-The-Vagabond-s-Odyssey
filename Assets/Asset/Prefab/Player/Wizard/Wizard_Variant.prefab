@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1601630567559403673, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
+      propertyPath: range
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1758712493675102998, guid: 8934cb0df6ad6b6439838e10f9ee2bd8, type: 3}
       propertyPath: m_Offset.y
       value: 0.05

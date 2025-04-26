@@ -9,7 +9,7 @@ public class RedZoneHitBox : MonoBehaviour
     public int damage = 0;
     private void Start()
     {
-        damage=GameObject.Find("Weapon").GetComponentInChildren<ThrowableWeaponCurve>().damage;
+        damage=GameObject.FindWithTag("Player").GetComponentInChildren<ThrowableWeaponCurve>().damage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

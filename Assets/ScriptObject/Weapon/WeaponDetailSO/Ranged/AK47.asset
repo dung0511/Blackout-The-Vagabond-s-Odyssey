@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponImage: {fileID: -3391257396490946495, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: AK47
   damageWeapon: 2
-  attackCooldown: 0.2
+  attackCooldown: 0.6
   force: 20
   weaponFiringSoundEffect: {fileID: 11400000, guid: 7597b4cdccb0f0f44b2011bea22e5b0a, type: 2}

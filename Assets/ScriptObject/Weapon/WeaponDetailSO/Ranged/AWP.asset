@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponImage: {fileID: 3091235889615749175, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: AWP
-  damageWeapon: 8
-  attackCooldown: 1
+  damageWeapon: 10
+  attackCooldown: 1.5
   force: 25
   weaponFiringSoundEffect: {fileID: 11400000, guid: cd1d4ad3862b0314f8f5aabe2c191aff, type: 2}

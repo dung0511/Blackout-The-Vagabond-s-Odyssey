@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponImage: {fileID: 2860768655726451345, guid: f1957cb05c5b31848b0941321a0a01f4, type: 3}
   weaponName: Piston
   damageWeapon: 3
-  attackCooldown: 0.75
-  force: 20
+  attackCooldown: 0.65
+  force: 22
   weaponFiringSoundEffect: {fileID: 11400000, guid: 2cee3b7ee086ce240a2f8bc976e2835a, type: 2}

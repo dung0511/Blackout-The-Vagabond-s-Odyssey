@@ -20,7 +20,10 @@ public class PlayerMoveController : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
+        if (ShopUI.Instance != null)
+        {
+            if (ShopUI.Instance.isOpenShop) return false;
+        }
         Vector2 moveInput = new Vector2(horizontal, vertical);
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
 

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73e13f1bc3c79441a1e658db5413cef, type: 3}
   m_Name: BaseballlBat_Melee
   m_EditorClassIdentifier: 
-  meleeWeaponName: 
-  meleeWeaponPrefab: {fileID: 0}
+  meleeWeaponName: Baseball Bat
+  meleeWeaponPrefab: {fileID: 6664432156163347331, guid: 3d98143a64d78e842b7acc212d6a7450, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageMeleeWeapon: 4
   attackCooldown: 1

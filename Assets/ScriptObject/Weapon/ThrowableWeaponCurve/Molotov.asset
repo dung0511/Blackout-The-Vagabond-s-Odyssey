@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Molotov
   m_EditorClassIdentifier: 
   throwableWeaponName: 
-  throwableWeaponPrefab: {fileID: 0}
+  throwableWeaponPrefab: {fileID: 2034621507168708110, guid: 742b228a7471d41468e402b64e2fa3bd, type: 3}
   runtimeAnimatorController: {fileID: 0}
   damageThrowableWeapon: 2
   TimeBtwFire: 1

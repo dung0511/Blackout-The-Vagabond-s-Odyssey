@@ -18,4 +18,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54cc729d696a1be449a06745b756e67f, type: 2}
   - {fileID: 11400000, guid: af489eabf6358054b996efeb0291d372, type: 2}
   - {fileID: 11400000, guid: e9ad9e8d5803b61499cb25dbd3bb40d2, type: 2}
+  - {fileID: 11400000, guid: ff19b18970659d8429ac3a12e0e41694, type: 2}
   finalBossMusic: {fileID: 8300000, guid: 87c25e707f955cc408f4e69fafcb1120, type: 3}

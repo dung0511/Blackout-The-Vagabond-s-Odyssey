@@ -16,16 +16,16 @@ public class PlayerWeaponController : MonoBehaviour
     {
         //if (ShopUI.Instance != null)
         //{
-            if (transform.root.GetComponent<InventoryController>().isOpenInventory || ShopUI.Instance.isOpenShop)
-                return;
-       // }
+        if (transform.root.GetComponent<InventoryController>().isOpenInventory || ShopUI.Instance.isOpenShop)
+            return;
+        // }
 
         baseWeapon.Attack();
     }
 
     public void RotateWeapon()
     {
-        baseWeapon.RotateWeapon();  
+        baseWeapon.RotateWeapon();
     }
 
     private static GameObject sceneHolder;
@@ -57,21 +57,20 @@ public class PlayerWeaponController : MonoBehaviour
 
     public void ChangeWeapon(int numPress)
     {
+        if (haveOneWepon)
+        {
+            return;
+        }
         switch (numPress)
         {
             case 1:
-                if (haveOneWepon)
-                {
-                    break;
-                }
-                else
-                {
-                    Weapon1.SetActive(true);
-                    Weapon2.SetActive(false);
-                    baseWeapon = GetComponentInChildren<BaseWeapon>();
-                    GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
-                    WeaponUI.Instance.SetImageAndActiveWeapon1(baseWeapon.GetWeaponDetailSO().weaponImage);
-                }
+
+                Weapon1.SetActive(true);
+                Weapon2.SetActive(false);
+                baseWeapon = GetComponentInChildren<BaseWeapon>();
+                GameManager.Instance.SetWeaponUsing(baseWeapon.GetWeaponDetailSO().weaponName);
+                WeaponUI.Instance.SetImageAndActiveWeapon1(baseWeapon.GetWeaponDetailSO().weaponImage);
+
                 break;
 
             case 2:

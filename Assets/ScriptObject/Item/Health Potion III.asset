@@ -15,9 +15,9 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <maxStackSize>k__BackingField: 9
   <Name>k__BackingField: Health Potion III
-  <Description>k__BackingField: Retores HP by 30
+  <Description>k__BackingField: Retores HP by 8
   <ItemImage>k__BackingField: {fileID: -1344099165, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
   <DropPrefab>k__BackingField: {fileID: 4991719267474809798, guid: bba56b0eb1181a6428e40b1eaf2d6374, type: 3}
   modifiersData:
   - statsModifier: {fileID: 11400000, guid: 1a07a550f7e65e04c839b587b8ee128e, type: 2}
-    value: 30
+    value: 8

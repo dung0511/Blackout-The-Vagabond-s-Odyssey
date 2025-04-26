@@ -45,11 +45,17 @@ public class SettingsMenuUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ToggleSettingsMenu();
+            if (InventoryController.Instance.isOpenInventory)
+            {
+                InventoryController.Instance.Close();
+                Show();
+                return;
+            }
+            
     }
     }
 
-    public void ToggleSettingsMenu()
+    public void Show()
     {
         isOpenSettingMenu = !isOpenSettingMenu;
         isPaused = !isPaused;

@@ -20,14 +20,16 @@ public class PlayerHealthController : Damageable
 
     public override void takeDame(int dame)
     {
+        if (isDead) return;
         if (GetComponent<PlayerArmorController>().TakeDamageArmor(dame) <= 0)
         {
             health -= dame;
             UpdateHealthBar(health, maxHealth);
-            if (health <= 0 && !isDead)
+            if (health <= 0)
             {
                 isDead = true;
                 health = 0;
+                UpdateHealthBar(health, maxHealth);
                 GameManager.Instance.SaveWhenDead();
                 StartCoroutine(ShowGameOverAfterDelay()); 
             }

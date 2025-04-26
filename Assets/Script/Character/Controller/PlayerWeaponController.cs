@@ -14,11 +14,11 @@ public class PlayerWeaponController : MonoBehaviour
     public BaseWeapon baseWeapon { get; set; }
     public void Attack()
     {
-        //if (ShopUI.Instance != null)
-        //{
-        if (transform.root.GetComponent<InventoryController>().isOpenInventory || ShopUI.Instance.isOpenShop)
-            return;
-        // }
+        if (ShopUI.Instance != null&& transform.root.GetComponent<InventoryController>()!=null)
+        {
+            if (transform.root.GetComponent<InventoryController>().isOpenInventory || ShopUI.Instance.isOpenShop)
+                return;
+        }
 
         baseWeapon.Attack();
     }

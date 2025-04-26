@@ -3,33 +3,15 @@ using System.Collections;
 
 public class Shop : Interactable
 {
-    private bool isUIOpen = false;
-    private bool canOpenShop = true; 
+    
 
     public override void Interact(Interactor interactPlayer)
     {
-        if (!canOpenShop) return; 
-
-        base.Interact(interactPlayer);
-
-        isUIOpen = !isUIOpen;
-
-        if (isUIOpen)
-        {
-            InventoryController inventoryController = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>();
-            if (inventoryController.isOpenInventory) inventoryController.Close();
-            ShopUI.Instance.Show();
-        } 
-        else
-        {
-            ShopUI.Instance.Hide();
-            StartCoroutine(InteractionCooldown());
-        }
+        ShopUI.Instance.Show();
     }
 
     public override void HighLightOn()
     {
-        if (!canOpenShop) return;
         base.HighLightOn();
     }
 
@@ -38,20 +20,5 @@ public class Shop : Interactable
         base.HighLightOff();
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.GetComponent<Interactor>() != null && isUIOpen)
-        {
-            isUIOpen = false;
-            ShopUI.Instance.Hide();
-            StartCoroutine(InteractionCooldown());
-        }
-    }
-
-    private IEnumerator InteractionCooldown()
-    {
-        canOpenShop = false; 
-        yield return new WaitForSeconds(7f); 
-        canOpenShop = true; 
-    }
+    
 }

@@ -58,25 +58,26 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < prices.Length; i++)
         {
-            prices[i] = Random.Range(10, 201); 
+            prices[i] = Random.Range(10, 201);
         }
 
+        // Weapon slots (0-3)
         for (int i = 0; i < 4; i++)
         {
             int itemID = i + 1;
             buttonSlots[i].SetupSlot(selectedWeapons[i], itemID, prices[itemID - 1]);
             itemPrefabs[itemID - 1] = selectedWeapons[i];
-            Debug.Log($"Weapon Slot {i}: {selectedWeapons[i].name}");
         }
 
+        // Potion slots (4-7)
         for (int i = 0; i < 4; i++)
         {
             int itemID = i + 5;
             buttonSlots[i + 4].SetupSlot(selectedPotions[i], itemID, prices[itemID - 1]);
             itemPrefabs[itemID - 1] = selectedPotions[i];
-            Debug.Log($"Potion Slot {i + 4}: {selectedPotions[i].name}");
         }
     }
+
 
     private GameObject[] GetRandomPrefabs(GameObject[] sourcePrefabs, int count)
     {
@@ -106,14 +107,15 @@ public class ShopManager : MonoBehaviour
 
     public void BuyItem(int itemID)
     {
-        if (playerCoins >= prices[itemID - 1])
+        if (playerCoins >= prices[itemID - 1] && quantities[itemID - 1] > 0)
         {
             playerCoins -= prices[itemID - 1];
-            quantities[itemID - 1]++;
+            quantities[itemID - 1]--; 
             UpdateCoinsUI();
             UpdateButtonQuantity(itemID);
             SpawnItem(itemID);
         }
+
     }
 
     public void UpdateButtonQuantity(int itemID)
@@ -138,6 +140,7 @@ public class ShopManager : MonoBehaviour
         }
 
         Vector3 spawnPos = player.transform.position + player.transform.forward * 0.5f;
+        spawnPos.y -= 1.5f;
         Instantiate(itemPrefabs[itemID - 1], spawnPos, Quaternion.identity);
     }
 
@@ -149,8 +152,17 @@ public class ShopManager : MonoBehaviour
 
     public void ResetShop()
     {
+        quantities = new int[8]; 
+
+        for (int i = 0; i < 4; i++)
+        {
+            quantities[i] = 1; // Weapons
+        }
+        for (int i = 4; i < 8; i++)
+        {
+            quantities[i] = Random.Range(1, 6); // Potions
+        }
         InitShopItems();
-        quantities = new int[8];
         UpdateAllButtonQuantities();
     }
 
@@ -159,6 +171,7 @@ public class ShopManager : MonoBehaviour
         playerCoins += randomValue;
         UpdateCoinsUI();
     }
+
     public void UpdateAllButtonQuantities()
     {
         foreach (var button in buttonSlots)

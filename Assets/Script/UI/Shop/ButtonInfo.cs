@@ -40,8 +40,12 @@ public class ButtonInfo : MonoBehaviour
 
     public void UpdateUI()
     {
-        quantityTxt.text = ShopManager.Instance.GetQuantity(itemID).ToString();
+        int quantity = ShopManager.Instance.GetQuantity(itemID);
+        quantityTxt.text = quantity.ToString();
+
+        GetComponent<Button>().interactable = quantity > 0;
     }
+
 
     public void Buy()
     {

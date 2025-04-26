@@ -63,18 +63,18 @@ public class PlayerHealthController : Damageable
         UIManager.Instance.healthBarEvent.Invoke(currentHealth, maxHealth);
     }
 
-    public void RegenHealth(int value)
+    public void RegenHealth(float percent)
     {
         if (isDead) return;
 
-        health = Mathf.Min(health + value, maxHealth);
+        int healAmount = Mathf.RoundToInt(maxHealth * (percent / 100f));
+        health = Mathf.Min(health + healAmount, maxHealth);
         UpdateHealthBar(health, maxHealth);
     }
 
     public void IncreaseMaxHP(int value)
     {
         maxHealth += value;
-        health += value;
         UpdateHealthBar(health, maxHealth);
     }
 

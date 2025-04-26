@@ -7,6 +7,6 @@ public class HealthModifierSO : StatsModifierSO
     {
         PlayerHealthController playerHp = player.GetComponent<PlayerHealthController>();
         if (playerHp != null) 
-            playerHp.RegenHealth((int)value);
+            playerHp.RegenHealth(value);
     }
 }

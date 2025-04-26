@@ -15,9 +15,9 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <maxStackSize>k__BackingField: 9
   <Name>k__BackingField: Health Potion II
-  <Description>k__BackingField: Retores HP by 5
+  <Description>k__BackingField: ' Restores 20% of the character''s max HP'
   <ItemImage>k__BackingField: {fileID: -7118549172432436139, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
   <DropPrefab>k__BackingField: {fileID: 3142589339821458704, guid: c5c0ff1fc8223124a9a6d5e061890ad5, type: 3}
   modifiersData:
   - statsModifier: {fileID: 11400000, guid: 1a07a550f7e65e04c839b587b8ee128e, type: 2}
-    value: 5
+    value: 20

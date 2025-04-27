@@ -90,8 +90,8 @@ public class PlayerArmorController : MonoBehaviour
 
     public void ShieldSkill()
     {
-        currentArmor = 99;
-        maxArmor = 99;
+        currentArmor = 20;
+        maxArmor = 20;
          UpdateArmorBar(currentArmor, maxArmor);
     }
 

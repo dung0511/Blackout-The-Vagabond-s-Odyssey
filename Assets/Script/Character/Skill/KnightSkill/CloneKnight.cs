@@ -15,10 +15,10 @@ public class CloneKnight : MonoBehaviour
 
     [HideInInspector] public Clone_Knight_Movement_AI ai;
     private float timetoDes;
-    private PlayerWeaponController playerWeaponController;
+    private CloneKnightWeaponController playerWeaponController;
     private void Awake()
     {
-        playerWeaponController = gameObject.GetComponentInChildren<PlayerWeaponController>();
+        playerWeaponController = gameObject.GetComponentInChildren<CloneKnightWeaponController>();
         animator = GetComponent<Animator>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         idleEvent = GetComponent<IdleEvent>();

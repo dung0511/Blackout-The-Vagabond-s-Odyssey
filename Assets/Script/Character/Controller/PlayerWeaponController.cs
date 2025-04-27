@@ -16,10 +16,11 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if (ShopUI.Instance != null&& transform.root.GetComponent<InventoryController>()!=null)
         {
+            Debug.Log("Player ko ddc ban");
             if (transform.root.GetComponent<InventoryController>().isOpenInventory || ShopUI.Instance.isOpenShop)
                 return;
         }
-
+        Debug.Log("Player dc ban");
         baseWeapon.Attack();
     }
 

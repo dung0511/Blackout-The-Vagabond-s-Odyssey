@@ -52,7 +52,7 @@ public class SettingsMenuUI : MonoBehaviour
                 return;
             }
             
-    }
+        }
     }
 
     public void Show()
@@ -89,12 +89,14 @@ public class SettingsMenuUI : MonoBehaviour
     {
         soundMixerManager.setMusicVolume(value);
         PlayerPrefs.SetFloat(MusicKey, value);
+        PlayerPrefs.Save();
     }
 
     private void OnSFXSliderChanged(float value)
     {
         soundMixerManager.setSoundFXVolume(value);
         PlayerPrefs.SetFloat(SFXKey, value);
+        PlayerPrefs.Save();
     }
 
     private void LoadSavedVolume()

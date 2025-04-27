@@ -11,9 +11,9 @@ public class MapUI : MonoBehaviour, IUIScreen
     [SerializeField] private Camera mapCamera;
     [SerializeField] private GameObject minimap, map;
 
-    private void Start()
+    private void Awake()
     {
-        InputManager.Instance.playerInput.MapUI.Disable();
+        Close(); //big map closed by default
     }
 
     public void Open()

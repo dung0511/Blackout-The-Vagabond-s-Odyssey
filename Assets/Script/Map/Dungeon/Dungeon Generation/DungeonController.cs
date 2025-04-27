@@ -67,8 +67,9 @@ public class DungeonController : AbstractDungeonGenerator
         }
     }
 
-    protected void Reset()
+    protected override void Reset()
     {
+        base.Reset();
         DungeonData.Reset();
         propPlacer.Reset();
         agentPlacer.Reset();

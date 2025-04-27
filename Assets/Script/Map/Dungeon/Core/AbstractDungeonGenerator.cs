@@ -36,4 +36,9 @@ public abstract class AbstractDungeonGenerator : MonoBehaviour
     }
 
     protected abstract void RunProceduralGeneration();
+
+    protected virtual void Reset()
+    {
+        mapVisualizer.ClearMap();
+    }
 }

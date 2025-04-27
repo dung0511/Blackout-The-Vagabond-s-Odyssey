@@ -79,6 +79,10 @@ public class MapVisualizer : MonoBehaviour
 
     public void ClearMap()
     {
+        if (foregroundTilemap != null)
+        {
+            foregroundTilemap.ClearAllTiles();
+        }
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
         minimap.ClearAllTiles();

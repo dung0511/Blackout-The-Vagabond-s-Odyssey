@@ -126,6 +126,8 @@ public class WizardSkill : BaseSkill
         }
         canUseTeleport = false;
         StartCoroutine(ResetNormalSkillCoolDown());
+
+        // cooldown
         SkillCooldownUI.Instance.TriggerCooldown_E(normalSkillCoolDown);
         SkillCooldownUI.Instance.glowEffect_E.enabled = false;
     }
@@ -135,7 +137,6 @@ public class WizardSkill : BaseSkill
         transform.root.position = lastBulletPosition;
         canUseTeleport = false;
         SkillCooldownUI.Instance.ActivateWizardESkill(normalSkillCoolDown);
-        SkillCooldownUI.Instance.glowEffect_E.enabled = false;
     }
 
     public override bool CanUseSkill1()

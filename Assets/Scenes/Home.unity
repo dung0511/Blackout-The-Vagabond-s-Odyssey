@@ -3717,7 +3717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: weaponPrefabs.Array.size
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: 'buttonSlots.Array.data[0]'
@@ -3879,6 +3879,30 @@ PrefabInstance:
       propertyPath: 'weaponPrefabs.Array.data[12]'
       value: 
       objectReference: {fileID: 2444577755630006874, guid: 50531edab2da1634593729fe8a0c6866, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[13]'
+      value: 
+      objectReference: {fileID: 6668001024334909585, guid: da481c07828ec0d41a1524d282da9934, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[14]'
+      value: 
+      objectReference: {fileID: 6664432156163347331, guid: 3d98143a64d78e842b7acc212d6a7450, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1892861501244000876, guid: bd4d6c70f3e50dd4abd6d1a8bfbca1ee, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[16]'
+      value: 
+      objectReference: {fileID: 7550559990989193233, guid: 52660150366591d49874a17963ed4b2f, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[17]'
+      value: 
+      objectReference: {fileID: 2578377734470710455, guid: 71756d62585f241459c59f4f8c3d412b, type: 3}
+    - target: {fileID: 2964545307372240145, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
+      propertyPath: 'weaponPrefabs.Array.data[18]'
+      value: 
+      objectReference: {fileID: 3536879428634636031, guid: b5d08cc3cd15d204caa4106183936264, type: 3}
     - target: {fileID: 4105271135995199096, guid: 478f8b42091bc5b4cb308b0ca22761cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -19440,19 +19464,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 43.6938
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023571239091566475, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29.330048
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519688204058687245, guid: ed48e0a3e4983e84e96f01cbc37278be, type: 3}
       propertyPath: m_Pivot.x

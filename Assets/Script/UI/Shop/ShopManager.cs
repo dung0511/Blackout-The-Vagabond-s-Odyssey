@@ -16,7 +16,7 @@ public class ShopManager : MonoBehaviour
 
     private int[] prices = new int[8];
     private int[] quantities = new int[8];
-    private int playerCoins = 0; // test
+    private int playerCoins = 999; // test
 
     private GameObject[] itemPrefabs = new GameObject[8];
 
@@ -58,7 +58,7 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < prices.Length; i++)
         {
-            prices[i] = Random.Range(10, 201);
+            prices[i] = Random.Range(10, 151);
         }
 
         // Weapon slots (0-3)

@@ -7560,7 +7560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossList:
-  - {fileID: 1222806960371969017, guid: 6061f46a5867e82488e42df3d2d71ec6, type: 3}
+  - {fileID: 1669468715911591175, guid: cb317cb3bc75e9f448447b6ceb5716c7, type: 3}
   bossKillObject: {fileID: 1551277221}
   bossKillEvent:
     m_PersistentCalls:

@@ -43,8 +43,15 @@ public class ButtonInfo : MonoBehaviour
         int quantity = ShopManager.Instance.GetQuantity(itemID);
         quantityTxt.text = quantity.ToString();
 
-        GetComponent<Button>().interactable = quantity > 0;
+        bool isAvailable = quantity > 0;
+        GetComponent<Button>().interactable = isAvailable;
+
+        if (icon != null)
+        {
+            icon.color = isAvailable ? Color.white : new Color(1f, 1f, 1f, 0.3f); 
+        }
     }
+
 
 
     public void Buy()

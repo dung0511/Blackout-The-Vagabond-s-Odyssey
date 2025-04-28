@@ -44,12 +44,11 @@ public class PlayerMoveController : MonoBehaviour
 
     private IEnumerator SpeedBoostRoutine(float percentBoost, float duration)
     {
-        // increase %
-        speed = baseSpeed * (1f + percentBoost / 100f);
+        float multiplier = 1f + (percentBoost / 100f);
+        speed = baseSpeed * multiplier;
 
         yield return new WaitForSeconds(duration);
 
-        // reset spd
         speed = baseSpeed;
         currentSpeedBoost = null;
     }
@@ -63,4 +62,6 @@ public class PlayerMoveController : MonoBehaviour
         }
         speed = baseSpeed;
     }
+
+
 }

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcb44dbbc2c74a4b9305cdc168488be, type: 3}
   m_Name: Increase Max Armor SO
   m_EditorClassIdentifier: 
+  amount: 10

@@ -15,9 +15,9 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <maxStackSize>k__BackingField: 3
   <Name>k__BackingField: Armor Potion
-  <Description>k__BackingField: Increases Max Armor by 10% permanently
+  <Description>k__BackingField: Increases Max Armor by 5 permanently
   <ItemImage>k__BackingField: {fileID: 1421786714, guid: aa94b61f12b552841862d26e38f04dbf, type: 3}
   <DropPrefab>k__BackingField: {fileID: 2282121856620440604, guid: 46797e74e9988924fba2b4a7fe19a0e8, type: 3}
   modifiersData:
   - statsModifier: {fileID: 11400000, guid: 0aa7b9ba9b69b304abdc01af9937029a, type: 2}
-    value: 10
+    value: 5

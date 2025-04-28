@@ -3,15 +3,14 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SpeedModifierSO : StatsModifierSO
 {
-    public float duration = 30f;
-    public float percentBoost;
+    private float duration = 20f;
 
     public override void AffectCharacter(GameObject player, float value)
     {
         PlayerMoveController playerMove = player.GetComponent<PlayerMoveController>();
         if (playerMove != null)
         {
-            playerMove.ApplySpeedBoost(percentBoost, duration);
+            playerMove.ApplySpeedBoost(value, duration);
         }
     }
 

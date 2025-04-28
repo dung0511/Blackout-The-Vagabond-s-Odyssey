@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Increase Speed SO
   m_EditorClassIdentifier: 
   duration: 30
+  percentBoost: 30

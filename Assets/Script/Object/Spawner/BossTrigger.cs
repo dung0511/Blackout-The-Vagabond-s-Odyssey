@@ -42,10 +42,6 @@ public class BossTrigger : MonoBehaviour
     private IEnumerator DelaySpawn()
     {
         yield return new WaitForSeconds(delaySpawn);
-        foreach(Transform child in transform)
-        {
-            child.gameObject.SetActive(false);
-        }
         anime = Instantiate(spawnEffect, spawnPos.position + new Vector3(0,-0.25f,0), Quaternion.identity);
         StartCoroutine(DelayBoss());
     }
@@ -56,6 +52,5 @@ public class BossTrigger : MonoBehaviour
         var bossIndex = Random.Range(0, BossManager.Instance.bossList.Count);
         Instantiate(BossManager.Instance.bossList[bossIndex], spawnPos.position, Quaternion.identity);
         Destroy(anime);
-        Destroy(gameObject);
     }
 }

@@ -19,7 +19,8 @@ public class BossTrigger : MonoBehaviour
         if (collision.tag.Equals("Player"))
         {
             trigger.enabled = false;
-            transform.GetChild(0).gameObject.SetActive(true);
+            var child = transform.GetChild(0).gameObject;
+            child.SetActive(!child.activeSelf);
             SpawnBoss();
 
             BossHealthBarController.Instance.Show();

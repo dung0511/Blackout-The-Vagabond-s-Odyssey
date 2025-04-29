@@ -589,7 +589,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   ResetLightCoolDown: 3
-  pullStrength: 50
+  pullStrength: 70
   pullDuration: 5
   hitBox: {fileID: 0}
   Skill3Damage: 1

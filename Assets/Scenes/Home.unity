@@ -23518,6 +23518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4562098841044402118, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5718913345049258520, guid: 01db5d1b5c85c114abbdd1c6ef16c4ff, type: 3}
       propertyPath: characterInfoPanel
       value: 
@@ -55913,6 +55917,10 @@ PrefabInstance:
     - target: {fileID: 8617082415971209967, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
       propertyPath: stage
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617082415971209967, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9188130133351135442, guid: e7bcc236647f1d24c90e3ce3374e56cf, type: 3}
       propertyPath: m_Name

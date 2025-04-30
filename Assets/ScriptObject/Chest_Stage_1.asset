@@ -17,7 +17,13 @@ MonoBehaviour:
     - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
     tableChance: 100
   - loots:
-    - {fileID: 6664432156163347331, guid: 3d98143a64d78e842b7acc212d6a7450, type: 3}
+    - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
+    tableChance: 69
+  - loots:
+    - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
+    tableChance: 33
+  - loots:
+    - {fileID: 3672800129031867069, guid: 4f84fe76a405e2f4db089a237377bc58, type: 3}
     - {fileID: 1892861501244000876, guid: bd4d6c70f3e50dd4abd6d1a8bfbca1ee, type: 3}
     - {fileID: 7550559990989193233, guid: 52660150366591d49874a17963ed4b2f, type: 3}
     - {fileID: 1367135548067778609, guid: 9bb0b86c0badd8d4488d714713224660, type: 3}

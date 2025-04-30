@@ -13,7 +13,7 @@ public class PlayerArmorController : MonoBehaviour
     private int defaultArmor;
     void Start()
     {
-        
+
         currentArmor = GetComponent<Player>().armor;
         maxArmor = currentArmor;
         defaultArmor = maxArmor;
@@ -90,9 +90,9 @@ public class PlayerArmorController : MonoBehaviour
 
     public void ShieldSkill()
     {
-        currentArmor = 20;
-        maxArmor = 20;
-         UpdateArmorBar(currentArmor, maxArmor);
+        currentArmor += 10;
+        maxArmor += 10;
+        UpdateArmorBar(currentArmor, maxArmor);
     }
 
     public void EndShieldSkill()
@@ -108,12 +108,13 @@ public class PlayerArmorController : MonoBehaviour
 
     public int DameTakenDuringShieldSkill()
     {
-        return 99 - currentArmor;
+        return maxArmor + 10 - currentArmor;
     }
 
     public void IncreaseMaxArmor(int amount)
     {
         maxArmor += amount;
+        defaultArmor += amount;
         UpdateArmorBar(currentArmor, maxArmor);
     }
 

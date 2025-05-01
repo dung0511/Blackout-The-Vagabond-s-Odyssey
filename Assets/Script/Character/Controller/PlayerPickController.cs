@@ -32,14 +32,14 @@ public class PlayerPickController : MonoBehaviour
             {
                 WeaponDetailSO currentWeaponDetail = GetComponentInChildren<BaseWeapon>().GetWeaponDetailSO();
                 weapon1 = Item.GetComponent<BaseWeapon>();
-                WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
-                ShowUIPanel(weaponDetailSO);
+                WeaponDetailSO weaponTouchingDetail = weapon1.GetWeaponDetailSO();
+                ShowUIPanel(weaponTouchingDetail);
                 string s1 = $"Damage {currentWeaponDetail.damageWeapon}, Time between attack {currentWeaponDetail.attackCooldown}, Force {currentWeaponDetail.force}";
-                string s2 = $"Damage {weaponDetailSO.damageWeapon}, Time between attack {weaponDetailSO.attackCooldown}, Force {weaponDetailSO.force}";
+                string s2 = $"Damage {weaponTouchingDetail.damageWeapon}, Time between attack {weaponTouchingDetail.attackCooldown}, Force {weaponTouchingDetail.force}";
                 //RecommendAI.INSTANCE.CompareItems(s1, s2,currentWeaponDetail.weaponName, weaponDetailSO.weaponName);
-                Talking.INSTANCE.Talk(weaponDetailSO.weaponName);
+                Talking.INSTANCE.Talk(weaponTouchingDetail.weaponName);
                 isWeapon = true;
-                StartCoroutine(ThinkUsingNomic(s1, s2, currentWeaponDetail.weaponName, weaponDetailSO.weaponName));
+                StartCoroutine(ThinkUsingNomic(s1, s2, currentWeaponDetail.weaponName, weaponTouchingDetail.weaponName));
             }
             else
             {

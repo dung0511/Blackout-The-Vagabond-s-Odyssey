@@ -34,7 +34,7 @@ public class ButtonInfo : MonoBehaviour
             }
         }
 
-        priceTxt.text = "$" + price;
+        priceTxt.text = " " + price;
         quantityTxt.text = ShopManager.Instance.GetQuantity(itemID).ToString();
     }
 

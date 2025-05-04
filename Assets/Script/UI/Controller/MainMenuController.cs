@@ -15,7 +15,7 @@ public class MainMenuController : MonoBehaviour
         }
         //settingsMenu.SetActive(false); 
         tutorialPanel.SetActive(false);
-        PlayerPrefs.SetInt("HasWatchedCutscene", 0);
+        //PlayerPrefs.SetInt("HasWatchedCutscene", 0);
     }
 
     public void PlayGame()

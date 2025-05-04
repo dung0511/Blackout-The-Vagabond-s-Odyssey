@@ -15,6 +15,7 @@ public class MainMenuController : MonoBehaviour
         }
         //settingsMenu.SetActive(false); 
         tutorialPanel.SetActive(false);
+        PlayerPrefs.SetInt("HasWatchedCutscene", 0);
     }
 
     public void PlayGame()
@@ -22,10 +23,11 @@ public class MainMenuController : MonoBehaviour
         if (PlayerPrefs.GetInt("HasWatchedCutscene", 0) == 0)
         {
             
-            SceneManager.LoadScene("CutsceneNew");
+            SceneManager.LoadScene("Cutscene_BeforeBlackout");
         }
         else
         {
+            Destroy(GameObject.Find("HomeBGM"));
             SceneManager.LoadScene("Home");
         }
     }

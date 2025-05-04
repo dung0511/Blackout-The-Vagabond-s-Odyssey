@@ -32,13 +32,14 @@ public class PlayerPickController : MonoBehaviour
             {
                 WeaponDetailSO currentWeaponDetail = GetComponentInChildren<BaseWeapon>().GetWeaponDetailSO();
                 weapon1 = Item.GetComponent<BaseWeapon>();
-                WeaponDetailSO weaponDetailSO = weapon1.GetWeaponDetailSO();
-                ShowUIPanel(weaponDetailSO);
+                WeaponDetailSO weaponTouchingDetail = weapon1.GetWeaponDetailSO();
+                ShowUIPanel(weaponTouchingDetail);
                 string s1 = $"Damage {currentWeaponDetail.damageWeapon}, Time between attack {currentWeaponDetail.attackCooldown}, Force {currentWeaponDetail.force}";
-                string s2 = $"Damage {weaponDetailSO.damageWeapon}, Time between attack {weaponDetailSO.attackCooldown}, Force {weaponDetailSO.force}";
-                RecommendAI.INSTANCE.CompareItems(s1, s2,currentWeaponDetail.weaponName, weaponDetailSO.weaponName);
+                string s2 = $"Damage {weaponTouchingDetail.damageWeapon}, Time between attack {weaponTouchingDetail.attackCooldown}, Force {weaponTouchingDetail.force}";
+                //RecommendAI.INSTANCE.CompareItems(s1, s2,currentWeaponDetail.weaponName, weaponDetailSO.weaponName);
+                Talking.INSTANCE.Talk(weaponTouchingDetail.weaponName);
                 isWeapon = true;
-                StartCoroutine(Think(s1, s2, currentWeaponDetail.weaponName, weaponDetailSO.weaponName));
+                StartCoroutine(ThinkUsingNomic(s1, s2, currentWeaponDetail.weaponName, weaponTouchingDetail.weaponName));
             }
             else
             {
@@ -48,9 +49,15 @@ public class PlayerPickController : MonoBehaviour
         }
     }
 
-    IEnumerator Think(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
+    IEnumerator ThinkUsingNomic(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(2f);
+        RecommendAI.INSTANCE.CompareItems(itemADescription, itemBDescription, weapon1Name, weapon2Name);
+        StartCoroutine(ThinkUsingGemini(itemADescription, itemBDescription, weapon1Name, weapon2Name));
+    }
+    IEnumerator ThinkUsingGemini(string itemADescription, string itemBDescription, string weapon1Name, string weapon2Name)
+    {
+        yield return new WaitForSeconds(3f);
         RecommendAI.INSTANCE.ThinkAboutTwoWeapon(itemADescription, itemBDescription, weapon1Name, weapon2Name);
     }
 

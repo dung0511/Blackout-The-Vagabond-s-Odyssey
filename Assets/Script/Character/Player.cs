@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (Input.GetAxisRaw("bag") > 0 && !SettingsMenuUI.Instance.isOpenSettingMenu && !ShopUI.Instance.isOpenShop)
+            if (Input.GetKeyDown(KeyCode.Tab) && !SettingsMenuUI.Instance.isOpenSettingMenu && !ShopUI.Instance.isOpenShop)
             {
                 if (!inventoryController.isOpenInventory)
                 {

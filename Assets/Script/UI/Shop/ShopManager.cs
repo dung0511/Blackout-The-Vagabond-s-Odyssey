@@ -58,7 +58,7 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < prices.Length; i++)
         {
-            prices[i] = Random.Range(10, 151);
+            prices[i] = Random.Range(149, 401);
         }
 
         // Weapon slots (0-3)

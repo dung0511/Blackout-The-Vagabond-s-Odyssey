@@ -17,8 +17,7 @@ public class CutsceneManager : MonoBehaviour
        
         if (pd == director)
         {
-            PlayerPrefs.SetInt("HasWatchedCutscene", 1);
-            PlayerPrefs.Save();
+            Destroy(GameObject.Find("HomeBGM"));
             SceneManager.LoadScene("Home"); 
         }
     }

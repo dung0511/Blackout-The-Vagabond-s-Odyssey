@@ -8,6 +8,7 @@ using Microsoft.Win32;
 using Zenject.SpaceFighter;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.Linq;
 
 public class FirebaseDatabaseManager : MonoBehaviour
 {
@@ -705,6 +706,57 @@ public class FirebaseDatabaseManager : MonoBehaviour
                 WriteDatabase(id, gameId, characterPlayed, floor, stage, playTime, enemiesKilled, bossKilled, win, normalSkill, ultimateSkill, weapons);
             }
         });
+    }
+
+    //GetFastestPlayTimes(5, times =>
+    //    {
+    //    Debug.Log("Top fastest play times (s): " + string.Join(", ", times));
+    //});
+
+    public void GetFastestPlayTimes(int topN, Action<List<int>> onComplete)
+    {
+        FirebaseDatabase
+            .DefaultInstance
+            .GetReference("Games")
+            .OrderByChild("Win")
+            .EqualTo(true)
+            .GetValueAsync()
+            .ContinueWithOnMainThread(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("Error fetching games: " + task.Exception);
+                    onComplete?.Invoke(new List<int>());
+                    return;
+                }
+
+                if (!task.Result.Exists)
+                {
+                    Debug.Log("No winning games found.");
+                    onComplete?.Invoke(new List<int>());
+                    return;
+                }
+
+                
+                var playTimes = new List<int>();
+                foreach (var snap in task.Result.Children)
+                {
+                    if (snap.Child("PlayTime").Exists &&
+                        float.TryParse(snap.Child("PlayTime").Value.ToString(), out float pt))
+                    {
+                        playTimes.Add(Mathf.RoundToInt(pt));
+                        
+                    }
+                }
+
+                
+                var fastest = playTimes
+                    .OrderBy(t => t)
+                    .Take(topN)
+                    .ToList();
+
+                onComplete?.Invoke(fastest);
+            });
     }
 
 

@@ -29783,8 +29783,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2084356424}
   m_HandleRect: {fileID: 2084356423}
   m_Direction: 2
-  m_Value: 0.9999986
-  m_Size: 0.3507813
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -41505,15 +41505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. ShadowSlayer \u2013 1h30m43.2s\r\n2. CrimsonWolf \u2013 1h32m10.5s\r\n3.
-    ArcaneKnight \u2013 1h35m22.8s\r\n4. VoidWalker \u2013 1h37m59.4s\r\n5. IronViper
-    \u2013 1h40m31.6s\r\n6. FrostFang \u2013 1h42m17.9s\r\n7. NightRaven \u2013 1h45m03.0s\r\n8.
-    PhoenixAsh \u2013 1h47m48.3s\r\n9. BlazeStrike \u2013 1h50m12.7s\r\n10. StormCaller
-    \u2013 1h52m55.1s\n1. ShadowSlayer \u2013 1h30m43.2s\r\n2. CrimsonWolf \u2013
-    1h32m10.5s\r\n3. ArcaneKnight \u2013 1h35m22.8s\r\n4. VoidWalker \u2013 1h37m59.4s\r\n5.
-    IronViper \u2013 1h40m31.6s\r\n6. FrostFang \u2013 1h42m17.9s\r\n7. NightRaven
-    \u2013 1h45m03.0s\r\n8. PhoenixAsh \u2013 1h47m48.3s\r\n9. BlazeStrike \u2013
-    1h50m12.7s\r\n10. StormCaller \u2013 1h52m55.1s\r\r"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

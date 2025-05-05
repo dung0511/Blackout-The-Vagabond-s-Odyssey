@@ -10,6 +10,11 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using System.Linq;
 
+public class LeaderboardData
+{
+    public string playerId;
+    public int playTime;
+}
 public class FirebaseDatabaseManager : MonoBehaviour
 {
     private DatabaseReference reference;
@@ -713,7 +718,7 @@ public class FirebaseDatabaseManager : MonoBehaviour
     //    Debug.Log("Top fastest play times (s): " + string.Join(", ", times));
     //});
 
-    public void GetFastestPlayTimes(int topN, Action<List<int>> onComplete)
+    public void GetFastestPlayTimes(int topN, Action<List<LeaderboardData>> onComplete)
     {
         FirebaseDatabase
             .DefaultInstance
@@ -726,32 +731,38 @@ public class FirebaseDatabaseManager : MonoBehaviour
                 if (task.IsFaulted)
                 {
                     Debug.LogError("Error fetching games: " + task.Exception);
-                    onComplete?.Invoke(new List<int>());
+                    onComplete?.Invoke(new List<LeaderboardData>());
                     return;
                 }
 
                 if (!task.Result.Exists)
                 {
                     Debug.Log("No winning games found.");
-                    onComplete?.Invoke(new List<int>());
+                    onComplete?.Invoke(new List<LeaderboardData>());
                     return;
                 }
 
                 
-                var playTimes = new List<int>();
+                var leaderboardList = new List<LeaderboardData>();
                 foreach (var snap in task.Result.Children)
                 {
+                    string playerId = snap.Child("PlayerId").Exists
+                        ? snap.Child("PlayerId").Value.ToString()
+                        : snap.Key;
+
                     if (snap.Child("PlayTime").Exists &&
                         float.TryParse(snap.Child("PlayTime").Value.ToString(), out float pt))
                     {
-                        playTimes.Add(Mathf.RoundToInt(pt));
-                        
+                        leaderboardList.Add(new LeaderboardData
+                        {
+                            playerId = playerId,
+                            playTime = Mathf.RoundToInt(pt)
+                        });
                     }
                 }
 
-                
-                var fastest = playTimes
-                    .OrderBy(t => t)
+                var fastest = leaderboardList
+                    .OrderBy(entry => entry.playTime)
                     .Take(topN)
                     .ToList();
 

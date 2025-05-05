@@ -111,8 +111,12 @@ public class GameManager : MonoBehaviour
     public void UpdateBossKill()
     {
         BossKilled++;
-        win = true; 
-        SaveWhenDeadOrWin();
+        if (BossKilled == 4)
+        {
+            win = true;
+            SaveWhenDeadOrWin();
+        }
+       
     }
     private void OnApplicationQuit()
     {

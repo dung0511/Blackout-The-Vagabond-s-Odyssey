@@ -8,13 +8,21 @@ public class Leaderboard : MonoBehaviour
 
     void Awake()
     {
+        leaderboardTMP.SetText("Loading...");
+
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            leaderboardTMP.SetText("No internet connection.");
+            return;
+        }   
+
         //fill
         if (FirebaseDatabaseManager.Instance != null)
         {
             string playerId = FirebaseDatabaseManager.Instance.GetOrCreatePlayerId();
             FirebaseDatabaseManager.Instance.GetFastestPlayTimes(10, leaderboard =>
             {
-                string leaderboardText = "Leaderboard\n";
+                string leaderboardText = "";
 
                 for (int i = 0; i < leaderboard.Count; i++)
                 {

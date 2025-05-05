@@ -26,12 +26,14 @@ public class ShopUI : MonoBehaviour
     {
         isOpenShop = true;
         gameObject.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void Hide()
     {
         isOpenShop = false;
         gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     

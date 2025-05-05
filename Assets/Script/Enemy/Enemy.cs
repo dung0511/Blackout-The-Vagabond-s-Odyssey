@@ -35,6 +35,24 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         isHurt = false;
         ai.CheckChaseCondition();
+        if (GameManager.Instance != null)
+        {
+            switch (GameManager.Instance.currentStage)
+            {
+                case 1:
+                    health *= 1;
+                    break;
+                case 2:
+                    float temp = (float)health;
+                    temp *= 1.5f;
+                    health = (int)temp;
+                    break;
+                case 3:
+                    health *= 2;
+                    
+                    break;
+            }
+        }
     }
 
     void Update()
@@ -51,7 +69,7 @@ public class Enemy : MonoBehaviour
         else ResetAllAttackParameters();
         isHurt = GetComponent<EnemyHealth>().isHurt;
         animator.SetBool("isHurt", isHurt);
-        if(!isArcher)animator.SetBool("isAttacking", isAttacking);
+        if (!isArcher) animator.SetBool("isAttacking", isAttacking);
     }
 
     void performRangedAttack()

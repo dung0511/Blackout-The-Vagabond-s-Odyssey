@@ -30,7 +30,7 @@ public class PlayerHealthController : Damageable
                 isDead = true;
                 health = 0;
                 UpdateHealthBar(health, maxHealth);
-                GameManager.Instance.SaveWhenDead();
+                GameManager.Instance.SaveWhenDeadOrWin();
                 StartCoroutine(ShowGameOverAfterDelay()); 
             }
             else

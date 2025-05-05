@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     {
         weaponUsing = weapon;
     }
-    public void SaveWhenDead()
+    public void SaveWhenDeadOrWin()
     {
         if (!gameId.IsEmpty())
         {
@@ -111,6 +111,8 @@ public class GameManager : MonoBehaviour
     public void UpdateBossKill()
     {
         BossKilled++;
+        win = true; 
+        SaveWhenDeadOrWin();
     }
     private void OnApplicationQuit()
     {

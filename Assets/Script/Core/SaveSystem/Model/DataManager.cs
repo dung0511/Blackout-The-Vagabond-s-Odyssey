@@ -8,12 +8,12 @@ public static class DataManager
 
     public static void Save()
     {
-        SaveSystem.SaveLocal("/save.sav",gameData);
+        SaveSystem.SaveLocal("/save.sav",gameData, true);
     }
 
     public static void Load()
     {
-        gameData =  SaveSystem.LoadLocal<GameData>("/save.sav");
+        gameData =  SaveSystem.LoadLocal<GameData>("/save.sav", true);
         if (gameData == null)
         {
             gameData = new();

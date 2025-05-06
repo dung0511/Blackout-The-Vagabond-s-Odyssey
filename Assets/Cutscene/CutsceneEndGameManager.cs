@@ -10,6 +10,7 @@ public class CutsceneEndGameManager : MonoBehaviour
     {
         director = GetComponent<PlayableDirector>();
         director.stopped += OnCutsceneEnd;
+        DontDestroyCleaner.ClearDDOL();
     }
 
     void OnCutsceneEnd(PlayableDirector pd)

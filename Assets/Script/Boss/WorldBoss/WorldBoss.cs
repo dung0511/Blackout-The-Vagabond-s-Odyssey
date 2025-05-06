@@ -249,14 +249,19 @@ public class WorldBoss : MonoBehaviour, IDamageable
             GetComponent<CapsuleCollider2D>().enabled=false;
             animator.SetTrigger("isDead");
             GameManager.Instance.UpdateBossKill();
-            DontDestroyCleaner.ClearDDOL();
+           // DontDestroyCleaner.ClearDDOL();
             //BossManager.Instance.bossKillEvent.Invoke();
-            SceneManager.LoadScene("CutsceneEndGame");
+            StartCoroutine(LoadEndGameCutSceneWhenFinishGame());
         }
     }
 
     public void DisableGameObject()
     {
         gameObject.SetActive(false);
+    }
+    IEnumerator LoadEndGameCutSceneWhenFinishGame()
+    {
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene("CutsceneEndGame");
     }
 }

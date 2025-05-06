@@ -18,10 +18,12 @@ public class RangedWeapon : BaseWeapon, IPick
     private float lastFireTime = -10f;
     public RangedWeaponSO RangedWeaponSO;
     public WeaponDetailSO weaponDetailSO;
-
+    public RangedWeaponFireType type;
     private int burstShotCount = 0;
     private float lastBurstShotTime;
     private bool isBursting = false;
+    private int bulletsRemaining;
+    private float nextBulletTime;
     public GameObject GetPickGameOject()
     {
         return gameObject;
@@ -51,7 +53,7 @@ public class RangedWeapon : BaseWeapon, IPick
         fireRate = RangedWeaponSO.TimeBtwFire;
         bulletForce = RangedWeaponSO.bulletForce;
         dam = RangedWeaponSO.damageRangedWeapon;
-
+        type= RangedWeaponSO.type;
         if (!GetComponentInParent<Transform>().root.Find("Character").IsUnityNull())
         {
             characterSR = transform.root.GetComponentInChildren<SpriteRenderer>();
@@ -101,7 +103,7 @@ public class RangedWeapon : BaseWeapon, IPick
         float currentTime = Time.time;
         float angle = RotateToMousePos();
 
-        switch (RangedWeaponSO.type)
+        switch (type)
         {
             case RangedWeaponFireType.SingleShot:
                 if (currentTime - lastFireTime >= RangedWeaponSO.TimeBtwFire)
@@ -112,10 +114,26 @@ public class RangedWeapon : BaseWeapon, IPick
                 break;
 
             case RangedWeaponFireType.BurstShot:
+                Debug.Log("burst shot");
+               
                 if (!isBursting && currentTime - lastFireTime >= RangedWeaponSO.TimeBtwFire)
                 {
-                    StartCoroutine(BurstFireRoutine(angle));
+                    isBursting = true;
+                    bulletsRemaining = Mathf.RoundToInt(RangedWeaponSO.bulletSequentialShot);
                     lastFireTime = currentTime;
+                    nextBulletTime = currentTime;  
+                }
+
+               
+                if (isBursting && currentTime >= nextBulletTime)
+                {
+                    FireBullet(angle);
+                    bulletsRemaining--;
+
+                    if (bulletsRemaining > 0)
+                        nextBulletTime = currentTime + RangedWeaponSO.timeBtwEachBullet;
+                    else
+                        isBursting = false;  
                 }
                 break;
 
@@ -157,14 +175,20 @@ public class RangedWeapon : BaseWeapon, IPick
     {
         isBursting = true;
 
-        int bulletCount = Mathf.RoundToInt(RangedWeaponSO.bulletSequentialShot);
-        for (int i = 0; i < bulletCount; i++)
+        try
         {
-            FireBullet(angle);
-            yield return new WaitForSeconds(RangedWeaponSO.timeBtwEachBullet);
+            int bulletCount = Mathf.RoundToInt(RangedWeaponSO.bulletSequentialShot);
+            for (int i = 0; i < bulletCount; i++)
+            {
+                FireBullet(angle);
+                yield return new WaitForSeconds(RangedWeaponSO.timeBtwEachBullet);
+            }
         }
-
-        isBursting = false;
+        finally
+        {
+            
+            isBursting = false;
+        }
     }
 
     public override void RotateWeapon()

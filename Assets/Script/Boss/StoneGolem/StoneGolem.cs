@@ -27,9 +27,9 @@ namespace Assets.Script.Boss.StoneGolem
         //private float lastAttackTime = 0f;
 
         private ProjecttileManager projectTileManager;
+        public Laser laser;
         private void Awake()
         {
-            Debug.Log("Stone Golem1");
             movementToPositionEvent = GetComponent<MovementToPositionEvent>();
             idleEvent = GetComponent<IdleEvent>();
 
@@ -81,6 +81,14 @@ namespace Assets.Script.Boss.StoneGolem
 
             }
             StartCoroutine(RangedAttackCooldown(attackSpeed));
+        }
+
+        void StartLaserCast()
+        {
+            Debug.Log("isLaser");
+            Animator animate = laser.GetComponentInChildren<Animator>();
+            Debug.Log(animate.gameObject.name);
+            animate.SetTrigger("isLaser");
         }
 
         void performMeleeAttack()

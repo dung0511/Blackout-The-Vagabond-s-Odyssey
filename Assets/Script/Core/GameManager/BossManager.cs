@@ -31,6 +31,6 @@ public class BossManager : MonoBehaviour
 
 
         GameManager.Instance.PlayCurrentStageDungeonMusic();
-        DataManager.gameData.playerData.furthestStage = GameManager.Instance.currentStage + 1;
+        DataManager.gameData.playerData.furthestStage = Mathf.Max(DataManager.gameData.playerData.furthestStage, GameManager.Instance.currentStage + 1);
     }
 }

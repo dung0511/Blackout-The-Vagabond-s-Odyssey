@@ -197,10 +197,7 @@ public class GameManager : MonoBehaviour
         {
             currentLevel = 1;
             currentStage++;
-            if (currentStage > DataManager.gameData.playerData.furthestStage)
-            {
-                DataManager.gameData.playerData.furthestStage = currentStage;
-            }
+            DataManager.gameData.playerData.furthestStage = Mathf.Max(DataManager.gameData.playerData.furthestStage, currentStage);
         }
         else
         {

@@ -84,29 +84,29 @@ public class Player : MonoBehaviour
 
             if (!skillController.IsUsingSkill())
             {
-                if (Input.GetAxisRaw("weapon1")>0)
+                if (Input.GetButtonDown("weapon1"))
                 {
                     weaponController.ChangeWeapon(1);
                 }
 
-                if (Input.GetAxisRaw("weapon2")>0 && !weaponController.haveOneWepon)
+                if (Input.GetButtonDown("weapon2") && !weaponController.haveOneWepon)
                 {
                     weaponController.ChangeWeapon(2);
                 }
 
-                if (Input.GetAxisRaw("Interact") >0 && pickController.isTouchItem)
+                if (Input.GetButtonDown("Interact") && pickController.isTouchItem)
                 {
                     pickController.PickItemWeapon();
                 }
 
                 weaponController.RotateWeapon();
-                if (Input.GetMouseButton(0))
+                if (Input.GetButton("Fire"))
                 {
                     weaponController.Attack();
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Tab) && !SettingsMenuUI.Instance.isOpenSettingMenu && !ShopUI.Instance.isOpenShop)
+            if (Input.GetButtonDown("bag") && !SettingsMenuUI.Instance.isOpenSettingMenu && !ShopUI.Instance.isOpenShop)
             {
                 if (!inventoryController.isOpenInventory)
                 {
@@ -122,12 +122,12 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (Input.GetAxisRaw("Skill1")>0 && skillController.CanUseSkill1())
+            if (Input.GetButtonDown("Skill1") && skillController.CanUseSkill1())
             {
                 anim.SetBool("isSkill1", true);
 
             }
-            if (Input.GetAxisRaw("Skill2")>0 && skillController.CanUseSkill2())
+            if (Input.GetButtonDown("Skill2") && skillController.CanUseSkill2())
             {
                 anim.SetBool("isSkill2", true);
             }
